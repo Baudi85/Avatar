@@ -1,0 +1,76 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.26e4a44a55eabf042ddae80126371bc55565f6ec_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_106_cooldown = v.state_nom_air_blades_triple_cooldown||v.state_nom_approach_cooldown;",
+					"v.metastate_air_blades_triple_cooldown = v.chain_106_cooldown;"
+				]
+			}
+		},
+		"animation.26e4a44a55eabf042ddae80126371bc55565f6ec_1": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_233_cooldown = v.state_nom_air_blades_single_cooldown;",
+					"v.chain_211_cooldown = v.state_nom_air_blades_double_cooldown;",
+					"v.metastate_air_blades_single_double_cooldown = v.chain_233_cooldown&&v.chain_211_cooldown;"
+				]
+			}
+		},
+		"animation.26e4a44a55eabf042ddae80126371bc55565f6ec_2": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_578_cooldown = v.state_nom_strafe_away_cooldown;",
+					"v.metastate_strafe_avoid_cooldown = v.chain_578_cooldown;"
+				]
+			}
+		},
+		"animation.26e4a44a55eabf042ddae80126371bc55565f6ec_3": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_379_cooldown = v.state_nom_air_sphere_defense_cooldown;",
+					"v.metastate_air_sphere_defense_cooldown = v.chain_379_cooldown;"
+				]
+			}
+		},
+		"animation.26e4a44a55eabf042ddae80126371bc55565f6ec_4": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_721_cooldown = v.state_nom_air_tornado_cooldown||v.state_nom_approach_cooldown;",
+					"v.metastate_air_tornado_cooldown = v.chain_721_cooldown;"
+				]
+			}
+		},
+		"animation.26e4a44a55eabf042ddae80126371bc55565f6ec_5": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_882_cooldown = v.state_nom_approach_cooldown||v.state_nom_air_sphere_offense_cooldown;",
+					"v.metastate_air_sphere_offense_cooldown = v.chain_882_cooldown;"
+				]
+			}
+		},
+		"animation.26e4a44a55eabf042ddae80126371bc55565f6ec_6": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_940_cooldown = v.state_nom_strafe_side_cooldown;",
+					"v.metastate_projectile_defence_strafe_cooldown = v.chain_940_cooldown;"
+				]
+			}
+		}
+	}
+}

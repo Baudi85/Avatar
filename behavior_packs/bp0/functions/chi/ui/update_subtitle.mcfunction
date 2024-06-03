@@ -1,0 +1,1 @@
+titleraw @s subtitle {"rawtext":[{"score":{"name": "@s", "objective":"technique_id"}},{"score":{"name": "@s", "objective":"teq_state"}}]}

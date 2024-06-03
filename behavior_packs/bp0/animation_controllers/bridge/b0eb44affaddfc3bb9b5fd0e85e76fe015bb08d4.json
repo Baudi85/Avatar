@@ -1,0 +1,151 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.b0eb44affaddfc3bb9b5fd0e85e76fe015bb08d4_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add duel.manager"
+					]
+				}
+			}
+		},
+		"controller.animation.b0eb44affaddfc3bb9b5fd0e85e76fe015bb08d4_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "q.variant==0&&q.is_sheared"
+						},
+						{
+							"state_1": "q.variant==1&&q.is_sheared"
+						},
+						{
+							"state_2": "q.variant==2&&q.is_sheared"
+						}
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"/tag @e[tag=duel.spawn.duel_zhao] add despawn",
+						"/event entity @s nom:npc.show"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "!q.is_sheared&&q.all_animations_finished"
+						}
+					]
+				},
+				"state_1": {
+					"on_entry": [],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "!q.is_sheared&&q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"b0eb44affaddfc3b_a_0"
+					]
+				},
+				"state_2": {
+					"on_entry": [
+						"/tag @e[tag=duel.spawn.duel_zhao] add despawn"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "!q.is_sheared&&q.all_animations_finished"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.b0eb44affaddfc3bb9b5fd0e85e76fe015bb08d4_2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_1": "q.variant==1"
+						}
+					]
+				},
+				"state_1": {
+					"transitions": [
+						{
+							"on_end": "q.variant==0"
+						},
+						{
+							"on_success": "q.variant==2"
+						}
+					],
+					"on_exit": [
+						"/function music/music_f_stop"
+					]
+				},
+				"on_end": {
+					"on_entry": [
+						"/tag @a remove battle.member.402",
+						"/tag @a remove battle.member"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"on_success": {
+					"animations": [
+						"b0eb44affaddfc3b_a_1"
+					],
+					"transitions": [
+						{
+							"on_end": "q.any_animation_finished"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.b0eb44affaddfc3bb9b5fd0e85e76fe015bb08d4_3": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.duel_load=q.life_time;"
+					],
+					"transitions": [
+						{
+							"loaded": "q.life_time>v.duel_load+5"
+						}
+					]
+				},
+				"loaded": {
+					"transitions": [
+						{
+							"end_check": "q.variant==1"
+						}
+					]
+				},
+				"end_check": {
+					"transitions": [
+						{
+							"loaded": "q.variant!=1"
+						}
+					],
+					"animations": [
+						"b0eb44affaddfc3b_a_2"
+					]
+				}
+			}
+		},
+		"controller.animation.b0eb44affaddfc3bb9b5fd0e85e76fe015bb08d4_4": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.duel_load=0;"
+					]
+				}
+			}
+		}
+	}
+}

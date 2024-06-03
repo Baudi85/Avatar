@@ -1,0 +1,136 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.water_whip",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 2,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [
+					0,
+					0.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "water_whip",
+					"parent": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-7,
+								-8,
+								-8
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										16
+									]
+								},
+								"east": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										16
+									]
+								},
+								"south": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										16
+									]
+								},
+								"west": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										16,
+										16
+									]
+								},
+								"up": {
+									"uv": [
+										16,
+										16
+									],
+									"uv_size": [
+										-16,
+										-16
+									]
+								},
+								"down": {
+									"uv": [
+										16,
+										16
+									],
+									"uv_size": [
+										-16,
+										-16
+									]
+								}
+							}
+						}
+					],
+					"locators": {
+						"water_whip": [
+							0,
+							0,
+							0
+						],
+						"water_whip2": [
+							0,
+							0,
+							16
+						],
+						"water_whip3": [
+							0,
+							0,
+							32
+						],
+						"water_whip4": [
+							0,
+							0,
+							48
+						]
+					}
+				}
+			]
+		}
+	]
+}

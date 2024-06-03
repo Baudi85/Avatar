@@ -1,0 +1,31 @@
+{
+    "namespace": "gm1_exp_bar",
+    "gm1_progress_text_label": {
+        "type": "label",
+        "shadow": true,
+        "text": "#level_number",
+        "anchor_from": "top_middle",
+        "anchor_to": "bottom_middle",
+        "bindings": [
+            { "binding_name": "#level_number", "binding_type": "global" },
+            { "binding_name": "#level_number_visible", "binding_type": "global", "binding_name_override": "#visible" }
+        ]
+    },
+    "custom_expbar": {
+        "type": "panel",
+        "size": [ "100%c", 16 ],
+        "controls": [
+            { "hotbar@hud.hotbar_chooser": { "offset": [ 4, 16 ]}},
+            { "gm1_progress_text_label@gm1_progress_text_label": { "offset": [ 0, 4 ], "layer": 7 }},
+            {
+                "background": {
+                    "type": "image",
+                    "texture": "textures/ui/gm1/mp",
+                    "size": [ "100%sm", 16 ],
+                    "offset": [ 0, -8 ]
+                }
+            }
+        ],
+        "bindings": [{ "binding_name": "#show_survival_ui", "binding_name_override": "#visible" }]
+    }
+}

@@ -1,0 +1,157 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:water_whip_trainer",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball",
+			"animations": {
+				"e89bf962834008dd_ac_0": "controller.animation.e89bf962834008ddf1a7afc7a59588a9e6547ef0_0",
+				"e89bf962834008dd_ac_1": "controller.animation.e89bf962834008ddf1a7afc7a59588a9e6547ef0_1"
+			},
+			"scripts": {
+				"animate": [
+					"e89bf962834008dd_ac_0",
+					{
+						"e89bf962834008dd_ac_1": "1"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"nom:fall_down": {
+				"minecraft:projectile": {
+					"gravity": 0.1,
+					"power": 0.5,
+					"inertia": 1,
+					"uncertainty_base": 6,
+					"offset": [
+						0,
+						0,
+						0
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"definition_event": {
+							"event_trigger": {
+								"event": "nom:on_hit"
+							}
+						},
+						"impact_damage": {
+							"damage": 0,
+							"knockback": false
+						},
+						"stick_in_ground": {}
+					}
+				}
+			},
+			"nom:on_hit": {
+				"minecraft:is_charged": {}
+			},
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:timer": {
+				"time": 0.4,
+				"time_down_event": {
+					"event": "nom:fall_down"
+				}
+			},
+			"minecraft:scale": {
+				"value": 0.5
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"any_of": [
+						{
+							"test": "in_water"
+						}
+					]
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 0.5
+			},
+			"minecraft:projectile": {
+				"gravity": 0,
+				"power": 0.5,
+				"inertia": 1,
+				"uncertainty_base": 2,
+				"offset": [
+					0,
+					0,
+					0
+				],
+				"should_bounce": false,
+				"destroy_on_hurt": false,
+				"on_hit": {
+					"definition_event": {
+						"event_trigger": {
+							"event": "nom:on_hit"
+						}
+					},
+					"impact_damage": {
+						"damage": 0,
+						"knockback": false
+					},
+					"stick_in_ground": {}
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"nom:fall_down": {
+				"add": {
+					"component_groups": [
+						"nom:fall_down"
+					]
+				}
+			},
+			"nom:no_homing": {
+				"add": {
+					"component_groups": [
+						"nom:no_homing"
+					]
+				}
+			},
+			"nom:on_hit": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"nom:on_hit"
+							]
+						}
+					},
+					{
+						"filters": {
+							"test": "has_component",
+							"value": "minecraft:is_sheared",
+							"operator": "!="
+						},
+						"trigger": "nom:despawn"
+					}
+				]
+			},
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

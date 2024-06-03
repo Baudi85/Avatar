@@ -1,0 +1,82 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "nom:water_stream",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/small_square"
+			}
+		},
+		"curves": {
+			"variable.size_delta": {
+				"type": "bezier",
+				"input": "v.particle_age/v.particle_lifetime",
+				"horizontal_range": 1,
+				"nodes": [
+					0.5,
+					1,
+					0.96,
+					0
+				]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 150,
+				"max_particles": 150
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_box": {
+				"half_dimensions": [
+					0.5,
+					0.5,
+					0.5
+				],
+				"direction": [
+					0,
+					0,
+					-1
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.45,0.5)"
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random_integer(0,360)"
+			},
+			"minecraft:particle_initial_speed": "(q.mark_variant-1)*2",
+			"minecraft:particle_motion_dynamic": {},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"0.3*variable.size_delta",
+					"0.3*variable.size_delta"
+				],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						0,
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "variable.particle_age/variable.particle_lifetime",
+					"gradient": {
+						"0.0": "#FF6A9CDB",
+						"1.0": "#AAFFFFFF"
+					}
+				}
+			}
+		}
+	}
+}

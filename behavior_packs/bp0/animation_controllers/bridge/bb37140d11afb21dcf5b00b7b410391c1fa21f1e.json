@@ -1,0 +1,227 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bb37140d11afb21dcf5b00b7b410391c1fa21f1e_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==330)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==330"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.bb37140d11afb21dcf5b00b7b410391c1fa21f1e_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:enemy.bending.air.blades.41963.move",
+						"@s nom:enemy.bending.air.blades.41963.shooter",
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==330)"
+						},
+						{
+							"charged": "query.is_charged&&query.is_saddled&&query.ground_speed<0.25"
+						}
+					]
+				},
+				"charged": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==330)"
+						},
+						{
+							"default": "!query.is_saddled"
+						},
+						{
+							"attack": "!query.is_charged"
+						}
+					]
+				},
+				"attack": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_2"
+					],
+					"on_exit": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:enemy.bending.air.blades.41963.stop"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==330)"
+						},
+						{
+							"cooldown": "q.life_time>=v.runtime+0.75"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.runtime=q.life_time;"
+					],
+					"on_exit": [
+						"@s nom:enemy.bending.air.blades.41963.end",
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==330)"
+						},
+						{
+							"end": "q.life_time>=v.runtime+1.2"
+						}
+					]
+				},
+				"end": {
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==330)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==330"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.bb37140d11afb21dcf5b00b7b410391c1fa21f1e_2": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==331)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==331"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.bb37140d11afb21dcf5b00b7b410391c1fa21f1e_3": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:enemy.bending.air.blades.218587.move",
+						"@s nom:enemy.bending.air.blades.218587.shooter",
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==331)"
+						},
+						{
+							"charged": "query.is_charged&&query.is_saddled&&query.ground_speed<0.25"
+						}
+					]
+				},
+				"charged": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==331)"
+						},
+						{
+							"default": "!query.is_saddled"
+						},
+						{
+							"attack": "!query.is_charged"
+						}
+					]
+				},
+				"attack": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_2"
+					],
+					"on_exit": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:enemy.bending.air.blades.218587.stop"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==331)"
+						},
+						{
+							"cooldown": "q.life_time>=v.runtime+1.5"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.runtime=q.life_time;"
+					],
+					"on_exit": [
+						"@s nom:enemy.bending.air.blades.218587.end",
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==331)"
+						},
+						{
+							"end": "q.life_time>=v.runtime+1.2"
+						}
+					]
+				},
+				"end": {
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==331)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==331"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.58e1fd4e1d00b66f6122dc9768faa87ac5c43272_0": {
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/tag @s add self",
+					"/execute @p[tag=dev] ~~~ execute @e[tag=self] ~~~ particle gm1:dev_hidden",
+					"/tag @s remove self"
+				]
+			},
+			"animation_length": 1
+		},
+		"animation.58e1fd4e1d00b66f6122dc9768faa87ac5c43272_1": {
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/tellraw  @a[tag=dev.hidden_nearby,tag=!dev.hidden_nearby.was,r=0.5] {\"rawtext\":[{\"text\":\"§c[DEBUG]§r \" },{\"text\":\" Indentifier -> nom:spawner_daofei\" }]}"
+				]
+			},
+			"animation_length": 1
+		}
+	}
+}

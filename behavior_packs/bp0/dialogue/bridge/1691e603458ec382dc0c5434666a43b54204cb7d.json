@@ -1,0 +1,50 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "splash.duel_amon",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{splash}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "4"
+						}
+					]
+				},
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/hud/hide"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/hud/show"
+				],
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sp.110.title"
+								}
+							]
+						}
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sp.110.name"
+								}
+							]
+						}
+					}
+				]
+			}
+		]
+	}
+}

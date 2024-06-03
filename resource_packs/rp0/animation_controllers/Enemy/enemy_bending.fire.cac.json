@@ -1,0 +1,259 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.enemy.bending.teq_manager_fire": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"fire_stream.default": "query.skin_id>=410&&query.skin_id<=419"
+						},
+						{
+							"fire_jet.default": "query.skin_id>=420&&query.skin_id<=429"
+						},
+						{
+							"fire_sweep.default": "query.skin_id>=430&&query.skin_id<=439"
+						}
+					],
+					"animations": [
+						"unlock_movement"
+					]
+				},
+				"fire_stream.default": {
+					"transitions": [
+						{
+							"default": "query.skin_id<410||query.skin_id>419"
+						},
+						{
+							"fire_stream.charging": "query.variant==1"
+						}
+					]
+				},
+				"fire_stream.charging": {
+					"transitions": [
+						{
+							"default": "query.skin_id<410||query.skin_id>419"
+						},
+						{
+							"fire_stream.release": "query.variant==0"
+						},
+						{
+							"fire_stream.charging_hold": "q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"fire_stream.charge",
+						"fire_stream_launch"
+					]
+				},
+				"fire_stream.charging_hold": {
+					"transitions": [
+						{
+							"default": "query.skin_id<410||query.skin_id>419"
+						},
+						{
+							"fire_stream.release": "query.variant==0"
+						}
+					],
+					"animations": [
+						"fire_stream.hold",
+						"fire_stream_loop"
+					]
+				},
+				"fire_stream.release": {
+					"transitions": [
+						{
+							"default": "query.skin_id<410||query.skin_id>419"
+						},
+						{
+							"fire_stream.default": "q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"fire_stream.release",
+						"fire_stream_release"
+					]
+				},
+				"fire_jet.default": {
+					"transitions": [
+						{
+							"fire_jet.charging": "query.variant==1"
+						},
+						{
+							"default": "query.skin_id<420||query.skin_id>429"
+						}
+					]
+				},
+				"fire_jet.charging": {
+					"transitions": [
+						{
+							"fire_jet.release": "query.variant==5"
+						},
+						{
+							"fire_jet.cancel": "query.variant==0"
+						},
+						{
+							"fire_jet.charging_hold": "q.all_animations_finished"
+						},
+						{
+							"default": "query.skin_id<420||query.skin_id>429"
+						}
+					],
+					"animations": [
+						"fire_jet_charge",
+						"jet_charge_sound",
+						"jet_loop_sound",
+						"lock_movement"
+					]
+				},
+				"fire_jet.charging_hold": {
+					"transitions": [
+						{
+							"fire_jet.release": "query.variant==5&&(q.skin_id!=421)"
+						},
+						{
+							"fire_jet.cancel": "query.variant==0&&q.skin_id==421"
+						},
+						{
+							"default": "query.skin_id<420||query.skin_id>429"
+						}
+					],
+					"animations": [
+						"fire_jet_hold",
+						"fire_jet_feet",
+						{
+							"fire_jet_dash_vfx": "q.anim_time>0.35"
+						}
+					]
+				},
+				"fire_jet.cancel": {
+					"transitions": [
+						{
+							"default": "q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"fire_jet_cancel"
+					]
+				},
+				"fire_jet.release": {
+					"transitions": [
+						{
+							"default": "q.any_animation_finished"
+						}
+					],
+					"animations": [
+						"fire_jet_dash",
+						"jet_launch_sound",
+						{
+							"jet_explode_sound": "q.anim_time>0.35"
+						},
+						{
+							"fire_jet_impact": "q.anim_time>0.35"
+						}
+					]
+				},
+				"fire_sweep.default": {
+					"transitions": [
+						{
+							"fire_sweep.charging": "query.variant==1"
+						},
+						{
+							"default": "query.skin_id<430||query.skin_id>439"
+						}
+					]
+				},
+				"fire_sweep.charging": {
+					"transitions": [
+						{
+							"fire_sweep.release": "query.variant==0||(query.skin_id<430||query.skin_id>439)"
+						},
+						{
+							"fire_sweep.charging_hold": "q.any_animation_finished"
+						}
+					],
+					"animations": [
+						"fire_sweep.charge",
+						"fire_sweep_init_sound"
+					]
+				},
+				"fire_sweep.charging_hold": {
+					"transitions": [
+						{
+							"fire_sweep.release": "query.variant==0||(query.skin_id<430||query.skin_id>439)"
+						}
+					],
+					"animations": [
+						"fire_sweep.hold",
+						"fire_sweep_sound",
+						"fire_sweep_locator",
+						"fire_from_legs"
+					]
+				},
+				"fire_sweep.release": {
+					"transitions": [
+						{
+							"default": "q.any_animation_finished"
+						}
+					],
+					"animations": [
+						"fire_sweep.release",
+						"fire_sweep_end_sound"
+					]
+				}
+			}
+		},
+		"controller.animation.enemy.fire.bending_trainer": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"fire_stream.charging": "query.variant==1&&!q.is_tamed"
+						}
+					]
+				},
+				"fire_stream.charging": {
+					"transitions": [
+						{
+							"default": "q.is_tamed&&q.all_animations_finished"
+						},
+						{
+							"fire_stream.charging_hold": "!q.is_tamed&&q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"fire_stream.charge",
+						"fire_stream_launch"
+					]
+				},
+				"fire_stream.charging_hold": {
+					"transitions": [
+						{
+							"fire_stream.release": "query.variant==0||q.is_tamed"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"fire_stream.hold",
+						"fire_stream_loop"
+					]
+				},
+				"fire_stream.release": {
+					"transitions": [
+						{
+							"default": "q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"fire_stream.release",
+						"fire_stream_release"
+					]
+				}
+			}
+		}
+	}
+}

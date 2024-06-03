@@ -1,0 +1,138 @@
+{
+    "namespace": "gm1_subtitle_teq",
+    "main": {
+        "type": "panel",
+        "size": [ "100%cm", "100%cm" ],
+        "controls": [{ "content@content": {}}, { "teq_data@data": {}}]
+    },
+    "data": {
+        "type": "panel",
+        "size": [ 0, 0 ],
+        "property_bag": { "#zero": 0 },
+        "bindings": [
+            { "binding_name": "#hud_subtitle_text_string", "binding_name_override": "#text" },
+            {
+                "binding_name": "#hud_subtitle_text_string",
+                "binding_name_override": "#value",
+                "binding_condition": "visibility_changed"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not (#text = '') and not (#text = #value))",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#value - '') + #zero)",
+                "target_property_name": "#input"
+            },
+            { "binding_type": "view", "source_property_name": "(#input/10)", "target_property_name": "#teq" },
+            { "binding_type": "view", "source_property_name": "(#input - (#teq * 10))", "target_property_name": "#state" }
+        ]
+    },
+    "content": {
+        "type": "panel",
+        "size": [ "100%c", "100%c" ],
+        "controls": [{ "teq_list@teq_list": {}}, { "state_list@state_list": {}}]
+    },
+    "teq_list": {
+        "type": "panel",
+        "size": [ "100%c", "100%cm" ],
+        "controls": [
+            { "whistle@teq": { "$teq": "whistle", "$id": 1 }},
+            { "tiles@teq": { "$teq": "tiles", "$id": 2 }},
+            { "whistle_confirm@teq": { "$teq": "whistle_confirm", "$id": 3 }},
+            { "earth_0@teq": { "$teq": "earth_0", "$id": 10 }},
+            { "earth_1@teq": { "$teq": "earth_1", "$id": 11 }},
+            { "earth_2@teq": { "$teq": "earth_2", "$id": 12 }},
+            { "earth_3@teq": { "$teq": "earth_3", "$id": 13 }},
+            { "water_0@teq": { "$teq": "water_0", "$id": 20 }},
+            { "water_1@teq": { "$teq": "water_1", "$id": 21 }},
+            { "water_2@teq": { "$teq": "water_2", "$id": 22 }},
+            { "water_3@teq": { "$teq": "water_3", "$id": 23 }},
+            { "air_0@teq": { "$teq": "air_0", "$id": 30 }},
+            { "air_1@teq": { "$teq": "air_1", "$id": 31 }},
+            { "air_2@teq": { "$teq": "air_2", "$id": 32 }},
+            { "air_3@teq": { "$teq": "air_3", "$id": 33 }},
+            { "air_4@teq": { "$teq": "air_4", "$id": 34}},
+            { "fire_0@teq": { "$teq": "fire_0", "$id": 40 }},
+            { "fire_1@teq": { "$teq": "fire_1", "$id": 41 }},
+            { "fire_2@teq": { "$teq": "fire_2", "$id": 42 }},
+            { "fire_3@teq": { "$teq": "fire_3", "$id": 43 }},
+            {
+                "background": {
+                    "layer": -1,
+                    "type": "image",
+                    "size": [ "100%sm + 5px", "100%sm + 2px" ],
+                    "texture": "textures/ui/gm1/item_background",
+                    "color": [ 0, 0, 0, 1 ],
+                    "alpha": 0.75,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "teq_data",
+                            "source_property_name": "(#teq > 0)",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "teq": {
+        "type": "label",
+        "text": "('item.nom:bending_'+ $teq + '.name')",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "teq_data",
+                "source_property_name": "(#teq = $id)",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "state_list": {
+        "type": "panel",
+        "size": [ "100%c", "100%cm" ],
+        "offset": [ 0, 12 ],
+        "controls": [
+            { "0@state": { "$state": "charged", "$id": 1 }},
+            { "2@state": { "$state": "charging", "$id": 2 }},
+            { "3@state": { "$state": "in_progress", "$id": 3 }},
+            { "4@state": { "$state": "requires_air", "$id": 4 }},
+            { "5@state": { "$state": "requires_earth", "$id": 5 }},
+            { "6@state": { "$state": "requires_ground", "$id": 6 }},
+            { "7@state": { "$state": "requires_water", "$id": 7 }},
+            {
+                "background": {
+                    "layer": -1,
+                    "type": "image",
+                    "size": [ "100%sm + 5px", "100%sm + 2px" ],
+                    "texture": "textures/ui/gm1/item_background",
+                    "color": [ 0, 0, 0, 1 ],
+                    "alpha": 0.75,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "teq_data",
+                            "source_property_name": "(#state > 0)",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "state": {
+        "type": "label",
+        "text": "('ui.state.' + $state)",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "teq_data",
+                "source_property_name": "(#state = $id)",
+                "target_property_name": "#visible"
+            }
+        ]
+    }
+}

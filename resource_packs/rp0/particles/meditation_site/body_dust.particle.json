@@ -1,0 +1,98 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "nom:body_dust",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/light_orb"
+			}
+		},
+		"curves": {
+			"variable.size": {
+				"type": "bezier_chain",
+				"input": "v.particle_age/v.particle_lifetime",
+				"horizontal_range": 1,
+				"nodes": {
+					"0.0": {
+						"value": 0,
+						"slope": 0.15
+					},
+					"1.0": {
+						"value": 0,
+						"slope": 0
+					},
+					"0.2": {
+						"value": 0.85,
+						"slope": 1.45
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 25,
+				"max_particles": 100
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_box": {
+				"half_dimensions": [
+					0.25,
+					0.6666,
+					0.125
+				],
+				"surface_only": true,
+				"direction": [
+					0,
+					1,
+					0
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(2,4)"
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": "math.random(-360,360)"
+			},
+			"minecraft:particle_initial_speed": 0,
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [
+					"math.sin(v.particle_age*180+(v.particle_random_4*180))",
+					1,
+					"math.cos(v.particle_age*180+(v.particle_random_4*180))"
+				],
+				"linear_drag_coefficient": 1
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"0.1*variable.size",
+					"0.1*variable.size"
+				],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						0,
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "v.particle_age/v.particle_lifetime",
+					"gradient": {
+						"0.21": "#FF250028",
+						"1.0": "#FFFFFFFF"
+					}
+				}
+			}
+		}
+	}
+}

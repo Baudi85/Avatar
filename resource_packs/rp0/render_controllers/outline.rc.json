@@ -1,0 +1,388 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.outline": {
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"light_color_multiplier": -1000,
+			"ignore_lighting": true
+		},
+		"controller.render.outline_highlight": {
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"light_color_multiplier": "v.is_selected ? 100000 : -1",
+			"ignore_lighting": true
+		},
+		"controller.render.outline_avatar": {
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.avatar_outline"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"overlay_color": {
+				"a": 0.5,
+				"r": 0.05,
+				"g": 0.2,
+				"b": 0.35
+			},
+			"ignore_lighting": true,
+			"light_color_multiplier": 1.2
+		},
+		"controller.render.citizen_base_outline": {
+			"textures": [
+				"array.t[query.skin_id]"
+			],
+			"part_visibility": [
+				{
+					"hair_detail_1": "query.is_sheared"
+				},
+				{
+					"hair_detail_2": "query.is_saddled"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.texture_0",
+						"Texture.texture_1",
+						"Texture.texture_2",
+						"Texture.texture_3",
+						"Texture.texture_4",
+						"Texture.texture_5",
+						"Texture.texture_6",
+						"Texture.texture_7",
+						"Texture.texture_8",
+						"Texture.texture_9",
+						"Texture.texture_10",
+						"Texture.texture_11"
+					]
+				}
+			},
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"light_color_multiplier": -1000,
+			"ignore_lighting": true
+		},
+		"controller.render.citizen_clothes_outline": {
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.clothes_0",
+						"Texture.clothes_1",
+						"Texture.clothes_2",
+						"Texture.clothes_3",
+						"Texture.clothes_4",
+						"Texture.clothes_5",
+						"Texture.clothes_6",
+						"Texture.clothes_7",
+						"Texture.clothes_8",
+						"Texture.clothes_9",
+						"Texture.clothes_10",
+						"Texture.clothes_11"
+					]
+				}
+			},
+			"textures": [
+				"array.t[query.mark_variant]"
+			],
+			"part_visibility": [
+				{
+					"hat_detail": "query.is_ignited"
+				},
+				{
+					"body_detail": "query.is_tamed"
+				}
+			],
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"light_color_multiplier": -1000,
+			"ignore_lighting": true
+		},
+		"controller.render.citizen_base_outline_highlight": {
+			"textures": [
+				"array.t[query.skin_id]"
+			],
+			"part_visibility": [
+				{
+					"hair_detail_1": "query.is_sheared"
+				},
+				{
+					"hair_detail_2": "query.is_saddled"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.texture_0",
+						"Texture.texture_1",
+						"Texture.texture_2",
+						"Texture.texture_3",
+						"Texture.texture_4",
+						"Texture.texture_5",
+						"Texture.texture_6",
+						"Texture.texture_7",
+						"Texture.texture_8",
+						"Texture.texture_9",
+						"Texture.texture_10",
+						"Texture.texture_11"
+					]
+				}
+			},
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"overlay_color": {
+				"a": 1,
+				"r": 0.5,
+				"g": 0.5,
+				"b": 0.5
+			},
+			"ignore_lighting": true,
+			"light_color_multiplier": "v.is_selected ? 100000 : -1"
+		},
+		"controller.render.citizen_clothes_outline_highlight": {
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.clothes_0",
+						"Texture.clothes_1",
+						"Texture.clothes_2",
+						"Texture.clothes_3",
+						"Texture.clothes_4",
+						"Texture.clothes_5",
+						"Texture.clothes_6",
+						"Texture.clothes_7",
+						"Texture.clothes_8",
+						"Texture.clothes_9",
+						"Texture.clothes_10",
+						"Texture.clothes_11"
+					]
+				}
+			},
+			"textures": [
+				"array.t[query.mark_variant]"
+			],
+			"part_visibility": [
+				{
+					"hat_detail": "query.is_ignited"
+				},
+				{
+					"body_detail": "query.is_tamed"
+				}
+			],
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"overlay_color": {
+				"a": 1,
+				"r": 0.5,
+				"g": 0.5,
+				"b": 0.5
+			},
+			"ignore_lighting": true,
+			"light_color_multiplier": "v.is_selected ? 100000 : -1"
+		},
+		"controller.render.guard_base_outline": {
+			"textures": [
+				"array.t[query.skin_id]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.texture_0",
+						"Texture.texture_1",
+						"Texture.texture_2",
+						"Texture.texture_3"
+					]
+				}
+			},
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"light_color_multiplier": -1000,
+			"ignore_lighting": true
+		},
+		"controller.render.guard_base_outline_highlight": {
+			"textures": [
+				"array.t[query.skin_id]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.texture_0",
+						"Texture.texture_1",
+						"Texture.texture_2",
+						"Texture.texture_3"
+					]
+				}
+			},
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"overlay_color": {
+				"a": 1,
+				"r": 0.5,
+				"g": 0.5,
+				"b": 0.5
+			},
+			"ignore_lighting": true,
+			"light_color_multiplier": "v.is_selected ? 100000 : -1"
+		},
+		"controller.render.red_outline": {
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"ignore_lighting": true,
+			"light_color_multiplier": 5,
+			"overlay_color": {
+				"a": 1,
+				"r": 0.75,
+				"g": 0,
+				"b": 0
+			},
+			"is_hurt_color": {
+				"a": 0,
+				"r": 0,
+				"g": 0,
+				"b": 0
+			}
+		},
+		"controller.render.citizen_base_outline_small": {
+			"textures": [
+				"array.t[query.skin_id]"
+			],
+			"part_visibility": [
+				{
+					"hair_detail_1": "query.is_sheared"
+				},
+				{
+					"hair_detail_2": "query.is_saddled"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.texture_0",
+						"Texture.texture_1",
+						"Texture.texture_2",
+						"Texture.texture_3"
+					]
+				}
+			},
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"light_color_multiplier": -1000,
+			"ignore_lighting": true
+		},
+		"controller.render.citizen_base_outline_small_highlight": {
+			"textures": [
+				"array.t[query.skin_id]"
+			],
+			"part_visibility": [
+				{
+					"hair_detail_1": "query.is_sheared"
+				},
+				{
+					"hair_detail_2": "query.is_saddled"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.texture_0",
+						"Texture.texture_1",
+						"Texture.texture_2",
+						"Texture.texture_3"
+					]
+				}
+			},
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"light_color_multiplier": "v.is_selected ? 100000 : -1",
+			"ignore_lighting": true
+		},
+		"controller.render.citizen_clothes_outline_small": {
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.clothes_0",
+						"Texture.clothes_1",
+						"Texture.clothes_2",
+						"Texture.clothes_3"
+					]
+				}
+			},
+			"textures": [
+				"array.t[query.mark_variant]"
+			],
+			"part_visibility": [
+				{
+					"hat_detail": "query.is_ignited"
+				},
+				{
+					"body_detail": "query.is_tamed"
+				}
+			],
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"light_color_multiplier": "v.is_selected ? 100000 : -1",
+			"ignore_lighting": true
+		}
+	}
+}

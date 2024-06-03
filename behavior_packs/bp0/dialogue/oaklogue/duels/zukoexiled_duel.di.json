@@ -1,0 +1,391 @@
+{
+    "format_version": "1.17.40",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "zukoexiled_duel.greeting",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.chjhaff"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.ciahaffhdf"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/zukoexiled_duel/hello"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "ol.beaegecabh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/zukoexiled_duel/hello"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.bgjdiaicib"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_zukoexiled,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.zukoexiled_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_zukoexiled,c=1] animation.set_var.emotion_id.4"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.zukoexiled_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "zukoexiled_duel.hello",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.chjhaff"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cjeaiegabj"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_zukoexiled] ~ ~ ~ function battle/state/on_start"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.biedijgfde"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "translate": "ol.biedijgfdg"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_zukoexiled,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.zukoexiled_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_zukoexiled,c=1] animation.set_var.emotion_id.16"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.zukoexiled_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "zukoexiled_duel.failure",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.chjhaff"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.bagadfabia"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_zukoexiled] ~ ~ ~ function battle/state/on_start"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.cgfhahjjac"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_zukoexiled,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.zukoexiled_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_zukoexiled,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.zukoexiled_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "zukoexiled_duel.victory_1st",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.chjhaff"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "ol.dibdbfigde"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/tag @e[tag=battle.manager.duel_zukoexiled] add zuko_rematch",
+                            "/tag @e[tag=battle.manager.duel_zukoexiled] remove battle.is_complete",
+                            "/execute @e[tag=battle.manager.duel_zukoexiled] ~ ~ ~ function battle/state/on_start"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.cgfffbhfdj"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_zukoexiled,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.zukoexiled_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_zukoexiled,c=1] animation.set_var.emotion_id.21"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.zukoexiled_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "zukoexiled_duel.victory_2nd",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.chjhaff"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cjefdhjdje"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_zukoexiled] ~ ~ ~ function battle/state/on_claim",
+                            "/function trinket/get/zuko"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.hfdihbbh"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_zukoexiled,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.zukoexiled_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_zukoexiled,c=1] animation.set_var.emotion_id.22"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.zukoexiled_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "zukoexiled_duel.rematch",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.chjhaff"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.chjdiciccb"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_zukoexiled] ~ ~ ~ function battle/state/on_start"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.jjbgibdji"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_zukoexiled,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.zukoexiled_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_zukoexiled,c=1] animation.set_var.emotion_id.4"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.zukoexiled_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            }
+        ]
+    }
+}

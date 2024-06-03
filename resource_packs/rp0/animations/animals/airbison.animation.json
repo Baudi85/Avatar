@@ -1,0 +1,173 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.npc_airbison.pose": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"position": [
+						0,
+						-25,
+						0
+					]
+				},
+				"head": {
+					"rotation": [
+						0,
+						-30,
+						0
+					]
+				},
+				"eyes_open": {
+					"scale": [
+						1,
+						0,
+						1
+					]
+				},
+				"leftThigh": {
+					"rotation": [
+						0,
+						-45,
+						0
+					],
+					"position": [
+						0,
+						4,
+						0
+					]
+				},
+				"leftLeg": {
+					"rotation": [
+						-55,
+						0,
+						0
+					]
+				},
+				"rightThigh": {
+					"rotation": [
+						0,
+						22.5,
+						0
+					],
+					"position": [
+						0,
+						4,
+						0
+					]
+				},
+				"rightLeg_1": {
+					"rotation": [
+						-55,
+						0,
+						0
+					]
+				},
+				"back": {
+					"rotation": [
+						0,
+						15,
+						0
+					]
+				},
+				"leftThigh2": {
+					"rotation": [
+						0,
+						-45,
+						0
+					],
+					"position": [
+						0,
+						4,
+						0
+					]
+				},
+				"leftLeg2": {
+					"rotation": [
+						-55,
+						0,
+						0
+					]
+				},
+				"rightThigh2": {
+					"rotation": [
+						0,
+						22.5,
+						0
+					],
+					"position": [
+						0,
+						4,
+						0
+					]
+				},
+				"rightLeg2": {
+					"rotation": [
+						-55,
+						0,
+						0
+					]
+				},
+				"leftThigh3": {
+					"rotation": [
+						0,
+						-45,
+						0
+					],
+					"position": [
+						0,
+						4,
+						0
+					]
+				},
+				"leftLeg3": {
+					"rotation": [
+						-55,
+						0,
+						0
+					]
+				},
+				"rightThigh3": {
+					"rotation": [
+						0,
+						22.5,
+						0
+					],
+					"position": [
+						0,
+						4,
+						0
+					]
+				},
+				"rightLeg_3": {
+					"rotation": [
+						-55,
+						0,
+						0
+					]
+				},
+				"back2": {
+					"rotation": [
+						15,
+						30,
+						0
+					]
+				},
+				"tail": {
+					"rotation": [
+						-15,
+						30,
+						0
+					]
+				},
+				"tail2": {
+					"rotation": [
+						15,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

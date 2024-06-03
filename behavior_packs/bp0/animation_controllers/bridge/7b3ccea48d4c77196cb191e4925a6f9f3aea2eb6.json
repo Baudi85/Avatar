@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.7b3ccea48d4c77196cb191e4925a6f9f3aea2eb6_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"dying": "q.can_power_jump"
+						}
+					]
+				},
+				"dying": {
+					"transitions": [
+						{
+							"die": "q.life_time>=v.death_time+3"
+						}
+					],
+					"animations": [
+						"7b3ccea48d4c7719_a_0"
+					],
+					"on_entry": [
+						"v.death_time=q.life_time;",
+						"/tag @s add enemy.dying",
+						"@s nom:enemy_idle"
+					]
+				},
+				"die": {
+					"on_entry": [
+						"@s gm1:despawn"
+					]
+				}
+			}
+		}
+	}
+}

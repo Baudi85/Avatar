@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.water_whip_projectile": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"ignore_lighting": true,
+			"uv_anim": {
+				"offset": [
+					0,
+					"q.life_time/11"
+				],
+				"scale": [
+					1,
+					"0.09090909090909091"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.4e3baecdd49a052ba699f869ebea72494630cb64_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"dead": "q.can_power_jump"
+						}
+					]
+				},
+				"dead": {
+					"on_entry": [
+						"/execute @e[tag=encampment.manager,c=1] ~ ~ ~ tag @s[scores={battle_state=!0}] add encampment.manager.target",
+						"/scoreboard players add @e[tag=encampment.manager.target] encampment_bprog 2",
+						"/execute @e[tag=encampment.manager.target] ~ ~ ~ function battle/encampment/update_bossbar",
+						"/tag @e remove encampment.manager.target",
+						"/function battle/encampment/spawners/update_buffer"
+					]
+				}
+			}
+		}
+	}
+}

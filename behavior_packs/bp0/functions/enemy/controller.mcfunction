@@ -1,0 +1,2 @@
+execute @e[tag=enemy,scores={defence_cd=1..}] ~ ~ ~ function enemy/controller/_/defence_cd
+execute @e[name=main,scores={seconds_timer=1}] ~ ~ ~ scoreboard players remove @e[tag=!battle.entity.inside,scores={battle_exit=0..},tag=!battle.manager] battle_exit 1

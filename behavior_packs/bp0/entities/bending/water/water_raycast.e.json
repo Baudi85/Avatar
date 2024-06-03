@@ -1,0 +1,59 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:water_raycast",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"f6f6c45829901ddd_a_0": "animation.f6f6c45829901ddded1fa2f592c63c3fe020b1dc_0"
+			},
+			"scripts": {
+				"animate": [
+					"f6f6c45829901ddd_a_0"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:health": {
+				"value": 8,
+				"max": 8
+			},
+			"minecraft:type_family": {
+				"family": [
+					"water_raycast"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:fire_immune": {}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

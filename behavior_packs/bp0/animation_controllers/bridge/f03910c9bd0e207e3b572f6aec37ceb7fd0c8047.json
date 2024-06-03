@@ -1,0 +1,77 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.f03910c9bd0e207e3b572f6aec37ceb7fd0c8047_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==430)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==430"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.f03910c9bd0e207e3b572f6aec37ceb7fd0c8047_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:freeze_behavior"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==430)"
+						},
+						{
+							"sweeping": "1"
+						}
+					]
+				},
+				"sweeping": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1",
+						"v.fire_sweep_runtime=q.life_time;"
+					],
+					"animations": [
+						"animation.enemy.bending.fire.fire_sweep.sweeping"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==430)"
+						},
+						{
+							"default": "(q.life_time>=v.fire_sweep_runtime+10||q.skin_id!=430)&&q.all_animations_finished"
+						}
+					],
+					"on_exit": [
+						"/event entity @s[tag=can_end_state] gm1:end_state",
+						"@s nom:unfreeze_behavior"
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==430"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		}
+	}
+}

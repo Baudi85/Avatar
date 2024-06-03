@@ -1,0 +1,10 @@
+execute @s[scores={roar_id=0}] ~~~ function roar/activate/str_8/id_0
+execute @s[scores={roar_id=1}] ~~~ function roar/activate/str_8/id_1
+execute @s[scores={roar_id=2}] ~~~ function roar/activate/str_8/id_2
+execute @s[scores={roar_id=3}] ~~~ function roar/activate/str_8/id_3
+execute @s[scores={roar_id=4}] ~~~ function roar/activate/str_8/id_4
+execute @s[scores={roar_id=5}] ~~~ function roar/activate/str_8/id_5
+execute @s[scores={roar_id=6}] ~~~ function roar/activate/str_8/id_6
+execute @s[scores={roar_id=7}] ~~~ function roar/activate/str_8/id_7
+execute @s[scores={roar_id=8}] ~~~ function roar/activate/str_8/id_8
+execute @s[scores={roar_id=9}] ~~~ function roar/activate/str_8/id_9

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.11f5bacc21033f4967a45cde8b1a8ea8e8e3bf77_0": {
+			"animation_length": 1.55,
+			"timeline": {
+				"1.5": [
+					"/tag @s add enemy.dead"
+				]
+			},
+			"loop": false
+		}
+	}
+}

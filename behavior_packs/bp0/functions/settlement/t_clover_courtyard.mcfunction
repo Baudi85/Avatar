@@ -1,0 +1,5 @@
+execute @e[name=main,tag=settlement.t_clover_courtyard.state.0] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_clover_courtyard>:§r§6 Currently settlement_0" }]}
+execute @e[name=main,tag=settlement.t_clover_courtyard.state.1] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_clover_courtyard>:§r§6 Currently settlement_1" }]}
+execute @e[name=main,tag=settlement.t_clover_courtyard.state.2] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_clover_courtyard>:§r§6 Currently settlement_2" }]}
+tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement:§r§6 Entity <" }, {"selector": "@e[tag=settlement.save,x=1341,y=135,z=-1866,dx=18,dy=9,dz=21]"} , {"text":">"}]}
+tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement:§r§6 Entity <" }, {"selector": "@e[tag=settlement.save,x=1319,y=133,z=-1844,dx=62,dy=20,dz=32]"} , {"text":">"}]}

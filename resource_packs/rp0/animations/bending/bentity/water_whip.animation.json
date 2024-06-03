@@ -1,0 +1,100 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.water_whip.in_air": {
+			"loop": true,
+			"bones": {
+				"water_whip": {
+					"position": [
+						0,
+						"math.sin(q.anim_time*720)*24",
+						0
+					],
+					"scale": [
+						"1+math.sin(q.anim_time*720)*0.2",
+						"1+math.cos(q.anim_time*720)*0.3",
+						"1-math.sin(q.anim_time*720)*0.2"
+					]
+				},
+				"root": {
+					"rotation": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.water_pull_stream.particle": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "water_stream",
+						"locator": "effect_locator"
+					}
+				]
+			}
+		},
+		"animation.water_whip.trail": {
+			"animation_length": 1,
+			"loop": true,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "trail",
+						"locator": "water_whip"
+					},
+					{
+						"effect": "lingering_trail",
+						"locator": "water_whip"
+					},
+					{
+						"effect": "trail",
+						"locator": "water_whip2"
+					},
+					{
+						"effect": "lingering_trail",
+						"locator": "water_whip2"
+					},
+					{
+						"effect": "trail",
+						"locator": "water_whip3"
+					},
+					{
+						"effect": "lingering_trail",
+						"locator": "water_whip3"
+					},
+					{
+						"effect": "trail",
+						"locator": "water_whip4"
+					},
+					{
+						"effect": "lingering_trail",
+						"locator": "water_whip4"
+					}
+				]
+			}
+		},
+		"animation.water_whip.despawn": {
+			"animation_length": 1,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "splash"
+					}
+				]
+			},
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "despawn_splash",
+						"locator": "water_whip"
+					}
+				]
+			}
+		}
+	}
+}

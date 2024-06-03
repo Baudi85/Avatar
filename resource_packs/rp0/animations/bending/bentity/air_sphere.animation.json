@@ -1,0 +1,156 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.air_sphere.grow": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.3,
+			"bones": {
+				"air_sphere": {
+					"position": [
+						0,
+						2,
+						0
+					],
+					"scale": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.2": [
+							1.1,
+							1.1,
+							1.1
+						],
+						"0.3": [
+							0.9,
+							0.9,
+							0.9
+						]
+					}
+				}
+			}
+		},
+		"animation.air_sphere.spin": {
+			"loop": true,
+			"bones": {
+				"air_sphere": {
+					"rotation": [
+						"math.sin(q.anim_time*720+55)*7",
+						0,
+						"math.sin(q.anim_time*720)*7"
+					],
+					"position": [
+						0,
+						2,
+						0
+					],
+					"scale": "0.9-math.sin(q.anim_time*720)*0.1"
+				},
+				"air_sphere_spin_1": {
+					"rotation": [
+						"math.cos(q.anim_time*720+60)*15",
+						0,
+						"math.sin(q.anim_time*720+60)*15"
+					]
+				},
+				"air_sphere_spin_2": {
+					"rotation": [
+						"math.sin(q.anim_time*720+60)*15",
+						0,
+						"math.cos(q.anim_time*720+60)*15"
+					]
+				},
+				"air_sphere_spin_3": {
+					"rotation": [
+						"-math.sin(q.anim_time*720+60)*15",
+						0,
+						"-math.cos(q.anim_time*720+60)*15"
+					]
+				},
+				"air_sphere_locator": {
+					"rotation": [
+						0,
+						"q.anim_time*1440",
+						0
+					]
+				}
+			}
+		},
+		"animation.air_sphere.release": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.1,
+			"bones": {
+				"air_sphere": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						0
+					],
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"0.1": [
+							5,
+							5,
+							5
+						]
+					}
+				}
+			}
+		},
+		"animation.air_sphere.fp_pose": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"air_sphere": {
+					"position": [
+						0,
+						0,
+						-8
+					]
+				}
+			}
+		},
+		"animation.air_sphere.avatar_state": {
+			"loop": true,
+			"bones": {
+				"air_sphere": {
+					"scale": 0.8
+				}
+			}
+		},
+		"animation.air_sphere.avatar_state_grow": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.41667,
+			"bones": {
+				"air_sphere": {
+					"scale": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.3333": [
+							1,
+							1,
+							1
+						],
+						"0.4167": [
+							0.8,
+							0.8,
+							0.8
+						]
+					}
+				}
+			}
+		}
+	}
+}

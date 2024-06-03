@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.09463a4e6836a24cbd80838f78f8488ba55cccfc_0": {
+			"states": {
+				"default": {
+					"animations": [
+						"09463a4e6836a24c_a_0"
+					],
+					"on_entry": [
+						"v.load_time=q.life_time;"
+					],
+					"transitions": [
+						{
+							"loaded": "q.life_time>v.load_time+5"
+						}
+					]
+				},
+				"loaded": {
+					"on_entry": [
+						"/tag @s add player.loaded"
+					]
+				}
+			}
+		},
+		"controller.animation.09463a4e6836a24cbd80838f78f8488ba55cccfc_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.load_time=0;"
+					]
+				}
+			}
+		}
+	}
+}

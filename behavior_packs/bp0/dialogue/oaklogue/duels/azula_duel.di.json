@@ -1,0 +1,279 @@
+{
+    "format_version": "1.17.40",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "azula_duel.greeting",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.gdhhjcej"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cedadbbiec"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "tag @e[type=nom:npc_azula] remove settlement.save",
+                            "/execute @e[tag=battle.manager.duel_azula] ~ ~ ~ function battle/state/on_start"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.dcbejdaihg"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "translate": "ol.dcbejdaihi"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_azula,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.azula_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_azula,c=1] animation.set_var.emotion_id.23"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.azula_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "azula_duel.failure",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.gdhhjcej"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.fejibgaad"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_azula] ~ ~ ~ function battle/state/on_start"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.hggeifhcd"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_azula,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.azula_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_azula,c=1] animation.set_var.emotion_id.4"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.azula_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "azula_duel.victory",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.gdhhjcej"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cjefdhjdje"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_azula] ~ ~ ~ function battle/state/on_claim",
+                            "/scoreboard players set @a[scores={return_point_id=!0}] scene_id 12",
+                            "/function trinket/get/azula",
+                            "/function settlement/t_pagoda_plaza/_/_load_settlement_2",
+                            "/tag @e[name=main] add fire_encampment_defeated"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.cgcffgjgbj"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "translate": "ol.cgcffgjgcb"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "translate": "ol.cgcffgjgcd"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_azula,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.azula_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_azula,c=1] animation.set_var.emotion_id.22"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.azula_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "azula_duel.rematch",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.gdhhjcej"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.bjejdfgdfa"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_azula] ~ ~ ~ function battle/state/on_start"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.ddjgafefbf"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_azula,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.azula_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_azula,c=1] animation.set_var.emotion_id.22"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.azula_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            }
+        ]
+    }
+}

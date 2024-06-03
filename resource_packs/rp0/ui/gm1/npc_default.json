@@ -1,0 +1,254 @@
+{
+    "namespace": "gm1_npc_default",
+    "screen_contents": {
+        "type": "panel",
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "size": [ "50%", "100%cm" ],
+        "offset": [ -15, 0 ],
+        "$fade_out": [ 0, 0, 0, 0.74 ],
+        "controls": [
+            { "main@main_box": {}},
+            {
+                "background": {
+                    "type": "image",
+                    "size": [ "100%", "100%sm + 20px" ],
+                    "texture": "textures/ui/gm1/dialogue",
+                    "layer": -1
+                }
+            }
+        ]
+    },
+    "main_box": {
+        "type": "panel",
+        "size": [ "100% - 24px", "100%cm" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "box": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": [ "100%", "100%c" ],
+                    "controls": [
+                        { "dialogue_box@gm1_npc_default.dialogue_box": {}},
+                        { "button_box@gm1_npc_default.button_box": {}}
+                    ]
+                }
+            }
+        ]
+    },
+    "fade": {
+        "type": "custom",
+        "renderer": "gradient_renderer",
+        "color2": [ 0, 0, 0, 0 ],
+        "color1": [ 0, 0, 0, 0 ],
+        "size": [ "100%", "10px" ],
+        "anims": [ "@gm1_npc_default.anim_gradient_background" ]
+    },
+    "dialogue_box": {
+        "type": "panel",
+        "size": [ "100%", "100%cm" ],
+        "controls": [
+            {
+                "labels": {
+                    "type": "stack_panel",
+                    "orientation": "vertical",
+                    "size": [ "100%", "100%c" ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "controls": [
+                        { "name_box@gm1_npc_default.name_box": {}},
+                        { "dialogue_label@gm1_npc_default.dialogue_label": {}}
+                    ]
+                }
+            }
+        ]
+    },
+    "name_box": {
+        "type": "panel",
+        "size": [ "100%", "100%c" ],
+        "controls": [
+            {
+                "label": {
+                    "type": "label",
+                    "color": [0.91, 0.94, 0.71],
+                    "text": "#title_text",
+                    "size": [ "default", "default" ],
+                    "bindings": [{ "binding_name": "#title_text" }],
+                    "offset": [ 0, "-4px"],
+                    "font_scale_factor": 1,
+                    "shadow": true,
+                    "anims": [ "@gm1_npc_default.anim_title__wait" ],
+                    "alpha": 0,
+                    "propagate_alpha": true
+                }
+            },
+            { "underline_default@common.underline": { "alpha": 1, "offset": [ 0, -3 ], "color": [0.61, 0.55, 0.33]}},
+            { "underline_default2@common.underline": { "alpha": 1, "offset": [ 0, -2 ], "color": [0.37, 0.30, 0.18]}}
+        ]
+    },
+    "dialogue_label": {
+        "type": "label",
+        "color": "$f_color_format",
+        "text": "#dialogtext",
+        "offset": [ 0, "+4px"],
+        "font_scale_factor": 0.75,
+        "size": [ "100%", "default" ],
+        "bindings": [{ "binding_name": "#dialogtext" }],
+        "anims": [ "@gm1_npc_default.anim_dialogue__wait" ],
+        "alpha": 0
+    },
+    "button_box": {
+        "type": "panel",
+        "size": [ "100%", "100%cm" ],
+        "controls": [{ "button_list@gm1_npc_default.button_list": {}}]
+    },
+    "button_list": {
+        "type": "stack_panel",
+        "size": [ "100% - 16px", "100%c" ],
+        "offset": [ 0, "+2px"],
+        "anchor_from": "right_middle",
+        "anchor_to": "right_middle",
+        "orientation": "vertical",
+        "collection_name": "student_buttons_collection",
+        "controls": [
+            { "0@gm1_npc_default.button": { "$collection_index": 0 }},
+            { "1@gm1_npc_default.button": { "$collection_index": 1 }},
+            { "2@gm1_npc_default.button": { "$collection_index": 2 }},
+            { "3@gm1_npc_default.button": { "$collection_index": 3 }},
+            { "4@gm1_npc_default.button": { "$collection_index": 4 }},
+            { "5@gm1_npc_default.button": { "$collection_index": 5 }}
+        ]
+    },
+    "button@common.button": {
+        "type": "button",
+        "size": [ "100%", "100%c + 2px" ],
+        "collection_index": "$collection_index",
+        "$pressed_button_name": "button.student_button",
+        "controls": [
+            { "default@button_content": { "$text_color": [ 0.81, 0.78, 0.63 ]}},
+            { "hover@button_content": { "$text_color": [ 0.95, 0.93, 0.85 ], "$hover": true }},
+            { "pressed@button_content": { "$text_color": [ 0.71, 0.68, 0.56 ], "$hover": true }}
+        ],
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "student_buttons_collection",
+                "binding_collection_prefix": "student_buttons"
+            },
+            {
+                "binding_name": "#student_button_text",
+                "binding_type": "collection",
+                "binding_collection_name": "student_buttons_collection"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not #student_button_text = '')",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "button_content": {
+        "type": "panel",
+        "size": [ "100%", "100%cm" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "$hover|default": false,
+        "propagate_alpha": true,
+        "alpha": 0,
+        "$anim": "('gm1_npc_default.anim_button_content__' + $collection_index)",
+        "anims": [ "@$anim" ],
+        "visible": "#visible",
+        "controls": [
+            {
+                "cursor": {
+                    "layer": 1,
+                    "type": "label",
+                    "text": ">",
+                    "font_scale_factor": 0.75,
+                    "offset": [ -2, 0 ],
+                    "shadow": true,
+                    "color": [0.91, 0.94, 0.71],
+                    "$alpha": 0.5,
+                    "variables": [
+                        { "requires": "$hover", "$alpha": 1, "$anim": "gm1_npc_default.anim_button_cursor__left" }
+                    ],
+                    "alpha": "$alpha",
+                    "anchor_from": "left_middle",
+                    "anchor_to": "right_middle",
+                    "$anim": "gm1_npc_default.anim_none",
+                    "anims": [ "@$anim" ]
+                }
+            },
+            {
+                "label": {
+                    "layer": 1,
+                    "type": "label",
+                    "size": [ "100%", "default" ],
+                    "font_scale_factor": 0.75,
+                    "color": "$text_color",
+                    "text_alignment": "left",
+                    "text": "#student_button_text",
+                    "bindings": [
+                        {
+                            "binding_name": "#student_button_text",
+                            "binding_type": "collection",
+                            "binding_collection_name": "student_buttons_collection"
+                        }
+                    ],
+                    "$alpha": 0.8,
+                    "variables": [{ "requires": "$hover", "$alpha": 1 }],
+                    "alpha": "$alpha",
+                    "$anim": "('gm1_npc_default.anim_button_label__' + $collection_index)",
+                    "anims": [ "@$anim" ],
+                    "offset": [ 5, 0 ]
+                }
+            }
+        ]
+    },
+    "anim_none": { "anim_type": "wait", "duration": 0 },
+    "anim_background": { "anim_type": "alpha", "from": 0, "to": 0.75, "duration": 0.5 },
+    "anim_gradient_background": { "anim_type": "alpha", "from": 0, "to": 1, "duration": 0.5 },
+    "anim_title__wait": { "anim_type": "wait", "duration": 0.25, "next": "@gm1_npc_default.anim_text" },
+    "anim_dialogue__wait": { "anim_type": "wait", "duration": 0.5, "next": "@gm1_npc_default.anim_text" },
+    "anim_text": { "anim_type": "alpha", "from": 0, "to": 1, "duration": 0.5 },
+    "anim_button_content__wait": {
+        "anim_type": "wait",
+        "duration": 0.85,
+        "next": "@gm1_npc_default.anim_button_content"
+    },
+    "anim_button_content": { "anim_type": "alpha", "from": 0, "to": 1, "duration": 0 },
+    "anim_button_content__x": { "anim_type": "wait", "next": "@gm1_npc_default.anim_button_content__wait" },
+    "anim_button_label__x": { "anim_type": "wait", "next": "@gm1_npc_default.anim_button_label__wait" },
+    "anim_button_content__0@anim_button_content__x": { "duration": 0 },
+    "anim_button_content__1@anim_button_content__x": { "duration": 0.2 },
+    "anim_button_content__2@anim_button_content__x": { "duration": 0.4 },
+    "anim_button_content__3@anim_button_content__x": { "duration": 0.6 },
+    "anim_button_content__4@anim_button_content__x": { "duration": 0.8 },
+    "anim_button_content__5@anim_button_content__x": { "duration": 1 },
+    "anim_button_label__0@anim_button_label__x": { "duration": 0 },
+    "anim_button_label__1@anim_button_label__x": { "duration": 0.2 },
+    "anim_button_label__2@anim_button_label__x": { "duration": 0.4 },
+    "anim_button_label__3@anim_button_label__x": { "duration": 0.6 },
+    "anim_button_label__4@anim_button_label__x": { "duration": 0.8 },
+    "anim_button_label__5@anim_button_label__x": { "duration": 1 },
+    "anim_button_label__wait": { "anim_type": "wait", "duration": 1.05, "next": "@gm1_npc_default.anim_button_label" },
+    "anim_button_label": { "anim_type": "offset", "from": [ 5, 0 ], "to": [ 0, 0 ], "duration": 0.25, "easing": "out_sine" },
+    "anim_button_cursor__left": {
+        "anim_type": "offset",
+        "from": [ -1, 0 ],
+        "to": [ -4, 0 ],
+        "duration": 0.5,
+        "easing": "in_out_sine",
+        "next": "@gm1_npc_default.anim_button_cursor__right"
+    },
+    "anim_button_cursor__right": {
+        "anim_type": "offset",
+        "from": [ -4, 0 ],
+        "to": [ -1, 0 ],
+        "duration": 0.5,
+        "easing": "in_out_sine",
+        "next": "@gm1_npc_default.anim_button_cursor__left"
+    }
+}

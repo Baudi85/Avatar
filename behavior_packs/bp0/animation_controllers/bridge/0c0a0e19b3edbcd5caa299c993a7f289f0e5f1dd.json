@@ -1,0 +1,72 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.0c0a0e19b3edbcd5caa299c993a7f289f0e5f1dd_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==130)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==130"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.0c0a0e19b3edbcd5caa299c993a7f289f0e5f1dd_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==130)"
+						},
+						{
+							"throw": "q.variant==1"
+						}
+					],
+					"on_entry": [
+						"@s nom:state_bending_teq_0"
+					],
+					"animations": [
+						"0c0a0e19b3edbcd5_a_1"
+					]
+				},
+				"throw": {
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==130)"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"on_entry": [
+						"/function bending/earth/earth_wall/on_raycast_hit_barrier_enemy",
+						"@s nom:state_bending_teq_0"
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==130"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		}
+	}
+}

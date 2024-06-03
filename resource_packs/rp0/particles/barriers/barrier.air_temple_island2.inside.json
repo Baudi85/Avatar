@@ -1,0 +1,349 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "nom:barrier.air_temple_island2.inside",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/light_orb"
+			}
+		},
+		"curves": {
+			"variable.x_position": {
+				"type": "linear",
+				"input": "v.count",
+				"horizontal_range": "v.block_count",
+				"nodes": [
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9,
+					9,
+					10,
+					10,
+					11,
+					11,
+					12,
+					12,
+					13,
+					13,
+					14,
+					14,
+					15,
+					15,
+					16,
+					16,
+					17,
+					17,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					17,
+					17,
+					16,
+					16,
+					15,
+					15,
+					14,
+					14,
+					13,
+					13,
+					12,
+					12,
+					11,
+					11,
+					10,
+					10,
+					9,
+					9,
+					8,
+					8,
+					7,
+					6,
+					0,
+					1,
+					2,
+					3,
+					4,
+					5
+				]
+			},
+			"variable.y_position": {
+				"type": "linear",
+				"input": "v.count",
+				"horizontal_range": "v.block_count",
+				"nodes": [
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					2,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				]
+			},
+			"variable.z_position": {
+				"type": "linear",
+				"input": "v.count",
+				"horizontal_range": "v.block_count",
+				"nodes": [
+					-19,
+					-19,
+					-19,
+					-19,
+					-19,
+					-19,
+					-19,
+					-19,
+					-19,
+					-18,
+					-18,
+					-17,
+					-17,
+					-16,
+					-16,
+					-15,
+					-15,
+					-14,
+					-14,
+					-13,
+					-13,
+					-12,
+					-12,
+					-11,
+					-11,
+					-10,
+					-10,
+					-9,
+					-9,
+					-8,
+					-7,
+					-6,
+					-5,
+					-4,
+					-3,
+					-2,
+					-1,
+					0,
+					1,
+					2,
+					3,
+					4,
+					5,
+					6,
+					7,
+					8,
+					8,
+					9,
+					9,
+					10,
+					10,
+					11,
+					11,
+					12,
+					12,
+					13,
+					13,
+					14,
+					14,
+					15,
+					15,
+					16,
+					16,
+					17,
+					17,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18,
+					18
+				]
+			},
+			"variable.size": {
+				"type": "bezier",
+				"input": "variable.particle_age/variable.particle_lifetime",
+				"horizontal_range": 1,
+				"nodes": [
+					1,
+					1,
+					0.5,
+					0
+				]
+			}
+		},
+		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "v.block_count=73;v.count=0;v.p=8*v.block_count;"
+			},
+			"minecraft:emitter_rate_instant": {
+				"num_particles": "v.p"
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.5
+			},
+			"minecraft:emitter_shape_box": {
+				"offset": [
+					"v.x_position",
+					"v.y_position",
+					"v.z_position"
+				],
+				"half_dimensions": [
+					0.5,
+					0,
+					0.5
+				],
+				"direction": [
+					0,
+					1,
+					0
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.75,1.25)"
+			},
+			"minecraft:particle_expire_if_not_in_blocks": [
+				"minecraft:air",
+				"minecraft:water"
+			],
+			"minecraft:particle_initial_speed": "math.random(0,1)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [
+					0,
+					"math.random(0.5,1.5)",
+					0
+				]
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"0.55*(v.size)",
+					"0.55*(v.size)"
+				],
+				"facing_camera_mode": "rotate_y",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						"math.round(variable.particle_random_1*2)*16",
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "v.particle_age/v.particle_lifetime",
+					"gradient": {
+						"0.0": "#ECDA00",
+						"1.0": "#FFFFEBF6"
+					}
+				}
+			},
+			"minecraft:particle_lifetime_events": {
+				"creation_event": [
+					"p_spawn"
+				]
+			}
+		},
+		"events": {
+			"p_spawn": {
+				"expression": "v.count=v.count < v.block_count ? v.count+1 : 0;"
+			}
+		}
+	}
+}

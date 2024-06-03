@@ -1,0 +1,20 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.1ebec212f5fa55e363a1e59fd663cc0d509f6e82_0": {
+			"animation_length": 15,
+			"timeline": {
+				"0.0": [
+					"/function entity/water_puddle/on_spawn"
+				],
+				"0.10": [
+					"/tag @s add tp_to_ground_entity",
+					"/function utils/tp_to_ground"
+				],
+				"14.95": [
+					"@s nom:pre_despawn"
+				]
+			}
+		}
+	}
+}

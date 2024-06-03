@@ -1,0 +1,68 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.70a1be08233e7bcbe3c74d900ad410df3b1f683d_0": {
+			"initial_state": "pre_default",
+			"states": {
+				"pre_default": {
+					"on_entry": [
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"on_entry": [
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"pre_despawn": "q.is_ignited||(!q.is_on_ground&&q.life_time>=v.runtime+0.6)"
+						}
+					]
+				},
+				"pre_despawn": {
+					"transitions": [
+						{
+							"despawn": "1"
+						}
+					]
+				},
+				"despawn": {
+					"on_entry": [
+						"@s nom:despawn"
+					]
+				}
+			}
+		},
+		"controller.animation.70a1be08233e7bcbe3c74d900ad410df3b1f683d_1": {
+			"states": {
+				"invisible": {
+					"transitions": [
+						{
+							"on_ground": "q.is_on_ground"
+						}
+					]
+				},
+				"on_ground": {
+					"on_entry": [
+						"t.water_puddle_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"visible": "q.life_time>=t.water_puddle_runtime+0.2"
+						}
+					]
+				},
+				"visible": {
+					"on_entry": [
+						"@s nom:visible"
+					]
+				}
+			}
+		}
+	}
+}

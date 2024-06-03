@@ -1,0 +1,44 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.1cb8f147c1033a7d4a840f4e094ed27aae3215f3_0": {
+			"loop": true,
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"/function bending/earth/earth_wall/earth_wall_tick"
+				]
+			}
+		},
+		"animation.1cb8f147c1033a7d4a840f4e094ed27aae3215f3_1": {
+			"animation_length": 1.2,
+			"timeline": {
+				"0.2": [
+					"/ride @s summon_rider nom:earth_wall_block_breaker"
+				],
+				"0.35": [
+					"/function bending/earth/earth_wall/fill_barriers"
+				],
+				"0.5": [
+					"/function bending/earth/earth_wall/on_earth_wall_popped"
+				]
+			}
+		},
+		"animation.1cb8f147c1033a7d4a840f4e094ed27aae3215f3_2": {
+			"animation_length": 0.5,
+			"timeline": {
+				"0.4": [
+					"/event entity @s[tag=enemy_spawned] nom:despawn"
+				]
+			}
+		},
+		"animation.1cb8f147c1033a7d4a840f4e094ed27aae3215f3_3": {
+			"animation_length": 0.5,
+			"timeline": {
+				"0.4": [
+					"/event entity @s[tag=enemy_spawned] nom:despawn"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,43 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:defence_emitter_marker",
+			"is_summonable": true,
+			"runtime_identifier": "minecraft:arrow"
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:timer": {
+				"time": 0.2,
+				"looping": true,
+				"time_down_event": {
+					"event": "nom:despawn"
+				}
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {
+					"remove_child_entities": false
+				}
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.water.puddle_detect": {
+			"animation_length": 0.1,
+			"timeline": {
+				"0.05": [
+					"/function bending/water/puddle/detect_solid_north",
+					"/function bending/water/puddle/detect_solid_south",
+					"/function bending/water/puddle/detect_solid_east",
+					"/function bending/water/puddle/detect_solid_west"
+				]
+			},
+			"loop": false
+		}
+	}
+}

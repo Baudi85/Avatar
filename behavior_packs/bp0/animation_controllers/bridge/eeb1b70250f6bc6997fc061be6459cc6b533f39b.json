@@ -1,0 +1,203 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.eeb1b70250f6bc6997fc061be6459cc6b533f39b_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"thrown": "q.variant==4"
+						}
+					],
+					"on_entry": [
+						"/summon nom:earth_wall_target",
+						"/scoreboard players add @s roar_cooldown 0"
+					]
+				},
+				"thrown": {
+					"on_entry": [
+						"v.runtime_ewac=q.life_time;",
+						"v.initial_y_pos=q.position(1)-1.8;"
+					],
+					"transitions": [
+						{
+							"in_air": "!q.is_on_ground"
+						},
+						{
+							"on_hit": "q.is_on_ground&&q.life_time>v.runtime_ewac+0.2"
+						}
+					]
+				},
+				"in_air": {
+					"transitions": [
+						{
+							"on_reinitiate": "(q.is_on_ground||math.abs(q.position_delta(0))<0.01&&math.abs(q.position_delta(2))<0.01)&&q.position(1)>v.initial_y_pos-1.8"
+						},
+						{
+							"on_hit": "(q.is_on_ground||math.abs(q.position_delta(0))<0.01&&math.abs(q.position_delta(2))<0.01)"
+						}
+					]
+				},
+				"on_reinitiate": {
+					"on_entry": [
+						"/function bending/earth/earth_wall/on_earth_wall_reinitiate"
+					],
+					"transitions": [
+						{
+							"default": "q.variant!=4"
+						}
+					]
+				},
+				"on_hit": {
+					"on_entry": [
+						"/function bending/earth/earth_wall/on_earth_wall_throw_hit"
+					]
+				}
+			}
+		},
+		"controller.animation.eeb1b70250f6bc6997fc061be6459cc6b533f39b_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"fast_despawn": "q.is_ignited"
+						},
+						{
+							"slow_despawn": "q.is_sheared"
+						}
+					]
+				},
+				"slow_despawn": {
+					"on_entry": [
+						"v.runtime_ewac=q.life_time;",
+						"/tag @s add slow_despawning",
+						"/scoreboard players set @s bending_id 0",
+						"/fill ^-1.5 ^^-.2 ^1.5 ^2.5 ^.2 air 0 replace minecraft:stained_glass 14"
+					],
+					"transitions": [
+						{
+							"despawn": "q.life_time>v.runtime_ewac+2"
+						}
+					]
+				},
+				"fast_despawn": {
+					"on_entry": [
+						"/fill ^-1.5 ^^-.2 ^1.5 ^2.5 ^.2 air 0 replace minecraft:stained_glass 14"
+					],
+					"transitions": [
+						{
+							"despawn": "1"
+						}
+					]
+				},
+				"despawn": {
+					"on_entry": [
+						"@s nom:real_despawn"
+					]
+				}
+			}
+		},
+		"controller.animation.eeb1b70250f6bc6997fc061be6459cc6b533f39b_2": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.runtime_ewac_timeout=q.life_time;"
+					],
+					"transitions": [
+						{
+							"reset_time": "query.variant==4||q.is_tamed"
+						},
+						{
+							"timeout": "q.life_time>=(v.runtime_ewac_timeout??q.life_time)+12"
+						}
+					]
+				},
+				"reset_time": {
+					"on_entry": [
+						"v.runtime_ewac_timeout=q.life_time;",
+						"@s nom:remove_reset_timeout"
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=4&&!q.is_tamed"
+						}
+					]
+				},
+				"timeout": {
+					"on_entry": [
+						"/event entity @s nom:slow_despawn"
+					]
+				}
+			}
+		},
+		"controller.animation.eeb1b70250f6bc6997fc061be6459cc6b533f39b_3": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_pre_reinit": "q.variant==4"
+						}
+					]
+				},
+				"pre_pre_reinit": {
+					"transitions": [
+						{
+							"pre_reinit": "q.variant==3"
+						}
+					]
+				},
+				"pre_reinit": {
+					"on_entry": [
+						"v.runtime_ewac_reinit=q.life_time;"
+					],
+					"transitions": [
+						{
+							"reinit": "q.life_time>=(v.runtime_ewac_reinit??q.life_time)+0.2"
+						}
+					]
+				},
+				"reinit": {
+					"on_entry": [
+						"/function bending/earth/earth_wall/on_earth_wall_reinitiate_post"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.eeb1b70250f6bc6997fc061be6459cc6b533f39b_4": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_execute": "q.variant==2"
+						}
+					]
+				},
+				"pre_execute": {
+					"on_entry": [
+						"v.runtime_ewac_stage_2_delayed=q.life_time;"
+					],
+					"transitions": [
+						{
+							"execute": "q.life_time>=(v.runtime_ewac_stage_2_delayed??q.life_time)+0.2"
+						}
+					]
+				},
+				"execute": {
+					"on_entry": [
+						"/function bending/earth/earth_wall/on_earth_wall_deploying_2_delayed"
+					],
+					"transitions": [
+						{
+							"default": "q.variant!=2"
+						}
+					]
+				}
+			}
+		}
+	}
+}

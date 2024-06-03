@@ -1,0 +1,1 @@
+dialogue open @e[type=nom:ui_handler,c=1] @s unlock.art

@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.e26626bfd4035bd939c6c3f0327d5e8c147a4e85_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"interact": "q.is_ignited"
+						},
+						{
+							"force": "q.is_saddled"
+						}
+					]
+				},
+				"interact": {
+					"on_entry": [
+						"/tag @s add oaklogue.speaker.start",
+						"/execute @p ~ ~ ~ function oaklogue/citizen_ati_female/staging",
+						"/tag @s remove oaklogue.speaker.start",
+						"@s nom:oaklogue.on_interact_end"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"force": {
+					"on_entry": [
+						"/tag @s add oaklogue.speaker.start",
+						"/execute @a[r=2] ~ ~ ~ function oaklogue/citizen_ati_female/staging",
+						"/tag @s remove oaklogue.speaker.start",
+						"@s nom:oaklogue.on_interact_end"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		}
+	}
+}

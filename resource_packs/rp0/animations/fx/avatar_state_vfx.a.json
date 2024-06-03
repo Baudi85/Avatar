@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.avatar_state_default": {
+			"animation_length": 1,
+			"loop": true,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "avatar_state_head_dust",
+						"locator": "forehead_locator"
+					},
+					{
+						"effect": "avatar_state_body_dust",
+						"locator": "body_locator"
+					},
+					{
+						"effect": "avatar_state_limb_dust",
+						"locator": "lefthand_locator"
+					},
+					{
+						"effect": "avatar_state_limb_dust",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "avatar_state_limb_dust",
+						"locator": "leftfoot_locator"
+					},
+					{
+						"effect": "avatar_state_limb_dust",
+						"locator": "rightfoot_locator"
+					}
+				]
+			}
+		}
+	}
+}

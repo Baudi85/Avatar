@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.d77bb98b0258bdaa6cff4e1a9e977d5f03135b54_0": {
+			"timeline": {
+				"0.0": [
+					"/tp @s[scores={battle_exit=..0},tag=!battle.entity.inside,tag=!enemy.dying] @e[tag=encampment.spawner,c=1]"
+				]
+			},
+			"animation_length": 1,
+			"loop": true
+		}
+	}
+}

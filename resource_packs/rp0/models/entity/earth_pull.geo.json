@@ -1,0 +1,522 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.earth_pull",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 6,
+				"visible_bounds_offset": [
+					0,
+					2,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "cube_root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "earth_cube1",
+					"parent": "cube_root",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4,
+								-4,
+								-4
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								8,
+								8
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube2",
+					"parent": "cube_root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "earth_cube2_1",
+					"parent": "earth_cube2",
+					"pivot": [
+						-4,
+						4,
+						-4
+					],
+					"cubes": [
+						{
+							"origin": [
+								-8,
+								0,
+								-8
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								74,
+								24
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube2_2",
+					"parent": "earth_cube2",
+					"pivot": [
+						4,
+						4,
+						-4
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								0,
+								-8
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								8,
+								8
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube2_3",
+					"parent": "earth_cube2",
+					"pivot": [
+						-4,
+						-4,
+						-4
+					],
+					"cubes": [
+						{
+							"origin": [
+								-8,
+								-8,
+								-8
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								80,
+								8
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube2_4",
+					"parent": "earth_cube2",
+					"pivot": [
+						4,
+						-4,
+						-4
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								-8,
+								-8
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								16,
+								80
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube2_5",
+					"parent": "earth_cube2",
+					"pivot": [
+						4,
+						4,
+						4
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								0,
+								0
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								0,
+								80
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube2_6",
+					"parent": "earth_cube2",
+					"pivot": [
+						-4,
+						4,
+						4
+					],
+					"cubes": [
+						{
+							"origin": [
+								-8,
+								0,
+								0
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								65.5,
+								24
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube2_7",
+					"parent": "earth_cube2",
+					"pivot": [
+						-4,
+						-4,
+						4
+					],
+					"cubes": [
+						{
+							"origin": [
+								-8,
+								-8,
+								0
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								8,
+								80
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube2_8",
+					"parent": "earth_cube2",
+					"pivot": [
+						4,
+						-4,
+						4
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								-8,
+								0
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								96,
+								80
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube3",
+					"parent": "cube_root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "earth_cube3_1",
+					"parent": "earth_cube3",
+					"pivot": [
+						-8,
+						8,
+						-8
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								0,
+								-16
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube3_2",
+					"parent": "earth_cube3",
+					"pivot": [
+						8,
+						8,
+						-7.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								0,
+								-16
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": [
+								64,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube3_3",
+					"parent": "earth_cube3",
+					"pivot": [
+						-8,
+						-8,
+						-8
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								-16,
+								-16
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": [
+								0,
+								63.9
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube3_4",
+					"parent": "earth_cube3",
+					"pivot": [
+						8,
+						-8,
+						-8
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								-16,
+								-16
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": [
+								42,
+								33
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube3_5",
+					"parent": "earth_cube3",
+					"pivot": [
+						8,
+						8,
+						8
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								0,
+								0
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": [
+								64,
+								64
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube3_6",
+					"parent": "earth_cube3",
+					"pivot": [
+						-8,
+						8,
+						8
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								0,
+								0
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": [
+								64,
+								64
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube3_7",
+					"parent": "earth_cube3",
+					"pivot": [
+						8,
+						-8,
+						8
+					],
+					"cubes": [
+						{
+							"origin": [
+								0,
+								-16,
+								0
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": [
+								0,
+								64
+							]
+						}
+					]
+				},
+				{
+					"name": "earth_cube3_8",
+					"parent": "earth_cube3",
+					"pivot": [
+						-8,
+						-8,
+						8
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								-16,
+								0
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": [
+								64,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "effect_locator",
+					"parent": "cube_root",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"locators": {
+						"effect_locator": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			]
+		}
+	]
+}

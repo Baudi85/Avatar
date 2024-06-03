@@ -1,0 +1,95 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.humanoid_bending",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 21,
+				"visible_bounds_height": 18.5,
+				"visible_bounds_offset": [
+					0,
+					7.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [
+						0,
+						4,
+						0
+					]
+				},
+				{
+					"name": "water_bending",
+					"parent": "body",
+					"pivot": [
+						0,
+						4,
+						0
+					]
+				},
+				{
+					"name": "particle_locator",
+					"parent": "water_bending",
+					"pivot": [
+						0,
+						4,
+						0
+					],
+					"locators": {
+						"water_bending_locator": [
+							0,
+							4,
+							0
+						]
+					}
+				},
+				{
+					"name": "particle_locator2",
+					"parent": "water_bending",
+					"pivot": [
+						0,
+						4,
+						0
+					],
+					"locators": {
+						"water_bending_locator2": [
+							0,
+							4,
+							0
+						]
+					}
+				},
+				{
+					"name": "particle_locator3",
+					"parent": "water_bending",
+					"pivot": [
+						0,
+						4,
+						0
+					],
+					"locators": {
+						"water_bending_locator3": [
+							0,
+							4,
+							0
+						]
+					}
+				}
+			]
+		}
+	]
+}

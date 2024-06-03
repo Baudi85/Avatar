@@ -1,0 +1,240 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending.air.tornado": {
+			"initial_state": "default",
+			"states": {
+				"fail_charge": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/air/tornado/on_fail_charge"
+					],
+					"transitions": [
+						{
+							"cooldown": "1"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_saddled||!q.is_using_item"
+						}
+					]
+				},
+				"default": {
+					"on_entry": [
+						"v.tornado_const_charge_time=1;",
+						"v.tornado_const_timeout_time=4;",
+						"@s nom:state_bending_teq_0"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.is_using_item&&q.is_saddled"
+						},
+						{
+							"charging": "q.is_using_item"
+						}
+					]
+				},
+				"charging": {
+					"on_entry": [
+						"v.tornado_runtime=q.life_time;",
+						"@s nom:state_bending_teq_1"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_using_item"
+						},
+						{
+							"charged": "q.life_time>=v.tornado_runtime+v.tornado_const_charge_time"
+						}
+					]
+				},
+				"charged": {
+					"on_entry": [
+						"v.tornado_runtime=q.life_time;",
+						"@s nom:state_bending_teq_2",
+						"/function bending/air/tornado/on_charged"
+					],
+					"transitions": [
+						{
+							"deployed": "!q.is_using_item||q.life_time>v.tornado_runtime+v.tornado_const_timeout_time"
+						}
+					]
+				},
+				"deployed": {
+					"on_entry": [
+						"v.tornado_runtime=q.life_time;",
+						"@s nom:state_bending_teq_3",
+						"/function bending/air/tornado/on_deployed"
+					],
+					"transitions": [
+						{
+							"cooldown": "!q.is_using_item"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.air.air_blades": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"pre_using": "q.is_using_item&&!q.is_saddled"
+						},
+						{
+							"cooldown": "q.is_using_item&&q.is_saddled"
+						}
+					]
+				},
+				"pre_using": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_1"
+					],
+					"transitions": [
+						{
+							"using_item": "q.life_time>=v.runtime+0.22"
+						},
+						{
+							"default": "q.is_saddled||q.mark_variant==-1||!q.is_using_item"
+						}
+					]
+				},
+				"using_item": {
+					"animations": [
+						"bending.air.air_blades.using"
+					],
+					"on_entry": [
+						"/function bending/air/air_blades/on_using_item"
+					],
+					"on_exit": [
+						"/stopsound @s air_gust_loop"
+					],
+					"transitions": [
+						{
+							"cooldown": "!q.is_using_item||q.variant==5||q.mark_variant==-1"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"@s nom:state_bending_teq_5",
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"cooldown2": "q.life_time>=v.runtime+0.5"
+						},
+						{
+							"default": "(!q.is_saddled||!q.is_using_item)"
+						}
+					]
+				},
+				"cooldown2": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"default": "(!q.is_saddled||!q.is_using_item)"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.air.air_sphere": {
+			"states": {
+				"cooldown": {
+					"on_entry": [
+						"v.air_sphere_runtime=q.life_time;",
+						"@s nom:state_bending_teq_0",
+						"/effect @s levitation 0 100 true"
+					],
+					"transitions": [
+						{
+							"default": "(!q.is_saddled||!q.is_using_item)&&q.life_time>=v.air_sphere_runtime+0.3"
+						}
+					]
+				},
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.is_using_item&&q.is_saddled"
+						},
+						{
+							"using_item": "q.is_using_item"
+						}
+					]
+				},
+				"using_item": {
+					"on_entry": [
+						"/function bending/air/air_sphere/on_using_item"
+					],
+					"transitions": [
+						{
+							"charging": "q.variant==1&&q.is_using_item"
+						},
+						{
+							"cooldown": "!q.is_using_item"
+						}
+					]
+				},
+				"charging": {
+					"on_entry": [
+						"/function bending/air/air_sphere/on_charging",
+						"v.air_sphere_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"cooldown": "!q.is_using_item"
+						},
+						{
+							"channeling": "q.is_using_item&&q.life_time>=v.air_sphere_runtime+0.5"
+						}
+					]
+				},
+				"channeling": {
+					"on_entry": [
+						"/function bending/air/air_sphere/on_channeling",
+						"v.air_sphere_runtime=q.life_time;"
+					],
+					"animations": [
+						"bending.air.air_sphere.on_channeling_loop"
+					],
+					"transitions": [
+						{
+							"release": "!q.is_using_item||q.variant==3"
+						}
+					]
+				},
+				"release": {
+					"on_entry": [
+						"@s nom:state_bending_teq_3",
+						"/function bending/air/air_sphere/on_release",
+						"v.air_sphere_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.variant==0&&q.life_time>=v.air_sphere_runtime+1.5"
+						}
+					]
+				}
+			}
+		}
+	}
+}

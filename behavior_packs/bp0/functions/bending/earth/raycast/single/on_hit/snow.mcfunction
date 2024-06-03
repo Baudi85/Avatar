@@ -1,0 +1,11 @@
+tag @p[tag=raycaster] add rc_successful
+summon nom:earth_raycast ~~.5 ~
+scoreboard players operation @e[type=nom:earth_raycast,c=1] bending_id = @p[tag=raycaster] bending_id
+tag @e[type=nom:earth_raycast,c=1] add eiq
+execute @e[tag=eiq] ~~~ function utils/centre_in_block
+tag @e[tag=eiq] remove eiq
+execute @s ~~~ detect ~~~ minecraft:snow_layer -1 tag @p[tag=raycaster] add rc_e_single_found_snow
+execute @s ~~~ detect ~~~ minecraft:snow -1 tag @p[tag=raycaster] add rc_e_single_found_snow
+execute @s ~~~ detect ~~~ minecraft:podzol -1 tag @p[tag=raycaster] add rc_e_single_found_snow
+execute @s ~~~ detect ~~~ minecraft:gray_glazed_terracotta -1 tag @p[tag=raycaster] add rc_e_single_found_snow
+execute @s ~~~ detect ~~~ minecraft:silver_glazed_terracotta -1 tag @p[tag=raycaster] add rc_e_single_found_snow

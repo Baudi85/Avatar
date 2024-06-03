@@ -1,0 +1,15 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.3ea4c1591d020060650a4724a118216668b68dc1_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/execute @s[tag=!dont_cull] ~~~ function performance_mode/cull_check",
+						"/execute @s ~~~ function performance_mode/remove_outlines"
+					]
+				}
+			}
+		}
+	}
+}

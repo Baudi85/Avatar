@@ -1,0 +1,40 @@
+{
+    "biomes": {
+       "ocean": {
+          "water_fog_color": "#FFFFFF",
+          "water_fog_distance": 65,
+          "water_surface_color": "#FFFFFF",
+          "water_surface_transparency": 0.7
+       },
+        "beach": {
+          "water_fog_color": "#FFFFFF",
+          "water_fog_distance": 65,
+          "water_surface_color": "#FFFFFF",
+          "water_surface_transparency": 0.5
+       },
+        "birch_forest" : {
+          "water_fog_color": "#FFFFFF",
+          "water_fog_distance": 65,
+          "water_surface_color" : "#FFFFFF",
+          "water_surface_transparency": 0.6
+       },
+        "forest" : {
+          "water_fog_color": "#FFFFFF",
+          "water_fog_distance": 45,
+          "water_surface_color" : "#FFFFFF",
+          "water_surface_transparency": 0.7
+       },
+        "jungle" : {
+          "water_fog_color": "#FFFFFF",
+          "water_fog_distance": 35,
+          "water_surface_color" : "#FFFFFF",
+          "water_surface_transparency": 0.8
+       },
+       "plains": {
+        "water_fog_color": "#FFFFFF",
+        "water_fog_distance": 65,
+        "water_surface_color": "#FFFFFF",
+        "water_surface_transparency": 0.7
+       }
+    }
+ }

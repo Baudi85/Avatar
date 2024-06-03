@@ -1,0 +1,1 @@
+tellraw @a[tag=dev] {"rawtext":[ {"text":"§c[DEBUG]§r " },{ "text": "§6Activating Performance Mode" }]}

@@ -1,0 +1,154 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:g_cabbagecart",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"entity_reset": "controller.animation.entity_reset",
+				"531f87c3327287cb_ac_0": "controller.animation.531f87c3327287cb6a73a27f9a0ddc2223550a04_0"
+			},
+			"scripts": {
+				"animate": [
+					"entity_reset",
+					"531f87c3327287cb_ac_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:health": {
+				"value": 10,
+				"max": 10
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false,
+						"on_damage": {
+							"event": "nom:explode",
+							"filters": {
+								"test": "has_damage",
+								"value": "fatal"
+							}
+						}
+					},
+					{
+						"on_damage": {
+							"event": "nom:damage",
+							"filters": {
+								"test": "has_damage",
+								"value": "fatal",
+								"operator": "!="
+							}
+						},
+						"deals_damage": true
+					}
+				]
+			},
+			"minecraft:type_family": {
+				"family": [
+					"decoration"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 3,
+						"height": 2,
+						"pivot": [
+							0,
+							1,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"value": "delete_item",
+										"domain": "hand",
+										"subject": "other"
+									},
+									{
+										"test": "has_ability",
+										"value": "instabuild",
+										"subject": "other"
+									}
+								]
+							},
+							"event": "gm1:despawn"
+						}
+					}
+				]
+			},
+			"minecraft:physics": {
+				"has_collision": true,
+				"has_gravity": true
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			}
+		},
+		"component_groups": {
+			"nom:explode": {
+				"minecraft:is_ignited": {}
+			},
+			"nom:damage": {
+				"minecraft:is_sheared": {}
+			},
+			"gm1:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"events": {
+			"nom:explode": {
+				"add": {
+					"component_groups": [
+						"nom:explode"
+					]
+				}
+			},
+			"nom:damage": {
+				"add": {
+					"component_groups": [
+						"nom:damage"
+					]
+				}
+			},
+			"nom:undamage": {
+				"remove": {
+					"component_groups": [
+						"nom:damage"
+					]
+				}
+			},
+			"nom:reset": {
+				"remove": {
+					"component_groups": [
+						"nom:damage",
+						"nom:explode"
+					]
+				}
+			},
+			"gm1:despawn": {
+				"add": {
+					"component_groups": [
+						"gm1:despawn"
+					]
+				}
+			}
+		}
+	}
+}

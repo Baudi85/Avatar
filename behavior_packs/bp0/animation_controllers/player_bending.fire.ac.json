@@ -1,0 +1,233 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending.fire.jet": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.const_timeout_time=5;",
+						"v.const_charge_time=0.25;",
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.is_saddled"
+						},
+						{
+							"charging": "q.is_using_item"
+						}
+					]
+				},
+				"fail_charge": {
+					"on_entry": [
+						"/function bending/fire/jet/on_fail_charge"
+					],
+					"transitions": [
+						{
+							"cooldown": "1"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_saddled"
+						}
+					]
+				},
+				"charging": {
+					"animations": [
+						"bending.fire.jet.charging",
+						"bending.fire.jet.shake"
+					],
+					"on_entry": [
+						"@s nom:state_bending_teq_1",
+						"v.runtime=q.life_time;",
+						"/function bending/fire/jet/on_charging",
+						"/function player/freeze/on"
+					],
+					"transitions": [
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"jetting": "(!q.is_using_item&&q.life_time>=v.runtime+v.const_charge_time)||q.life_time>=v.runtime+v.const_timeout_time||q.variant==4"
+						}
+					],
+					"on_exit": [
+						"/function player/freeze/off"
+					]
+				},
+				"jetting": {
+					"on_entry": [
+						"@s nom:state_bending_teq_4",
+						"/function bending/fire/jet/run",
+						"v.runtime=q.life_time;"
+					],
+					"animations": [
+						"animation.bending.fire.jet.using"
+					],
+					"transitions": [
+						{
+							"default": "q.variant==0||q.mark_variant!=42"
+						},
+						{
+							"blowup": "q.life_time>v.runtime+0.3&&(q.is_sneaking||!query.is_riding||q.is_using_item)"
+						}
+					]
+				},
+				"blowup": {
+					"on_entry": [
+						"/function bending/fire/jet/blowup",
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_5"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.life_time>v.runtime+1||q.variant==0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.fire.fire_sweep": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.is_saddled"
+						},
+						{
+							"pre_using": "q.is_using_item"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/default",
+						"/function player/freeze/off",
+						"/stopsound @s fire_sweep",
+						"/stopsound @s fire_sweep_init",
+						"v.runtime_fire_sweep=q.life_time;"
+					],
+					"transitions": [
+						{
+							"default": "(!q.is_saddled&&q.life_time>=v.runtime_fire_sweep+1.5)||!q.is_using_item"
+						}
+					]
+				},
+				"pre_using": {
+					"on_entry": [
+						"v.runtime_fire_sweep=q.life_time;",
+						"@s nom:state_bending_teq_1",
+						"/function bending/fire/fire_sweep/on_pre_using"
+					],
+					"transitions": [
+						{
+							"using": "q.life_time>=v.runtime_fire_sweep+0.2"
+						},
+						{
+							"cooldown": "!q.is_using_item"
+						}
+					]
+				},
+				"using": {
+					"on_entry": [
+						"v.runtime_fire_sweep=q.life_time;",
+						"@s nom:state_bending_teq_2",
+						"/function bending/fire/fire_sweep/on_using"
+					],
+					"animations": [
+						"animation.bending.fire.fire_sweep.using",
+						"chi.using.fire_sweep"
+					],
+					"on_exit": [
+						"/function player/freeze/off",
+						"/playsound fire_sweep_end @s",
+						"/stopsound @s fire_sweep",
+						"/stopsound @s fire_sweep_init"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.life_time>=v.runtime_fire_sweep+5||!q.is_using_item||q.variant==0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.fire.jet_stream": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.is_saddled"
+						},
+						{
+							"pre_using": "q.is_using_item"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"v.runtime_jet_stream=q.life_time;",
+						"/function bending/state/default",
+						"/function player/freeze/off",
+						"/stopsound @s fire_stream_loop"
+					],
+					"transitions": [
+						{
+							"default": "(!q.is_saddled||!q.is_using_item)&&q.life_time>=v.runtime_jet_stream+0.5"
+						}
+					]
+				},
+				"pre_using": {
+					"on_entry": [
+						"v.runtime_jet_stream=q.life_time;",
+						"@s nom:state_bending_teq_1",
+						"/function bending/fire/jet_stream/on_pre_using"
+					],
+					"transitions": [
+						{
+							"using": "q.life_time>=v.runtime_jet_stream+0.25"
+						}
+					]
+				},
+				"using": {
+					"on_entry": [
+						"v.runtime_jet_stream=q.life_time;",
+						"@s nom:state_bending_teq_2",
+						"/function bending/fire/jet_stream/on_using"
+					],
+					"animations": [
+						"animation.bending.fire.jet_stream.using",
+						"chi.using.jet_stream"
+					],
+					"on_exit": [
+						"/function player/freeze/off"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.life_time>=v.runtime_jet_stream+5||!q.is_using_item||q.is_in_water||q.variant==0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

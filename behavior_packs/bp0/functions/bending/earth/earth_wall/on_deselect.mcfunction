@@ -1,0 +1,3 @@
+function bending/earth/raycast/loop/deactivate
+function bending/earth/raycast/single/remove_single_found_tags
+function bending/earth/raycast/single/remove_single_enable_tags

@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.809c5818c80fedda6d3831d339379b8abb1eced9_0": {
+			"loop": true,
+			"animation_length": 20,
+			"timeline": {
+				"19.5": [
+					"@s nom:remove_wet"
+				]
+			}
+		}
+	}
+}

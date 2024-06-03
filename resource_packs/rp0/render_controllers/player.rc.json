@@ -1,0 +1,515 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.player.first_person": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"static_root": true
+				},
+				{
+					"rightArm": true
+				},
+				{
+					"leftArm": true
+				},
+				{
+					"rightLeg": true
+				},
+				{
+					"leftLeg": true
+				}
+			]
+		},
+		"controller.render.player.third_person": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"*": true
+				},
+				{
+					"helmet": "variable.helmet_layer_visible"
+				},
+				{
+					"leftLegging": "variable.leg_layer_visible"
+				},
+				{
+					"rightLegging": "variable.leg_layer_visible"
+				},
+				{
+					"leftBoot": "variable.boot_layer_visible"
+				},
+				{
+					"rightBoot": "variable.boot_layer_visible"
+				},
+				{
+					"leftSock": "variable.boot_layer_visible && variable.leg_layer_visible"
+				},
+				{
+					"rightSock": "variable.boot_layer_visible && variable.leg_layer_visible"
+				},
+				{
+					"bodyArmor": "variable.chest_layer_visible && !query.has_cape"
+				},
+				{
+					"leftArmArmor": "variable.chest_layer_visible && !query.has_cape"
+				},
+				{
+					"rightArmArmor": "variable.chest_layer_visible && !query.has_cape"
+				},
+				{
+					"belt": "variable.chest_layer_visible && variable.leg_layer_visible"
+				}
+			]
+		},
+		"controller.render.bending_locators": {
+			"geometry": "geometry.locators",
+			"textures": [
+				"texture.default"
+			],
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			]
+		},
+		"controller.render.bending_entity": {
+			"geometry": "geometry.bending",
+			"materials": [
+				{
+					"*": "material.transparent"
+				}
+			],
+			"textures": [
+				"texture.bending"
+			],
+			"part_visibility": [
+				{
+					"water_bending": "q.mark_variant == 20 && q.variant < 7 && q.variant > 0 && q.variant != 2"
+				}
+			]
+		},
+		"controller.render.earth_bending_entity": {
+			"geometry": "geometry.earth_pull_bending",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.earth_pull_bending"
+			]
+		},
+		"controller.render.player.map": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"head": true
+				},
+				{
+					"hat": true
+				},
+				{
+					"helmet": true
+				}
+			]
+		},
+		"controller.render.glider_staff": {
+			"geometry": "geometry.glider_staff",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.glider_staff"
+			],
+			"part_visibility": [
+				{
+					"weapon": "true"
+				}
+			]
+		},
+		"controller.render.glider_elytra": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			]
+		},
+		"controller.render.air_sphere": {
+			"geometry": "geometry.air_sphere",
+			"materials": [
+				{
+					"*": "material.air_animated"
+				}
+			],
+			"textures": [
+				"texture.air_sphere"
+			],
+			"uv_anim": {
+				"offset": [
+					"-q.life_time*2",
+					0
+				],
+				"scale": [
+					1,
+					1
+				]
+			}
+		},
+		"controller.render.air_sphere_ends": {
+			"geometry": "geometry.air_sphere_ends",
+			"materials": [
+				{
+					"*": "material.air_animated"
+				}
+			],
+			"textures": [
+				"texture.air_sphere_ends"
+			],
+			"uv_anim": {
+				"offset": [
+					"math.mod(math.floor(q.life_time*30),6)/6",
+					0
+				],
+				"scale": [
+					"0.16666666666666666",
+					1
+				]
+			}
+		},
+		"controller.render.air_sphere_endsouter": {
+			"geometry": "geometry.air_sphere_endsouter",
+			"materials": [
+				{
+					"*": "material.air_animated"
+				}
+			],
+			"textures": [
+				"texture.air_sphere_endsouter"
+			],
+			"uv_anim": {
+				"offset": [
+					"math.mod(math.floor(q.life_time*30),6)/6",
+					0
+				],
+				"scale": [
+					"0.16666666666666666",
+					1
+				]
+			}
+		},
+		"controller.render.air_sphere_avatar": {
+			"geometry": "geometry.air_sphere",
+			"materials": [
+				{
+					"*": "material.air_animated"
+				}
+			],
+			"textures": [
+				"texture.air_sphere"
+			],
+			"overlay_color": {
+				"a": 0.85,
+				"b": 0,
+				"g": 0,
+				"r": 0
+			},
+			"uv_anim": {
+				"offset": [
+					"-q.life_time*2",
+					0
+				],
+				"scale": [
+					1,
+					1
+				]
+			}
+		},
+		"controller.render.air_sphere_ends_avatar": {
+			"geometry": "geometry.air_sphere_ends",
+			"materials": [
+				{
+					"*": "material.air_animated"
+				}
+			],
+			"textures": [
+				"texture.air_sphere_ends"
+			],
+			"overlay_color": {
+				"a": 0.85,
+				"b": 0,
+				"g": 0,
+				"r": 0
+			},
+			"uv_anim": {
+				"offset": [
+					"math.mod(math.floor(q.life_time*30),6)/6",
+					0
+				],
+				"scale": [
+					"0.16666666666666666",
+					1
+				]
+			}
+		},
+		"controller.render.air_sphere_endsouter_avatar": {
+			"geometry": "geometry.air_sphere_endsouter",
+			"materials": [
+				{
+					"*": "material.air_animated"
+				}
+			],
+			"textures": [
+				"texture.air_sphere_endsouter"
+			],
+			"overlay_color": {
+				"a": 0.85,
+				"b": 0,
+				"g": 0,
+				"r": 0
+			},
+			"uv_anim": {
+				"offset": [
+					"math.mod(math.floor(q.life_time*30),6)/6",
+					0
+				],
+				"scale": [
+					"0.16666666666666666",
+					1
+				]
+			}
+		},
+		"controller.render.octopus_form": {
+			"geometry": "geometry.octopus_form",
+			"materials": [
+				{
+					"*": "material.water_animated"
+				}
+			],
+			"textures": [
+				"texture.octopus_form"
+			],
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"inside": "v.mark_variant == 21 && v.variant > 1"
+				},
+				{
+					"body": "v.mark_variant == 21 && v.variant > 1"
+				},
+				{
+					"tentacle*": "v.mark_variant == 21 && v.variant > 1"
+				}
+			],
+			"ignore_lighting": true,
+			"uv_anim": {
+				"offset": [
+					0,
+					"math.round(query.life_time*8)/12"
+				],
+				"scale": [
+					1,
+					"0.08333333333333333"
+				]
+			}
+		},
+		"controller.render.octopus_form_skirt": {
+			"geometry": "geometry.octopus_form",
+			"materials": [
+				{
+					"*": "material.alpha_water_anim"
+				}
+			],
+			"textures": [
+				"texture.octopus_form_skirt"
+			],
+			"ignore_lighting": true,
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"body": "v.mark_variant == 21 && v.variant > 1"
+				},
+				{
+					"skirt": "v.mark_variant == 21 && v.variant > 1"
+				}
+			],
+			"uv_anim": {
+				"offset": [
+					"q.life_time*0.5",
+					"0.05+math.sin(q.life_time*360)*0.05"
+				],
+				"scale": [
+					1,
+					1
+				]
+			}
+		},
+		"controller.render.octopus_form_top": {
+			"geometry": "geometry.octopus_form",
+			"materials": [
+				{
+					"*": "material.alpha_water_anim"
+				}
+			],
+			"textures": [
+				"texture.octopus_form_top"
+			],
+			"ignore_lighting": true,
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"top": "v.mark_variant == 21 && v.variant > 1"
+				}
+			],
+			"uv_anim": {
+				"offset": [
+					0,
+					"math.round(query.life_time*8)/20"
+				],
+				"scale": [
+					1,
+					0.05
+				]
+			}
+		},
+		"controller.render.octopus_form_interal_top": {
+			"geometry": "geometry.octopus_form",
+			"materials": [
+				{
+					"*": "material.water_anim"
+				}
+			],
+			"textures": [
+				"texture.octopus_form"
+			],
+			"ignore_lighting": true,
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"internal_top": "v.mark_variant == 21 && v.variant > 1"
+				}
+			],
+			"uv_anim": {
+				"offset": [
+					0,
+					0
+				],
+				"scale": [
+					1,
+					0.076923076923076
+				]
+			}
+		},
+		"controller.render.air_sphere_fp": {
+			"geometry": "geometry.air_sphere",
+			"materials": [
+				{
+					"*": "material.air_animated"
+				}
+			],
+			"textures": [
+				"texture.air_sphere_fp"
+			],
+			"overlay_color": {
+				"a": 0.5,
+				"b": 0,
+				"r": 0,
+				"g": 0
+			},
+			"uv_anim": {
+				"offset": [
+					"-q.life_time*2",
+					0
+				],
+				"scale": [
+					1,
+					1
+				]
+			},
+			"light_color_multiplier": 4
+		},
+		"controller.render.air_sphere_fp_avatar": {
+			"geometry": "geometry.air_sphere",
+			"materials": [
+				{
+					"*": "material.air_animated"
+				}
+			],
+			"textures": [
+				"texture.air_sphere_fp"
+			],
+			"overlay_color": {
+				"a": 0.5,
+				"b": 0,
+				"r": 0,
+				"g": 0
+			},
+			"uv_anim": {
+				"offset": [
+					"-q.life_time*2",
+					0
+				],
+				"scale": [
+					1,
+					1
+				]
+			},
+			"light_color_multiplier": 4
+		},
+		"controller.render.earth_ring": {
+			"geometry": "geometry.earth_ring",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.earth_ring"
+			]
+		}
+	}
+}

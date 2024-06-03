@@ -1,0 +1,137 @@
+{
+    "namespace": "gm1_actionbar_chi",
+    "contents": { "type": "panel", "size": [ "100%", "100%" ], "controls": [{ "bar@bar": {}}, { "chi_data@data": {}}]},
+    "data": {
+        "type": "panel",
+        "property_bag": { "#zero": 0 },
+        "size": [ 0, 0 ],
+        "$input": "$actionbar_text",
+        "variables": [{ "requires": "(($input < '0') or ($input > '99999')", "$input": "1000" }],
+        "$chi_to_use": 3,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_property_name": "(($input - '') + #zero)",
+                "target_property_name": "#input"
+            },
+            { "binding_type": "view", "source_property_name": "(#input/100)", "target_property_name": "#chi" },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#input/10 - (#chi * 10))",
+                "target_property_name": "#chi_to_use"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#input - (#input / 10 * 10))",
+                "target_property_name": "#chi_control"
+            }
+        ]
+    },
+    "bar": {
+        "orientation": "horizontal",
+        "type": "stack_panel",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            { "p9@pearl": { "$v": 9 }},
+            { "p8@pearl": { "$v": 8 }},
+            { "p7@pearl": { "$v": 7 }},
+            { "p6@pearl": { "$v": 6 }},
+            { "p5@pearl": { "$v": 5 }},
+            { "p4@pearl": { "$v": 4 }},
+            { "p3@pearl": { "$v": 3 }},
+            { "p2@pearl": { "$v": 2 }},
+            { "p1@pearl": { "$v": 1 }},
+            { "p0@pearl": { "$v": 0 }},
+            { "pd@droplet": { "$v": "d" }}
+        ]
+    },
+    "droplet":{
+        "type": "panel",
+        "size":[11, 8],
+        "property_bag": { "#true": true },
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "chi_data",
+                "source_property_name": "(#chi_control > 3)",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "chi_data",
+                "source_property_name": "(#chi_control = 6 or #chi_control = 7)",
+                "target_property_name": "#droplet"
+            }
+        ],
+        "controls":[
+            { "no@pimage":{"$texture": "droplet_no", "$condition": "(not #droplet)", "anchor_from": "right_middle", "anchor_to": "right_middle"} },
+            { "yes@pimage":{"$texture": "droplet_yes","$condition": "#droplet", "anchor_from": "right_middle", "anchor_to": "right_middle"} }
+        ]
+    },
+    "pearl": {
+        "type": "panel",
+        "size": [ 8, 8 ],
+        "property_bag": { "#true": true },
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "chi_data",
+                "source_property_name": "#chi",
+                "target_property_name": "#chi"
+            },
+            {
+                "binding_type": "view",
+                "source_control_name": "chi_data",
+                "source_property_name": "#chi_to_use",
+                "target_property_name": "#chi_to_use"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#chi - #chi_to_use) > -1)",
+                "target_property_name": "#enough_chi"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(($v < #chi and #enough_chi) or ($v < #chi_to_use and not #enough_chi)",
+                "target_property_name": "#max_chi"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "($v > (#chi - #chi_to_use - 1) and #max_chi and (#chi_control = 0 or #chi_control = 2))",
+                "target_property_name": "#show_preview"
+            },
+            { "binding_type": "view", "source_property_name": "(#chi > $v)", "target_property_name": "#show_full" },
+            {
+                "binding_type": "view",
+                "source_control_name": "chi_data",
+                "source_property_name": "(#chi_control = 1 or #chi_control = 3)",
+                "target_property_name": "#show_error"
+            }
+        ],
+        "controls": [
+            { "empty@pimage": { "$texture": "empty", "layer": 0 }},
+            { "full@pimage": { "$texture": "full", "layer": 1, "$condition": "#show_full" }},
+            { "preview@pimage": { "layer": 2, "$texture": "preview", "$condition": "#show_preview" }},
+            { "preview_has@pimage": { "layer": 3, "$texture": "preview_has", "$condition": "(#show_preview and #show_full)" }},
+            { "error@pimage": { "layer": 4, "$texture": "error", "$condition": "(#show_outline and #show_error)" }}
+        ]
+    },
+    "pimage": {
+        "type": "image",
+        "size": [ 9, 9 ],
+        "texture": "('textures/ui/gm1/chi/' + $texture)",
+        "$condition": "#true",
+        "uv_size": [ 9, 9 ],
+        "uv": "@gm1_actionbar_chi.pimage__anim",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "('p' + $v)",
+                "source_property_name": "$condition",
+                "target_property_name": "#visible",
+                "resolve_sibling_scope": true
+            }
+        ]
+    },
+    "pimage__anim": { "anim_type": "flip_book", "initial_uv": [ 0, 0 ], "frame_count": 4, "fps": 4, "frame_step": 9 }
+}

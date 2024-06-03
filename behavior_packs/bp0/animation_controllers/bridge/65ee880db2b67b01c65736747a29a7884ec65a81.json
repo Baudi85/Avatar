@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.65ee880db2b67b01c65736747a29a7884ec65a81_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"collected_effect": "q.is_chested"
+						},
+						{
+							"collected": "q.is_ignited"
+						}
+					]
+				},
+				"collected_effect": {
+					"on_entry": [
+						"/function paisho/tile/on_collect",
+						"@s nom:collect"
+					],
+					"transitions": [
+						{
+							"collected": "q.is_ignited"
+						}
+					]
+				},
+				"collected": {
+					"transitions": [
+						{
+							"default": "!q.is_ignited"
+						}
+					]
+				}
+			}
+		}
+	}
+}

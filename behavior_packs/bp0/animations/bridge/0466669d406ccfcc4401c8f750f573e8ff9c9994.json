@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.0466669d406ccfcc4401c8f750f573e8ff9c9994_0": {
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"/function bending/earth/raycast/single/on_entity_spawn",
+					"@s nom:despawn"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,80 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.npc_icon_speech3",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 5,
+				"visible_bounds_offset": [
+					0,
+					2.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "root_icon",
+					"parent": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "speech",
+					"parent": "root_icon",
+					"pivot": [
+						0,
+						44,
+						-12
+					],
+					"rotation": [
+						-22.5,
+						0,
+						0
+					],
+					"reset": true
+				},
+				{
+					"name": "speech_bubble",
+					"parent": "speech",
+					"pivot": [
+						0,
+						47.5,
+						-11.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4.5,
+								41.5,
+								-11.5
+							],
+							"size": [
+								9,
+								7,
+								0
+							],
+							"uv": [
+								9,
+								9
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

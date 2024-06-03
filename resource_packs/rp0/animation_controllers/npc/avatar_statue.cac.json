@@ -1,0 +1,63 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.avatar_statue": {
+			"initial_state": "determine",
+			"states": {
+				"determine": {
+					"transitions": [
+						{
+							"hidden": "!q.is_powered"
+						},
+						{
+							"hovering": "q.is_powered"
+						}
+					]
+				},
+				"hidden": {
+					"animations": [
+						"hidden"
+					],
+					"transitions": [
+						{
+							"hover_start": "q.is_powered"
+						}
+					]
+				},
+				"hover_start": {
+					"animations": [
+						"hover_start"
+					],
+					"transitions": [
+						{
+							"hovering": "q.all_animations_finished"
+						},
+						{
+							"hidden": "!q.is_powered"
+						}
+					]
+				},
+				"hovering": {
+					"animations": [
+						"hover"
+					],
+					"transitions": [
+						{
+							"hover_end": "!q.is_powered"
+						}
+					]
+				},
+				"hover_end": {
+					"animations": [
+						"hover_end"
+					],
+					"transitions": [
+						{
+							"hidden": "q.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

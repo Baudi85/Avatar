@@ -1,0 +1,1 @@
+execute @e[tag=encampment.manager,c=1] ~ ~ ~ function battle/encampment/reset

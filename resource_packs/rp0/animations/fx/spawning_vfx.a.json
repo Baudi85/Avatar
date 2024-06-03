@@ -1,0 +1,74 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.enemy.spawn_fire_vfx": {
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": {
+					"effect": "spawn"
+				},
+				"0.75": {
+					"effect": "spawn_smash"
+				}
+			}
+		},
+		"animation.enemy.spawn_earth_vfx": {
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "spawn"
+					},
+					{
+						"effect": "spawn_debris"
+					}
+				],
+				"0.9": {
+					"effect": "spawn_smash"
+				}
+			}
+		},
+		"animation.enemy.spawn_water_vfx": {
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "spawn_splash"
+					},
+					{
+						"effect": "column"
+					},
+					{
+						"effect": "jet"
+					},
+					{
+						"effect": "spawn",
+						"locator": "rightfoot_locator"
+					},
+					{
+						"effect": "spawn",
+						"locator": "leftfoot_locator"
+					},
+					{
+						"effect": "spawn",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "spawn",
+						"locator": "lefthand_locator"
+					}
+				]
+			}
+		},
+		"animation.enemy.spawn_air_vfx": {
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "tornado_dust"
+					}
+				]
+			}
+		}
+	}
+}

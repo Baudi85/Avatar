@@ -1,0 +1,2886 @@
+{
+    "format_version": "1.17.40",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "citizen_swt_male.1",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.becdfcjeac"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.17"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.2",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.ihcaibgbd"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.3",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.ggiijhjdg"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.14"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.4",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.debdadiidf"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.14"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.5",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bdhjaiaieb"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.13"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.6",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cjejcddceh"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.0"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.7",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.gdaaghdif"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.11"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.8",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.djjbbacfbh"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "translate": "cu.cbidiaajb"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "translate": "cu.baagbifihj"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "translate": "cu.baddjhjccf"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.17"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.9",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.djcgdfjdgj"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.15"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.11",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.gffjgfdab"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.12",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.hfeahgdch"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.13",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.hjcjfecaa"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.17"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.14",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bgjadifcf"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.12"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.24",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.hdhaaebga"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.14"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.25",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.dcbjcdcefe"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.27",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.hfjhejjbg"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.28",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bghbgcbjgg"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.29",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.eacijjceg"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.30",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bgjcdifbea"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.31",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cgigfcciai"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.14"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.32",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bhbfegcdbg"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.34",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baafibchfe"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/scoreboard players set @a[scores={return_point_id=!0}] scene_id 7",
+                            "/function music/cutscene/cutscene_long"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.iaeadbcdf"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.18"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.35",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.dagcdddihe"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.36",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.eehefchhi"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.37",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cdbhdhiaej"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.38",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.djhiddjhjh"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.39",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bdjiadbhc"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.bowing"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.40",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.dcheijahhh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/scoreboard players set @a[scores={return_point_id=!0}] scene_id 6",
+                            "/function music/cutscene/cutscene_xlong"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bggdhgfhja"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_bss",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.ciajjhacjc"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss2"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bgjaadjhjb"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_bss2",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cfjibcacgh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss3"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bihffjghfc"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "translate": "cu.cgggdihebh"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_bss3",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.dachdgjcih"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.eafhdhgihh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.jjjggbcjb"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.chjchfaehe"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.djgigadeed"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss_yes"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.djjgfiffii"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_bss_no",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.dachdgjcih"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.eafhdhgihh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.jjjggbcjb"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.chjchfaehe"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.djgigadeed"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_bss_yes"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cchecgehdd"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.13"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_bss_yes",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bdceaiajha"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "translate": "cu.baheccgjfa"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.18"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_swt",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.bafifjbjhb"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt2"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.dgdjjiihcj"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_swt2",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cehjgfc"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cecacaf"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt_yes"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.caehgbg"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.ccihiec"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.ceaeagi"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.dabaaedhdh"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_swt_no",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cehjgfc"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cecacaf"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt_yes"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.caehgbg"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.ccihiec"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.ceaeagi"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_swt_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.faebbfbgi"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.13"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_swt_yes",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cjbgggdhch"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.18"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_emi",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.ddifheja"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi2"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bjdccgacjd"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_emi2",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cfjibcacgh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi3"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bdhcgeehfd"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_emi3",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cejigdijdc"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cejijgcbee"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.bfbhigaic"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi_yes"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.bficedfee"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.ecaaafggce"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.beifjfbbjj"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_emi_no",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cejigdijdc"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cejijgcbee"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.bfbhigaic"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi_yes"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.bficedfee"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.ecaaafggce"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_emi_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.baibjfhjag"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.13"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_emi_yes",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bggagcaiah"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.18"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_nat",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.ddifegah"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat2"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bdacaaigfh"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_nat2",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.biddhiaabi"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cgaiadiaeh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.bjgfbbgeh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.dhbjebajdb"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.dfchhcjcej"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat_yes"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cfbggcaifc"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_nat_no",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.biddhiaabi"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cgaiadiaeh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.bjgfbbgeh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.dhbjebajdb"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat_no"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.dfchhcjcej"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function oaklogue/citizen_swt_male/trivia_nat_yes"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cgigibdchg"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.13"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.trivia_nat_yes",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.chhhbcbfd"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.18"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_swt_male.default",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.befbbbjjhe"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.iihddehji"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_swt_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_swt_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_swt_male,c=1] animation.set_var.emotion_id.0"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_swt_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            }
+        ]
+    }
+}

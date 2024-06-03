@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.fde2d7419351a411ac9aae6176eee9c4fa41e21c_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"interact": "q.is_ignited"
+						},
+						{
+							"force": "q.is_saddled"
+						}
+					]
+				},
+				"interact": {
+					"on_entry": [
+						"/tag @s add oaklogue.speaker.start",
+						"/execute @p ~ ~ ~ function oaklogue/unalaq_duel/staging",
+						"/tag @s remove oaklogue.speaker.start",
+						"@s nom:oaklogue.on_interact_end"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"force": {
+					"on_entry": [
+						"/tag @s add oaklogue.speaker.start",
+						"/execute @a[r=16] ~ ~ ~ function oaklogue/unalaq_duel/staging",
+						"/tag @s remove oaklogue.speaker.start",
+						"@s nom:oaklogue.on_interact_end"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.player.chi.using.fire_sweep": {
+			"loop": true,
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"/scoreboard players remove @s chi 1"
+				]
+			}
+		},
+		"animation.player.chi.using.octopus_form": {
+			"loop": true,
+			"animation_length": 0.1,
+			"timeline": {
+				"0.0": [
+					"/scoreboard players remove @s chi 1"
+				]
+			}
+		},
+		"animation.player.chi.using.jet_stream": {
+			"loop": true,
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"/scoreboard players remove @s chi 1"
+				]
+			}
+		},
+		"animation.player.chi.using.frost_breath": {
+			"loop": true,
+			"animation_length": 0.1,
+			"timeline": {
+				"0.0": [
+					"/scoreboard players remove @s chi 1"
+				]
+			}
+		},
+		"animation.player.chi.regenerate": {
+			"loop": true,
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"/execute @s[tag=!no_chi_recharge,scores={chi=..99}] ~~~ scoreboard players add @s chi 1"
+				]
+			}
+		},
+		"animation.player.chi.avatar_state_regenerate": {
+			"loop": true,
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"/scoreboard players add @s[scores={chi=..99}] chi 2",
+					"/scoreboard players set @s[scores={chi=101..}] chi 100"
+				]
+			}
+		}
+	}
+}

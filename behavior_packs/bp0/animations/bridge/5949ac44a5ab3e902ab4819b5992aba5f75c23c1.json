@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.5949ac44a5ab3e902ab4819b5992aba5f75c23c1_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_987_cooldown = v.state_nom_water_whip_cooldown;",
+					"v.metastate_water_whip_cooldown = v.chain_987_cooldown;"
+				]
+			}
+		},
+		"animation.5949ac44a5ab3e902ab4819b5992aba5f75c23c1_1": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_341_cooldown = v.state_nom_approach_cooldown||v.state_nom_water_octopus_offense_cooldown;",
+					"v.metastate_water_octopus_cooldown = v.chain_341_cooldown;"
+				]
+			}
+		}
+	}
+}

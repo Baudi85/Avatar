@@ -1,0 +1,49 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.bending_locators.sweep_locator": {
+			"loop": true,
+			"animation_length": 0.8,
+			"bones": {
+				"fire_sweep_root": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.78": [
+							0,
+							"!v.is_first_person?-360:0",
+							0
+						],
+						"0.8": {
+							"pre": [
+								0,
+								"!v.is_first_person ? -360 : 0",
+								0
+							],
+							"post": [
+								0,
+								0,
+								0
+							]
+						}
+					}
+				},
+				"fire_sweep_locator": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						0,
+						"v.is_first_person&&v.player_x_rotation>=0?5+0.25*(math.clamp(v.player_x_rotation,0,60)):v.is_first_person?-10:0",
+						"v.is_first_person?-18:-24"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+execute @e[tag=perf_cull] ~~~ particle nom:dummy_id ~~1~

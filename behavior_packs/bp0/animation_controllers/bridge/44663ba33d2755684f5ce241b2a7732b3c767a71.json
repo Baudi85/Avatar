@@ -1,0 +1,178 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"on_start_upgrading": "q.skin_id==2"
+						},
+						{
+							"on_fetch_water": "q.skin_id==3"
+						}
+					]
+				},
+				"on_start_upgrading": {
+					"on_entry": [
+						"/function bending/upgrading/player/on_start_upgrading",
+						"@s nom:reset_skin_id"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"on_fetch_water": {
+					"on_entry": [
+						"/function bending/water/water_whip/on_fetch_water",
+						"@s nom:reset_skin_id"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"avatar_state_message": "q.is_illager_captain"
+						}
+					]
+				},
+				"avatar_state_message": {
+					"transitions": [
+						{
+							"default": "!q.is_illager_captain"
+						}
+					],
+					"on_entry": [
+						"/execute @s[tag=!avatar_state_onboarding] ~ ~ ~ function avatar_state_onboarding"
+					],
+					"on_exit": [
+						"/execute @s[tag=!avatar_state_onboarding] ~ ~ ~ tag @s add avatar_state_onboarding"
+					]
+				}
+			}
+		},
+		"controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"dead": "!q.is_alive"
+						}
+					]
+				},
+				"dead": {
+					"transitions": [
+						{
+							"default": "q.is_alive"
+						}
+					],
+					"on_entry": [
+						"/function player/on_die"
+					],
+					"on_exit": [
+						"/function player/on_respawn"
+					]
+				}
+			}
+		},
+		"controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_3": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"is_riding": "q.is_riding"
+						},
+						{
+							"not_riding": "!q.is_riding"
+						}
+					]
+				},
+				"is_riding": {
+					"on_entry": [
+						"/tag @s add is_riding"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_riding"
+						}
+					]
+				},
+				"not_riding": {
+					"on_entry": [
+						"/tag @s remove is_riding"
+					],
+					"transitions": [
+						{
+							"default": "q.is_riding"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_4": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"low_health": "q.health<5"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove low_health"
+					]
+				},
+				"low_health": {
+					"transitions": [
+						{
+							"default": "q.health>=5"
+						}
+					],
+					"on_entry": [
+						"/tag @s add low_health"
+					]
+				}
+			}
+		},
+		"controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_5": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"riding": "q.is_riding"
+						}
+					]
+				},
+				"riding": {
+					"transitions": [
+						{
+							"riding_tick": "q.life_time!=v.riding_runtime"
+						}
+					],
+					"on_entry": [
+						"v.riding_runtime=q.life_time;"
+					]
+				},
+				"riding_tick": {
+					"on_entry": [
+						"/function chi/ui/update_chi"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_riding"
+						}
+					]
+				}
+			}
+		}
+	}
+}

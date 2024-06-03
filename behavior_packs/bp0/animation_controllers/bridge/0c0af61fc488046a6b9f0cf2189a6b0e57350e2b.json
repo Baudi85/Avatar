@@ -1,0 +1,378 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_fire_dash_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_fire_dash_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_fire_dash_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_fire_dash_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_fire_sweep_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_fire_sweep_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_fire_sweep_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_fire_sweep_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_fire_stream_med_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_fire_stream_med_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_fire_stream_med_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_fire_stream_med_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_3": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_fire_stream_small_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_fire_stream_small_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_fire_stream_small_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_fire_stream_small_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_4": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.metastate_fire_dash_cooldown=0;",
+						"v.chain_629=0;",
+						"v.chain_629_cooldown=0;",
+						"v.metastate_fire_sweep_cooldown=0;",
+						"v.chain_952=0;",
+						"v.chain_952_cooldown=0;",
+						"v.metastate_fire_stream_med_cooldown=0;",
+						"v.chain_37=0;",
+						"v.chain_37_cooldown=0;",
+						"v.metastate_fire_stream_small_cooldown=0;",
+						"v.chain_814=0;",
+						"v.chain_814_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_5": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/event entity @s[tag=state_init] gm1:default_state",
+						"/tag @s add state_init"
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_6": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1996&&!v.metastate_fire_dash_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_629_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_629=!v.chain_629_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_629_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_7": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1451&&!v.metastate_fire_sweep_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_952_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_952=!v.chain_952_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_952_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_8": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1302&&!v.metastate_fire_stream_med_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_37_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_37=!v.chain_37_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_37_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_9": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1599&&!v.metastate_fire_stream_small_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_814_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_814=!v.chain_814_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_814_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_10": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_629"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_fire_dash"
+					],
+					"on_exit": [
+						"v.chain_629=0;",
+						"/tag @s add metastate_fire_dash"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_fire_dash=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_11": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_952"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_fire_sweep"
+					],
+					"on_exit": [
+						"v.chain_952=0;",
+						"/tag @s add metastate_fire_sweep"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_approach=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"state_1": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				},
+				"state_1": {
+					"on_entry": [
+						"v.state_nom_fire_sweep=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_12": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_37"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_fire_stream_med"
+					],
+					"on_exit": [
+						"v.chain_37=0;",
+						"/tag @s add metastate_fire_stream_med"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_fire_stream_medium=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_13": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_814"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_fire_stream_small"
+					],
+					"on_exit": [
+						"v.chain_814=0;",
+						"/tag @s add metastate_fire_stream_small"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_fire_stream_small=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		}
+	}
+}

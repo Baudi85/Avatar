@@ -1,0 +1,63 @@
+{
+    "namespace": "gm1_title_abpoints",
+    "anim__wait": { "anim_type": "wait", "duration": 1, "next": "@gm1_title_abpoints.anim__fade" },
+    "anim__fade": { "anim_type": "alpha", "from": 0, "to": 1, "duration": 1, "easing": "in_sine" },
+    "main": {
+        "type": "stack_panel",
+        "collection_name": "__collection_abpoints",
+        "size": [ "100%y", "9.375%" ],
+        "offset": [ 0, "-25%" ],
+        "propagate_alpha": true,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "factory": { "name": "__factory_abpoints", "control_name": "gm1_title_abpoints.content" },
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "/abpoints",
+                "source_property_name": "((#value > -1) * 1)",
+                "target_property_name": "#collection_length"
+            }
+        ]
+    },
+    "content": {
+        "alpha": 0,
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "anims": [ "@gm1_title_abpoints.anim__wait" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "propagate_alpha": true,
+        "controls": [
+            {
+                "background": {
+                    "type": "image",
+                    "texture": "textures/ui/gm1/mp",
+                    "size": [ "100%", "100%" ],
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                }
+            },
+            { "text@text": {}}
+        ]
+    },
+    "text": {
+        "type": "label",
+        "text": "#text",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "font_size": "large",
+        "shadow": true,
+        "font_scale_factor": 0.65,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "/abpoints",
+                "source_property_name": "#value",
+                "target_property_name": "#value"
+            },
+            { "binding_type": "view", "source_property_name": "('§f' + #value)", "target_property_name": "#text" }
+        ],
+        "text_alignment": "center"
+    }
+}

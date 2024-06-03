@@ -1,0 +1,25 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.material_pull": {
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.earth",
+						"Texture.water"
+					]
+				}
+			},
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.t[q.skin_id]"
+			],
+			"ignore_lighting": true
+		}
+	}
+}

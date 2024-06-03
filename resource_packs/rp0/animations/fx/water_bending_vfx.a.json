@@ -1,0 +1,83 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.water_octopusform.pop_vfx": {
+			"loop": false,
+			"animation_length": 1.2,
+			"particle_effects": {
+				"1.0": [
+					{
+						"effect": "pus_pop",
+						"locator": "octopus_body_locator"
+					}
+				]
+			}
+		},
+		"animation.frost_breath.frost_breath_projectile": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "frost_breath",
+						"locator": "effect_locator"
+					}
+				]
+			}
+		},
+		"animation.water_octopusform.attack_vfx": {
+			"loop": true,
+			"animation_length": 2,
+			"particle_effects": {
+				"0.5": [
+					{
+						"effect": "octopus_slap",
+						"locator": "tentacle_locator_0"
+					},
+					{
+						"effect": "octopus_slap",
+						"locator": "tentacle_locator_3"
+					}
+				],
+				"0.63": [
+					{
+						"effect": "octopus_slap",
+						"locator": "tentacle_locator_1"
+					},
+					{
+						"effect": "octopus_slap",
+						"locator": "tentacle_locator_5"
+					},
+					{
+						"effect": "octopus_slap",
+						"locator": "tentacle_locator_6"
+					}
+				],
+				"0.68": [
+					{
+						"effect": "octopus_slap",
+						"locator": "tentacle_locator_2"
+					}
+				],
+				"0.8": [
+					{
+						"effect": "octopus_slap",
+						"locator": "tentacle_locator_6"
+					}
+				],
+				"0.9": [
+					{
+						"effect": "octopus_slap",
+						"locator": "tentacle_locator_4"
+					}
+				],
+				"1.08": [
+					{
+						"effect": "octopus_slap",
+						"locator": "tentacle_locator_7"
+					}
+				]
+			}
+		}
+	}
+}

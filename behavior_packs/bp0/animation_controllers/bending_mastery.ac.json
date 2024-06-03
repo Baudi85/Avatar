@@ -1,0 +1,90 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending_mastered": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"air": "q.skin_id==200"
+						},
+						{
+							"fire": "q.skin_id==201"
+						},
+						{
+							"water": "q.skin_id==202"
+						},
+						{
+							"earth": "q.skin_id==203"
+						}
+					]
+				},
+				"fire": {
+					"on_entry": [
+						"/tag @s add mastered.fire_done",
+						"@s nom:reset_skin_id",
+						"/tellraw @s { \"rawtext\": [ { \"translate\": \"mastered.fire_done\" }]}",
+						"/playsound mastery_art @s"
+					],
+					"animations": [
+						"fire_mastery_ended"
+					],
+					"transitions": [
+						{
+							"default": "q.skin_id!=201&&q.any_animation_finished"
+						}
+					]
+				},
+				"air": {
+					"on_entry": [
+						"/tag @s add mastered.air_done",
+						"@s nom:reset_skin_id",
+						"/tellraw @s { \"rawtext\": [ { \"translate\": \"mastered.air_done\" }]}",
+						"/playsound mastery_art @s"
+					],
+					"animations": [
+						"air_mastery_ended"
+					],
+					"transitions": [
+						{
+							"default": "q.skin_id!=200&&q.any_animation_finished"
+						}
+					]
+				},
+				"earth": {
+					"on_entry": [
+						"/tag @s add mastered.earth_done",
+						"@s nom:reset_skin_id",
+						"/tellraw @s { \"rawtext\": [ { \"translate\": \"mastered.earth_done\" }]}",
+						"/playsound mastery_art @s"
+					],
+					"animations": [
+						"earth_mastery_ended"
+					],
+					"transitions": [
+						{
+							"default": "q.skin_id!=203&&q.any_animation_finished"
+						}
+					]
+				},
+				"water": {
+					"on_entry": [
+						"/tag @s add mastered.water_done",
+						"@s nom:reset_skin_id",
+						"/tellraw @s { \"rawtext\": [ { \"translate\": \"mastered.water_done\" }]}",
+						"/playsound mastery_art @s"
+					],
+					"animations": [
+						"water_mastery_ended"
+					],
+					"transitions": [
+						{
+							"default": "q.skin_id!=202&&q.any_animation_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

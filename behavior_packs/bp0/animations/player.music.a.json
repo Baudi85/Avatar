@@ -1,0 +1,216 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.cutscene.wait": {
+			"loop": false,
+			"animation_length": 40,
+			"timeline": {
+				"39.0": [
+					"@s nom:music_reset"
+				]
+			}
+		},
+		"animation.cutscene.waitba": {
+			"loop": false,
+			"animation_length": 50,
+			"timeline": {
+				"19": [
+					"/playsound cutscene_xlong @s"
+				],
+				"49.0": [
+					"@s nom:music_reset"
+				]
+			}
+		},
+		"animation.duel.loop": {
+			"loop": true,
+			"animation_length": 27.69,
+			"timeline": {
+				"0.0": [
+					"/playsound duel_music_loop @s"
+				]
+			}
+		},
+		"animation.duel.loop2": {
+			"loop": true,
+			"animation_length": 65.2,
+			"timeline": {
+				"0.0": [
+					"/playsound duel_music_loop2 @s"
+				]
+			}
+		},
+		"animation.duel.loop3": {
+			"loop": true,
+			"animation_length": 18.57,
+			"timeline": {
+				"0.0": [
+					"/playsound duel_music_loop3 @s"
+				]
+			}
+		},
+		"animation.duel.loop4": {
+			"loop": true,
+			"animation_length": 47.8,
+			"timeline": {
+				"0.0": [
+					"/playsound duel_music_loop4 @s"
+				]
+			}
+		},
+		"animation.duel.loop5": {
+			"loop": true,
+			"animation_length": 67.8,
+			"timeline": {
+				"0.0": [
+					"/playsound duel_music_loop5 @s"
+				]
+			}
+		},
+		"animation.duel.loop6": {
+			"loop": true,
+			"animation_length": 54.2,
+			"timeline": {
+				"0.0": [
+					"/playsound duel_music_loop6 @s"
+				]
+			}
+		},
+		"animation.iroh.lotv": {
+			"loop": true,
+			"animation_length": 70,
+			"timeline": {
+				"1.5": [
+					"/playsound leaves_from_the_vine @s"
+				]
+			}
+		},
+		"animation.encampment.loop": {
+			"loop": true,
+			"animation_length": 55.48,
+			"timeline": {
+				"0.0": [
+					"/playsound encampment_music_loop @s"
+				]
+			}
+		},
+		"animation.minigame1.loop": {
+			"loop": true,
+			"animation_length": 135.04,
+			"timeline": {
+				"0.0": [
+					"/playsound minigame_upbeat_loop @s"
+				]
+			}
+		},
+		"animation.minigame2.loop": {
+			"loop": true,
+			"animation_length": 20.7,
+			"timeline": {
+				"0.0": [
+					"/playsound minigame_drum_loop @s"
+				]
+			}
+		},
+		"animation.music.random.loop": {
+			"loop": true,
+			"animation_length": 1.5,
+			"timeline": {
+				"0.0": [
+					"v.music_rand = math.random_integer(1, 18);"
+				]
+			}
+		},
+		"animation.music.random.wait": {
+			"loop": true,
+			"animation_length": 1,
+			"timeline": {
+				"0.0": [
+					"v.rand_wait_tick = v.rand_wait_tick + 1;"
+				]
+			}
+		},
+		"animation.music.random.track1": {
+			"loop": false,
+			"animation_length": 25
+		},
+		"animation.music.random.track2": {
+			"loop": false,
+			"animation_length": 35
+		},
+		"animation.music.random.track3": {
+			"loop": false,
+			"animation_length": 55
+		},
+		"animation.music.random.track4": {
+			"loop": false,
+			"animation_length": 65
+		},
+		"animation.music.random.track5": {
+			"loop": false,
+			"animation_length": 75
+		},
+		"animation.music.random.track6": {
+			"loop": false,
+			"animation_length": 20
+		},
+		"animation.music.random.track7": {
+			"loop": false,
+			"animation_length": 20
+		},
+		"animation.music.random.track8": {
+			"loop": false,
+			"animation_length": 54.9
+		},
+		"animation.music.random.track9": {
+			"loop": false,
+			"animation_length": 85
+		},
+		"animation.music.random.track10": {
+			"loop": false,
+			"animation_length": 29.4
+		},
+		"animation.music.random.track11": {
+			"loop": false,
+			"animation_length": 38.4
+		},
+		"animation.music.random.track12": {
+			"loop": false,
+			"animation_length": 27.1
+		},
+		"animation.music.random.track13": {
+			"loop": false,
+			"animation_length": 22
+		},
+		"animation.music.random.track14": {
+			"loop": false,
+			"animation_length": 102
+		},
+		"animation.music.random.track15": {
+			"loop": false,
+			"animation_length": 86
+		},
+		"animation.music.random.track16": {
+			"loop": false,
+			"animation_length": 76
+		},
+		"animation.music.random.track17": {
+			"loop": false,
+			"animation_length": 37.4
+		},
+		"animation.music.random.track18": {
+			"loop": false,
+			"animation_length": 20
+		},
+		"animation.firesweep.cancel.delay": {
+			"loop": false,
+			"animation_length": 0.3,
+			"timeline": {
+				"0.25": [
+					"/stopsound @s fire_sweep_init",
+					"/stopsound @s fire_sweep"
+				]
+			}
+		}
+	}
+}

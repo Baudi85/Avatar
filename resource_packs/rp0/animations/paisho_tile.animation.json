@@ -1,0 +1,55 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.paisho_tile.bob": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [
+						0,
+						"15+q.anim_time*180",
+						0
+					],
+					"position": [
+						0,
+						"math.sin(q.anim_time*180)*2",
+						0
+					]
+				}
+			}
+		},
+		"animation.paisho_tile.collect": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "collect"
+					}
+				]
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "collect_effect",
+					"locator": "effect_locator"
+				}
+			},
+			"bones": {
+				"root": {
+					"rotation": {
+						"0.0": [
+							0,
+							"q.anim_time*1440",
+							0
+						],
+						"1.0": [
+							0,
+							"q.anim_time*720",
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

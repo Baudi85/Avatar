@@ -1,0 +1,1855 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.paisho_table.idle": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"white_jade": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						-9,
+						0.125,
+						-3
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"white_dragon5": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-13,
+						0,
+						-13
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"wheel9": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						1,
+						0,
+						13
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"white_lotus13": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						13,
+						0,
+						7
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"pieces": {
+					"position": [
+						0,
+						0.125,
+						0
+					]
+				}
+			}
+		},
+		"animation.paisho_table.empty_1": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_jade5": {
+					"scale": 0
+				},
+				"slot_white_jade5": {
+					"rotation": [
+						-90,
+						45,
+						0
+					],
+					"position": [
+						-3,
+						0,
+						-9
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_1": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"white_jade5": {
+					"rotation": {
+						"0.0": [
+							0,
+							360,
+							0
+						],
+						"1.0": [
+							0,
+							720,
+							0
+						],
+						"1.8333": [
+							-90,
+							45,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							-3,
+							"16+math.sin(q.anim_time*720)*2",
+							-9
+						],
+						"1.0": [
+							-3,
+							"16+math.sin(q.anim_time*720)*2",
+							-9
+						],
+						"1.8333": [
+							-3,
+							0.125,
+							-9
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_white_jade5": {
+					"rotation": [
+						-90,
+						45,
+						0
+					],
+					"position": [
+						-3,
+						0,
+						-9
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_1_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_jade5": {
+					"rotation": [
+						-90,
+						45,
+						0
+					],
+					"position": [
+						-3,
+						0,
+						-9
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_white_jade5": {
+					"rotation": {
+						"0.0": [
+							-90,
+							45,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							-3,
+							0,
+							-9
+						]
+					},
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_2": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_jade9": {
+					"scale": 0
+				},
+				"slot_white_jade9": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						9,
+						0,
+						3
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_2": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"white_jade9": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							-90,
+							-135,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							9,
+							"16+math.sin(q.anim_time*720)*2",
+							3
+						],
+						"1.0": [
+							9,
+							"16+math.sin(q.anim_time*720)*2",
+							3
+						],
+						"1.8333": [
+							9,
+							0,
+							3
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_white_jade9": {
+					"rotation": [
+						-90,
+						-135,
+						0
+					],
+					"position": [
+						9,
+						0,
+						3
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_2_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_jade9": {
+					"rotation": {
+						"0.0": [
+							-90,
+							-135,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							9,
+							0,
+							3
+						]
+					},
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_white_jade9": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_3": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_jade13": {
+					"scale": 0
+				},
+				"slot_white_jade13": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						3,
+						0,
+						9
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_3": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"white_jade13": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							90,
+							-135,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							3,
+							"16+math.sin(q.anim_time*720)*2",
+							9
+						],
+						"1.0": [
+							3,
+							"16+math.sin(q.anim_time*720)*2",
+							9
+						],
+						"1.8333": [
+							3,
+							0,
+							9
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_white_jade13": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						3,
+						0,
+						9
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_3_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_jade13": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						3,
+						0,
+						9
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_white_jade13": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_4": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_dragon": {
+					"scale": 0
+				},
+				"slot_white_dragon": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						-7,
+						0,
+						-7
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_4": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"white_dragon": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							90,
+							-135,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							-7,
+							"16+math.sin(q.anim_time*720)*2",
+							-7
+						],
+						"1.0": [
+							-7,
+							"16+math.sin(q.anim_time*720)*2",
+							-7
+						],
+						"1.8333": [
+							-7,
+							0,
+							-7
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_white_dragon": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						-7,
+						0,
+						-7
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_4_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_dragon": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						-7,
+						0,
+						-7
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_white_dragon": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_5": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_dragon9": {
+					"scale": 0
+				},
+				"slot_white_dragon9": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						7,
+						0,
+						7
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_5": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"white_dragon9": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							90,
+							-135,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							7,
+							"16+math.sin(q.anim_time*720)*2",
+							7
+						],
+						"1.0": [
+							7,
+							"16+math.sin(q.anim_time*720)*2",
+							7
+						],
+						"1.8333": [
+							7,
+							0,
+							7
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_white_dragon9": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						7,
+						0,
+						7
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_5_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_dragon9": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						7,
+						0,
+						7
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_white_dragon9": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_6": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_dragon13": {
+					"scale": 0
+				},
+				"slot_white_dragon13": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						13,
+						0,
+						13
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_6": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"white_dragon13": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							90,
+							-135,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							13,
+							"16+math.sin(q.anim_time*720)*2",
+							13
+						],
+						"1.0": [
+							13,
+							"16+math.sin(q.anim_time*720)*2",
+							13
+						],
+						"1.8333": [
+							13,
+							0,
+							13
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_white_dragon13": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						13,
+						0,
+						13
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_6_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_dragon13": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						13,
+						0,
+						13
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_white_dragon13": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_7": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"wheel": {
+					"scale": 0
+				},
+				"slot_wheel": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-13,
+						0,
+						-1
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_7": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"wheel": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							90,
+							45,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							-13,
+							"16+math.sin(q.anim_time*720)*2",
+							-1
+						],
+						"1.0": [
+							-13,
+							"16+math.sin(q.anim_time*720)*2",
+							-1
+						],
+						"1.8333": [
+							-13,
+							0,
+							-1
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_wheel": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-13,
+						0,
+						-1
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_7_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"wheel": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-13,
+						0,
+						-1
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_wheel": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_8": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"wheel5": {
+					"scale": 0
+				},
+				"slot_wheel5": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-1,
+						0,
+						-13
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_8": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"wheel5": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							90,
+							45,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							-1,
+							"16+math.sin(q.anim_time*720)*2",
+							-13
+						],
+						"1.0": [
+							-1,
+							"16+math.sin(q.anim_time*720)*2",
+							-13
+						],
+						"1.8333": [
+							-1,
+							0,
+							-13
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_wheel5": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-1,
+						0,
+						-13
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_8_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"wheel5": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-1,
+						0,
+						-13
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_wheel5": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_9": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"wheel13": {
+					"scale": 0
+				},
+				"slot_wheel13": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						13,
+						0,
+						1
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_9": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"wheel13": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							90,
+							-135,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							13,
+							"16+math.sin(q.anim_time*720)*2",
+							1
+						],
+						"1.0": [
+							13,
+							"16+math.sin(q.anim_time*720)*2",
+							1
+						],
+						"1.8333": [
+							13,
+							0,
+							1
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_wheel13": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						13,
+						0,
+						1
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_9_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"wheel13": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						13,
+						0,
+						1
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_wheel13": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_10": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_lotus": {
+					"scale": 0
+				},
+				"slot_white_lotus": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-13,
+						0,
+						-7
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_10": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"white_lotus": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							90,
+							45,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							-13,
+							"16+math.sin(q.anim_time*720)*2",
+							-7
+						],
+						"1.0": [
+							-13,
+							"16+math.sin(q.anim_time*720)*2",
+							-7
+						],
+						"1.8333": [
+							-13,
+							0,
+							-7
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_white_lotus": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-13,
+						0,
+						-7
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_10_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_lotus": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-13,
+						0,
+						-7
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_white_lotus": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_11": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_lotus5": {
+					"scale": 0
+				},
+				"slot_white_lotus5": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-7,
+						0,
+						-13
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_11": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"white_lotus5": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							90,
+							45,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							-7,
+							"16+math.sin(q.anim_time*720)*2",
+							-13
+						],
+						"1.0": [
+							-7,
+							"16+math.sin(q.anim_time*720)*2",
+							-13
+						],
+						"1.8333": [
+							-7,
+							0,
+							-13
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_white_lotus5": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-7,
+						0,
+						-13
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_11_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_lotus5": {
+					"rotation": [
+						90,
+						45,
+						0
+					],
+					"position": [
+						-7,
+						0,
+						-13
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_white_lotus5": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.paisho_table.empty_12": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_lotus9": {
+					"scale": 0
+				},
+				"slot_white_lotus9": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						7,
+						0,
+						13
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				}
+			}
+		},
+		"animation.paisho_table.tile_12": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 2,
+			"override_previous_animation": true,
+			"bones": {
+				"white_lotus9": {
+					"rotation": {
+						"0.0": [
+							0,
+							720,
+							0
+						],
+						"1.0": [
+							0,
+							360,
+							0
+						],
+						"1.8333": [
+							90,
+							-135,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							7,
+							"16+math.sin(q.anim_time*720)*2",
+							13
+						],
+						"1.0": [
+							7,
+							"16+math.sin(q.anim_time*720)*2",
+							13
+						],
+						"1.8333": [
+							7,
+							0,
+							13
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							1,
+							1,
+							1
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						]
+					}
+				},
+				"slot_white_lotus9": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						7,
+						0,
+						13
+					],
+					"scale": {
+						"0.0": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.8333": [
+							0.125,
+							0.125,
+							0.125
+						],
+						"1.875": [
+							0.5,
+							0.5,
+							0.125
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.paisho_table.tile_12_got": {
+			"loop": "hold_on_last_frame",
+			"override_previous_animation": true,
+			"bones": {
+				"white_lotus9": {
+					"rotation": [
+						90,
+						-135,
+						0
+					],
+					"position": [
+						7,
+						0,
+						13
+					],
+					"scale": [
+						0.125,
+						0.125,
+						0.125
+					]
+				},
+				"slot_white_lotus9": {
+					"scale": 0
+				}
+			}
+		}
+	}
+}

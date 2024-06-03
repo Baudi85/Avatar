@@ -1,0 +1,306 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:water_puddle",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"detect_controller": "controller.animation.bending.water.puddle_detect_sides",
+				"puddle_detect_a": "animation.water.puddle_detect",
+				"1ebec212f5fa55e3_a_0": "animation.1ebec212f5fa55e363a1e59fd663cc0d509f6e82_0",
+				"70a1be08233e7bcb_ac_0": "controller.animation.70a1be08233e7bcbe3c74d900ad410df3b1f683d_0",
+				"70a1be08233e7bcb_ac_1": "controller.animation.70a1be08233e7bcbe3c74d900ad410df3b1f683d_1"
+			},
+			"scripts": {
+				"animate": [
+					"detect_controller",
+					"1ebec212f5fa55e3_a_0",
+					"70a1be08233e7bcb_ac_0",
+					"70a1be08233e7bcb_ac_1"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:pre_despawn": {
+				"minecraft:is_ignited": {}
+			},
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"nom:selected": {
+				"minecraft:is_stunned": {},
+				"minecraft:is_shaking": {}
+			},
+			"nom:selected_buffer": {
+				"minecraft:is_saddled": {}
+			},
+			"nom:visible": {
+				"minecraft:scale": {
+					"value": 1
+				}
+			},
+			"nom:invisible": {
+				"minecraft:scale": {
+					"value": 0
+				}
+			},
+			"nom:north": {
+				"minecraft:is_sheared": {}
+			},
+			"nom:south": {
+				"minecraft:is_charged": {}
+			},
+			"nom:east": {
+				"minecraft:is_illager_captain": {}
+			},
+			"nom:west": {
+				"minecraft:is_baby": {}
+			},
+			"nom:player_near": {
+				"minecraft:is_chested": {}
+			}
+		},
+		"components": {
+			"minecraft:physics": {
+				"has_gravity": true
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.4,
+				"height": 0.05
+			},
+			"minecraft:health": {
+				"value": 8,
+				"max": 8
+			},
+			"minecraft:type_family": {
+				"family": [
+					"water_puddle"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"test": "has_component",
+							"value": "minecraft:is_stunned"
+						},
+						"event": "nom:remove_selected_loop"
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "distance_to_nearest_player",
+									"subject": "self",
+									"operator": "<=",
+									"value": 15
+								}
+							]
+						},
+						"event": "nom:player_near",
+						"target": "self"
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "distance_to_nearest_player",
+									"subject": "self",
+									"operator": ">",
+									"value": 15
+								}
+							]
+						},
+						"event": "nom:player_far",
+						"target": "self"
+					}
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"interact_text": "action.interact.water_skin.fetch",
+						"swing": true,
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"subject": "other",
+										"test": "has_tag",
+										"operator": "!=",
+										"value": "holding_water_in_water_skin"
+									},
+									{
+										"subject": "other",
+										"test": "has_tag",
+										"operator": "!=",
+										"value": "raycast_water"
+									}
+								]
+							},
+							"target": "other",
+							"event": "nom:on_water_fetch"
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"nom:not_riding": {
+				"add": {
+					"component_groups": [
+						"nom:not_riding"
+					]
+				}
+			},
+			"nom:pre_despawn": {
+				"add": {
+					"component_groups": [
+						"nom:pre_despawn"
+					]
+				}
+			},
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			},
+			"nom:remove_selected_loop": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "has_component",
+							"operator": "==",
+							"value": "minecraft:is_saddled"
+						},
+						"trigger": "nom:remove_selected_buffer"
+					},
+					{
+						"filters": {
+							"test": "has_component",
+							"operator": "!=",
+							"value": "minecraft:is_saddled"
+						},
+						"trigger": "nom:remove_selected"
+					}
+				]
+			},
+			"nom:visible": {
+				"add": {
+					"component_groups": [
+						"nom:visible"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"nom:invisible"
+					]
+				}
+			},
+			"nom:select": {
+				"add": {
+					"component_groups": [
+						"nom:selected",
+						"nom:selectes_buffer"
+					]
+				}
+			},
+			"nom:add_selected": {
+				"add": {
+					"component_groups": [
+						"nom:selected"
+					]
+				}
+			},
+			"nom:add_selected_buffer": {
+				"add": {
+					"component_groups": [
+						"nom:selectes_buffer"
+					]
+				}
+			},
+			"nom:remove_selected": {
+				"remove": {
+					"component_groups": [
+						"nom:selected"
+					]
+				}
+			},
+			"nom:remove_selected_buffer": {
+				"remove": {
+					"component_groups": [
+						"nom:selectes_buffer"
+					]
+				}
+			},
+			"nom:remove_north": {
+				"remove": {
+					"component_groups": [
+						"nom:north"
+					]
+				}
+			},
+			"nom:remove_south": {
+				"remove": {
+					"component_groups": [
+						"nom:south"
+					]
+				}
+			},
+			"nom:remove_east": {
+				"remove": {
+					"component_groups": [
+						"nom:east"
+					]
+				}
+			},
+			"nom:remove_west": {
+				"remove": {
+					"component_groups": [
+						"nom:west"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"nom:north",
+						"nom:south",
+						"nom:east",
+						"nom:west",
+						"nom:invisible"
+					]
+				}
+			},
+			"nom:player_near": {
+				"add": {
+					"component_groups": [
+						"nom:player_near"
+					]
+				}
+			},
+			"nom:player_far": {
+				"remove": {
+					"component_groups": [
+						"nom:player_near"
+					]
+				}
+			}
+		}
+	}
+}

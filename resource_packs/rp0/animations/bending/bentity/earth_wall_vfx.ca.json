@@ -1,0 +1,120 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.earth_wall.debris": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "debris",
+						"locator": "effect_r1"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_r2"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_r3"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_r4"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_r5"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_c1"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_c2"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_c3"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_c4"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_c5"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_l1"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_l2"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_l3"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_l4"
+					},
+					{
+						"effect": "debris",
+						"locator": "effect_l5"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_l4"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_l3"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_l2"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_c4"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_c3"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_c2"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_r4"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_r3"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_r2"
+					}
+				]
+			}
+		},
+		"animation.earth_wall.charge_pebbles": {
+			"loop": false,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "pebbles"
+					}
+				]
+			}
+		}
+	}
+}

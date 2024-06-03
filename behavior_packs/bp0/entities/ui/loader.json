@@ -1,0 +1,47 @@
+{
+	"format_version": "1.18.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:ui_loader",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"00eab6e82162a850_a_0": "animation.00eab6e82162a850d9cd6c31fe975f8c2cc390f8_0"
+			},
+			"scripts": {
+				"animate": [
+					"00eab6e82162a850_a_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:npc": {
+				"npc_data": {}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{}
+				]
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"test": "has_tag",
+					"value": "despawn"
+				}
+			},
+			"minecraft:explode": {
+				"fuse_length": 30,
+				"fuse_lit": true,
+				"power": 0
+			}
+		}
+	}
+}

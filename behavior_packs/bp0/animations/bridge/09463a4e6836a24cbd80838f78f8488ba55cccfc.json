@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.09463a4e6836a24cbd80838f78f8488ba55cccfc_0": {
+			"timeline": {
+				"0.0": [
+					"/tag @s remove player.loaded"
+				]
+			},
+			"loop": true,
+			"animation_length": 0.01
+		}
+	}
+}

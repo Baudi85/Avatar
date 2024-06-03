@@ -1,0 +1,1 @@
+execute @s[scores={settlement_q_i=8}] ~ ~ ~ function settlement/t_rumble_arena/_/_load_queue

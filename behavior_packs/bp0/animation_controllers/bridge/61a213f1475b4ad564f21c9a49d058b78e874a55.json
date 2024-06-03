@@ -1,0 +1,121 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.61a213f1475b4ad564f21c9a49d058b78e874a55_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/scoreboard players set @s encampment_val 25",
+						"/tag @s add encampment.manager",
+						"/tag @s add encampment.manager.e_ruined_backstreet"
+					]
+				}
+			}
+		},
+		"controller.animation.61a213f1475b4ad564f21c9a49d058b78e874a55_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "q.variant==0&&q.is_sheared"
+						},
+						{
+							"state_1": "q.variant==1&&q.is_sheared"
+						},
+						{
+							"state_2": "q.variant==2&&q.is_sheared"
+						}
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"/execute @a[tag=battle.member.102] ~ ~ ~ function qtitle/push/encampbar_clear",
+						"/scoreboard players set @a[tag=battle.member.102] qtitle_delay 20",
+						"/tag @a remove battle.member.102",
+						"/tag @a remove battle.member",
+						"/function settlement/t_ruined_backstreet/_/on_settlement_0"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "!q.is_sheared&&q.all_animations_finished"
+						}
+					]
+				},
+				"state_1": {
+					"on_entry": [],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "!q.is_sheared&&q.all_animations_finished"
+						}
+					]
+				},
+				"state_2": {
+					"on_entry": [
+						"/function settlement/t_ruined_backstreet/_/queue_settlement_1"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "!q.is_sheared&&q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"61a213f1475b4ad5_a_1"
+					]
+				}
+			}
+		},
+		"controller.animation.61a213f1475b4ad564f21c9a49d058b78e874a55_2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"spawn": "q.skin_id>=50&&q.variant==1"
+						}
+					]
+				},
+				"spawn": {
+					"on_entry": [
+						"/execute @e[tag=encampment.spawner.leader] ~ ~ ~ scoreboard players operation @s tmp = @s battle_id",
+						"/scoreboard players operation @e[tag=encampment.spawner.leader] tmp -= @s battle_id",
+						"/execute @s[tag=!encampment.manager.leader.50] ~ ~ ~ event entity @r[tag=encampment.spawner.leader,scores={tmp=0},c=1,type=!player] nom:spawn",
+						"/tag @s add encampment.manager.leader.50"
+					],
+					"on_exit": [
+						"/tag @s remove encampment.manager.leader.50"
+					],
+					"transitions": [
+						{
+							"default": "q.variant!=1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.61a213f1475b4ad564f21c9a49d058b78e874a55_3": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"update": "q.is_saddled"
+						}
+					]
+				},
+				"update": {
+					"on_entry": [
+						"/execute @a[tag=battle.member.102] ~ ~ ~ function qtitle/push/encampbar_id",
+						"/execute @a[tag=battle.member.102] ~ ~ ~ function qtitle/push/encampbar_value",
+						"@s nom:encampbar.update.end"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_saddled"
+						}
+					]
+				}
+			}
+		}
+	}
+}

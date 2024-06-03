@@ -1,0 +1,59 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.earth_pull_block.dust_puff": {
+			"loop": false,
+			"animation_length": 0.1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "earth_block_dust",
+						"locator": "effect_locator"
+					}
+				]
+			}
+		},
+		"animation.earth_pull_stream.particle": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "earth_stream",
+						"locator": "effect_locator"
+					}
+				]
+			}
+		},
+		"animation.earth_block.projectile_particles": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "debris",
+						"locator": "effect_locator"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_locator"
+					}
+				]
+			}
+		},
+		"animation.earth_block.explode_particles": {
+			"loop": false,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "explode_debris"
+					},
+					{
+						"effect": "explode_dust"
+					}
+				]
+			}
+		}
+	}
+}

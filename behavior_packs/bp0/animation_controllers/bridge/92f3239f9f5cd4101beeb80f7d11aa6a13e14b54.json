@@ -1,0 +1,203 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.92f3239f9f5cd4101beeb80f7d11aa6a13e14b54_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==210)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==210"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.92f3239f9f5cd4101beeb80f7d11aa6a13e14b54_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"v.octopus_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==210)"
+						},
+						{
+							"charging": "1"
+						}
+					]
+				},
+				"charging": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1",
+						"v.octopus_runtime=q.life_time;",
+						"@s nom:freeze_behavior"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==210)"
+						},
+						{
+							"holding": "q.life_time>=v.octopus_runtime+0.5"
+						}
+					]
+				},
+				"holding": {
+					"animations": [
+						"animation.bending.water.octopus_form.using"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==210)"
+						},
+						{
+							"release": "q.life_time>=v.octopus_runtime+5"
+						}
+					]
+				},
+				"release": {
+					"on_entry": [
+						"@s nom:state_bending_teq_2",
+						"v.octopus_runtime=q.life_time;",
+						"/summon nom:water_puddle ~~~",
+						"/summon nom:roar ~~~ nom:octopus_form_explosion_enemy"
+					],
+					"on_exit": [
+						"/event entity @s[tag=can_end_state] gm1:end_state",
+						"@s nom:unfreeze_behavior"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==210)"
+						},
+						{
+							"default": "q.life_time>=v.octopus_runtime+1"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==210"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.92f3239f9f5cd4101beeb80f7d11aa6a13e14b54_2": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==211)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==211"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.92f3239f9f5cd4101beeb80f7d11aa6a13e14b54_3": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"v.octopus_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==211)"
+						},
+						{
+							"charging": "1"
+						}
+					]
+				},
+				"charging": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1",
+						"v.octopus_runtime=q.life_time;",
+						"@s nom:freeze_behavior"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==211)"
+						},
+						{
+							"holding": "q.life_time>=v.octopus_runtime+0.5"
+						}
+					]
+				},
+				"holding": {
+					"animations": [
+						"animation.bending.water.octopus_form.using"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==211)"
+						},
+						{
+							"release": "q.life_time>=v.octopus_runtime+5"
+						}
+					]
+				},
+				"release": {
+					"on_entry": [
+						"@s nom:state_bending_teq_2",
+						"v.octopus_runtime=q.life_time;",
+						"/summon nom:water_puddle ~~~",
+						"/summon nom:roar ~~~ nom:octopus_form_explosion_enemy"
+					],
+					"on_exit": [
+						"/event entity @s[tag=can_end_state] gm1:end_state",
+						"@s nom:unfreeze_behavior"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==211)"
+						},
+						{
+							"default": "q.life_time>=v.octopus_runtime+1"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==211"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		}
+	}
+}

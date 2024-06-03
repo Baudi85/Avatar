@@ -1,0 +1,250 @@
+{
+    "format_version": "1.17.40",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "opal_duel.greeting",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cegecdg"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.defbdiabjg"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_opal] ~ ~ ~ function battle/state/on_start"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.bgecbjffd"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_opal,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.opal_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_opal,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.opal_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "opal_duel.failure",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cegecdg"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.bfhaiiedfh"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_opal] ~ ~ ~ function battle/state/on_start"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.cegjbjajji"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_opal,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.opal_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_opal,c=1] animation.set_var.emotion_id.4"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.opal_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "opal_duel.victory",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cegecdg"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.cjefdhjdje"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_opal] ~ ~ ~ function battle/state/on_claim",
+                            "/function trinket/get/opal",
+                            "/scoreboard players set @a[scores={return_point_id=!0}] scene_id 16",
+                            "/function settlement/t_air_temple_sanctuary/_/_load_settlement_1"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.dddahfji"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_opal,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.opal_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_opal,c=1] animation.set_var.emotion_id.10"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.opal_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "opal_duel.rematch",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cegecdg"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.dgdidaaajc"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/execute @e[tag=battle.manager.duel_opal] ~ ~ ~ function battle/state/on_start"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.iadhjceje"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:npc_opal,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.opal_duel",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:npc_opal,c=1] animation.set_var.emotion_id.0"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.opal_duel",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            }
+        ]
+    }
+}

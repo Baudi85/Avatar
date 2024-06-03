@@ -1,0 +1,118 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:jet_stream_projectile_trainer",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball",
+			"animations": {
+				"2ad9d6a823c63e0e_ac_0": "controller.animation.2ad9d6a823c63e0eb8552fedcbcdcb873d96da0e_0",
+				"2ad9d6a823c63e0e_ac_1": "controller.animation.2ad9d6a823c63e0eb8552fedcbcdcb873d96da0e_1"
+			},
+			"scripts": {
+				"animate": [
+					"2ad9d6a823c63e0e_ac_0",
+					{
+						"2ad9d6a823c63e0e_ac_1": "1"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"nom:enemy": {
+				"minecraft:projectile": {
+					"gravity": 0,
+					"power": 3.1,
+					"inertia": 0.75,
+					"uncertainty_base": 4,
+					"offset": [
+						0,
+						1,
+						0
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 3,
+							"knockback": false
+						}
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:despawn": {
+				"filters": {
+					"any_of": [
+						{
+							"test": "in_water"
+						}
+					]
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 0.5
+			},
+			"minecraft:timer": {
+				"time": 0.5,
+				"time_down_event": {
+					"event": "nom:despawn"
+				}
+			},
+			"minecraft:projectile": {
+				"gravity": 0,
+				"power": 2,
+				"inertia": 0.75,
+				"uncertainty_base": 4,
+				"offset": [
+					0.5,
+					-0.3,
+					1.5
+				],
+				"should_bounce": false,
+				"destroy_on_hurt": false,
+				"on_hit": {
+					"impact_damage": {
+						"damage": 0,
+						"knockback": false
+					}
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:type_family": {
+				"family": [
+					"protection_ability_blockable"
+				]
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			},
+			"nom:as_projectile_enemy": {
+				"add": {
+					"component_groups": [
+						"nom:enemy"
+					]
+				}
+			}
+		}
+	}
+}

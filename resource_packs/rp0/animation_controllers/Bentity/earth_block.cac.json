@@ -1,0 +1,92 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.earth_block_rotation": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"clock_wise": "v.rotation_direction==1"
+						},
+						{
+							"counter_wise": "v.rotation_direction==-1"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"clock_wise": {
+					"transitions": [
+						{
+							"clock_wise_stop": "v.rotation_direction==0||v.rotation_direction==-1"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"clock_wise_stop": {
+					"transitions": [
+						{
+							"default": "q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"earth_block_counterclockwise",
+						"earth_block_dust_animation"
+					],
+					"blend_transition": 0.3
+				},
+				"counter_wise": {
+					"transitions": [
+						{
+							"count_wise_stop": "v.rotation_direction==0||v.rotation_direction==1"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"count_wise_stop": {
+					"transitions": [
+						{
+							"default": "q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"earth_block_clockwise",
+						"earth_block_dust_animation"
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.bentity.earth_block": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"explode": "q.variant==3"
+						}
+					],
+					"animations": [
+						"rotate"
+					]
+				},
+				"explode": {
+					"transitions": [
+						{
+							"finished": "q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"block_explode",
+						"explode"
+					]
+				},
+				"finished": {
+					"animations": [
+						"hidden"
+					]
+				}
+			}
+		}
+	}
+}

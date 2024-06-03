@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending_trainer": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"t.air_blade_rot=0;",
+						"v.count=0;",
+						"v.start_angle=0;",
+						"t.start_angle=0;"
+					],
+					"transitions": [
+						{
+							"training": "!q.is_tamed"
+						}
+					]
+				},
+				"training": {
+					"on_exit": [
+						"@s nom:state_bending_teq_0"
+					],
+					"animations": [
+						"training"
+					],
+					"transitions": [
+						{
+							"default": "q.is_tamed"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,4 @@
+execute @e[name=main,tag=settlement.t_zhao_ship.state.0] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_zhao_ship>:§r§6 Currently settlement_0" }]}
+execute @e[name=main,tag=settlement.t_zhao_ship.state.1] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_zhao_ship>:§r§6 Currently settlement_1" }]}
+execute @e[name=main,tag=settlement.t_zhao_ship.state.2] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_zhao_ship>:§r§6 Currently settlement_2" }]}
+tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement:§r§6 Entity <" }, {"selector": "@e[tag=settlement.save,x=1382,y=31,z=-199,dx=20,dy=5,dz=38]"} , {"text":">"}]}

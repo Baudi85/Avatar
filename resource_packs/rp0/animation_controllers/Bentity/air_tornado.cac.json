@@ -1,0 +1,47 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bentity.air_tornado": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"charging": "q.variant>=1"
+						}
+					]
+				},
+				"charging": {
+					"animations": [
+						"initial"
+					],
+					"transitions": [
+						{
+							"loop": "q.variant==2"
+						}
+					]
+				},
+				"loop": {
+					"animations": [
+						"grow",
+						"spin",
+						"loop_sfx"
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"end": "q.is_ignited"
+						}
+					]
+				},
+				"end": {
+					"animations": [
+						"shrink",
+						"spin_end"
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

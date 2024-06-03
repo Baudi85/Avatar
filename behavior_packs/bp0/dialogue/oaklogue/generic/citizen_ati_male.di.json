@@ -1,0 +1,1206 @@
+{
+    "format_version": "1.17.40",
+    "minecraft:npc_dialogue": {
+        "scenes": [
+            {
+                "scene_tag": "citizen_ati_male.15",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.eajgjghab"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/scoreboard players set @a[scores={return_point_id=!0}] scene_id 2",
+                            "/function music/cutscene/cutscene_xlong"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.chdfdcddf"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.20"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.16",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bchcgbcbag"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.20"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.17",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.chicdebce"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.22",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.ibgieaijb"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.no_mastery_points",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "ol.becjjafgfd"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.mastery_points",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bfchgbfeif"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_start",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.faddihafa"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.15"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_first_unplaced_tile",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.ggcdgjhec"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_unplaced_tile",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bbadjefc"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_unplaced_tiles",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bbjjeigcbj"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_1",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cfjggeiejc"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_2",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cagejccigd"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_3",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.dgjchffcfj"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_4",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.eccabjcif"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_5",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.dgcaeaggc"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_6",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.fhbiedid"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_7",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.dffdbffcji"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_8",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.chfafbcige"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_9",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.eiacjieej"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_10",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.dfgfghedji"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_11",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.cfbfhcfged"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.paisho_tile_12",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.hcgbedfjj"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "/function trinket/get/glider"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.djieigcifi"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.18"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.no_whistle",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.hcgbedfjj"
+                                }
+                            ]
+                        },
+                        "commands": [
+                            "tag @e[name=main] add whistle.complete",
+                            "/execute @a[scores={return_point_id=!0}] ~~~ function region_bounds/mark_ATI_bison_as_reached"
+                        ]
+                    },
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.hehiegifg"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.0"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            },
+            {
+                "scene_tag": "citizen_ati_male.whistle",
+                "npc_name": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.diaaadgjgh"
+                        }
+                    ]
+                },
+                "buttons": [
+                    {
+                        "name": {
+                            "rawtext": [
+                                {
+                                    "text": "cu.baajjjbejb"
+                                }
+                            ]
+                        },
+                        "commands": []
+                    }
+                ],
+                "text": {
+                    "rawtext": [
+                        {
+                            "translate": "cu.bheeciegid"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "text": "\n"
+                        },
+                        {
+                            "translate": "cu.bhheddfbje"
+                        }
+                    ]
+                },
+                "on_open_commands": [
+                    "/tag @e[type=nom:speaker_citizen_ati_male,c=1] add oaklogue.speaker",
+                    "/tag @e[tag=oaklogue.speaker,c=1] add oaklogue.speaker.citizen_ati_male",
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @p",
+                    "/scoreboard players set @initiator close_ui_in -1",
+                    "/execute @initiator ~~~ function bending/player/disable",
+                    "/execute @initiator ~ ~ ~ function ui/hud/hide",
+                    "/execute @initiator ~~~ function ui/clean",
+                    "/function oaklogue/utils/on_open",
+                    "/playanimation @e[type=nom:speaker_citizen_ati_male,c=1] animation.set_var.emotion_id.9"
+                ],
+                "on_close_commands": [
+                    "/execute @e[tag=oaklogue.speaker,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[type=nom:oaklogue.rot,c=1]",
+                    "/execute @initiator ~ ~ ~ function ui/hud/show",
+                    "/execute @initiator ~~~ function bending/player/enable",
+                    "/function oaklogue/utils/on_close",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker.citizen_ati_male",
+                    "/tag @e[tag=oaklogue.speaker,c=1] remove oaklogue.speaker"
+                ]
+            }
+        ]
+    }
+}

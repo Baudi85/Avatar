@@ -1,0 +1,29 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.bss_cart": {
+			"geometry": "array.g[query.variant]",
+			"textures": [
+				"array.t[query.variant]"
+			],
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"array.t": [
+						"Texture.variant_0"
+					]
+				},
+				"geometries": {
+					"array.g": [
+						"Geometry.variant_0",
+						"Geometry.variant_1"
+					]
+				}
+			}
+		}
+	}
+}

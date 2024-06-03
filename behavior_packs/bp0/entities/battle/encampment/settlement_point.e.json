@@ -1,0 +1,32 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:settlement_point",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"29d11c077d720bda_a_0": "animation.29d11c077d720bda2aace80afb120bedbcdeba3a_0",
+				"29d11c077d720bda_a_1": "animation.29d11c077d720bda2aace80afb120bedbcdeba3a_1",
+				"29d11c077d720bda_ac_0": "controller.animation.29d11c077d720bda2aace80afb120bedbcdeba3a_0"
+			},
+			"scripts": {
+				"animate": [
+					"29d11c077d720bda_a_0",
+					"29d11c077d720bda_a_1",
+					"29d11c077d720bda_ac_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			}
+		}
+	}
+}

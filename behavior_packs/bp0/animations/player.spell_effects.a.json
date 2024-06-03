@@ -1,0 +1,17 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.player.spell_effects": {
+			"animation_length": 4.9,
+			"timeline": {
+				"0.0": [
+					"/effect @s jump_boost 5 0 true",
+					"/effect @s regeneration 5 0 true",
+					"/effect @s resistance 5 0 true",
+					"/effect @s saturation 5 0 true"
+				]
+			},
+			"loop": true
+		}
+	}
+}

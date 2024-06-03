@@ -1,0 +1,45 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.sun_ray.dust": {
+			"animation_length": 1,
+			"loop": true,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "sun_ray_dust",
+						"locator": "god_ray_dust"
+					},
+					{
+						"effect": "moon_ray_dust",
+						"locator": "moon_ray_dust"
+					},
+					{
+						"effect": "head_dust",
+						"locator": "head_locator"
+					},
+					{
+						"effect": "body_dust",
+						"locator": "body_locator"
+					},
+					{
+						"effect": "limb_dust",
+						"locator": "leftarm_locator"
+					},
+					{
+						"effect": "limb_dust",
+						"locator": "rightarm_locator"
+					},
+					{
+						"effect": "limb_dust",
+						"locator": "leftleg_locator"
+					},
+					{
+						"effect": "limb_dust",
+						"locator": "rightleg_locator"
+					}
+				]
+			}
+		}
+	}
+}

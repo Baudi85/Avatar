@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.0d26105152a1c1426313b369a35dd7245a3973e9_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"/function enemy/bending/earth/wall/look_at"
+				]
+			}
+		},
+		"animation.0d26105152a1c1426313b369a35dd7245a3973e9_1": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"/function enemy/bending/earth/wall/look_at"
+				]
+			}
+		}
+	}
+}

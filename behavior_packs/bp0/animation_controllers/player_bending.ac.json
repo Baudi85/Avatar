@@ -1,0 +1,651 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.bending_teq_selection_manager": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_art_reset",
+						"@s nom:state_bending_teq_reset",
+						"/scoreboard players set @s technique_id 0",
+						"/tag @s remove technique.charged",
+						"/tag @s remove technique.charging",
+						"/function chi/ui/update_both"
+					],
+					"animations": [
+						"bending.player.reset_technique_id"
+					],
+					"transitions": [
+						{
+							"disabled": "q.mark_variant==-1"
+						},
+						{
+							"whistle": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:egg')"
+						},
+						{
+							"tile": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:paisho_tile')"
+						},
+						{
+							"whistle_confirm": "query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:snowball')"
+						},
+						{
+							"earth_0": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_earth_0')"
+						},
+						{
+							"earth_1": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_earth_1')"
+						},
+						{
+							"earth_2": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_earth_2')"
+						},
+						{
+							"earth_3": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_earth_3')"
+						},
+						{
+							"earth_4": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_earth_4')"
+						},
+						{
+							"water_0": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_water_0')"
+						},
+						{
+							"water_1": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_water_1')"
+						},
+						{
+							"water_2": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_water_2')"
+						},
+						{
+							"water_3": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_water_3')"
+						},
+						{
+							"water_4": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_water_4')"
+						},
+						{
+							"air_0": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_air_0')"
+						},
+						{
+							"air_1": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_air_1')"
+						},
+						{
+							"air_2": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_air_2')"
+						},
+						{
+							"air_3": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_air_3')"
+						},
+						{
+							"air_4": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_air_4')"
+						},
+						{
+							"fire_0": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_fire_0')"
+						},
+						{
+							"fire_1": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_fire_1')"
+						},
+						{
+							"fire_2": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_fire_2')"
+						},
+						{
+							"fire_3": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_fire_3')"
+						},
+						{
+							"fire_4": "query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_fire_4')"
+						}
+					]
+				},
+				"disabled": {
+					"transitions": [
+						{
+							"default": "q.mark_variant!=-1"
+						}
+					]
+				},
+				"whistle": {
+					"on_entry": [
+						"/scoreboard players set @s technique_id 1",
+						"/function chi/ui/update_subtitle"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:egg')||q.mark_variant==-1"
+						}
+					]
+				},
+				"tile": {
+					"on_entry": [
+						"/scoreboard players set @s technique_id 2",
+						"/function chi/ui/update_subtitle"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:paisho_tile')||q.mark_variant==-1"
+						}
+					]
+				},
+				"whistle_confirm": {
+					"on_entry": [
+						"/scoreboard players set @s technique_id 3",
+						"/function chi/ui/update_subtitle"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'minecraft:snowball')||q.mark_variant==-1"
+						}
+					]
+				},
+				"earth_0": {
+					"on_entry": [
+						"@s nom:state_bending_art_earth_0",
+						"/scoreboard players set @s technique_id 10",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_earth_0')||q.mark_variant==-1"
+						}
+					]
+				},
+				"earth_1": {
+					"on_entry": [
+						"@s nom:state_bending_art_earth_1",
+						"/scoreboard players set @s technique_id 11",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_earth_1')||q.mark_variant==-1"
+						}
+					]
+				},
+				"earth_2": {
+					"on_entry": [
+						"@s nom:state_bending_art_earth_2",
+						"/scoreboard players set @s technique_id 12",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_earth_2')||q.mark_variant==-1"
+						}
+					]
+				},
+				"earth_3": {
+					"on_entry": [
+						"@s nom:state_bending_art_earth_3",
+						"/scoreboard players set @s technique_id 13",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_earth_3')||q.mark_variant==-1"
+						}
+					]
+				},
+				"earth_4": {
+					"on_entry": [
+						"@s nom:state_bending_art_earth_4",
+						"/scoreboard players set @s technique_id 14",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_earth_4')||q.mark_variant==-1"
+						}
+					]
+				},
+				"water_0": {
+					"on_entry": [
+						"@s nom:state_bending_art_water_0",
+						"/scoreboard players set @s technique_id 20",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_water_0')||q.mark_variant==-1"
+						}
+					]
+				},
+				"water_1": {
+					"on_entry": [
+						"@s nom:state_bending_art_water_1",
+						"/scoreboard players set @s technique_id 21",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_water_1')||q.mark_variant==-1"
+						}
+					]
+				},
+				"water_2": {
+					"on_entry": [
+						"@s nom:state_bending_art_water_2",
+						"/scoreboard players set @s technique_id 22",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_water_2')||q.mark_variant==-1"
+						}
+					]
+				},
+				"water_3": {
+					"on_entry": [
+						"@s nom:state_bending_art_water_3",
+						"/scoreboard players set @s technique_id 23",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_water_3')||q.mark_variant==-1"
+						}
+					]
+				},
+				"water_4": {
+					"on_entry": [
+						"@s nom:state_bending_art_water_4",
+						"/scoreboard players set @s technique_id 24",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_water_4')||q.mark_variant==-1"
+						}
+					]
+				},
+				"air_0": {
+					"on_entry": [
+						"@s nom:state_bending_art_air_0",
+						"/scoreboard players set @s technique_id 30",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_air_0')||q.mark_variant==-1"
+						}
+					]
+				},
+				"air_1": {
+					"on_entry": [
+						"@s nom:state_bending_art_air_1",
+						"/scoreboard players set @s technique_id 31",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_air_1')||q.mark_variant==-1"
+						}
+					]
+				},
+				"air_2": {
+					"on_entry": [
+						"@s nom:state_bending_art_air_2",
+						"/scoreboard players set @s technique_id 32",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_air_2')||q.mark_variant==-1"
+						}
+					]
+				},
+				"air_3": {
+					"on_entry": [
+						"@s nom:state_bending_art_air_3",
+						"/scoreboard players set @s technique_id 33",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_air_3')||q.mark_variant==-1"
+						}
+					]
+				},
+				"air_4": {
+					"on_entry": [
+						"@s nom:state_bending_art_air_4",
+						"/scoreboard players set @s technique_id 34",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_air_4')||q.mark_variant==-1"
+						}
+					]
+				},
+				"fire_0": {
+					"on_entry": [
+						"@s nom:state_bending_art_fire_0",
+						"/scoreboard players set @s technique_id 40",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_fire_0')||q.mark_variant==-1"
+						}
+					]
+				},
+				"fire_1": {
+					"on_entry": [
+						"@s nom:state_bending_art_fire_1",
+						"/scoreboard players set @s technique_id 41",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_fire_1')||q.mark_variant==-1"
+						}
+					]
+				},
+				"fire_2": {
+					"on_entry": [
+						"@s nom:state_bending_art_fire_2",
+						"/scoreboard players set @s technique_id 42",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_fire_2')||q.mark_variant==-1"
+						}
+					]
+				},
+				"fire_3": {
+					"on_entry": [
+						"@s nom:state_bending_art_fire_3",
+						"/scoreboard players set @s technique_id 43",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_fire_3')||q.mark_variant==-1"
+						}
+					]
+				},
+				"fire_4": {
+					"on_entry": [
+						"@s nom:state_bending_art_fire_4",
+						"/scoreboard players set @s technique_id 44",
+						"/function chi/ui/update_both"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_item_name_any('slot.weapon.mainhand',0,'nom:bending_fire_4')||q.mark_variant==-1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.teq_manager": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"earth.earth_pull": "query.mark_variant==10"
+						},
+						{
+							"earth.earth_wall": "query.mark_variant==11"
+						},
+						{
+							"earth.earth_quake": "query.mark_variant==12"
+						},
+						{
+							"water.water_whip": "query.mark_variant==20"
+						},
+						{
+							"water.octopus_form": "query.mark_variant==21"
+						},
+						{
+							"water.frost_breath": "query.mark_variant==22"
+						},
+						{
+							"air.tornado": "query.mark_variant==31"
+						},
+						{
+							"air.sphere": "query.mark_variant==32"
+						},
+						{
+							"air.blades": "query.mark_variant==33"
+						},
+						{
+							"air.glider": "query.mark_variant==34"
+						},
+						{
+							"fire.jet_stream": "query.mark_variant==40"
+						},
+						{
+							"fire.fire_sweep": "query.mark_variant==41"
+						},
+						{
+							"fire.meteor_dash": "query.mark_variant==42"
+						}
+					],
+					"on_entry": [
+						"/function bending/state/default"
+					]
+				},
+				"earth.earth_pull": {
+					"animations": [
+						"bending.earth.earth_pull"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=10"
+						}
+					],
+					"on_exit": [
+						"/function bending/earth/earth_pull/on_deselect"
+					],
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/earth/raycast/loop/activate"
+					]
+				},
+				"earth.earth_wall": {
+					"animations": [
+						"bending.earth.earth_wall"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=11"
+						}
+					],
+					"on_exit": [
+						"/function bending/earth/earth_wall/on_deselect"
+					],
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/earth/raycast/loop/activate"
+					]
+				},
+				"earth.earth_quake": {
+					"animations": [
+						"bending.earth.earth_quake"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=12"
+						}
+					],
+					"on_exit": [
+						"/function bending/earth/earth_quake/on_deselect"
+					],
+					"on_entry": [
+						"@s nom:state_bending_teq_0"
+					]
+				},
+				"fire.meteor_dash": {
+					"animations": [
+						"bending.fire.jet"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=42"
+						}
+					],
+					"on_exit": [
+						"/function bending/fire/jet/on_deselect"
+					]
+				},
+				"fire.fire_sweep": {
+					"animations": [
+						"bending.fire.fire_sweep"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=41"
+						}
+					]
+				},
+				"fire.jet_stream": {
+					"animations": [
+						"bending.fire.jet_stream"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=40"
+						}
+					]
+				},
+				"water.water_whip": {
+					"animations": [
+						"bending.water.water_whip"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=20"
+						}
+					],
+					"on_exit": [
+						"/function bending/water/water_whip/on_deselect"
+					],
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/water/raycast/loop/activate"
+					]
+				},
+				"water.octopus_form": {
+					"animations": [
+						"bending.water.octopus_form"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=21"
+						}
+					],
+					"on_exit": [
+						"/function bending/water/octopus_form/on_deselect"
+					],
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/water/raycast/loop/activate"
+					]
+				},
+				"water.frost_breath": {
+					"animations": [
+						"bending.water.frost_breath"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=22"
+						}
+					],
+					"on_entry": [
+						"@s nom:state_bending_teq_0"
+					]
+				},
+				"air.blades": {
+					"animations": [
+						"bending.air.air_blades"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=33"
+						}
+					]
+				},
+				"air.glider": {
+					"transitions": [
+						{
+							"default": "query.mark_variant!=34"
+						}
+					],
+					"on_entry": [
+						"/function bending/air/glider/equip",
+						"@s nom:state_bending_teq_0"
+					],
+					"on_exit": [
+						"/function bending/air/glider/unequip"
+					]
+				},
+				"air.tornado": {
+					"animations": [
+						"bending.air.tornado"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=31"
+						}
+					]
+				},
+				"air.sphere": {
+					"on_exit": [
+						"/effect @s levitation 0 100 true",
+						"/effect @s slow_falling 0 100 true"
+					],
+					"animations": [
+						"bending.air.air_sphere"
+					],
+					"transitions": [
+						{
+							"default": "query.mark_variant!=32"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.bending.no_chi": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"no_chi_tick": "q.is_using_item&&q.is_saddled"
+						},
+						{
+							"chi": "q.is_using_item"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove ignore_chi"
+					]
+				},
+				"chi": {
+					"transitions": [
+						{
+							"default": "!q.is_using_item"
+						}
+					]
+				},
+				"no_chi_tick": {
+					"on_entry": [
+						"v.no_chi_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"no_chi": "1"
+						},
+						{
+							"default": "!q.is_using_item"
+						}
+					]
+				},
+				"no_chi": {
+					"on_entry": [
+						"/execute @s[tag=!ignore_chi] ~ ~ ~ function chi/on/not_enough_chi"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_using_item"
+						}
+					]
+				}
+			}
+		}
+	}
+}

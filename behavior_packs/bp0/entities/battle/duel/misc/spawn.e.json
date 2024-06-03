@@ -1,0 +1,40 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:duel.spawn",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:arrow",
+			"animations": {
+				"28db04706bde1387_a_0": "animation.28db04706bde13872fbdf1c14484204d7d11f0e2_0",
+				"28db04706bde1387_a_1": "animation.28db04706bde13872fbdf1c14484204d7d11f0e2_1",
+				"28db04706bde1387_ac_0": "controller.animation.28db04706bde13872fbdf1c14484204d7d11f0e2_0"
+			},
+			"scripts": {
+				"animate": [
+					"28db04706bde1387_a_0",
+					"28db04706bde1387_a_1",
+					"28db04706bde1387_ac_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:despawn": {
+				"filters": {
+					"test": "has_tag",
+					"value": "despawn"
+				}
+			}
+		}
+	}
+}

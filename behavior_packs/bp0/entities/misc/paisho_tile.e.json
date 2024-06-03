@@ -1,0 +1,319 @@
+{
+	"minecraft:entity": {
+		"format_version": "1.19.0",
+		"description": {
+			"identifier": "nom:paisho_tile",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"animations": {
+				"entity_reset": "controller.animation.entity_reset",
+				"65ee880db2b67b01_ac_0": "controller.animation.65ee880db2b67b01c65736747a29a7884ec65a81_0"
+			},
+			"scripts": {
+				"animate": [
+					"entity_reset",
+					"65ee880db2b67b01_ac_0"
+				]
+			}
+		},
+		"component_groups": {
+			"npc:base_0": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			},
+			"npc:base_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"npc:base_2": {
+				"minecraft:skin_id": {
+					"value": 2
+				}
+			},
+			"npc:base_3": {
+				"minecraft:skin_id": {
+					"value": 3
+				}
+			},
+			"nom:not_collected": {
+				"minecraft:entity_sensor": {
+					"sensor_range": 1.5,
+					"relative_range": false,
+					"minimum_count": 1,
+					"event_filters": {
+						"any_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							}
+						]
+					},
+					"event": "nom:collect_effect"
+				}
+			},
+			"nom:collect_effect": {
+				"minecraft:is_chested": {}
+			},
+			"nom:collected": {
+				"minecraft:is_ignited": {}
+			},
+			"gm1:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"swing": true,
+						"interact_text": "action.interact.base_change",
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_sneaking",
+										"subject": "player",
+										"operator": "equals",
+										"value": true
+									},
+									{
+										"test": "has_ability",
+										"value": "instabuild",
+										"subject": "other"
+									},
+									{
+										"test": "has_equipment",
+										"value": "nom:cycle_tool",
+										"subject": "other"
+									}
+								]
+							},
+							"event": "npc:change_base"
+						}
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"value": "nom:delete_tool",
+										"domain": "hand",
+										"subject": "other"
+									},
+									{
+										"test": "has_ability",
+										"value": "instabuild",
+										"subject": "other"
+									}
+								]
+							},
+							"event": "gm1:despawn"
+						}
+					}
+				]
+			},
+			"minecraft:push_through": {
+				"value": 1
+			},
+			"minecraft:ambient_sound_interval": {
+				"range": 30,
+				"value": 30,
+				"event_name": "ambient"
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:skin_id": {
+				"value": 0
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"test": "has_tag",
+					"value": "despawn"
+				}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"randomize": [
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"npc:base_0"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"npc:base_1"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"npc:base_2"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"npc:base_3"
+									]
+								}
+							}
+						]
+					},
+					{
+						"add": {
+							"component_groups": [
+								"nom:not_collected"
+							]
+						}
+					}
+				],
+				"add": {
+					"component_groups": [
+						"gm1:skin_id_0"
+					]
+				}
+			},
+			"npc:change_base": {
+				"sequence": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_skin_id",
+									"value": 0
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"npc:base_1"
+							]
+						}
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_skin_id",
+									"value": 1
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"npc:base_2"
+							]
+						}
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_skin_id",
+									"value": 2
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"npc:base_3"
+							]
+						}
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_skin_id",
+									"value": 3
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"npc:base_0"
+							]
+						}
+					}
+				]
+			},
+			"nom:collect_effect": {
+				"add": {
+					"component_groups": [
+						"nom:collect_effect"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"nom:not_collected"
+					]
+				}
+			},
+			"nom:collect": {
+				"add": {
+					"component_groups": [
+						"nom:collected"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"nom:collect_effect"
+					]
+				}
+			},
+			"nom:reset": {
+				"remove": {
+					"component_groups": [
+						"nom:collected"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"nom:not_collected"
+					]
+				}
+			},
+			"gm1:despawn": {
+				"add": {
+					"component_groups": [
+						"gm1:despawn"
+					]
+				}
+			}
+		}
+	}
+}

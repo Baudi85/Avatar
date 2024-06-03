@@ -1,0 +1,75 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.earth_wall": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.t[q.skin_id]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.stone",
+						"Texture.dirt",
+						"Texture.grass",
+						"Texture.diorite",
+						"Texture.stonebrick",
+						"Texture.gravel",
+						"Texture.cobblestone",
+						"Texture.andesite",
+						"Texture.polished_andesite",
+						"Texture.snow",
+						"Texture.course_dirt",
+						"Texture.granite",
+						"Texture.sand",
+						"Texture.red_sand",
+						"Texture.black_concrete",
+						"Texture.red_concrete",
+						"Texture.rar_floor"
+					]
+				}
+			}
+		},
+		"controller.render.earth_wall_outline": {
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"textures": [
+				"array.t[q.skin_id]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.stone",
+						"Texture.dirt",
+						"Texture.grass",
+						"Texture.diorite",
+						"Texture.stonebrick",
+						"Texture.gravel",
+						"Texture.cobblestone",
+						"Texture.andesite",
+						"Texture.polished_andesite",
+						"Texture.snow",
+						"Texture.course_dirt",
+						"Texture.granite",
+						"Texture.sand",
+						"Texture.red_sand",
+						"Texture.black_concrete",
+						"Texture.red_concrete",
+						"Texture.rar_floor"
+					]
+				}
+			},
+			"ignore_lighting": true,
+			"light_color_multiplier": "q.is_stunned ? 1000 : -1"
+		}
+	}
+}

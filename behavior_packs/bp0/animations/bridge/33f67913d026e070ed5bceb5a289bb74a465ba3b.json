@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.33f67913d026e070ed5bceb5a289bb74a465ba3b_0": {
+			"timeline": {
+				"0.0": [
+					"/tp @s[scores={battle_exit=..0},tag=!battle.entity.inside,tag=!enemy.dying] @e[type=nom:duel.spawn,c=1]"
+				]
+			},
+			"animation_length": 1,
+			"loop": true
+		}
+	}
+}

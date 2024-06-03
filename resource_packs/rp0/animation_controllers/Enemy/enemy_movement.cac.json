@@ -1,0 +1,179 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.enemy.movement": {
+			"initial_state": "none",
+			"states": {
+				"none": {
+					"transitions": [
+						{
+							"walk": "query.modified_move_speed>=0.2&&query.modified_move_speed<=0.95&&v.lock_movement==0&&v.lock_all==0&&q.skin_id!=420"
+						},
+						{
+							"run": "query.modified_move_speed>0.95&&v.lock_movement==0&&v.lock_all==0&&q.skin_id!=420"
+						},
+						{
+							"sneak": "query.is_sneaking&&v.lock_movement==0&&v.lock_sneak==0&&v.lock_all==0&&q.skin_id!=420"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"walk": {
+					"animations": [
+						"custom_walk"
+					],
+					"transitions": [
+						{
+							"none": "query.modified_move_speed<=0.2||(v.lock_movement==1||v.lock_all==1||q.skin_id==420)"
+						},
+						{
+							"run": "query.modified_move_speed>0.95&&v.lock_movement==0&&v.lock_all==0&&q.skin_id!=420"
+						},
+						{
+							"sneak": "query.is_sneaking&&v.lock_movement==0&&v.lock_sneak==0&&v.lock_all==0&&q.skin_id!=420"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"run": {
+					"animations": [
+						"custom_run"
+					],
+					"transitions": [
+						{
+							"none": "query.modified_move_speed<=0.2||(v.lock_movement==1||v.lock_all==1||q.skin_id==420)"
+						},
+						{
+							"walk": "query.modified_move_speed>=0.2&&query.modified_move_speed<=0.75&&v.lock_movement==0&&v.lock_all==0&&q.skin_id!=420"
+						},
+						{
+							"sneak": "query.is_sneaking&&v.lock_movement==0&&v.lock_sneak==0&&v.lock_all==0&&q.skin_id!=420"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"sneak": {
+					"animations": [
+						"sneak_controller"
+					],
+					"transitions": [
+						{
+							"none": "(!query.is_sneaking&&query.modified_move_speed<=0.2)||(v.lock_movement==1||v.lock_sneak==1||v.lock_all==1||q.skin_id==420)"
+						},
+						{
+							"walk": "!query.is_sneaking&&query.modified_move_speed>=0.2&&query.modified_move_speed<=0.95&&v.lock_movement==0&&v.lock_all==0&&q.skin_id!=420"
+						},
+						{
+							"run": "!query.is_sneaking&&query.modified_move_speed>0.95&&q.skin_id!=420"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.enemy.jump": {
+			"states": {
+				"ground": {
+					"transitions": [
+						{
+							"jump": "v.is_jumping==1&&(v.lock_all==0&&v.lock_jump==0&&q.skin_id!=420)"
+						},
+						{
+							"fall": "query.modified_move_speed>0.01&&!query.is_on_ground&&query.vertical_speed<-7.8&&(v.lock_all==0&&v.lock_jump==0&&q.skin_id!=420)"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"fall": {
+					"animations": [
+						"fall"
+					],
+					"transitions": [
+						{
+							"land": "query.is_on_ground"
+						},
+						{
+							"ground": "v.lock_all==1||v.lock_jump==1||q.skin_id==420"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"jump": {
+					"animations": [
+						"jump"
+					],
+					"transitions": [
+						{
+							"land": "q.all_animations_finished&&query.is_on_ground"
+						},
+						{
+							"ground": "v.lock_all==1||v.lock_jump==1||q.skin_id==420"
+						},
+						{
+							"fall": "q.all_animations_finished&&!query.is_on_ground&&(v.lock_all==0&&v.lock_jump==0)"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"land": {
+					"animations": [
+						"land",
+						"jump_end"
+					],
+					"transitions": [
+						{
+							"jump": "v.is_jumping==1&&(v.lock_all==0&&v.lock_jump==0)"
+						},
+						{
+							"ground": "query.is_on_ground&&query.all_animations_finished||(v.lock_all==1||v.lock_jump==1||q.skin_id==420)"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.enemy.sneak": {
+			"states": {
+				"stand": {
+					"transitions": [
+						{
+							"sneak": "query.is_sneaking&&query.modified_move_speed>0.05"
+						},
+						{
+							"sneak_still": "query.is_sneaking&&query.modified_move_speed<=0.05"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"sneak_still": {
+					"animations": [
+						"sneak_static"
+					],
+					"transitions": [
+						{
+							"sneak": "query.is_sneaking&&query.modified_move_speed>0.05"
+						},
+						{
+							"stand": "!query.is_sneaking"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"sneak": {
+					"animations": [
+						"sneak"
+					],
+					"transitions": [
+						{
+							"sneak_still": "query.is_sneaking&&query.modified_move_speed<=0.05"
+						},
+						{
+							"stand": "!query.is_sneaking"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,162 @@
+{
+	"format_version": "1.18.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:meditation_site",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"entity_reset": "controller.animation.entity_reset",
+				"e89b300be3aec25d_ac_0": "controller.animation.e89b300be3aec25dd2c077c0acf58b3ea17cbde4_0",
+				"e89b300be3aec25d_ac_1": "controller.animation.e89b300be3aec25dd2c077c0acf58b3ea17cbde4_1",
+				"e89b300be3aec25d_ac_2": "controller.animation.e89b300be3aec25dd2c077c0acf58b3ea17cbde4_2"
+			},
+			"scripts": {
+				"animate": [
+					"entity_reset",
+					"e89b300be3aec25d_ac_0",
+					"e89b300be3aec25d_ac_1",
+					"e89b300be3aec25d_ac_2"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:on_interact": {
+				"minecraft:is_ignited": {}
+			},
+			"nom:first_site": {
+				"minecraft:environment_sensor": {
+					"triggers": {
+						"filters": {
+							"test": "distance_to_nearest_player",
+							"operator": "<",
+							"subject": "self",
+							"value": 5
+						},
+						"event": "nom:chat_fire",
+						"target": "self"
+					}
+				},
+				"minecraft:is_stunned": {}
+			},
+			"nom:fire_chat_message": {
+				"minecraft:is_sheared": {},
+				"minecraft:timer": {
+					"time": 1,
+					"looping": true,
+					"time_down_event": {
+						"event": "nom:fire_chat_end",
+						"target": "self"
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:rideable": {
+				"family_types": [
+					"player"
+				],
+				"seat_count": 1,
+				"seats": [
+					{
+						"position": [
+							0,
+							0.675,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:custom_hit_test": {
+				"hitboxes": [
+					{
+						"width": 1.5,
+						"height": 1.8,
+						"pivot": [
+							0,
+							1,
+							0
+						]
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 0
+			},
+			"minecraft:type_family": {
+				"family": [
+					"meditation_site"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "nom:on_interact"
+						},
+						"interact_text": "action.interact.meditate"
+					}
+				]
+			}
+		},
+		"events": {
+			"nom:on_interact": {
+				"add": {
+					"component_groups": [
+						"nom:on_interact"
+					]
+				}
+			},
+			"nom:on_interact_end": {
+				"remove": {
+					"component_groups": [
+						"nom:on_interact"
+					]
+				}
+			},
+			"nom:reset": {
+				"add": {
+					"component_groups": [
+						"nom:first_site"
+					]
+				}
+			},
+			"nom:chat_fire": {
+				"remove": {
+					"component_groups": [
+						"nom:first_site"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"nom:fire_chat_message"
+					]
+				}
+			},
+			"nom:fire_chat_end": {
+				"remove": {
+					"component_groups": [
+						"nom:fire_chat_message"
+					]
+				}
+			}
+		}
+	}
+}

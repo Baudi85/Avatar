@@ -1,0 +1,168 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.meditation_site.static_root": {
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "ethereal_dust",
+					"locator": "ethereal_dust_locator"
+				}
+			},
+			"bones": {
+				"static_root": {
+					"rotation": [
+						0,
+						"-query.body_y_rotation",
+						0
+					]
+				},
+				"Player": {
+					"position": [
+						0,
+						"8+math.sin(q.anim_time*60)",
+						0
+					]
+				},
+				"leftLeg": {
+					"rotation": [
+						-23.41031,
+						11.26652,
+						70.84199
+					],
+					"position": [
+						1.7,
+						-9.4,
+						-0.9
+					],
+					"scale": [
+						1,
+						0.95,
+						1
+					]
+				},
+				"rightLeg": {
+					"rotation": [
+						-19.61277,
+						2.62145,
+						-73.19744
+					],
+					"position": [
+						-3.4,
+						-7.7,
+						-2.6
+					]
+				},
+				"body": {
+					"rotation": [
+						"math.sin(query.anim_time*100)*2",
+						0,
+						0
+					],
+					"position": [
+						0,
+						-11.6,
+						"math.sin(query.anim_time*100)*-0.2"
+					]
+				},
+				"hat": {
+					"rotation": [
+						"12.5+math.sin(query.anim_time*100+40)*-4",
+						0,
+						0
+					]
+				},
+				"leftArm": {
+					"rotation": [
+						-58.54541,
+						-25.2333,
+						25.44957
+					],
+					"position": [
+						0,
+						-0.4,
+						0.9
+					],
+					"scale": 1
+				},
+				"rightArm": {
+					"rotation": [
+						-56.36244,
+						24.76387,
+						-22.21067
+					],
+					"position": [
+						0,
+						-0.2,
+						0.5
+					],
+					"scale": 1
+				},
+				"head": {
+					"rotation": [
+						15,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.meditation_site.sun_ray_movement": {
+			"loop": true,
+			"bones": {
+				"god_ray": {
+					"rotation": [
+						0,
+						0,
+						"180-(q.time_of_day*360)"
+					],
+					"scale": [
+						1,
+						2,
+						1
+					]
+				},
+				"moon_ray": {
+					"rotation": [
+						0,
+						0,
+						"180-(q.time_of_day*360)"
+					],
+					"scale": [
+						1,
+						2,
+						1
+					]
+				}
+			}
+		},
+		"animation.meditation_site.sun_ray_LOD": {
+			"loop": true,
+			"bones": {
+				"god_ray": {
+					"scale": 1
+				},
+				"moon_ray": {
+					"scale": 1
+				}
+			}
+		},
+		"animation.meditation_site.rotate_to_player": {
+			"loop": true,
+			"bones": {
+				"Player": {
+					"rotation": [
+						0,
+						"q.rotation_to_camera(1)",
+						0
+					]
+				}
+			}
+		}
+	}
+}

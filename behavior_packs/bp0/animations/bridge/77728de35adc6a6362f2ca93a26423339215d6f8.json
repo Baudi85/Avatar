@@ -1,0 +1,64 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.77728de35adc6a6362f2ca93a26423339215d6f8_0": {
+			"timeline": {
+				"0.0": [
+					"/tag @s add self",
+					"/scoreboard players set @s tmp 0",
+					"/execute @a[tag=battle.entity.106.inside] ~ ~ ~ scoreboard players add @e[tag=self] tmp 1",
+					"/execute @s[scores={tmp=1}] ~ ~ ~ execute @a[tag=player.dead,tag=battle.entity.106.inside] ~ ~ ~ scoreboard players set @e[tag=self] battle_exit -2",
+					"/tag @s remove self"
+				]
+			},
+			"animation_length": 0.5,
+			"loop": true
+		},
+		"animation.77728de35adc6a6362f2ca93a26423339215d6f8_1": {
+			"timeline": {
+				"0.0": [
+					"/tag @s remove battle.occupied.was",
+					"/tag @s[tag=battle.occupied] add battle.occupied.was",
+					"/tag @s remove battle.occupied",
+					"/tag @e remove battle.entity.106",
+					"/tag @e[tag=battle.entity.106.inside] add battle.entity.106",
+					"/tag @e remove battle.entity.inside.106.was",
+					"/tag @e[tag=battle.entity.106.inside] add battle.entity.inside.106.was",
+					"/tag @e[tag=battle.entity.106.inside] remove battle.entity.inside",
+					"/tag @e remove battle.entity.106.inside",
+					"/tag @e[x=56,y=15,z=25,dx=10,dy=5,dz=14,tag=bender,tag=!enemy.in_water] add battle.entity.106.inside",
+					"/tag @e[x=53,y=15,z=40,dx=13,dy=5,dz=2,tag=bender,tag=!enemy.in_water] add battle.entity.106.inside",
+					"/tag @e[x=58,y=15,z=43,dx=8,dy=5,dz=7,tag=bender,tag=!enemy.in_water] add battle.entity.106.inside",
+					"/tag @e[x=67,y=15,z=42,dx=3,dy=5,dz=11,tag=bender,tag=!enemy.in_water] add battle.entity.106.inside",
+					"/tag @e[x=64,y=15,z=51,dx=2,dy=5,dz=4,tag=bender,tag=!enemy.in_water] add battle.entity.106.inside",
+					"/tag @s add self",
+					"/execute @a[tag=battle.entity.106.inside,m=!1,c=1,scores={scene_id=..1}] ~ ~ ~ tag @e[tag=self] add battle.occupied",
+					"/tag @s remove self",
+					"/tag @e[tag=battle.entity.106.inside] add battle.entity.inside",
+					"/tag @e[tag=battle.entity.inside,tag=enemy] add battle.enemy",
+					"/tag @s add battle.current",
+					"/execute @s[scores={battle_state=1}] ~ ~ ~ execute @a[tag=battle.entity.106.inside,tag=!battle.member.106] ~ ~ ~ function battle/state/on_join",
+					"/tag @s remove battle.current",
+					"/tag @a[tag=battle.join] add battle.member.106",
+					"/tag @a[tag=battle.join] add battle.member",
+					"/tag @a remove battle.join",
+					"/scoreboard players set @e[tag=!battle.entity.106.inside,tag=battle.entity.inside.106.was] battle_exit 5",
+					"/scoreboard players set @s[tag=!battle.occupied,tag=battle.occupied.was,scores={battle_exit=-1..}] battle_exit 5",
+					"/scoreboard players remove @s[tag=!battle.occupied,scores={battle_exit=0..}] battle_exit 1"
+				]
+			},
+			"animation_length": 1,
+			"loop": true
+		},
+		"animation.77728de35adc6a6362f2ca93a26423339215d6f8_2": {
+			"timeline": {
+				"0.0": [
+					"/execute @s[scores={battle_state=1},tag=battle.occupied,tag=!battle.delay] ~ ~ ~ particle nom:barrier.rooftop_road.inside 63 15 46",
+					"/execute @s[scores={battle_state=1},tag=!battle.occupied,tag=!battle.delay] ~ ~ ~ particle nom:barrier.rooftop_road.outside 63 15 46"
+				]
+			},
+			"animation_length": 0.5,
+			"loop": true
+		}
+	}
+}

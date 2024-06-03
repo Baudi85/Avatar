@@ -1,0 +1,17 @@
+scoreboard players set @s[rym=-11.25,ry=11.75] facing_dir 1
+scoreboard players set @s[rym=11.25,ry=33.75] facing_dir 2
+scoreboard players set @s[rym=33.75,ry=56.25] facing_dir 3
+scoreboard players set @s[rym=56.25,ry=78.75] facing_dir 4
+scoreboard players set @s[rym=78.75,ry=101.25] facing_dir 5
+scoreboard players set @s[rym=101.25,ry=123.75] facing_dir 6
+scoreboard players set @s[rym=123.75,ry=146.25] facing_dir 7
+scoreboard players set @s[rym=146.25,ry=168.75] facing_dir 8
+scoreboard players set @s[rym=168.75,ry=180] facing_dir 9
+scoreboard players set @s[rym=-180,ry=-168.75] facing_dir 9
+scoreboard players set @s[rym=-168.75,ry=-146.25] facing_dir 10
+scoreboard players set @s[rym=-146.25,ry=-123.75] facing_dir 11
+scoreboard players set @s[rym=-123.75,ry=-101.25] facing_dir 12
+scoreboard players set @s[rym=-101.25,ry=-78.75] facing_dir 13
+scoreboard players set @s[rym=-78.75,ry=-56.25] facing_dir 14
+scoreboard players set @s[rym=-56.25,ry=-33.75] facing_dir 15
+scoreboard players set @s[rym=-33.75,ry=-11.25] facing_dir 16

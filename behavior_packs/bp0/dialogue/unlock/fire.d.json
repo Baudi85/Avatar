@@ -1,0 +1,3175 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "unlock.fire.stream.0000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.0001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/stream",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.0010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.0011",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/stream",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.0100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.0101",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/stream",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.0110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.0111",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/stream",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.1000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.1010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.1100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.stream.1110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.stream"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.0000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.0001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/sweep",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.0010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.0011",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/sweep",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.0100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.0110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.1000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.1001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/sweep",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.1010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.1011",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/sweep",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.1100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.sweep.1110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.sweep"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.0000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.0001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/dash",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.0010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.0100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.0101",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/dash",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.0110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.1000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.1001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/dash",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.1010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.1100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.1101",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/fire/dash",
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.fire.dash.1110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "fire.dash"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/stream"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/sweep"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/fire/dash"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			}
+		]
+	}
+}

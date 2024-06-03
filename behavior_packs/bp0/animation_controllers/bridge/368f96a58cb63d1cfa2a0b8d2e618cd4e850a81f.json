@@ -1,0 +1,90 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.368f96a58cb63d1cfa2a0b8d2e618cd4e850a81f_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==310)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==310"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.368f96a58cb63d1cfa2a0b8d2e618cd4e850a81f_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==310)"
+						},
+						{
+							"charging": "1"
+						}
+					]
+				},
+				"charging": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1",
+						"v.tornado_charge_timer=q.life_time;",
+						"@s nom:freeze_behavior"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==310)"
+						},
+						{
+							"release": "(q.life_time>=v.tornado_charge_timer+1||q.skin_id!=310)"
+						}
+					]
+				},
+				"release": {
+					"on_entry": [
+						"v.tornado_delay_timer=q.life_time;",
+						"/function bending/air/tornado/create_enemy_tornado",
+						"/function bending/air/tornado/activate_enemy_tornado",
+						"@s nom:state_bending_teq_2"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==310)"
+						},
+						{
+							"default": "q.life_time>=v.tornado_delay_timer+1||q.skin_id!=310"
+						}
+					],
+					"on_exit": [
+						"/event entity @s[tag=can_end_state] gm1:end_state",
+						"@s nom:unfreeze_behavior"
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==310"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		}
+	}
+}

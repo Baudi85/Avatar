@@ -1,0 +1,192 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:npc_batlemur",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"edc30b199a47e34d_ac_0": "controller.animation.edc30b199a47e34d1869ed9aa5d3d3e16a25dc09_0"
+			},
+			"scripts": {
+				"animate": [
+					"edc30b199a47e34d_ac_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:is_saddled": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"value": "minecraft:is_ignited",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "nom:interact"
+						},
+						"interact_text": "action.interact.pet"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"value": "nom:delete_tool",
+										"domain": "hand",
+										"subject": "other"
+									},
+									{
+										"test": "has_ability",
+										"value": "instabuild",
+										"subject": "other"
+									}
+								]
+							},
+							"event": "gm1:despawn"
+						}
+					}
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"value": "minecraft:is_ignited",
+										"operator": "!="
+									}
+								]
+							},
+							"event": "nom:interact"
+						},
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 2
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": false
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"test": "has_tag",
+					"value": "despawn"
+				}
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:skin_id": {
+				"value": 0
+			}
+		},
+		"component_groups": {
+			"nom:interact": {
+				"minecraft:is_ignited": {}
+			},
+			"nom:npc.hide": {
+				"minecraft:scale": {
+					"value": 0
+				}
+			},
+			"gm1:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"events": {
+			"nom:interact": {
+				"add": {
+					"component_groups": [
+						"nom:interact"
+					]
+				}
+			},
+			"nom:stop_interact": {
+				"remove": {
+					"component_groups": [
+						"nom:interact"
+					]
+				}
+			},
+			"nom:npc.hide": {
+				"add": {
+					"component_groups": [
+						"nom:npc.hide"
+					]
+				}
+			},
+			"nom:npc.show": {
+				"remove": {
+					"component_groups": [
+						"nom:npc.hide"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"gm1:skin_id_0"
+					]
+				}
+			},
+			"gm1:despawn": {
+				"add": {
+					"component_groups": [
+						"gm1:despawn"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,30 @@
+{
+    "namespace": "gm1_npc_creative",
+    "screen_contents": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [{ "screen@screen": {}}, { "close@gm1_npc_utils.close_on_escape": {}}]
+    },
+    "screen": {
+        "type": "image",
+        "size": [ "100%", "100%" ],
+        "texture": "textures/ui/White",
+        "color": [ 0, 0, 0 ],
+        "alpha": 0.85,
+        "controls": [
+            {
+                "title": {
+                    "type": "label",
+                    "color": "$f_color_format",
+                    "text": "Custom dialogues do not work in Creative\nPress 'esc' to close",
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "text_alignment": "center",
+                    "font_size": "normal"
+                }
+            }
+        ]
+    }
+}

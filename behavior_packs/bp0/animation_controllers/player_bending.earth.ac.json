@@ -1,0 +1,404 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending.earth.earth_pull": {
+			"states": {
+				"cooldown": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/earth/earth_wall/wall_raycast_only",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_saddled||!q.is_using_item"
+						}
+					]
+				},
+				"fail": {
+					"on_entry": [
+						"/function bending/earth/earth_pull/on_fail"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"in_air": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/requires_ground"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_using_item||q.is_on_ground"
+						}
+					]
+				},
+				"default": {
+					"on_entry": [
+						"/function bending/earth/raycast/loop/activate",
+						"/function bending/state/default",
+						"v.earth_pull_charge_time=0.25;",
+						"v.earth_pull_const_timeout_time=8;",
+						"@s nom:state_bending_teq_0"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.is_using_item&&q.is_saddled"
+						},
+						{
+							"in_air": "q.is_using_item&&!q.is_on_ground"
+						},
+						{
+							"using_item": "q.is_using_item"
+						}
+					]
+				},
+				"using_item": {
+					"on_entry": [
+						"/function bending/earth/earth_pull/on_using_item"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_using_item"
+						},
+						{
+							"requires_earth": "q.variant==2"
+						},
+						{
+							"charging": "q.variant==1"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					]
+				},
+				"requires_earth": {
+					"on_entry": [
+						"/function bending/state/requires_earth"
+					],
+					"transitions": [
+						{
+							"using_item": "1"
+						}
+					]
+				},
+				"charging": {
+					"on_entry": [
+						"/function bending/earth/earth_pull/on_charging",
+						"v.earth_pull_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"fail": "!q.is_using_item"
+						},
+						{
+							"fetching_stone": "q.life_time>=v.earth_pull_runtime+v.earth_pull_charge_time"
+						}
+					]
+				},
+				"fetching_stone": {
+					"on_entry": [
+						"/function bending/earth/earth_pull/on_fetching_stone",
+						"v.earth_pull_runtime=q.life_time;"
+					],
+					"animations": [
+						"bending.earth.earth_pull.fetching_stone"
+					],
+					"transitions": [
+						{
+							"throwing_stone": "!q.is_using_item||q.is_saddled||q.life_time>=v.earth_pull_runtime+v.earth_pull_const_timeout_time||q.variant>5"
+						}
+					]
+				},
+				"throwing_stone": {
+					"on_entry": [
+						"@s nom:state_bending_teq_6",
+						"/function bending/earth/earth_pull/on_throwing_stone",
+						"v.earth_pull_runtime=q.life_time;"
+					],
+					"animations": [
+						{
+							"bending.earth.earth_pull.throwing_stone_1": "q.variant == 3 || q.variant == 6"
+						},
+						{
+							"bending.earth.earth_pull.throwing_stone_2": "q.variant == 4 || q.variant == 7"
+						},
+						{
+							"bending.earth.earth_pull.throwing_stone_3": "q.variant == 5 || q.variant == 8"
+						}
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.earth.earth_wall": {
+			"states": {
+				"fail_charge": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/earth/earth_wall/on_fail_charge",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"cooldown": "!q.is_using_item"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/earth/earth_wall/wall_raycast_only",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"attempt_throw": "q.is_using_item"
+						},
+						{
+							"default": "!q.is_saddled||!q.is_using_item"
+						}
+					]
+				},
+				"in_air": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/earth/earth_wall/on_in_air",
+						"/function bending/state/requires_ground"
+					],
+					"transitions": [
+						{
+							"default": "q.is_on_ground"
+						}
+					]
+				},
+				"default": {
+					"on_entry": [
+						"v.earth_wall_const_charge_time=0;",
+						"v.earth_wall_const_timeout_time=2.5;",
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_0",
+						"/function bending/earth/raycast/loop/activate",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.is_using_item&&q.is_saddled"
+						},
+						{
+							"in_air": "q.is_using_item&&!q.is_on_ground"
+						},
+						{
+							"deploying_1": "q.is_using_item"
+						}
+					]
+				},
+				"deploying_1": {
+					"on_entry": [
+						"v.earth_wall_runtime=q.life_time;",
+						"/function bending/earth/earth_wall/on_deploying_1"
+					],
+					"transitions": [
+						{
+							"in_air": "!q.is_on_ground"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"requires_earth": "q.variant==5"
+						},
+						{
+							"throwing": "q.variant==4"
+						},
+						{
+							"charging": "q.variant==1&&q.life_time>=v.earth_wall_runtime+0.1"
+						}
+					]
+				},
+				"requires_earth": {
+					"on_entry": [
+						"/function bending/state/requires_earth"
+					],
+					"transitions": [
+						{
+							"deploying_1": "1"
+						}
+					]
+				},
+				"charging": {
+					"on_entry": [
+						"v.earth_wall_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"deploying_2": "q.life_time>=v.earth_wall_runtime+v.earth_wall_const_charge_time+0.1"
+						}
+					]
+				},
+				"deploying_2": {
+					"on_entry": [
+						"v.earth_wall_runtime=q.life_time;",
+						"@s nom:state_bending_teq_2",
+						"/function bending/earth/earth_wall/on_deploying_2"
+					],
+					"transitions": [
+						{
+							"deploying_3": "!q.is_using_item"
+						},
+						{
+							"fail_charge": "q.life_time>v.earth_wall_runtime+v.earth_wall_const_timeout_time"
+						}
+					]
+				},
+				"deploying_3": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_3",
+						"/function bending/earth/earth_wall/on_deploying_3"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"attempt_throw": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"/function bending/earth/earth_wall/on_attempt_throw"
+					],
+					"transitions": [
+						{
+							"throwing": "q.variant==4"
+						},
+						{
+							"cooldown": "q.life_time>v.runtime+0.1"
+						}
+					]
+				},
+				"throwing": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_4",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.life_time>=v.runtime+0.1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.earth.earth_quake": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.earth_quake_const_timeout_time=2.5;",
+						"v.earth_quake_const_cooldown=1.5;",
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/default",
+						"/function player/freeze/off"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.is_using_item&&q.is_saddled"
+						},
+						{
+							"in_air": "q.is_using_item&&!q.is_on_ground"
+						},
+						{
+							"using_item": "q.is_using_item"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.earth_quake_runtime=q.life_time;",
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/default",
+						"/function player/freeze/off"
+					],
+					"transitions": [
+						{
+							"default": "(!q.is_saddled||!q.is_using_item)&&q.life_time>=v.earth_quake_runtime+v.earth_quake_const_cooldown"
+						}
+					]
+				},
+				"in_air": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/requires_ground"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_using_item||q.is_on_ground"
+						}
+					]
+				},
+				"using_item": {
+					"on_entry": [
+						"/function bending/earth/earth_quake/on_using_item"
+					],
+					"transitions": [
+						{
+							"charging": "q.variant==1"
+						},
+						{
+							"requires_earth": "q.variant==2"
+						},
+						{
+							"default": "q.variant!=1&&q.variant!=2"
+						}
+					]
+				},
+				"requires_earth": {
+					"on_entry": [
+						"/function bending/state/requires_earth"
+					],
+					"transitions": [
+						{
+							"using_item": "1"
+						}
+					]
+				},
+				"charging": {
+					"on_entry": [
+						"/function bending/earth/earth_quake/on_charging",
+						"v.earth_quake_runtime=q.life_time;"
+					],
+					"animations": [
+						"bending.earth.earth_quake.charging"
+					],
+					"transitions": [
+						{
+							"quaking": "!q.is_using_item||q.life_time>=v.earth_quake_runtime+v.earth_quake_const_timeout_time||q.variant==4"
+						}
+					]
+				},
+				"quaking": {
+					"on_entry": [
+						"/function bending/earth/earth_quake/on_quaking",
+						"v.earth_quake_runtime=q.life_time;"
+					],
+					"animations": [
+						"bending.earth.earth_quake.quaking"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.variant==0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

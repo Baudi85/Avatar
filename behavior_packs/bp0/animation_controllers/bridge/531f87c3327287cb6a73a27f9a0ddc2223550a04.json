@@ -1,0 +1,71 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.531f87c3327287cb6a73a27f9a0ddc2223550a04_0": {
+			"initial_state": "determine",
+			"states": {
+				"determine": {
+					"transitions": [
+						{
+							"exploded": "query.is_ignited"
+						},
+						{
+							"default": "!query.is_ignited"
+						}
+					]
+				},
+				"default": {
+					"on_entry": [
+						"/tag @s add enemy"
+					],
+					"transitions": [
+						{
+							"damaged": "q.is_sheared"
+						},
+						{
+							"explode": "query.is_ignited"
+						}
+					]
+				},
+				"damaged": {
+					"on_entry": [
+						"@s nom:undamage"
+					],
+					"transitions": [
+						{
+							"explode": "query.is_ignited"
+						},
+						{
+							"default": "!query.is_ignited&&!q.is_sheared"
+						}
+					]
+				},
+				"explode": {
+					"on_entry": [
+						"/tag @e[type=nom:npc_cabbagemerchant, c=1] add cart_destroyed",
+						"/scoreboard players add @a cabbage_cart 1",
+						"/playanimation @e[type=nom:npc_cabbagemerchant, c=1] animation.set_var.emotion_id.15"
+					],
+					"transitions": [
+						{
+							"exploded": "1"
+						}
+					]
+				},
+				"exploded": {
+					"on_entry": [
+						"/tag @s remove enemy"
+					],
+					"on_exit": [
+						"/effect @s instant_health 1 31 true"
+					],
+					"transitions": [
+						{
+							"default": "!query.is_ignited"
+						}
+					]
+				}
+			}
+		}
+	}
+}

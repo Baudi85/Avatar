@@ -1,0 +1,60 @@
+{
+    "namespace": "gm1_title_levelup",
+    "main": {
+        "type": "stack_panel",
+        "collection_name": "__collection_toast_entry",
+        "factory": { "name": "__factory_toast_entry", "control_name": "gm1_title_levelup.holder" },
+        "size": [ "100%", "100%" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "/levelup",
+                "source_property_name": "((#value > 0) * -1)",
+                "target_property_name": "#collection_length"
+            }
+        ]
+    },
+    "holder": { "type": "panel", "size": [ "100%", "100%" ], "controls": [{ "content@content": {}}]},
+    "content": {
+        "type": "panel",
+        "size": [ 16, 16 ],
+        "anchor_from": "bottom_middle",
+        "anchor_to": "bottom_middle",
+        "propagate_alpha": true,
+        "anims": [ "@gm1_title_levelup.anim__offset" ],
+        "controls": [{ "background@background": {}}, { "text@text": {}}]
+    },
+    "background": { 
+        "type": "image", 
+        "size": [ "100%", "100%" ], 
+        "offset": [-8, 0],
+        "texture": "textures/ui/gm1/exp/levelup",
+        "uv_size": [ 16, 16 ],
+        "uv": "@gm1_title_levelup.anim__flipbook"
+    },
+    "text": {
+        "alpha": 1,
+        "layer": 1,
+        "offset": [7, 0],
+        "type": "label",
+        "shadow": true,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "text": "+1"
+    },
+    "text_2": {
+        "alpha": 0,
+        "layer": 1,
+        "offset": [0, -16],
+        "type": "label",
+        "shadow": true,
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "text": "MASTERY POINT"
+    },
+    "anim__offset": { "anim_type": "offset", "from": [ 0, "-25%" ], "to": [ 0, "-50%" ], "duration": 1, "easing": "out_expo", "next": "@gm1_title_levelup.anim__fade" },
+    "anim__flipbook": { "anim_type": "flip_book", "initial_uv": [ 0, 0 ], "frame_count": 8, "fps": 8, "frame_step": 16 },
+    "anim__fade": { "anim_type": "alpha", "from": 1, "to": 0, "duration": 1, "easing": "in_expo" }
+}

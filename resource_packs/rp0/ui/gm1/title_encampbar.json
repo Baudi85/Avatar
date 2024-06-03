@@ -1,0 +1,102 @@
+{
+    "namespace": "gm1_title_encampbar",
+    "main": {
+        "type": "panel",
+        "offset": "$offset_x",
+        "size": [ "100%", "100%c" ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [{ "bossbar@bossbar": {}}],
+        "variables":[
+            { "requires": "$pocket_screen", "$offset_x": [ 0, 20 ]},
+            { "requires": "$desktop_screen", "$offset_x": [ 0, 8 ]},
+            { "requires": "$console_edition", "$offset_x": [ 0, 8 ]},
+            { "requires": "$is_ps4", "$offset_x": [ 0, 8 ]},
+            { "requires": "$build_platform_UWP", "$offset_x": [ 0, 8 ]}
+        ]
+    },
+    "bossbar":{
+        "type": "stack_panel",
+        "orientation": "vertical",
+        "size": [ 150, "100%c" ],
+        "controls": [{ "boss_name@boss_name": {}}, { "boss_bar@boss_bar": {}}],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "/encampbar_value",
+                "source_property_name": "#value",
+                "target_property_name": "#value"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not(#value < 1) and not(#value = ''))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "boss_name": {
+        "type": "panel",
+        "size": [ "100%", "100%c + 2px" ],
+        "controls": [
+            {
+                "boss_name": {
+                    "type": "label",
+                    "text_alignment": "center",
+                    "color": "$boss_name_text_color",
+                    "text": "#value",
+                    "shadow": true,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "/encampbar_id",
+                            "source_property_name": "('encampment.' + #value)",
+                            "target_property_name": "#value"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "boss_bar": {
+        "type": "panel",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [ 150, 5 ],
+        "controls": [
+            { 
+                "frame_progress_bar": { 
+                    "layer": 0, 
+                    "type": "image", 
+                    "texture": "textures/ui/frame_progress_bar", 
+                    "size": [ "100% + 18px", 15 ],
+                    "offset": [ 0, 0 ]
+                }
+            },
+            { "empty_progress_bar": { "layer": 1, "type": "image", "texture": "textures/ui/empty_progress_bar" }},
+            {
+                "filled_progress_bar": {
+                    "layer": 2,
+                    "type": "image",
+                    "size": [ "100%", "100%" ],
+                    "texture": "textures/ui/filled_progress_bar",
+                    "clip_direction": "left",
+                    "property_bag": { "#mul": 0.01 },
+                    "clip_pixelperfect": false,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "/encampbar_value",
+                            "source_property_name": "#value",
+                            "target_property_name": "#value"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(1 - (#value * #mul))",
+                            "target_property_name": "#clip_ratio"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

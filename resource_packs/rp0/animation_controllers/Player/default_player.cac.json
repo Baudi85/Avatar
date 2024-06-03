@@ -1,0 +1,190 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.root": {
+			"initial_state": "first_person",
+			"states": {
+				"first_person": {
+					"animations": [
+						"first_person_base_pose",
+						"double_jump_sfx_controller"
+					],
+					"transitions": [
+						{
+							"paperdoll": "variable.is_paperdoll"
+						},
+						{
+							"map_player": "variable.map_face_icon"
+						},
+						{
+							"third_person": "!variable.is_first_person"
+						}
+					]
+				},
+				"map_player": {
+					"transitions": [
+						{
+							"paperdoll": "variable.is_paperdoll"
+						},
+						{
+							"first_person": "variable.is_first_person"
+						},
+						{
+							"third_person": "!variable.map_face_icon&&!variable.is_first_person"
+						}
+					]
+				},
+				"paperdoll": {
+					"animations": [
+						"humanoid_base_pose",
+						"look_at_target_ui",
+						"cape"
+					],
+					"transitions": [
+						{
+							"first_person": "!variable.is_paperdoll&&variable.is_first_person"
+						},
+						{
+							"map_player": "variable.map_face_icon"
+						},
+						{
+							"third_person": "!variable.is_paperdoll&&!variable.is_first_person"
+						}
+					]
+				},
+				"third_person": {
+					"animations": [
+						"humanoid_base_pose",
+						"gliding_controller",
+						"double_jump_sfx_controller",
+						{
+							"look_at_target_controller": "!query.is_sleeping&&!query.is_emoting"
+						},
+						"cape",
+						{
+							"meditating": "q.is_riding&&q.variant==0"
+						},
+						"holding",
+						{
+							"swimming": "variable.swim_amount>0"
+						},
+						{
+							"swimming.legs": "variable.swim_amount>0"
+						}
+					],
+					"transitions": [
+						{
+							"paperdoll": "variable.is_paperdoll"
+						},
+						{
+							"first_person": "variable.is_first_person"
+						},
+						{
+							"map_player": "variable.map_face_icon"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.first_person": {
+			"initial_state": "none",
+			"states": {
+				"none": {
+					"transitions": [
+						{
+							"first_person": "variable.is_first_person"
+						}
+					]
+				},
+				"first_person": {
+					"animations": [
+						"flip_offset"
+					],
+					"transitions": [
+						{
+							"none": "!variable.is_first_person"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.look_at_target": {
+			"initial_state": "look_at_target",
+			"states": {
+				"look_at_target": {
+					"animations": [
+						"look_at_target"
+					],
+					"transitions": [
+						{
+							"none": "v.lock_head==1||v.lock_all==1"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"none": {
+					"transitions": [
+						{
+							"look_at_target": "v.lock_head==0&&v.lock_all==0"
+						}
+					],
+					"blend_transition": 0.1
+				}
+			}
+		},
+		"controller.animation.gliding_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"lock": "query.is_gliding"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"lock": {
+					"transitions": [
+						{
+							"gliding": "1"
+						}
+					],
+					"animations": [
+						"lock_movement",
+						"lock_sneak",
+						"lock_attack",
+						"lock_jump",
+						"lock_head"
+					],
+					"blend_transition": 0.25
+				},
+				"gliding": {
+					"transitions": [
+						{
+							"unlock": "query.is_gliding==0"
+						}
+					],
+					"animations": [
+						"gliding"
+					],
+					"blend_transition": 0.25
+				},
+				"unlock": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"animations": [
+						"unlock_movement",
+						"unlock_sneak",
+						"unlock_attack",
+						"unlock_jump",
+						"unlock_head"
+					],
+					"blend_transition": 0.1
+				}
+			}
+		}
+	}
+}

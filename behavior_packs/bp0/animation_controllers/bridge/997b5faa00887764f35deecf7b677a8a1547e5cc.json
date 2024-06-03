@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.997b5faa00887764f35deecf7b677a8a1547e5cc_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"spawn_puddle": "q.is_sheared&&q.is_powered"
+						}
+					]
+				},
+				"spawn_puddle": {
+					"on_entry": [
+						"/tag @e[tag=enemy,c=1,r=3] add wet",
+						"/event entity @e[tag=enemy,tag=wet,c=1,r=3] nom:add_wet",
+						"/execute @e[tag=enemy,tag=wet,r=3] ~~~ tag @e[type=nom:water_whip,c=1] add made_enemy_wet",
+						"/execute @s[tag=!made_enemy_wet] ~~~ /ride @s summon_ride nom:water_puddle",
+						"@s nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.eab41e1024c75af5d9e468bae0c1872a62b3103f_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"run": "v.state_nom_strafe_side"
+						}
+					]
+				},
+				"run": {
+					"on_entry": [
+						"/tag @p remove count",
+						"/tag @s add boost_target",
+						"/tp @s ~ ~ ~",
+						"/execute @s ~ ~ ~ playanimation @s animation.set_var.jump_start",
+						"/summon nom:boost ~ ~ ~ nom:distance_5",
+						"/execute @e[type=nom:boost,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[tag=defence.projectile,c=1]",
+						"/execute @s ~ ~ ~ tp @s ~ ~ ~ facing @e[tag=defence.projectile,c=1]",
+						"/execute @s[tag=!defence.projectile.incoming.left] ~ ~ ~ execute @e[type=nom:boost,c=1] ~ ~ ~ tp @s ^0.2 ^ ^",
+						"/execute @s[tag=defence.projectile.incoming.left] ~ ~ ~ execute @e[type=nom:boost,c=1] ~ ~ ~ tp @s ^-0.2 ^ ^",
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "!v.state_nom_strafe_side"
+						}
+					]
+				}
+			}
+		}
+	}
+}

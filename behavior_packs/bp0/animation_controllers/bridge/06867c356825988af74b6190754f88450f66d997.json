@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.06867c356825988af74b6190754f88450f66d997_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add dev.hidden"
+					]
+				}
+			}
+		}
+	}
+}

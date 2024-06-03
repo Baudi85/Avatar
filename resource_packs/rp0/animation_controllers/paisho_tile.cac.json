@@ -1,0 +1,37 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.paisho_tile": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"collect_animation": "query.is_chested"
+						},
+						{
+							"collected": "query.is_ignited"
+						}
+					]
+				},
+				"collect_animation": {
+					"transitions": [
+						{
+							"collected": "q.is_ignited&&q.any_animation_finished"
+						}
+					],
+					"animations": [
+						"collect"
+					]
+				},
+				"collected": {
+					"transitions": [
+						{
+							"default": "!q.is_ignited"
+						}
+					]
+				}
+			}
+		}
+	}
+}

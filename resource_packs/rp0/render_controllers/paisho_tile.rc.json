@@ -1,0 +1,55 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.paisho_tile": {
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"geometry": "geometry.default",
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"white_lotus*": "query.skin_id == 0"
+				},
+				{
+					"white_jade*": "query.skin_id == 1"
+				},
+				{
+					"white_dragon*": "query.skin_id == 2"
+				},
+				{
+					"wheel*": "query.skin_id == 3"
+				}
+			]
+		},
+		"controller.render.paisho_tile_collected": {
+			"materials": [
+				{
+					"*": "material.collected"
+				}
+			],
+			"geometry": "geometry.default",
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"white_lotus*": "query.skin_id == 0"
+				},
+				{
+					"white_jade*": "query.skin_id == 1"
+				},
+				{
+					"white_dragon*": "query.skin_id == 2"
+				},
+				{
+					"wheel*": "query.skin_id == 3"
+				}
+			]
+		}
+	}
+}

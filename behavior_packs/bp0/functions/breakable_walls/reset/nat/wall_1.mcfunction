@@ -1,0 +1,1 @@
+fill 1335 125 -1778 1333 127 -1778 nom:block_breakable_stone_ew 0 replace air

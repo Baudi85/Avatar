@@ -1,0 +1,403 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending.fire.jet": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant==false"
+						},
+						{
+							"lock": "q.variant>=1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==42"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_movement",
+						"lock_head",
+						"lock_jump",
+						"lock_sneak"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"dash": "q.variant==5"
+						},
+						{
+							"charging": "q.variant==1"
+						}
+					]
+				},
+				"charging": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"dash": "q.variant>=5"
+						},
+						{
+							"unlock": "q.variant==0"
+						},
+						{
+							"charging_hold": "q.any_animation_finished"
+						}
+					],
+					"animations": [
+						{
+							"fire_jet_charge": "!v.is_first_person"
+						},
+						{
+							"FP.fire_jet_charge": "v.is_first_person"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"charging_hold": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"dash": "q.variant==5"
+						},
+						{
+							"unlock": "q.variant==0"
+						}
+					],
+					"animations": [
+						{
+							"fire_jet_hold": "!v.is_first_person"
+						},
+						{
+							"FP.fire_jet_hold": "v.is_first_person"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"dash": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"unlock": "q.any_animation_finished"
+						}
+					],
+					"animations": [
+						{
+							"fire_jet_dash": "!v.is_first_person"
+						},
+						{
+							"FP.fire_jet_dash": "v.is_first_person"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"unlock": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"animations": [
+						"unlock_movement",
+						"unlock_head",
+						"unlock_jump",
+						"unlock_sneak"
+					]
+				}
+			}
+		},
+		"controller.animation.bending.fire.stream": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=40"
+						},
+						{
+							"lock": "q.variant==1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==40"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_head",
+						"lock_jump",
+						"lock_sneak",
+						"lock_movement"
+					],
+					"transitions": [
+						{
+							"charging": "1"
+						}
+					]
+				},
+				"charging": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=40"
+						},
+						{
+							"hold": "q.any_animation_finished"
+						},
+						{
+							"release": "q.variant==0"
+						}
+					],
+					"blend_transition": 0.2,
+					"animations": [
+						{
+							"fire_stream.charge.R": "!v.is_first_person&&v.fire_stream==1"
+						},
+						{
+							"fire_stream.charge.L": "!v.is_first_person&&v.fire_stream==2"
+						},
+						{
+							"FP.fire_stream.charge.R": "v.is_first_person&&v.fire_stream==1"
+						},
+						{
+							"FP.fire_stream.charge.L": "v.is_first_person&&v.fire_stream==2"
+						}
+					]
+				},
+				"hold": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=40"
+						},
+						{
+							"release": "q.variant==0"
+						}
+					],
+					"animations": [
+						{
+							"fire_stream.hold.R": "!v.is_first_person&&v.fire_stream==1"
+						},
+						{
+							"fire_stream.hold.L": "!v.is_first_person&&v.fire_stream==2"
+						},
+						{
+							"FP.fire_stream.hold.R": "v.is_first_person&&v.fire_stream==1"
+						},
+						{
+							"FP.fire_stream.hold.L": "v.is_first_person&&v.fire_stream==2"
+						},
+						"firestream.walk_offset"
+					],
+					"blend_transition": 0.1
+				},
+				"release": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=40"
+						},
+						{
+							"unlock": "q.any_animation_finished"
+						},
+						{
+							"charging": "q.variant==1"
+						}
+					],
+					"blend_transition": 0.2,
+					"animations": [
+						{
+							"fire_stream.release.R": "!v.is_first_person&&v.fire_stream==1"
+						},
+						{
+							"fire_stream.release.L": "!v.is_first_person&&v.fire_stream==2"
+						},
+						{
+							"FP.fire_stream.release.R": "v.is_first_person&&v.fire_stream==1"
+						},
+						{
+							"FP.fire_stream.release.L": "v.is_first_person&&v.fire_stream==2"
+						}
+					]
+				},
+				"unlock": {
+					"animations": [
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak",
+						"unlock_movement"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=40"
+						},
+						{
+							"default": "v.lock_timer>=0.1||q.variant!=0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.fire.fire_sweep": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=41"
+						},
+						{
+							"lock": "q.variant==1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==41"
+						}
+					]
+				},
+				"lock": {
+					"transitions": [
+						{
+							"charging": "1"
+						}
+					],
+					"animations": [
+						"lock_movement",
+						"lock_jump",
+						"lock_head"
+					]
+				},
+				"charging": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=41"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"hold": "q.variant==2||q.any_animation_finished"
+						}
+					],
+					"animations": [
+						{
+							"fire_sweep.charge": "!v.is_first_person"
+						},
+						{
+							"FP.fire_sweep.hold": "v.is_first_person"
+						}
+					]
+				},
+				"release": {
+					"animations": [
+						{
+							"fire_sweep.release": "!v.is_first_person"
+						},
+						{
+							"FP.fire_sweep.release": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"unlock": "q.any_animation_finished"
+						},
+						{
+							"charging": "q.variant==1&&q.mark_variant==41"
+						}
+					]
+				},
+				"hold": {
+					"transitions": [
+						{
+							"release": "q.variant==0||q.mark_variant!=41"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						{
+							"fire_sweep.hold": "!v.is_first_person"
+						},
+						{
+							"FP.fire_sweep.hold": "v.is_first_person"
+						},
+						{
+							"fire_from_legs": "!v.is_first_person"
+						},
+						{
+							"FP.fire_from_legs": "v.is_first_person"
+						},
+						"fire_sweep_locator"
+					]
+				},
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.fire_stream.walk_offset": {
+			"initial_state": "determine",
+			"states": {
+				"determine": {
+					"transitions": [
+						{
+							"walking": "q.modified_move_speed>0.05"
+						},
+						{
+							"default": "q.modified_move_speed<=0.05"
+						}
+					],
+					"blend_transition": 0.25
+				},
+				"default": {
+					"transitions": [
+						{
+							"walking": "q.modified_move_speed>0.05&&!v.is_first_person&&q.mark_variant==40"
+						}
+					],
+					"blend_transition": 0.25
+				},
+				"walking": {
+					"animations": [
+						"fire_stream.walk_offset",
+						"bending_walk"
+					],
+					"transitions": [
+						{
+							"default": "q.modified_move_speed<=0.05||v.is_first_person||q.mark_variant!=40"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		}
+	}
+}

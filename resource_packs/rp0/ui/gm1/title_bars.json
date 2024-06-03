@@ -1,0 +1,23 @@
+{
+    "namespace": "gm1_title_bars",
+    "main": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "layer": 999999,
+        "controls": [
+            { "top@bar": { "anchor_from": "top_middle", "anchor_to": "top_middle", "offset": [0, "-40%"]}},
+            { "bottom@bar": { "anchor_from": "bottom_middle", "anchor_to": "bottom_middle", "offset": [0, "40%"]}}
+        ],
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "/bars",
+                "source_property_name": "(#value and not (#value = ''))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "bar": { "type": "image", "size": [ "200%", "50%" ],  "texture": "textures/ui/White", "color": [ 0, 0, 0 ], "alpha": 1 }
+}

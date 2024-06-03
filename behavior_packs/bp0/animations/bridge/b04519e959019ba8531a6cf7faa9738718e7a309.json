@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.b04519e959019ba8531a6cf7faa9738718e7a309_0": {
+			"timeline": {
+				"0.25": [
+					"/scoreboard players operation @s battle_id = @e[tag=encampment.manager,c=1] battle_id"
+				]
+			},
+			"loop": false,
+			"animation_length": 0.3
+		},
+		"animation.b04519e959019ba8531a6cf7faa9738718e7a309_1": {
+			"timeline": {
+				"0.0": [
+					"/function battle/encampment/count_population",
+					"/event entity @s[scores={spawner_count=..0,spawner_buffer=1..}] nom:spawning.activate",
+					"/event entity @s[scores={spawner_count=1..}] nom:spawning.deactivate",
+					"/event entity @s[scores={spawner_buffer=..0}] nom:spawning.deactivate",
+					"/tag @s remove encampment.spawner.buffer_capped",
+					"/tag @s[scores={spawner_buffer=3..}] add encampment.spawner.buffer_capped"
+				]
+			},
+			"loop": true,
+			"animation_length": 1
+		}
+	}
+}

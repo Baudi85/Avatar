@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.d623b9af72a56bb3f4fa038e89a0bea22033bd02_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/function player/on_target_memory"
+					]
+				}
+			}
+		}
+	}
+}

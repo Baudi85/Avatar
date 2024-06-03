@@ -1,0 +1,389 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.acrobatics.double_jump": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_double_jump_ready": "!q.is_on_ground&&q.is_jumping"
+						},
+						{
+							"double_jump_ready": "!q.is_on_ground"
+						}
+					]
+				},
+				"pre_double_jump_ready": {
+					"transitions": [
+						{
+							"default": "q.is_on_ground"
+						},
+						{
+							"double_jump_ready": "!q.is_jumping"
+						}
+					]
+				},
+				"double_jump_ready": {
+					"transitions": [
+						{
+							"default": "q.is_on_ground"
+						},
+						{
+							"pre_exec_double_jump": "(q.is_jumping&&(q.variant==0||(q.mark_variant>=30&&q.mark_variant<=34)))"
+						}
+					]
+				},
+				"pre_exec_double_jump": {
+					"on_entry": [
+						"/event entity @s nom:double_jump",
+						"v.mov_dir_x=q.movement_direction(0);",
+						"v.mov_dir_y=q.movement_direction(2);",
+						"v.mov_dir_yaw=math.atan2(v.mov_dir_x,v.mov_dir_y)+180;"
+					],
+					"transitions": [
+						{
+							"exec_double_jump_dir_1": "v.mov_dir_yaw<22.5"
+						},
+						{
+							"exec_double_jump_dir_2": "v.mov_dir_yaw<45.5"
+						},
+						{
+							"exec_double_jump_dir_3": "v.mov_dir_yaw<67.5"
+						},
+						{
+							"exec_double_jump_dir_4": "v.mov_dir_yaw<90.5"
+						},
+						{
+							"exec_double_jump_dir_5": "v.mov_dir_yaw<112.5"
+						},
+						{
+							"exec_double_jump_dir_6": "v.mov_dir_yaw<135.5"
+						},
+						{
+							"exec_double_jump_dir_7": "v.mov_dir_yaw<157.5"
+						},
+						{
+							"exec_double_jump_dir_8": "v.mov_dir_yaw<180.5"
+						},
+						{
+							"exec_double_jump_dir_9": "v.mov_dir_yaw<202.5"
+						},
+						{
+							"exec_double_jump_dir_10": "v.mov_dir_yaw<225.5"
+						},
+						{
+							"exec_double_jump_dir_11": "v.mov_dir_yaw<247.5"
+						},
+						{
+							"exec_double_jump_dir_12": "v.mov_dir_yaw<270.5"
+						},
+						{
+							"exec_double_jump_dir_13": "v.mov_dir_yaw<292.5"
+						},
+						{
+							"exec_double_jump_dir_14": "v.mov_dir_yaw<315.5"
+						},
+						{
+							"exec_double_jump_dir_15": "v.mov_dir_yaw<337.5"
+						},
+						{
+							"exec_double_jump_dir_16": "v.mov_dir_yaw<360.5"
+						}
+					]
+				},
+				"exec_double_jump_dir_1": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 9",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_2": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 8",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_3": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 7",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_4": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 6",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_5": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 5",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_6": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 4",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_7": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 3",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_8": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 2",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_9": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 1",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_10": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 16",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_11": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 15",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_12": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 14",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_13": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 13",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_14": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 12",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_15": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 11",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"exec_double_jump_dir_16": {
+					"on_entry": [
+						"/scoreboard players set @s movement_dir 10",
+						"/function acrobatics/execute_double_jump"
+					],
+					"transitions": [
+						{
+							"reset_1": "1"
+						}
+					]
+				},
+				"reset_1": {
+					"on_exit": [
+						"/event entity @s nom:double_jump_end"
+					],
+					"transitions": [
+						{
+							"reset_2": "1"
+						}
+					]
+				},
+				"reset_2": {
+					"transitions": [
+						{
+							"default": "q.is_on_ground"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.acrobatics.faster_sprint": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/effect @s speed 0 0 true"
+					],
+					"transitions": [
+						{
+							"sprinting": "q.is_sprinting"
+						}
+					]
+				},
+				"sprinting": {
+					"on_entry": [
+						"/effect @s speed 36000000 2 true"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_sprinting"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.chi.chi_manager": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"regenerate": "!q.variant"
+						}
+					]
+				},
+				"regenerate": {
+					"animations": [
+						{
+							"chi.regenerate": "!q.is_illager_captain"
+						}
+					],
+					"transitions": [
+						{
+							"default": "q.variant"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.avatar_state": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_avatar_state": "q.is_illager_captain"
+						}
+					]
+				},
+				"in_avatar_state": {
+					"on_entry": [
+						"/function player/avatar_state/on_enter"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_illager_captain"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.player.health_boost": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"is_dead": "!query.is_alive"
+						},
+						{
+							"is_alive": "query.is_alive"
+						}
+					]
+				},
+				"is_dead": {
+					"transitions": [
+						{
+							"is_alive": "query.is_alive"
+						}
+					]
+				},
+				"is_alive": {
+					"on_entry": [
+						"/function unlock/mastery/apply_boost"
+					],
+					"transitions": [
+						{
+							"is_dead": "!query.is_alive"
+						}
+					]
+				}
+			}
+		}
+	}
+}

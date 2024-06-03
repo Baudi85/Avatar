@@ -1,0 +1,68 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:marker_temp",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"0bf22e71b0addf54_a_0": "animation.0bf22e71b0addf54f93a4d0a47bb34e26b47be06_0"
+			},
+			"scripts": {
+				"animate": [
+					"0bf22e71b0addf54_a_0"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:health": {
+				"value": 8,
+				"max": 8
+			},
+			"minecraft:type_family": {
+				"family": [
+					"marker"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": true,
+				"always_show": false
+			},
+			"minecraft:explode": {
+				"fuse_length": 0.05,
+				"fuse_lit": true,
+				"power": 0
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,95 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.4ea974b203cd41d04690a6ec029d4affb94d7672_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/function enemy/on_spawn"
+					]
+				}
+			}
+		},
+		"controller.animation.4ea974b203cd41d04690a6ec029d4affb94d7672_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.runtime_624497=q.life_time;"
+					],
+					"transitions": [
+						{
+							"run": "q.life_time>v.runtime_624497"
+						}
+					]
+				},
+				"run": {
+					"on_entry": [
+						"/event entity @e[type=nom:target_memory,r=1] nom:despawn"
+					],
+					"transitions": [
+						{
+							"cooldown": "1"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.runtime_624497=q.life_time;",
+						"v.time_624497=math.random(0.01,0.01);"
+					],
+					"transitions": [
+						{
+							"default": "q.life_time>v.runtime_624497+v.time_624497"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.4ea974b203cd41d04690a6ec029d4affb94d7672_2": {
+			"initial_state": "not_frozen",
+			"states": {
+				"not_frozen": {
+					"on_entry": [
+						"@s nom:remove_frozen"
+					],
+					"transitions": [
+						{
+							"frozen": "q.is_shaking"
+						}
+					]
+				},
+				"frozen": {
+					"on_entry": [
+						"/tag @s remove wet",
+						"@s nom:remove_wet",
+						"v.frozen_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"unfreeze": "!q.is_shaking||q.life_time>=v.frozen_runtime+5"
+						}
+					]
+				},
+				"unfreeze": {
+					"on_entry": [
+						"/summon nom:water_puddle ~~~"
+					],
+					"transitions": [
+						{
+							"not_frozen": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.4ea974b203cd41d04690a6ec029d4affb94d7672_3": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.runtime_624497=0;"
+					]
+				}
+			}
+		}
+	}
+}

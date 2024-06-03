@@ -1,0 +1,27 @@
+{
+    "format_version": "1.12.0",
+    "minecraft:attachable": {
+        "description": {
+            "identifier": "minecraft:elytra",
+            "materials": { "default": "elytra" },
+            "textures": { "default": "textures/entity/glider" },
+            "geometry": { "default": "geometry.glider" },
+            "animations": {
+                "default_controller": "controller.animation.elytra.default",
+                "default": "animation.elytra.default",
+                "gliding": "animation.elytra.gliding",
+                "sneaking": "animation.elytra.sneaking",
+                "sleeping": "animation.elytra.sleeping",
+                "swimming": "animation.elytra.swimming",
+                "glider_flap": "animation.glider_flap"
+            },
+            "scripts": { "parent_setup": "variable.chest_layer_visible = 0.0;", 
+            "animate": [ 
+                "default_controller",
+                "glider_flap"
+                ]
+            },
+            "render_controllers": [{ "controller.render.glider_elytra": "q.is_gliding" }]
+        }
+    }
+}

@@ -1,0 +1,5 @@
+execute @e[name=main,tag=settlement.t_rumble_arena.state.0] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_rumble_arena>:§r§6 Currently settlement_0" }]}
+execute @e[name=main,tag=settlement.t_rumble_arena.state.1] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_rumble_arena>:§r§6 Currently settlement_1" }]}
+execute @e[name=main,tag=settlement.t_rumble_arena.state.2] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_rumble_arena>:§r§6 Currently settlement_2" }]}
+tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement:§r§6 Entity <" }, {"selector": "@e[tag=settlement.save,x=96,y=31,z=1744,dx=52,dy=11,dz=30]"} , {"text":">"}]}
+tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement:§r§6 Entity <" }, {"selector": "@e[tag=settlement.save,x=113,y=30,z=1700,dx=18,dy=18,dz=14]"} , {"text":">"}]}

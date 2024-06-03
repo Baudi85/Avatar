@@ -1,0 +1,76 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.4a3f42867219c4ef946ab73da32a2f24a8a8627d_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add defence.projectile"
+					]
+				}
+			}
+		},
+		"controller.animation.4a3f42867219c4ef946ab73da32a2f24a8a8627d_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/summon nom:defence_emitter_marker ~ ~ ~",
+						"/tag @e[type=nom:defence_emitter_marker,c=1] add self.marker",
+						"/execute @p[r=3] ~ ~ ~ tag @e[tag=self.marker] add player_thrown",
+						"/execute @e[tag=bender,c=1] ~ ~ ~ tp @e[tag=self.marker] ^ ^ ^1",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ~ ~ ~ facing @e[tag=bender,c=1]",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/execute @e[tag=self.marker,tag=player_thrown] ~ ~ ~ execute @e[r=4,tag=enemy,tag=!defence.projectile.incoming] ~ ~ ~ function enemy/on_defence_needed",
+						"/execute @e[tag=self.marker] ~ ~ ~ tp @s ^ ^ ^-1 true",
+						"/tag @e[type=nom:defence_emitter_marker] remove self.marker"
+					]
+				}
+			}
+		}
+	}
+}

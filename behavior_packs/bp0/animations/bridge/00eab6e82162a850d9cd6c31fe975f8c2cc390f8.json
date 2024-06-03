@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.00eab6e82162a850d9cd6c31fe975f8c2cc390f8_0": {
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"/dialogue open @s @p[r=1,tag=!ui.loaded] ui.loader"
+				]
+			},
+			"loop": true
+		}
+	}
+}

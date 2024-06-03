@@ -1,0 +1,16 @@
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true
+execute @s ~~~ tp @s ^^-.1 ^ true

@@ -1,0 +1,31 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.b7b3442b81d74b2390b141f31e9e5bf4f31c135b_0": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add air_gate",
+						"/tag @s add enemy"
+					],
+					"transitions": [
+						{
+							"activate": "q.is_sheared"
+						}
+					]
+				},
+				"activate": {
+					"on_entry": [
+						"@s nom:deactivate"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_sheared"
+						}
+					]
+				}
+			}
+		}
+	}
+}

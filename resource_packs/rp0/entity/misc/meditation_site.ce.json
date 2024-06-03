@@ -1,0 +1,148 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"scripts": {
+				"initialize": [
+					"v.skin_id = q.skin_id;",
+					"v.mark_variant = q.mark_variant;",
+					"v.variant = q.variant;",
+					"v.is_ignited = q.is_ignited;",
+					"v.is_sheared = q.is_sheared;",
+					"v.is_chested = q.is_chested;",
+					"v.is_saddled = q.is_saddled;",
+					"v.is_baby = q.is_baby;",
+					"v.is_stunned = q.is_stunned;",
+					"v.is_charged = q.is_charged;",
+					"v.is_illager_captain = q.is_illager_captain;",
+					"v.camera_rotation_y = q.camera_rotation(1);",
+					"v.camera_rotation_x = q.camera_rotation(0);",
+					"v.distance_from_camera = q.distance_from_camera;",
+					"v.rotation_to_camera_y = q.rotation_to_camera(1);",
+					"v.rotation_to_camera_x = q.rotation_to_camera(0);",
+					"v.emotion_id = 0;",
+					"v.target_x_rotation = 0;",
+					"v.target_y_rotation = 0;",
+					"v.movement_direction_y = 0;",
+					"v.defeated_overlay = 0;",
+					"v.time_since_defeated = 0;",
+					"v.fade_away = 0;",
+					"v.ground_speed=0;",
+					"v.mod_move_speed=0;",
+					"v.is_first_person=0;",
+					"v.selected_cube= 0;",
+					"v.time_of_day = 0;",
+					"v.min_out = 0.0;",
+					"v.max_out = 1.0;",
+					"v.min_in = 0.25;",
+					"v.max_in = 0.75;"
+				],
+				"pre_animation": [
+					"v.skin_id = q.skin_id;",
+					"v.mark_variant = q.mark_variant;",
+					"v.variant = q.variant;",
+					"v.is_ignited = q.is_ignited;",
+					"v.is_sheared = q.is_sheared;",
+					"v.is_chested = q.is_chested;",
+					"v.is_saddled = q.is_saddled;",
+					"v.is_baby = q.is_baby;",
+					"v.is_stunned = q.is_stunned;",
+					"v.is_charged = q.is_charged;",
+					"v.distance_from_camera = q.distance_from_camera;",
+					"v.is_illager_captain = q.is_illager_captain;",
+					"v.camera_rotation_y = q.camera_rotation(1);",
+					"v.camera_rotation_x = q.camera_rotation(0);",
+					"v.rotation_to_camera_y = q.rotation_to_camera(1);",
+					"v.rotation_to_camera_x = q.rotation_to_camera(0);",
+					"v.target_x_rotation = query.target_x_rotation;",
+					"v.target_y_rotation = query.target_y_rotation;",
+					"v.movement_direction_y = q.movement_direction(1);",
+					"v.ground_speed=q.ground_speed;",
+					"v.mod_move_speed=query.modified_move_speed;",
+					"v.yfactor = 52;",
+					"v.xfactor = 64;",
+					"v.interact_range = 3.9;",
+					"v.cam_y_rot = q.camera_rotation(1) - q.rotation_to_camera(1) + 180;",
+					"v.cam_y_rot = v.cam_y_rot > 180 ? v.cam_y_rot-360: v.cam_y_rot;",
+					"v.cam_y_size = (1/query.distance_from_camera)*v.yfactor;",
+					"v.cam_y_size = query.distance_from_camera < 2.5 ? v.cam_y_size*2: v.cam_y_size;",
+					"v.cam_y_size = query.distance_from_camera < 1.5 ? v.cam_y_size*2 : v.cam_y_size;",
+					"v.is_selected_y = (v.cam_y_rot > v.cam_y_size || v.cam_y_rot < -v.cam_y_size) ? 0 : 1;",
+					"v.cam_x_rot = -q.camera_rotation(0) - q.rotation_to_camera(0) - (60/query.distance_from_camera);",
+					"v.cam_x_rot = v.cam_x_rot > 180 ? v.cam_x_rot-360: v.cam_x_rot;",
+					"v.cam_x_size = (1/query.distance_from_camera)*v.xfactor;",
+					"v.cam_x_size = query.distance_from_camera < 2.5 ? v.cam_x_size*2 : v.cam_x_size;",
+					"v.cam_x_size = query.distance_from_camera < 1.5 ? v.cam_x_size*1.4 : v.cam_x_size;",
+					"v.is_selected_x = (v.cam_x_rot > v.cam_x_size || v.cam_x_rot < -v.cam_x_size) ? 0 : 1;",
+					"v.is_selected_range = query.distance_from_camera <= v.interact_range;",
+					"v.is_selected = v.is_selected_x && v.is_selected_y && v.is_selected_range;",
+					"v.active = q.is_ignited && q.mark_variant && query.distance_from_camera < 5;",
+					"v.time_of_day = q.time_of_day < 0.5 ? q.time_of_day*2 : 1-((q.time_of_day-0.5)*2);",
+					"v.time_of_day = v.time_of_day-0.33;"
+				],
+				"should_update_bones_and_effects_offscreen": true,
+				"animate": [
+					"static_root",
+					"sun_ray",
+					"ray_lod",
+					"god_ray_dust",
+					"rotation_to_player",
+					{
+						"focus_anim": "q.is_stunned"
+					}
+				]
+			},
+			"materials": {
+				"default": "entity_alphatest",
+				"outline": "outline",
+				"charged": "charged_creeper",
+				"emissive": "magma_cube",
+				"transparent": "entity_alphablend",
+				"transparent_additive": "entity_beam_additive",
+				"death_fade": "death_fade",
+				"seethrough": "entity_seethrough",
+				"shine": "god_ray",
+				"galaxy": "galaxy"
+			},
+			"geometry": {
+				"inflated": "geometry.npc_meditation_site_inflated",
+				"default": "geometry.npc_meditation_site",
+				"god_ray": "geometry.god_ray"
+			},
+			"render_controllers": [
+				{
+					"controller.render.outline_highlight": "!v.defeated_overlay&&q.distance_from_camera<=11"
+				},
+				"controller.render.meditation_site.player",
+				"controller.render.meditation_site.base",
+				"controller.render.meditation_site.god_ray",
+				{
+					"controller.render.outline_highlight_meditation": "q.distance_from_camera<=11"
+				}
+			],
+			"identifier": "nom:meditation_site",
+			"textures": {
+				"default": "textures/entity/meditation_site/pad",
+				"meditating": "textures/entity/meditation_site/galaxy_print",
+				"god_ray": "textures/entity/perlin_noise",
+				"moon_ray": "textures/entity/perlin_noise_blue"
+			},
+			"animations": {
+				"static_root": "animation.meditation_site.static_root",
+				"sun_ray": "animation.meditation_site.sun_ray_movement",
+				"ray_lod": "animation.meditation_site.sun_ray_LOD",
+				"god_ray_dust": "animation.sun_ray.dust",
+				"rotation_to_player": "animation.meditation_site.rotate_to_player",
+				"focus_anim": "animation.oboarding.focus_particle"
+			},
+			"particle_effects": {
+				"sun_ray_dust": "nom:sun_ray_dust",
+				"moon_ray_dust": "nom:moon_ray_dust",
+				"head_dust": "nom:head_dust",
+				"body_dust": "nom:body_dust",
+				"limb_dust": "nom:limb_dust",
+				"focus": "nom:focus"
+			}
+		}
+	}
+}

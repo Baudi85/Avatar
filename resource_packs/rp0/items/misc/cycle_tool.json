@@ -1,0 +1,9 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": { "identifier": "nom:cycle_tool", "category": "Nature" },
+        "components": {
+            "minecraft:icon": "cycle_tool"
+        }
+    }
+}

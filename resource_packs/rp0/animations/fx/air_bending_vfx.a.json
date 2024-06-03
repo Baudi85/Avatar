@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.air.air_blade": {
+			"animation_length": 1,
+			"loop": false,
+			"particle_effects": {
+				"0.1": [
+					{
+						"effect": "default",
+						"locator": "effect_locator"
+					}
+				]
+			}
+		}
+	}
+}

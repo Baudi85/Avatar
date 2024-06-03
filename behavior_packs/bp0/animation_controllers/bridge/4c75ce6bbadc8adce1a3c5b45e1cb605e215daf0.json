@@ -1,0 +1,38 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.4c75ce6bbadc8adce1a3c5b45e1cb605e215daf0_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add duel.enemy"
+					]
+				}
+			}
+		},
+		"controller.animation.4c75ce6bbadc8adce1a3c5b45e1cb605e215daf0_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s remove enemy.in_water"
+					],
+					"transitions": [
+						{
+							"in_water": "q.is_in_water"
+						}
+					]
+				},
+				"in_water": {
+					"on_entry": [
+						"/tag @s add enemy.in_water"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_in_water"
+						}
+					]
+				}
+			}
+		}
+	}
+}

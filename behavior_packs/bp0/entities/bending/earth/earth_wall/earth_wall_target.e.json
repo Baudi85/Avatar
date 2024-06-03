@@ -1,0 +1,43 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:earth_wall_target",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"a1878beafbe9661e_a_0": "animation.a1878beafbe9661ed84bb57db430ee1124d4bb6b_0"
+			},
+			"scripts": {
+				"animate": [
+					"a1878beafbe9661e_a_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"test": "has_tag",
+					"value": "despawn"
+				}
+			},
+			"minecraft:type_family": {
+				"family": [
+					"earth_wall_target"
+				]
+			}
+		}
+	}
+}

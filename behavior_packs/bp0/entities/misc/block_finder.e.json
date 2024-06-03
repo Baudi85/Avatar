@@ -1,0 +1,137 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:block_finder",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"a19ab3b8c73392bf_ac_0": "controller.animation.a19ab3b8c73392bf0f159ebaee444448b926aa55_0",
+				"0cc52aa4a2c3bd88_ac_0": "controller.animation.0cc52aa4a2c3bd88b2d19766cecbf7df7e18b19d_0"
+			},
+			"scripts": {
+				"animate": [
+					"a19ab3b8c73392bf_ac_0",
+					"0cc52aa4a2c3bd88_ac_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:explode": {
+				"fuse_length": 0.95,
+				"fuse_lit": true,
+				"power": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:navigation.float": {
+				"can_jump": true,
+				"can_path_from_air": true,
+				"can_path_over_lava": true,
+				"can_path_over_water": true,
+				"can_walk": true,
+				"is_amphibious": true
+			},
+			"minecraft:pushable": {
+				"is_pushable": false
+			},
+			"minecraft:can_fly": {},
+			"minecraft:movement.fly": {
+				"max_turn": 30
+			},
+			"minecraft:movement": {
+				"value": 15
+			},
+			"minecraft:flying_speed": {
+				"value": 1
+			},
+			"minecraft:friction_modifier": {
+				"value": 10
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:follow_range": {
+				"value": 64
+			},
+			"minecraft:skin_id": {
+				"value": -1
+			}
+		},
+		"component_groups": {
+			"nom:on_reach": {
+				"minecraft:is_saddled": {},
+				"minecraft:explode": {
+					"fuse_length": 0.05,
+					"fuse_lit": true,
+					"power": 0
+				}
+			},
+			"nom:earth": {
+				"minecraft:behavior.move_to_block": {
+					"start_chance": 1,
+					"search_range": 16,
+					"goal_radius": 1,
+					"stay_duration": 100,
+					"target_blocks": [
+						"minecraft:stone",
+						"minecraft:grass",
+						"minecraft:gravel",
+						"minecraft:dirt",
+						"minecraft:double_stone_block_slab4",
+						"minecraft:stone_block_slab4",
+						"minecraft:normal_stone_stairs",
+						"minecraft:diorite_stairs",
+						"minecraft:stone_block_slab3",
+						"minecraft:double_stone_block_slab3",
+						"minecraft:stonebrick",
+						"minecraft:stone_block_slab",
+						"minecraft:stone_brick_stairs",
+						"minecraft:quartz_block",
+						"minecraft:quartz_stairs",
+						"minecraft:cobblestone",
+						"minecraft:stone_stairs"
+					],
+					"priority": 0,
+					"tick_interval": 1,
+					"target_selection_method": "nearest",
+					"on_reach": [
+						{
+							"event": "nom:on_reach"
+						}
+					]
+				},
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			}
+		},
+		"events": {
+			"nom:on_reach": {
+				"add": {
+					"component_groups": [
+						"nom:on_reach"
+					]
+				}
+			},
+			"nom:earth": {
+				"add": {
+					"component_groups": [
+						"nom:earth"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.material_pull.static_root": {
+			"loop": true,
+			"bones": {
+				"bone": {
+					"rotation": [
+						0,
+						"-query.body_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.material_pull.particle": {
+			"loop": true,
+			"bones": {
+				"cube_root": {
+					"relative_to": {
+						"rotation": "entity"
+					},
+					"rotation": [
+						"query.eye_target_x_rotation",
+						"query.eye_target_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.material_pull.splash": {
+			"animation_length": 0.5,
+			"loop": false,
+			"particle_effects": {
+				"0.0": {
+					"effect": "splash"
+				}
+			}
+		}
+	}
+}

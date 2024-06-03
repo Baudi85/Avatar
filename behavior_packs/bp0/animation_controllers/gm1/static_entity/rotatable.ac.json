@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.rotatable.reset_rotation": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"reset_rotation": "query.is_chested"
+						}
+					]
+				},
+				"reset_rotation": {
+					"on_entry": [
+						"/tp @s ~~~ 0 0",
+						"@s gm1:remove_reset_rotation"
+					]
+				}
+			}
+		}
+	}
+}

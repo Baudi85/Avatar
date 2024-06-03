@@ -1,0 +1,70 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.4de1f5a0511ec443b7fd3cbf14160d6416795b09_0": {
+			"timeline": {
+				"2": [
+					"/tag @a[tag=battle.member.5] add battle.member",
+					"/execute @a[tag=battle.member.5] ~ ~ ~ function ui/hud/hide",
+					"/function music/music_pre_stop",
+					"/tag @s remove battle.delay",
+					"/playsound encampment_start_jingle @a[tag=battle.member.5]",
+					"/event entity @s nom:npc.hide"
+				],
+				"0.0": [
+					"/tag @a[r=16] add battle.member.5"
+				],
+				"0.5": [
+					"/execute @a[tag=battle.member.5] ~ ~ ~ dialogue open @e[type=nom:ui_handler,c=1] @s splash.duel_korra"
+				],
+				"3.45": [
+					"/summon nom:enemy_korra ~ ~ ~ nom:enemy_idle",
+					"/scoreboard players operation @e[type=nom:enemy_korra,c=1] battle_id = @s battle_id",
+					"/tp @e[type=nom:enemy_korra,c=1] 53.5 75 -1932 0 0",
+					"/summon nom:duel.spawn 53.5 75 -1932",
+					"/tag @e[type=nom:duel.spawn,tag=] add duel.spawn.duel_korra"
+				],
+				"4.45": [
+					"/scoreboard players set @a[tag=battle.member.5] scene_id 1"
+				],
+				"11.0": [
+					"/tag @s add duel.cutscene_over",
+					"/event entity @e[tag=duel.enemy] nom:duel_start",
+					"/execute @a[tag=battle.member.5] ~~~ function music/duel_player",
+					"/function bossbar/update/_/universal"
+				]
+			},
+			"loop": false,
+			"animation_length": 12.05
+		},
+		"animation.4de1f5a0511ec443b7fd3cbf14160d6416795b09_1": {
+			"timeline": {
+				"0.0": [
+					"/execute @a[tag=battle.member.5] ~ ~ ~ dialogue open @e[type=nom:ui_handler,c=1] @s ui.fade",
+					"/scoreboard players set @a[tag=battle.member.5] close_ui_in 50"
+				],
+				"1.25": [
+					"/tag @a[tag=battle.member.5] add eiqs",
+					"/function battle/duel/on_teleport_back",
+					"/execute @a[tag=battle.member.5] ~ ~ ~ tp @s ~ ~ ~ ~30 ~",
+					"/event entity @s nom:npc.show"
+				],
+				"2.5": [
+					"/event entity @s nom:oaklogue.on_force",
+					"/event entity @s nom:remove_tick_world"
+				]
+			},
+			"loop": false,
+			"animation_length": 2.55
+		},
+		"animation.4de1f5a0511ec443b7fd3cbf14160d6416795b09_2": {
+			"loop": true,
+			"animation_length": 0.25,
+			"timeline": {
+				"0.0": [
+					"/execute @s[tag=duel.cutscene_over] ~ ~ ~ function battle/duel/end_check"
+				]
+			}
+		}
+	}
+}

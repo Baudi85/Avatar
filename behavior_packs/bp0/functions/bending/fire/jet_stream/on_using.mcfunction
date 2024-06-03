@@ -1,0 +1,1 @@
+scoreboard players remove @s[type=player] chi 10

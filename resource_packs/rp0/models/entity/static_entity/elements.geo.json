@@ -1,0 +1,150 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.elements",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 39,
+				"visible_bounds_height": 7,
+				"visible_bounds_offset": [
+					0,
+					2.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "elements",
+					"parent": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "air",
+					"parent": "elements",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-48,
+								8,
+								7.5
+							],
+							"size": [
+								96,
+								64,
+								0
+							],
+							"inflate": 0.0625,
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "water",
+					"parent": "elements",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-48,
+								8,
+								7.5
+							],
+							"size": [
+								96,
+								64,
+								0
+							],
+							"inflate": 0.0625,
+							"uv": [
+								0,
+								64
+							]
+						}
+					]
+				},
+				{
+					"name": "earth",
+					"parent": "elements",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-48,
+								8,
+								7.5
+							],
+							"size": [
+								96,
+								64,
+								0
+							],
+							"inflate": 0.0625,
+							"uv": [
+								0,
+								128
+							]
+						}
+					]
+				},
+				{
+					"name": "fire",
+					"parent": "elements",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-48,
+								8,
+								7.5
+							],
+							"size": [
+								96,
+								64,
+								0
+							],
+							"inflate": 0.0625,
+							"uv": [
+								0,
+								192
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

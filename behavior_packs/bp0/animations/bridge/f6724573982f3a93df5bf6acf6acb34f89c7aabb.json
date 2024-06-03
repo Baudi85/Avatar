@@ -1,0 +1,18 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.f6724573982f3a93df5bf6acf6acb34f89c7aabb_0": {
+			"timeline": {
+				"0.0": [
+					"/tag @a[rm=13.5,r=30] remove oaklogue.force.204130",
+					"/tag @s add self",
+					"/execute @s[scores={battle_state=!1}] ~ ~ ~ execute @a[r=10,tag=!oaklogue.force.204130] ~ ~ ~ event entity @e[tag=self] nom:oaklogue.on_force",
+					"/tag @a[r=10] add oaklogue.force.204130",
+					"/tag @s remove self"
+				]
+			},
+			"animation_length": 0.5,
+			"loop": true
+		}
+	}
+}

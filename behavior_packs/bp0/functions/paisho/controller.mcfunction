@@ -1,0 +1,1 @@
+execute @s[scores={active_region=0}] ~~~ function paisho/table/place_cooldown/process

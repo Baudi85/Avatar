@@ -1,0 +1,11 @@
+execute @s ~~~ tp @s ~ ~-1 ~ true
+execute @s ~~~ tp @s ~ ~-1 ~ true
+execute @s ~~~ tp @s ~ ~-1 ~ true
+execute @s ~~~ tp @s ~ ~-1 ~ true
+execute @s ~~~ tp @s ~ ~-1 ~ true
+execute @s ~~~ tp @s ~ ~-1 ~ true
+execute @s ~~~ tp @s ~ ~-1 ~ true
+execute @s ~~~ tp @s ~ ~-0.5 ~ true
+execute @s ~~~ tp @s ~ ~-0.25 ~ true
+execute @s ~~~ tp @s ~ ~-0.125 ~ true
+execute @s ~~~ tp @s ~ ~-0.0625 ~ true

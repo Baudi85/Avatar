@@ -1,0 +1,21 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nom:block_shelf_4_n",
+			"is_experimental": false,
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.block_shelf_4_n",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "nom_block_shelf",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

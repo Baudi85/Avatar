@@ -1,0 +1,74 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.player.avatar_state_fire": {
+			"loop": true,
+			"animation_length": 2,
+			"particle_effects": {
+				"0.0": {
+					"effect": "avatar_state_fire",
+					"locator": "body_locator"
+				}
+			}
+		},
+		"animation.player.avatar_state_fire_init": {
+			"loop": false,
+			"animation_length": 0.6,
+			"particle_effects": {
+				"0.0": {
+					"effect": "avatar_state_fire_init",
+					"locator": "body_locator"
+				}
+			}
+		},
+		"animation.player.avatar_state_water": {
+			"loop": true,
+			"animation_length": 2,
+			"particle_effects": {
+				"0.0": {
+					"effect": "avatar_state_water",
+					"locator": "water_locator"
+				}
+			}
+		},
+		"animation.player.avatar_state_earth": {
+			"loop": true,
+			"animation_length": 2,
+			"particle_effects": {
+				"0.0": {
+					"effect": "avatar_state_earth",
+					"locator": "body_locator"
+				}
+			}
+		},
+		"animation.player.avatar_state_air": {
+			"loop": true,
+			"animation_length": 2,
+			"particle_effects": {
+				"0.0": {
+					"effect": "avatar_state_air",
+					"locator": "body_locator"
+				}
+			}
+		},
+		"animation.player.fp_visibility_fix": {
+			"loop": true,
+			"bones": {
+				"body_locator": {
+					"position": [
+						0,
+						-4,
+						0
+					]
+				},
+				"water_locator": {
+					"position": [
+						-3,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

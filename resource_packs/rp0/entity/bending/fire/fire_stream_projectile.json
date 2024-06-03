@@ -1,0 +1,90 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"scripts": {
+				"initialize": [
+					"v.skin_id = q.skin_id;",
+					"v.mark_variant = q.mark_variant;",
+					"v.variant = q.variant;",
+					"v.is_ignited = q.is_ignited;",
+					"v.is_sheared = q.is_sheared;",
+					"v.is_chested = q.is_chested;",
+					"v.is_saddled = q.is_saddled;",
+					"v.is_baby = q.is_baby;",
+					"v.is_stunned = q.is_stunned;",
+					"v.is_charged = q.is_charged;",
+					"v.is_illager_captain = q.is_illager_captain;",
+					"v.camera_rotation_y = q.camera_rotation(1);",
+					"v.camera_rotation_x = q.camera_rotation(0);",
+					"v.distance_from_camera = q.distance_from_camera;",
+					"v.rotation_to_camera_y = q.rotation_to_camera(1);",
+					"v.rotation_to_camera_x = q.rotation_to_camera(0);",
+					"v.emotion_id = 0;",
+					"v.target_x_rotation = 0;",
+					"v.target_y_rotation = 0;",
+					"v.movement_direction_y = 0;",
+					"v.defeated_overlay = 0;",
+					"v.time_since_defeated = 0;",
+					"v.fade_away = 0;",
+					"v.ground_speed=0;",
+					"v.mod_move_speed=0;",
+					"v.is_first_person=0;"
+				],
+				"pre_animation": [
+					"v.skin_id = q.skin_id;",
+					"v.mark_variant = q.mark_variant;",
+					"v.variant = q.variant;",
+					"v.is_ignited = q.is_ignited;",
+					"v.is_sheared = q.is_sheared;",
+					"v.is_chested = q.is_chested;",
+					"v.is_saddled = q.is_saddled;",
+					"v.is_baby = q.is_baby;",
+					"v.is_stunned = q.is_stunned;",
+					"v.is_charged = q.is_charged;",
+					"v.distance_from_camera = q.distance_from_camera;",
+					"v.is_illager_captain = q.is_illager_captain;",
+					"v.camera_rotation_y = q.camera_rotation(1);",
+					"v.camera_rotation_x = q.camera_rotation(0);",
+					"v.rotation_to_camera_y = q.rotation_to_camera(1);",
+					"v.rotation_to_camera_x = q.rotation_to_camera(0);",
+					"v.target_x_rotation = query.target_x_rotation;",
+					"v.target_y_rotation = query.target_y_rotation;",
+					"v.movement_direction_y = q.movement_direction(1);",
+					"v.ground_speed=q.ground_speed;",
+					"v.mod_move_speed=query.modified_move_speed;"
+				],
+				"animate": [
+					{
+						"play_particle": "q.life_time>0.2"
+					}
+				]
+			},
+			"materials": {
+				"default": "entity",
+				"outline": "outline",
+				"charged": "charged_creeper",
+				"emissive": "magma_cube",
+				"transparent": "entity_alphablend",
+				"transparent_additive": "entity_beam_additive",
+				"death_fade": "death_fade"
+			},
+			"identifier": "nom:jet_stream_projectile",
+			"textures": {
+				"default": "textures/blank"
+			},
+			"geometry": {
+				"default": "geometry.blank"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"animations": {
+				"play_particle": "animation.fire_stream.fire_stream_fireball"
+			},
+			"particle_effects": {
+				"fire_stream": "nom:fire_kick"
+			}
+		}
+	}
+}

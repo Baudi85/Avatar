@@ -1,0 +1,43 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:settlement.reset",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:explode": {
+				"power": 0,
+				"fuse_lit": true,
+				"fuse_length": 20
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:explode": {
+					"fuse_lit": true,
+					"fuse_length": 1,
+					"power": 0
+				}
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

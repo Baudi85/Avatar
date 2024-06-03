@@ -1,0 +1,263 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "nom:barrier.zhao_ship.before",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/light_orb"
+			}
+		},
+		"curves": {
+			"variable.x_position": {
+				"type": "linear",
+				"input": "v.count",
+				"horizontal_range": "v.block_count",
+				"nodes": [
+					-15,
+					-15,
+					-15,
+					-15,
+					-15,
+					-14,
+					-13,
+					-12,
+					15,
+					15,
+					15,
+					15,
+					14,
+					13,
+					12
+				]
+			},
+			"variable.y_position": {
+				"type": "linear",
+				"input": "v.count",
+				"horizontal_range": "v.block_count",
+				"nodes": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				]
+			},
+			"variable.z_position": {
+				"type": "linear",
+				"input": "v.count",
+				"horizontal_range": "v.block_count",
+				"nodes": [
+					12,
+					13,
+					14,
+					15,
+					16,
+					16,
+					16,
+					16,
+					13,
+					14,
+					15,
+					16,
+					16,
+					16,
+					16
+				]
+			},
+			"variable.size": {
+				"type": "bezier",
+				"input": "variable.particle_age/variable.particle_lifetime",
+				"horizontal_range": 1,
+				"nodes": [
+					1,
+					1,
+					0.5,
+					0
+				]
+			}
+		},
+		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "v.block_count=14;v.count=0;v.p=8*v.block_count;"
+			},
+			"minecraft:emitter_rate_instant": {
+				"num_particles": "v.p"
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.5
+			},
+			"minecraft:emitter_shape_box": {
+				"offset": [
+					"v.x_position",
+					"v.y_position",
+					"v.z_position"
+				],
+				"half_dimensions": [
+					0.5,
+					0,
+					0.5
+				],
+				"direction": [
+					0,
+					1,
+					0
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.75,1.25)"
+			},
+			"minecraft:particle_expire_if_not_in_blocks": [
+				"minecraft:air",
+				"minecraft:water",
+				"minecraft:snow_layer",
+				"minecraft:oak_stairs",
+				"minecraft:spruce_stairs",
+				"minecraft:birch_stairs",
+				"minecraft:jungle_stairs",
+				"minecraft:acacia_stairs",
+				"minecraft:dark_oak_stairs",
+				"minecraft:crimson_stairs",
+				"minecraft:warped_stairs",
+				"minecraft:normal_stone_stairs",
+				"minecraft:granite_stairs",
+				"minecraft:polished_granite_stairs",
+				"minecraft:diorite_stairs",
+				"minecraft:polished_diorite_stairs",
+				"minecraft:andesite_stairs",
+				"minecraft:polished_andesite_stairs",
+				"minecraft:stone_stairs",
+				"minecraft:mossy_cobblestone_stairs",
+				"minecraft:stone_brick_stairs",
+				"minecraft:mossy_stone_brick_stairs",
+				"minecraft:brick_stairs",
+				"minecraft:end_brick_stairs",
+				"minecraft:nether_brick_stairs",
+				"minecraft:red_nether_brick_stairs",
+				"minecraft:sandstone_stairs",
+				"minecraft:smooth_sandstone_stairs",
+				"minecraft:red_sandstone_stairs",
+				"minecraft:smooth_red_sandstone_stairs",
+				"minecraft:quartz_stairs",
+				"minecraft:smooth_quartz_stairs",
+				"minecraft:purpur_stairs",
+				"minecraft:prismarine_stairs",
+				"minecraft:prismarine_bricks_stairs",
+				"minecraft:dark_prismarine_stairs",
+				"minecraft:blackstone_stairs",
+				"minecraft:polished_blackstone_stairs",
+				"minecraft:polished_blackstone_brick_stairs",
+				"minecraft:cut_copper_stairs",
+				"minecraft:exposed_cut_copper_stairs",
+				"minecraft:weathered_cut_copper_stairs",
+				"minecraft:oxidized_cut_copper_stairs",
+				"minecraft:waxed_cut_copper_stairs",
+				"minecraft:waxed_exposed_cut_copper_stairs",
+				"minecraft:waxed_weathered_cut_copper_stairs",
+				"minecraft:waxed_oxidized_cut_copper_stairs",
+				"minecraft:cobbled_deepslate_stairs",
+				"minecraft:polished_deepslate_stairs",
+				"minecraft:deepslate_brick_stairs",
+				"minecraft:deepslate_tile_stairs",
+				"minecraft:double_wooden_slab",
+				"minecraft:wooden_slab",
+				"minecraft:crimson_double_slab",
+				"minecraft:crimson_slab",
+				"minecraft:warped_double_slab",
+				"minecraft:warped_slab",
+				"minecraft:double_stone_block_slab",
+				"minecraft:stone_block_slab",
+				"minecraft:double_stone_block_slab2",
+				"minecraft:stone_block_slab2",
+				"minecraft:double_stone_block_slab3",
+				"minecraft:stone_block_slab3",
+				"minecraft:double_stone_block_slab4",
+				"minecraft:stone_block_slab4",
+				"minecraft:blackstone_double_slab",
+				"minecraft:blackstone_slab",
+				"minecraft:polished_blackstone_double_slab",
+				"minecraft:polished_blackstone_slab",
+				"minecraft:polished_blackstone_brick_double_slab",
+				"minecraft:polished_blackstone_brick_slab",
+				"minecraft:double_cut_copper_slab",
+				"minecraft:cut_copper_slab",
+				"minecraft:exposed_double_cut_copper_slab",
+				"minecraft:exposed_cut_copper_slab",
+				"minecraft:weathered_double_cut_copper_slab",
+				"minecraft:weathered_cut_copper_slab",
+				"minecraft:oxidized_double_cut_copper_slab",
+				"minecraft:oxidized_cut_copper_slab",
+				"minecraft:waxed_double_cut_copper_slab",
+				"minecraft:waxed_cut_copper_slab",
+				"minecraft:waxed_exposed_double_cut_copper_slab",
+				"minecraft:waxed_exposed_cut_copper_slab",
+				"minecraft:waxed_weathered_double_cut_copper_slab",
+				"minecraft:waxed_weathered_cut_copper_slab",
+				"minecraft:waxed_oxidized_double_cut_copper_slab",
+				"minecraft:waxed_oxidized_cut_copper_slab",
+				"minecraft:cobbled_deepslate_double_slab",
+				"minecraft:cobbled_deepslate_slab",
+				"minecraft:polished_deepslate_double_slab",
+				"minecraft:polished_deepslate_slab",
+				"minecraft:deepslate_brick_double_slab",
+				"minecraft:deepslate_brick_slab"
+			],
+			"minecraft:particle_initial_speed": "math.random(0,1)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [
+					0,
+					"math.random(0.5,1.5)",
+					0
+				]
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"0.55*(v.size)",
+					"0.55*(v.size)"
+				],
+				"facing_camera_mode": "rotate_y",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						"math.round(variable.particle_random_1*2)*16",
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "v.particle_age/v.particle_lifetime",
+					"gradient": {
+						"0.0": "#00DADE",
+						"1.0": "#FFFFEBF6"
+					}
+				}
+			},
+			"minecraft:particle_lifetime_events": {
+				"creation_event": [
+					"p_spawn"
+				]
+			}
+		},
+		"events": {
+			"p_spawn": {
+				"expression": "v.count=v.count < v.block_count ? v.count+1 : 0;"
+			}
+		}
+	}
+}

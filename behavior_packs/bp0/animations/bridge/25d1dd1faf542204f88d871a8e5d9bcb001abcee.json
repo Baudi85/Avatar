@@ -1,0 +1,58 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.25d1dd1faf542204f88d871a8e5d9bcb001abcee_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_681_cooldown = v.state_nom_water_octopus_defense_cooldown;",
+					"v.metastate_octopus_defense_cooldown = v.chain_681_cooldown;"
+				]
+			}
+		},
+		"animation.25d1dd1faf542204f88d871a8e5d9bcb001abcee_1": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_481_cooldown = v.state_nom_water_whip2_cooldown||v.state_nom_approach_cooldown;",
+					"v.metastate_water_whip2_cooldown = v.chain_481_cooldown;"
+				]
+			}
+		},
+		"animation.25d1dd1faf542204f88d871a8e5d9bcb001abcee_2": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_668_cooldown = v.state_nom_water_breath_small_cooldown;",
+					"v.chain_946_cooldown = v.state_nom_water_breath_medium_cooldown;",
+					"v.chain_612_cooldown = v.state_nom_water_breath_large_cooldown;",
+					"v.chain_230_cooldown = v.state_nom_approach_cooldown||v.state_nom_water_octopus_offense_cooldown;",
+					"v.metastate_near_cooldown = v.chain_668_cooldown&&v.chain_946_cooldown&&v.chain_612_cooldown&&v.chain_230_cooldown;"
+				]
+			}
+		},
+		"animation.25d1dd1faf542204f88d871a8e5d9bcb001abcee_3": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_276_cooldown = v.state_nom_water_whip1_cooldown;",
+					"v.metastate_water_whip_cooldown = v.chain_276_cooldown;"
+				]
+			}
+		},
+		"animation.25d1dd1faf542204f88d871a8e5d9bcb001abcee_4": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_260_cooldown = v.state_nom_strafe_side_cooldown;",
+					"v.metastate_projectile_defence_strafe_cooldown = v.chain_260_cooldown;"
+				]
+			}
+		}
+	}
+}

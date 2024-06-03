@@ -1,0 +1,159 @@
+{
+    "namespace": "gm1_npc_splash",
+    "screen_contents": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [{ "bars@bars": {}}, { "frame@frame": {}}]
+    },
+    "bars": {
+        "layer": 0,
+        "type": "panel",
+        "size": [ "200%", "200%" ],
+        "controls": [
+            {
+                "top@bar": {
+                    "anchor_from": "top_middle",
+                    "anchor_to": "center",
+                    "anims": [ "@gm1_npc_splash.anim__bars-top__0" ],
+                    "animation_reset_name": "screen_animation_reset"
+                }
+            },
+            {
+                "bottom@bar": {
+                    "anchor_from": "bottom_middle",
+                    "anchor_to": "center",
+                    "anims": [ "@gm1_npc_splash.anim__bars-bottom__0" ],
+                    "animation_reset_name": "screen_animation_reset"
+                }
+            }
+        ],
+        "alpha": 0
+    },
+    "bar": {
+        "type": "image",
+        "size": [ "100%", "100%" ],
+        "texture": "textures/ui/White",
+        "color": [ 0, 0, 0, 1 ],
+        "alpha": 0,
+        "animation_reset_name": "screen_animation_reset"
+    },
+    "frame": {
+        "type": "panel",
+        "size": [ "100% - 16px", "100% - 16px" ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "controls": [
+            {
+                "text": {
+                    "offset": [ 0, "10%c" ],
+                    "animation_reset_name": "screen_animation_reset",
+                    "anims": [ "@gm1_npc_splash.anim__frame-text__0" ],
+                    "alpha": 0,
+                    "propagate_alpha": true,
+                    "type": "panel",
+                    "size": [ "100%c", "100%c" ],
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "controls": [
+                        { "title@button_stack_panel": { "$content": "title", "offset": [ 0, "-50%c" ]}},
+                        { "names@button_stack_panel": { "offset": [ 0, "50%c" ], "$content": "names" }}
+                    ]
+                }
+            },
+            {
+                "image": {
+                    "type": "image",
+                    "size": [ "100%", "100%" ],
+                    "max_size": [ "100%", "100%" ],
+                    "texture": "#texture",
+                    "layer": 2,
+                    "alpha": 0,
+                    "anchor_from": "center",
+                    "anchor_to": "center",
+                    "propagate_alpha": false,
+                    "animation_reset_name": "screen_animation_reset",
+                    "anims": [ "@gm1_npc_splash.anim__frame__0" ],
+                    "bindings": [
+                        { "binding_name": "#dialogtext" },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "('textures/ui/gm1/splash/frame_' + #dialogtext)",
+                            "target_property_name": "#texture"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "button_stack_panel": {
+        "type": "stack_panel",
+        "size": [ "100%c", "100%c" ],
+        "collection_name": "student_buttons_collection",
+        "controls": [{ "content@$content": {}}]
+    },
+    "names@label": { "font_scale_factor": 0.75, "collection_index": 1, "shadow": true },
+    "title@label": { "font_scale_factor": 0.90, "collection_index": 0, "shadow": true },
+    "label": {
+        "type": "label",
+        "font_size": "large",
+        "color": [ 1, 1, 1, 1 ],
+        "text": "#student_button_text",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "bindings": [
+            {
+                "binding_type": "collection_details",
+                "binding_collection_name": "student_buttons_collection",
+                "binding_collection_prefix": "student_buttons"
+            },
+            {
+                "binding_name": "#student_button_text",
+                "binding_type": "collection",
+                "binding_collection_name": "student_buttons_collection"
+            }
+        ]
+    },
+    "blank": { "type": "panel" },
+    "anim__bars-top__0": {
+        "anim_type": "alpha",
+        "duration": 0.5,
+        "from": 0,
+        "to": 1,
+        "next": "@gm1_npc_splash.anim__bars-top__1"
+    },
+    "anim__bars-bottom__0": {
+        "anim_type": "alpha",
+        "duration": 0.5,
+        "from": 0,
+        "to": 1,
+        "next": "@gm1_npc_splash.anim__bars-bottom__1"
+    },
+    "anim__bars-top__1": { "anim_type": "wait", "duration": 4, "next": "@gm1_npc_splash.anim__bars-top__2" },
+    "anim__bars-bottom__1": { "anim_type": "wait", "duration": 4, "next": "@gm1_npc_splash.anim__bars-bottom__2" },
+    "anim__bars-top__2": { "anim_type": "offset", "from": [ 0, 0 ], "to": [ 0, "-20%" ], "duration": 0.5 },
+    "anim__bars-bottom__2": { "anim_type": "offset", "from": [ 0, 0 ], "to": [ 0, "20%" ], "duration": 0.5 },
+    "anim__frame__0": { "anim_type": "wait", "duration": 1.25, "next": "@gm1_npc_splash.anim__frame__1" },
+    "anim__frame-text__0": { "anim_type": "wait", "duration": 0.75, "next": "@gm1_npc_splash.anim__frame-text__1" },
+    "anim__frame__1": {
+        "anim_type": "alpha",
+        "from": 0,
+        "to": 1,
+        "duration": 1,
+        "next": "@gm1_npc_splash.anim__frame__2",
+        "easing": "in_quad"
+    },
+    "anim__frame-text__1": {
+        "anim_type": "alpha",
+        "from": 0,
+        "to": 1,
+        "duration": 0.5,
+        "next": "@gm1_npc_splash.anim__frame-text__2",
+        "easing": "linear"
+    },
+    "anim__frame__2": { "anim_type": "wait", "duration": 1.5, "next": "@gm1_npc_splash.anim__frame__3" },
+    "anim__frame-text__2": { "anim_type": "wait", "duration": 2.5, "next": "@gm1_npc_splash.anim__frame-text__3" },
+    "anim__frame__3": { "anim_type": "alpha", "from": 1, "to": 0, "duration": 0.25 },
+    "anim__frame-text__3": { "anim_type": "alpha", "from": 1, "to": 0, "duration": 0.25 }
+}

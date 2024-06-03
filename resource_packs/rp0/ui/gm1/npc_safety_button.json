@@ -1,0 +1,65 @@
+{
+    "namespace": "gm1_npc_safety_button",
+    "main":{
+        "type": "panel",
+        "size":["100%c", "100%c"],
+        "anchor_from":"top_middle",
+        "anchor_to":"top_middle",
+        "offset": [0, "-100%"],
+        "layer": 99999,
+        "alpha": 0,
+        "propagate_alpha": true,
+        "$anim": "('gm1_npc_safety_button.anim__wait__' + $time)",
+        "anims": ["@$anim"],
+        "controls":[
+            { 
+                "button@button":{
+                    "anchor_from": "center",
+                    "anchor_to": "center"
+                } 
+            }
+        ],
+        "enabled": "(not ($time = 0))"
+    },
+    "button@gm1_npc_utils.simple_close_button":{
+        "button_mappings": [
+            {
+                "from_button_id": "button.menu_select",
+                "to_button_id": "$close_button_to_button_id",
+                "mapping_type": "pressed"
+            },
+            {
+                "from_button_id": "button.menu_ok",
+                "to_button_id": "$close_button_to_button_id",
+                "mapping_type": "focused"
+            }
+        ]
+    },
+    "anim__move":{
+        "anim_type":"offset",
+        "from":[0,0],
+        "to": [0,0],
+        "duration": 0,
+        "next": "@gm1_npc_safety_button.anim__show"
+    },
+    "anim__show":{
+        "anim_type":"alpha",
+        "duration": 0.25,
+        "from": 0,
+        "to": 1
+    },
+    "anim__wait__4":{
+        "anim_type":"wait",
+        "duration": 4,
+        "next":"@gm1_npc_safety_button.anim__move"
+    },
+    "anim__wait__12":{
+        "anim_type":"wait",
+        "duration": 12,
+        "next":"@gm1_npc_safety_button.anim__move"
+    },
+    "anim__wait__0":{
+        "anim_type":"wait",
+        "duration": 0
+    }
+}

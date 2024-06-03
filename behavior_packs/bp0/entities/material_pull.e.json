@@ -1,0 +1,875 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:material_pull",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"93419aa5506e0d3a_a_0": "animation.93419aa5506e0d3a39ddf8a8fe2994182701669b_0"
+			},
+			"scripts": {
+				"animate": [
+					"93419aa5506e0d3a_a_0"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:v0": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"nom:v1": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"nom:v2": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"nom:v3": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			},
+			"nom:v4": {
+				"minecraft:variant": {
+					"value": 4
+				}
+			},
+			"nom:v5": {
+				"minecraft:variant": {
+					"value": 5
+				}
+			},
+			"nom:v6": {
+				"minecraft:variant": {
+					"value": 6
+				}
+			},
+			"nom:v7": {
+				"minecraft:variant": {
+					"value": 7
+				}
+			},
+			"nom:v8": {
+				"minecraft:variant": {
+					"value": 8
+				}
+			},
+			"nom:v9": {
+				"minecraft:variant": {
+					"value": 9
+				}
+			},
+			"nom:mv1": {
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			},
+			"nom:mv2": {
+				"minecraft:mark_variant": {
+					"value": 2
+				}
+			},
+			"nom:mv3": {
+				"minecraft:mark_variant": {
+					"value": 3
+				}
+			},
+			"nom:mv4": {
+				"minecraft:mark_variant": {
+					"value": 4
+				}
+			},
+			"nom:mv5": {
+				"minecraft:mark_variant": {
+					"value": 5
+				}
+			},
+			"nom:mv6": {
+				"minecraft:mark_variant": {
+					"value": 6
+				}
+			},
+			"nom:mv7": {
+				"minecraft:mark_variant": {
+					"value": 7
+				}
+			},
+			"nom:mv8": {
+				"minecraft:mark_variant": {
+					"value": 8
+				}
+			},
+			"nom:mv9": {
+				"minecraft:mark_variant": {
+					"value": 9
+				}
+			},
+			"nom:mv10": {
+				"minecraft:mark_variant": {
+					"value": 10
+				}
+			},
+			"nom:mv11": {
+				"minecraft:mark_variant": {
+					"value": 11
+				}
+			},
+			"nom:mv12": {
+				"minecraft:mark_variant": {
+					"value": 12
+				}
+			},
+			"nom:mv13": {
+				"minecraft:mark_variant": {
+					"value": 13
+				}
+			},
+			"nom:mv14": {
+				"minecraft:mark_variant": {
+					"value": 14
+				}
+			},
+			"nom:mv15": {
+				"minecraft:mark_variant": {
+					"value": 15
+				}
+			},
+			"nom:mv16": {
+				"minecraft:mark_variant": {
+					"value": 16
+				}
+			},
+			"nom:mv17": {
+				"minecraft:mark_variant": {
+					"value": 17
+				}
+			},
+			"nom:mv18": {
+				"minecraft:mark_variant": {
+					"value": 18
+				}
+			},
+			"nom:mv19": {
+				"minecraft:mark_variant": {
+					"value": 19
+				}
+			},
+			"nom:mv20": {
+				"minecraft:mark_variant": {
+					"value": 20
+				}
+			},
+			"nom:mv21": {
+				"minecraft:mark_variant": {
+					"value": 21
+				}
+			},
+			"nom:mv22": {
+				"minecraft:mark_variant": {
+					"value": 22
+				}
+			},
+			"nom:mv23": {
+				"minecraft:mark_variant": {
+					"value": 23
+				}
+			},
+			"nom:mv24": {
+				"minecraft:mark_variant": {
+					"value": 24
+				}
+			},
+			"nom:mv25": {
+				"minecraft:mark_variant": {
+					"value": 25
+				}
+			},
+			"nom:mv26": {
+				"minecraft:mark_variant": {
+					"value": 26
+				}
+			},
+			"nom:mv27": {
+				"minecraft:mark_variant": {
+					"value": 27
+				}
+			},
+			"nom:mv28": {
+				"minecraft:mark_variant": {
+					"value": 28
+				}
+			},
+			"nom:mv29": {
+				"minecraft:mark_variant": {
+					"value": 29
+				}
+			},
+			"nom:mv30": {
+				"minecraft:mark_variant": {
+					"value": 30
+				}
+			},
+			"nom:mv31": {
+				"minecraft:mark_variant": {
+					"value": 31
+				}
+			},
+			"nom:mv32": {
+				"minecraft:mark_variant": {
+					"value": 32
+				}
+			},
+			"nom:mv33": {
+				"minecraft:mark_variant": {
+					"value": 33
+				}
+			},
+			"nom:mv34": {
+				"minecraft:mark_variant": {
+					"value": 34
+				}
+			},
+			"nom:mv35": {
+				"minecraft:mark_variant": {
+					"value": 35
+				}
+			},
+			"nom:mv36": {
+				"minecraft:mark_variant": {
+					"value": 36
+				}
+			},
+			"nom:mv37": {
+				"minecraft:mark_variant": {
+					"value": 37
+				}
+			},
+			"nom:mv38": {
+				"minecraft:mark_variant": {
+					"value": 38
+				}
+			},
+			"nom:mv39": {
+				"minecraft:mark_variant": {
+					"value": 39
+				}
+			},
+			"nom:mv40": {
+				"minecraft:mark_variant": {
+					"value": 40
+				}
+			},
+			"nom:mv41": {
+				"minecraft:mark_variant": {
+					"value": 41
+				}
+			},
+			"nom:mv42": {
+				"minecraft:mark_variant": {
+					"value": 42
+				}
+			},
+			"nom:mv43": {
+				"minecraft:mark_variant": {
+					"value": 43
+				}
+			},
+			"nom:mv44": {
+				"minecraft:mark_variant": {
+					"value": 44
+				}
+			},
+			"nom:mv45": {
+				"minecraft:mark_variant": {
+					"value": 45
+				}
+			},
+			"nom:mv46": {
+				"minecraft:mark_variant": {
+					"value": 46
+				}
+			},
+			"nom:mv47": {
+				"minecraft:mark_variant": {
+					"value": 47
+				}
+			},
+			"nom:mv48": {
+				"minecraft:mark_variant": {
+					"value": 48
+				}
+			},
+			"nom:mv49": {
+				"minecraft:mark_variant": {
+					"value": 49
+				}
+			},
+			"nom:mv50": {
+				"minecraft:mark_variant": {
+					"value": 50
+				}
+			},
+			"nom:mv51": {
+				"minecraft:mark_variant": {
+					"value": 51
+				}
+			},
+			"nom:mv52": {
+				"minecraft:mark_variant": {
+					"value": 52
+				}
+			},
+			"nom:mv53": {
+				"minecraft:mark_variant": {
+					"value": 53
+				}
+			},
+			"nom:mv54": {
+				"minecraft:mark_variant": {
+					"value": 54
+				}
+			},
+			"nom:mv55": {
+				"minecraft:mark_variant": {
+					"value": 55
+				}
+			},
+			"nom:mv56": {
+				"minecraft:mark_variant": {
+					"value": 56
+				}
+			},
+			"nom:earth": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			},
+			"nom:water": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"material_pull"
+				]
+			},
+			"minecraft:health": {
+				"value": 8,
+				"max": 8
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:fire_immune": {}
+		},
+		"events": {
+			"nom:v0": {
+				"add": {
+					"component_groups": [
+						"nom:v0"
+					]
+				}
+			},
+			"nom:v1": {
+				"add": {
+					"component_groups": [
+						"nom:v1"
+					]
+				}
+			},
+			"nom:v2": {
+				"add": {
+					"component_groups": [
+						"nom:v2"
+					]
+				}
+			},
+			"nom:v3": {
+				"add": {
+					"component_groups": [
+						"nom:v3"
+					]
+				}
+			},
+			"nom:v4": {
+				"add": {
+					"component_groups": [
+						"nom:v4"
+					]
+				}
+			},
+			"nom:v5": {
+				"add": {
+					"component_groups": [
+						"nom:v5"
+					]
+				}
+			},
+			"nom:v6": {
+				"add": {
+					"component_groups": [
+						"nom:v6"
+					]
+				}
+			},
+			"nom:v7": {
+				"add": {
+					"component_groups": [
+						"nom:v7"
+					]
+				}
+			},
+			"nom:v8": {
+				"add": {
+					"component_groups": [
+						"nom:v8"
+					]
+				}
+			},
+			"nom:v9": {
+				"add": {
+					"component_groups": [
+						"nom:v9"
+					]
+				}
+			},
+			"nom:mv1": {
+				"add": {
+					"component_groups": [
+						"nom:mv1"
+					]
+				}
+			},
+			"nom:mv2": {
+				"add": {
+					"component_groups": [
+						"nom:mv2"
+					]
+				}
+			},
+			"nom:mv3": {
+				"add": {
+					"component_groups": [
+						"nom:mv3"
+					]
+				}
+			},
+			"nom:mv4": {
+				"add": {
+					"component_groups": [
+						"nom:mv4"
+					]
+				}
+			},
+			"nom:mv5": {
+				"add": {
+					"component_groups": [
+						"nom:mv5"
+					]
+				}
+			},
+			"nom:mv6": {
+				"add": {
+					"component_groups": [
+						"nom:mv6"
+					]
+				}
+			},
+			"nom:mv7": {
+				"add": {
+					"component_groups": [
+						"nom:mv7"
+					]
+				}
+			},
+			"nom:mv8": {
+				"add": {
+					"component_groups": [
+						"nom:mv8"
+					]
+				}
+			},
+			"nom:mv9": {
+				"add": {
+					"component_groups": [
+						"nom:mv9"
+					]
+				}
+			},
+			"nom:mv10": {
+				"add": {
+					"component_groups": [
+						"nom:mv10"
+					]
+				}
+			},
+			"nom:mv11": {
+				"add": {
+					"component_groups": [
+						"nom:mv11"
+					]
+				}
+			},
+			"nom:mv12": {
+				"add": {
+					"component_groups": [
+						"nom:mv12"
+					]
+				}
+			},
+			"nom:mv13": {
+				"add": {
+					"component_groups": [
+						"nom:mv13"
+					]
+				}
+			},
+			"nom:mv14": {
+				"add": {
+					"component_groups": [
+						"nom:mv14"
+					]
+				}
+			},
+			"nom:mv15": {
+				"add": {
+					"component_groups": [
+						"nom:mv15"
+					]
+				}
+			},
+			"nom:mv16": {
+				"add": {
+					"component_groups": [
+						"nom:mv16"
+					]
+				}
+			},
+			"nom:mv17": {
+				"add": {
+					"component_groups": [
+						"nom:mv17"
+					]
+				}
+			},
+			"nom:mv18": {
+				"add": {
+					"component_groups": [
+						"nom:mv18"
+					]
+				}
+			},
+			"nom:mv19": {
+				"add": {
+					"component_groups": [
+						"nom:mv19"
+					]
+				}
+			},
+			"nom:mv20": {
+				"add": {
+					"component_groups": [
+						"nom:mv20"
+					]
+				}
+			},
+			"nom:mv21": {
+				"add": {
+					"component_groups": [
+						"nom:mv21"
+					]
+				}
+			},
+			"nom:mv22": {
+				"add": {
+					"component_groups": [
+						"nom:mv22"
+					]
+				}
+			},
+			"nom:mv23": {
+				"add": {
+					"component_groups": [
+						"nom:mv23"
+					]
+				}
+			},
+			"nom:mv24": {
+				"add": {
+					"component_groups": [
+						"nom:mv24"
+					]
+				}
+			},
+			"nom:mv25": {
+				"add": {
+					"component_groups": [
+						"nom:mv25"
+					]
+				}
+			},
+			"nom:mv26": {
+				"add": {
+					"component_groups": [
+						"nom:mv26"
+					]
+				}
+			},
+			"nom:mv27": {
+				"add": {
+					"component_groups": [
+						"nom:mv27"
+					]
+				}
+			},
+			"nom:mv28": {
+				"add": {
+					"component_groups": [
+						"nom:mv28"
+					]
+				}
+			},
+			"nom:mv29": {
+				"add": {
+					"component_groups": [
+						"nom:mv29"
+					]
+				}
+			},
+			"nom:mv30": {
+				"add": {
+					"component_groups": [
+						"nom:mv30"
+					]
+				}
+			},
+			"nom:mv31": {
+				"add": {
+					"component_groups": [
+						"nom:mv31"
+					]
+				}
+			},
+			"nom:mv32": {
+				"add": {
+					"component_groups": [
+						"nom:mv32"
+					]
+				}
+			},
+			"nom:mv33": {
+				"add": {
+					"component_groups": [
+						"nom:mv33"
+					]
+				}
+			},
+			"nom:mv34": {
+				"add": {
+					"component_groups": [
+						"nom:mv34"
+					]
+				}
+			},
+			"nom:mv35": {
+				"add": {
+					"component_groups": [
+						"nom:mv35"
+					]
+				}
+			},
+			"nom:mv36": {
+				"add": {
+					"component_groups": [
+						"nom:mv36"
+					]
+				}
+			},
+			"nom:mv37": {
+				"add": {
+					"component_groups": [
+						"nom:mv37"
+					]
+				}
+			},
+			"nom:mv38": {
+				"add": {
+					"component_groups": [
+						"nom:mv38"
+					]
+				}
+			},
+			"nom:mv39": {
+				"add": {
+					"component_groups": [
+						"nom:mv39"
+					]
+				}
+			},
+			"nom:mv40": {
+				"add": {
+					"component_groups": [
+						"nom:mv40"
+					]
+				}
+			},
+			"nom:mv41": {
+				"add": {
+					"component_groups": [
+						"nom:mv41"
+					]
+				}
+			},
+			"nom:mv42": {
+				"add": {
+					"component_groups": [
+						"nom:mv42"
+					]
+				}
+			},
+			"nom:mv43": {
+				"add": {
+					"component_groups": [
+						"nom:mv43"
+					]
+				}
+			},
+			"nom:mv44": {
+				"add": {
+					"component_groups": [
+						"nom:mv44"
+					]
+				}
+			},
+			"nom:mv45": {
+				"add": {
+					"component_groups": [
+						"nom:mv45"
+					]
+				}
+			},
+			"nom:mv46": {
+				"add": {
+					"component_groups": [
+						"nom:mv46"
+					]
+				}
+			},
+			"nom:mv47": {
+				"add": {
+					"component_groups": [
+						"nom:mv47"
+					]
+				}
+			},
+			"nom:mv48": {
+				"add": {
+					"component_groups": [
+						"nom:mv48"
+					]
+				}
+			},
+			"nom:mv49": {
+				"add": {
+					"component_groups": [
+						"nom:mv49"
+					]
+				}
+			},
+			"nom:mv50": {
+				"add": {
+					"component_groups": [
+						"nom:mv50"
+					]
+				}
+			},
+			"nom:mv51": {
+				"add": {
+					"component_groups": [
+						"nom:mv51"
+					]
+				}
+			},
+			"nom:mv52": {
+				"add": {
+					"component_groups": [
+						"nom:mv52"
+					]
+				}
+			},
+			"nom:mv53": {
+				"add": {
+					"component_groups": [
+						"nom:mv53"
+					]
+				}
+			},
+			"nom:mv54": {
+				"add": {
+					"component_groups": [
+						"nom:mv54"
+					]
+				}
+			},
+			"nom:mv55": {
+				"add": {
+					"component_groups": [
+						"nom:mv55"
+					]
+				}
+			},
+			"nom:mv56": {
+				"add": {
+					"component_groups": [
+						"nom:mv56"
+					]
+				}
+			},
+			"nom:earth": {
+				"add": {
+					"component_groups": [
+						"nom:earth"
+					]
+				}
+			},
+			"nom:water": {
+				"add": {
+					"component_groups": [
+						"nom:water"
+					]
+				}
+			},
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

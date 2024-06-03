@@ -1,0 +1,3175 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "unlock.water.whip.0000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.0001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/whip",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.0010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.0011",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/whip",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.0100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.0101",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/whip",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.0110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.0111",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/whip",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.1000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.1010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.1100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.whip.1110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.whip"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.0000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.0001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/octopus",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.0010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.0011",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/octopus",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.0100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.0110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.1000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.1001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/octopus",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.1010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.1011",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/octopus",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.1100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.octopus.1110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.octopus"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.0000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.0001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/breath",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.0010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.0100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.0101",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/breath",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.0110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.1000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.1001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/breath",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.1010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.1100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.1101",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/water/breath",
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.water.breath.1110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "water.breath"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/whip"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/octopus"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/water/breath"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			}
+		]
+	}
+}

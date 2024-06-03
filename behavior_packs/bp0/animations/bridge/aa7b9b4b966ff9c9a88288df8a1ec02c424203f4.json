@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.aa7b9b4b966ff9c9a88288df8a1ec02c424203f4_0": {
+			"timeline": {
+				"0.15": [
+					"/execute @s[scores={bossbar_id=-1}] ~ ~ ~ function bossbar/set_id",
+					"/tag @s add bossbar.loaded"
+				]
+			},
+			"loop": false,
+			"animation_length": 0.2
+		},
+		"animation.aa7b9b4b966ff9c9a88288df8a1ec02c424203f4_1": {
+			"timeline": {
+				"5": [
+					"/tag @a[r=32] add bossbar.update",
+					"/function bossbar/update/_/all",
+					"/tag @a remove bossbar.update"
+				]
+			},
+			"loop": false,
+			"animation_length": 5.05
+		},
+		"animation.aa7b9b4b966ff9c9a88288df8a1ec02c424203f4_2": {
+			"timeline": {
+				"0.0": [
+					"/execute @s[scores={bossbar_id=-1},tag=bossbar.loaded] ~ ~ ~ function bossbar/set_id"
+				]
+			},
+			"animation_length": 0.5,
+			"loop": true
+		}
+	}
+}

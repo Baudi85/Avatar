@@ -1,0 +1,147 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "nom:barrier.test_encampment.outside",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/light_orb"
+			}
+		},
+		"curves": {
+			"variable.x_position": {
+				"type": "linear",
+				"input": "v.count",
+				"horizontal_range": "v.block_count",
+				"nodes": [
+					-15,
+					6,
+					6,
+					26,
+					26,
+					-15,
+					-15
+				]
+			},
+			"variable.y_position": {
+				"type": "linear",
+				"input": "v.count",
+				"horizontal_range": "v.block_count",
+				"nodes": [
+					0,
+					0,
+					0,
+					0,
+					0,
+					0,
+					0
+				]
+			},
+			"variable.z_position": {
+				"type": "linear",
+				"input": "v.count",
+				"horizontal_range": "v.block_count",
+				"nodes": [
+					25,
+					25,
+					12,
+					12,
+					-16,
+					-16,
+					25
+				]
+			},
+			"variable.size": {
+				"type": "bezier",
+				"input": "variable.particle_age/variable.particle_lifetime",
+				"horizontal_range": 1,
+				"nodes": [
+					1,
+					1,
+					0.5,
+					0
+				]
+			}
+		},
+		"components": {
+			"minecraft:emitter_initialization": {
+				"creation_expression": "v.block_count=4;v.count=0;v.p=2*v.block_count;"
+			},
+			"minecraft:emitter_rate_instant": {
+				"num_particles": "v.p"
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.05
+			},
+			"minecraft:emitter_shape_box": {
+				"offset": [
+					"v.x_position",
+					"v.y_position",
+					"v.z_position"
+				],
+				"half_dimensions": [
+					0.5,
+					0,
+					0.5
+				],
+				"direction": [
+					0,
+					1,
+					0
+				]
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.75,1.25)"
+			},
+			"minecraft:particle_expire_if_not_in_blocks": [
+				"minecraft:air",
+				"minecraft:water"
+			],
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [
+					0,
+					"math.random(0.5,1.5)",
+					0
+				]
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"0.45*(v.size)",
+					"0.45*(v.size)"
+				],
+				"facing_camera_mode": "rotate_y",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 16,
+					"uv": [
+						"math.round(variable.particle_random_1*2)*16",
+						0
+					],
+					"uv_size": [
+						16,
+						16
+					]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "v.particle_age/v.particle_lifetime",
+					"gradient": {
+						"0.0": "#E50101",
+						"1.0": "#FFFFEBF6"
+					}
+				}
+			},
+			"minecraft:particle_lifetime_events": {
+				"creation_event": [
+					"p_spawn"
+				]
+			}
+		},
+		"events": {
+			"p_spawn": {
+				"expression": "v.count=v.count < v.block_count ? v.count+1 : 0;"
+			}
+		}
+	}
+}

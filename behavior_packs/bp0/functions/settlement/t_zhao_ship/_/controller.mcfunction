@@ -1,0 +1,1 @@
+execute @s[scores={settlement_q_i=9}] ~ ~ ~ function settlement/t_zhao_ship/_/_load_queue

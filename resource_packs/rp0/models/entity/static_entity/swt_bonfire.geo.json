@@ -1,0 +1,189 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.swt_bonfire",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 6,
+				"visible_bounds_height": 7,
+				"visible_bounds_offset": [
+					0,
+					2.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-32,
+								-16,
+								-32
+							],
+							"size": [
+								64,
+								8,
+								8
+							],
+							"uv": [
+								0,
+								56
+							]
+						},
+						{
+							"origin": [
+								-32,
+								-16,
+								24
+							],
+							"size": [
+								64,
+								8,
+								8
+							],
+							"uv": [
+								0,
+								56
+							]
+						},
+						{
+							"origin": [
+								-32,
+								-16,
+								-24
+							],
+							"size": [
+								8,
+								8,
+								48
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								24,
+								-16,
+								-24
+							],
+							"size": [
+								8,
+								8,
+								48
+							],
+							"uv": [
+								0,
+								0
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "stick1",
+					"pivot": [
+						-24,
+						0,
+						5
+					],
+					"rotation": [
+						0,
+						0,
+						27.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16.61202,
+								-14.19217,
+								4
+							],
+							"size": [
+								6,
+								80,
+								6
+							],
+							"uv": [
+								0,
+								72
+							]
+						}
+					]
+				},
+				{
+					"name": "stick2",
+					"pivot": [
+						21,
+						0,
+						17
+					],
+					"rotation": [
+						25,
+						45,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								16.58579,
+								-15.09859,
+								5.51982
+							],
+							"size": [
+								6,
+								80,
+								6
+							],
+							"uv": [
+								0,
+								72
+							]
+						}
+					]
+				},
+				{
+					"name": "stick3",
+					"pivot": [
+						8,
+						0,
+						-21
+					],
+					"rotation": [
+						-17.5,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								2,
+								-14.65806,
+								-17.28128
+							],
+							"size": [
+								6,
+								80,
+								6
+							],
+							"uv": [
+								0,
+								72
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

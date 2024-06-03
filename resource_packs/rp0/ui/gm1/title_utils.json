@@ -1,0 +1,41 @@
+{
+    "namespace": "gm1_title_utils",
+    "command": {
+        "type": "panel",
+        "bindings": [
+            { "binding_name": "#hud_title_text_string", "binding_name_override": "#text" },
+            {
+                "binding_name": "#hud_title_text_string",
+                "binding_name_override": "#saved_value",
+                "binding_condition": "visibility_changed"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#text > $command or #text = $command) and (#text < $command_max) and not (#text = #saved_value))",
+                "target_property_name": "#visible"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(#saved_value - $command)",
+                "target_property_name": "#value"
+            }
+        ]
+    },
+    "default": {
+        "type": "panel",
+        "bindings": [
+            { "binding_name": "#hud_title_text_string", "binding_name_override": "#text" },
+            {
+                "binding_name": "#hud_title_text_string",
+                "binding_name_override": "#saved_value",
+                "binding_condition": "visibility_changed"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "((#text < '/' or #text > '/􀐏') and not (#text = #saved_value))",
+                "target_property_name": "#visible"
+            },
+            { "binding_type": "view", "source_property_name": "(#saved_value)", "target_property_name": "#value" }
+        ]
+    }
+}

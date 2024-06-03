@@ -1,0 +1,1378 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.g_cabbagecart",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 10,
+				"visible_bounds_height": 7.5,
+				"visible_bounds_offset": [
+					0,
+					3.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "base",
+					"parent": "root",
+					"pivot": [
+						8,
+						0,
+						0
+					]
+				},
+				{
+					"name": "leftbase",
+					"parent": "base",
+					"pivot": [
+						-15,
+						15,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								9,
+								-24
+							],
+							"size": [
+								2,
+								12,
+								48
+							],
+							"uv": [
+								100,
+								102
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "rightbase",
+					"parent": "base",
+					"pivot": [
+						15,
+						15,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								14,
+								9,
+								-24
+							],
+							"size": [
+								2,
+								12,
+								48
+							],
+							"uv": [
+								100,
+								102
+							]
+						}
+					]
+				},
+				{
+					"name": "frontbase",
+					"parent": "base",
+					"pivot": [
+						0,
+						15,
+						22.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-14,
+								9,
+								22
+							],
+							"size": [
+								28,
+								12,
+								2
+							],
+							"uv": [
+								100,
+								12
+							]
+						}
+					]
+				},
+				{
+					"name": "handles",
+					"parent": "frontbase",
+					"pivot": [
+						8,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								6,
+								15,
+								24
+							],
+							"size": [
+								2,
+								2,
+								16
+							],
+							"uv": [
+								0,
+								46
+							]
+						},
+						{
+							"origin": [
+								-8,
+								15,
+								24
+							],
+							"size": [
+								2,
+								2,
+								16
+							],
+							"uv": [
+								0,
+								46
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "backbase",
+					"parent": "base",
+					"pivot": [
+						0,
+						15,
+						-23
+					],
+					"cubes": [
+						{
+							"origin": [
+								-14,
+								9,
+								-24
+							],
+							"size": [
+								28,
+								12,
+								2
+							],
+							"uv": [
+								100,
+								26
+							]
+						}
+					]
+				},
+				{
+					"name": "bottom",
+					"parent": "base",
+					"pivot": [
+						0,
+						9.5,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-14,
+								9,
+								-22
+							],
+							"size": [
+								28,
+								2,
+								44
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-20,
+								7,
+								-15
+							],
+							"size": [
+								40,
+								2,
+								2
+							],
+							"uv": [
+								100,
+								0
+							]
+						},
+						{
+							"origin": [
+								10,
+								1,
+								18
+							],
+							"size": [
+								4,
+								8,
+								4
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								-14,
+								1,
+								18
+							],
+							"size": [
+								4,
+								8,
+								4
+							],
+							"uv": [
+								0,
+								0
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "cabbages",
+					"parent": "base",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "Cabbages1",
+					"parent": "cabbages",
+					"pivot": [
+						10,
+						14.5,
+						-5
+					],
+					"cubes": [
+						{
+							"origin": [
+								6,
+								11,
+								-9
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages2",
+					"parent": "cabbages",
+					"pivot": [
+						8,
+						23,
+						5
+					],
+					"cubes": [
+						{
+							"origin": [
+								4,
+								19,
+								1
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								8,
+								23,
+								5
+							],
+							"rotation": [
+								0,
+								-22.5,
+								0
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "cabbages20",
+					"parent": "cabbages",
+					"pivot": [
+						8,
+						23,
+						15
+					],
+					"cubes": [
+						{
+							"origin": [
+								-1,
+								19,
+								11
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								5,
+								15,
+								2
+							],
+							"rotation": [
+								0,
+								22.5,
+								0
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages3",
+					"parent": "cabbages",
+					"pivot": [
+						5,
+						23,
+						-15
+					],
+					"cubes": [
+						{
+							"origin": [
+								1,
+								19,
+								-19
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages4",
+					"parent": "cabbages",
+					"pivot": [
+						0,
+						31,
+						-11.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-12,
+								27,
+								-8
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								5,
+								15,
+								2
+							],
+							"rotation": [
+								0,
+								-45,
+								0
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages5",
+					"parent": "cabbages",
+					"pivot": [
+						1.5,
+						31,
+						13
+					],
+					"cubes": [
+						{
+							"origin": [
+								-9,
+								27,
+								3
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								5,
+								15,
+								2
+							],
+							"rotation": [
+								0,
+								45,
+								0
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages6",
+					"parent": "cabbages",
+					"pivot": [
+						-3,
+						31,
+						-1
+					],
+					"cubes": [
+						{
+							"origin": [
+								-5,
+								27,
+								-8
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								5,
+								31,
+								2
+							],
+							"rotation": [
+								0,
+								22.5,
+								0
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages7",
+					"parent": "cabbages",
+					"pivot": [
+						4,
+						31,
+						4
+					],
+					"cubes": [
+						{
+							"origin": [
+								1,
+								27,
+								0
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								5,
+								15,
+								2
+							],
+							"rotation": [
+								0,
+								-22.5,
+								0
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages8",
+					"parent": "cabbages",
+					"pivot": [
+						5,
+						23,
+						-5
+					],
+					"cubes": [
+						{
+							"origin": [
+								6,
+								19,
+								-7
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								5,
+								15,
+								2
+							],
+							"rotation": [
+								0,
+								45,
+								0
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages9",
+					"parent": "cabbages",
+					"pivot": [
+						-6,
+						23,
+						-14.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-5,
+								19,
+								-19
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								-3,
+								15,
+								-2
+							],
+							"rotation": [
+								0,
+								22.5,
+								0
+							],
+							"uv": [
+								0,
+								240
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "Cabbages10",
+					"parent": "cabbages",
+					"pivot": [
+						-5,
+						23,
+						-5.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-10,
+								19,
+								-9
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								-3,
+								15,
+								-2
+							],
+							"rotation": [
+								0,
+								-22.5,
+								0
+							],
+							"uv": [
+								0,
+								240
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "Cabbages11",
+					"parent": "cabbages",
+					"pivot": [
+						-3,
+						23,
+						5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-12,
+								19,
+								-1
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								-3,
+								15,
+								-2
+							],
+							"rotation": [
+								0,
+								45,
+								0
+							],
+							"uv": [
+								0,
+								240
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "Cabbages12",
+					"parent": "cabbages",
+					"pivot": [
+						-3,
+						23,
+						15
+					],
+					"cubes": [
+						{
+							"origin": [
+								-7,
+								19,
+								11
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								0,
+								240
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "Cabbages13",
+					"parent": "cabbages",
+					"pivot": [
+						6,
+						15,
+						15.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-3,
+								11,
+								11
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								5,
+								15,
+								3
+							],
+							"rotation": [
+								0,
+								22.5,
+								0
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages14",
+					"parent": "cabbages",
+					"pivot": [
+						4.5,
+						15,
+						4
+					],
+					"cubes": [
+						{
+							"origin": [
+								1,
+								11,
+								0
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								5,
+								15,
+								3
+							],
+							"rotation": [
+								0,
+								-45,
+								0
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages15",
+					"parent": "cabbages",
+					"pivot": [
+						6,
+						15,
+						-15
+					],
+					"cubes": [
+						{
+							"origin": [
+								1,
+								11,
+								-19
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								5,
+								15,
+								-12
+							],
+							"rotation": [
+								0,
+								-22.5,
+								0
+							],
+							"uv": [
+								0,
+								240
+							]
+						}
+					]
+				},
+				{
+					"name": "Cabbages16",
+					"parent": "cabbages",
+					"pivot": [
+						-10,
+						15,
+						5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-14,
+								11,
+								1
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"uv": [
+								0,
+								240
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "Cabbages17",
+					"parent": "cabbages",
+					"pivot": [
+						-6,
+						15,
+						-15.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-5,
+								11,
+								-19
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								-5,
+								15,
+								-3
+							],
+							"rotation": [
+								0,
+								22.5,
+								0
+							],
+							"uv": [
+								0,
+								240
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "Cabbages18",
+					"parent": "cabbages",
+					"pivot": [
+						-4.5,
+						15,
+						-3.5
+					],
+					"cubes": [
+						{
+							"origin": [
+								-9,
+								11,
+								-8
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								-5,
+								15,
+								-3
+							],
+							"rotation": [
+								0,
+								-45,
+								0
+							],
+							"uv": [
+								0,
+								240
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "Cabbages19",
+					"parent": "cabbages",
+					"pivot": [
+						-6,
+						15,
+						15
+					],
+					"cubes": [
+						{
+							"origin": [
+								-9,
+								11,
+								11
+							],
+							"size": [
+								8,
+								8,
+								8
+							],
+							"pivot": [
+								-5,
+								15,
+								12
+							],
+							"rotation": [
+								0,
+								-22.5,
+								0
+							],
+							"uv": [
+								0,
+								240
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "supports",
+					"parent": "root",
+					"pivot": [
+						8,
+						0,
+						0
+					]
+				},
+				{
+					"name": "backsupports",
+					"parent": "supports",
+					"pivot": [
+						0,
+						28,
+						-22.5
+					]
+				},
+				{
+					"name": "left_back_support",
+					"parent": "backsupports",
+					"pivot": [
+						8,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								21,
+								-24
+							],
+							"size": [
+								2,
+								16,
+								2
+							],
+							"uv": [
+								62,
+								62
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "right_back_support",
+					"parent": "backsupports",
+					"pivot": [
+						8,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								14,
+								21,
+								-24
+							],
+							"size": [
+								2,
+								16,
+								2
+							],
+							"uv": [
+								62,
+								62
+							]
+						}
+					]
+				},
+				{
+					"name": "back_top_support",
+					"parent": "backsupports",
+					"pivot": [
+						8,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-18,
+								35,
+								-26
+							],
+							"size": [
+								36,
+								2,
+								2
+							],
+							"uv": [
+								100,
+								8
+							]
+						}
+					]
+				},
+				{
+					"name": "frontsupports",
+					"parent": "supports",
+					"pivot": [
+						0,
+						21,
+						23
+					]
+				},
+				{
+					"name": "front_top_support",
+					"parent": "frontsupports",
+					"pivot": [
+						8,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-18,
+								35,
+								24
+							],
+							"size": [
+								36,
+								2,
+								2
+							],
+							"uv": [
+								100,
+								8
+							]
+						}
+					]
+				},
+				{
+					"name": "left_front_support",
+					"parent": "frontsupports",
+					"pivot": [
+						8,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								21,
+								22
+							],
+							"size": [
+								2,
+								16,
+								2
+							],
+							"uv": [
+								62,
+								62
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "right_front_support",
+					"parent": "frontsupports",
+					"pivot": [
+						8,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								14,
+								21,
+								22
+							],
+							"size": [
+								2,
+								16,
+								2
+							],
+							"uv": [
+								62,
+								62
+							]
+						}
+					]
+				},
+				{
+					"name": "leftsupport",
+					"parent": "supports",
+					"pivot": [
+						-15,
+						37,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								37,
+								-26
+							],
+							"size": [
+								2,
+								2,
+								52
+							],
+							"uv": [
+								56,
+								48
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "rightsupport",
+					"parent": "supports",
+					"pivot": [
+						15,
+						37,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								14,
+								37,
+								-26
+							],
+							"size": [
+								2,
+								2,
+								52
+							],
+							"uv": [
+								56,
+								48
+							]
+						}
+					]
+				},
+				{
+					"name": "roof",
+					"parent": "root",
+					"pivot": [
+						0,
+						44,
+						0
+					]
+				},
+				{
+					"name": "leftroof",
+					"parent": "roof",
+					"pivot": [
+						-7,
+						42.5,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								2,
+								28,
+								-24
+							],
+							"size": [
+								5,
+								22,
+								48
+							],
+							"pivot": [
+								2,
+								50,
+								0
+							],
+							"rotation": [
+								0,
+								0,
+								67.5
+							],
+							"uv": [
+								150,
+								0
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "rightroof",
+					"parent": "roof",
+					"pivot": [
+						7,
+						42.5,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-7,
+								28,
+								-24.1
+							],
+							"size": [
+								5,
+								22,
+								48
+							],
+							"pivot": [
+								-2,
+								50,
+								0
+							],
+							"rotation": [
+								0,
+								0,
+								-67.5
+							],
+							"uv": [
+								150,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "wheels",
+					"parent": "root",
+					"pivot": [
+						8,
+						0,
+						0
+					]
+				},
+				{
+					"name": "leftwheel",
+					"parent": "wheels",
+					"pivot": [
+						-19,
+						8,
+						-14
+					],
+					"cubes": [
+						{
+							"origin": [
+								-20,
+								0.01,
+								-22
+							],
+							"size": [
+								3,
+								16,
+								16
+							],
+							"uv": [
+								0,
+								0
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "rightwheel",
+					"parent": "wheels",
+					"pivot": [
+						19,
+						8,
+						-14
+					],
+					"cubes": [
+						{
+							"origin": [
+								17,
+								0.01,
+								-22
+							],
+							"size": [
+								3,
+								16,
+								16
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

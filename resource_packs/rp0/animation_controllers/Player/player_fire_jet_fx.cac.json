@@ -1,0 +1,170 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending.fire_jet_fx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"charge_1": "q.variant==1"
+						},
+						{
+							"charge_2": "q.variant==2"
+						},
+						{
+							"charge_3": "q.variant==3"
+						},
+						{
+							"dash": "q.variant==4"
+						},
+						{
+							"impact": "q.variant==5"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==42"
+						}
+					]
+				},
+				"charge_1": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"charge_2": "q.variant==2"
+						},
+						{
+							"charge_3": "q.variant==3"
+						},
+						{
+							"dash": "q.variant==4"
+						},
+						{
+							"impact": "q.variant==5"
+						}
+					],
+					"animations": [
+						{
+							"fire_jet_dash_vfx": "v.fire_dash_buffer>0.35"
+						}
+					]
+				},
+				"charge_2": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"charge_1": "q.variant==1"
+						},
+						{
+							"charge_3": "q.variant==3"
+						},
+						{
+							"dash": "q.variant==4"
+						},
+						{
+							"impact": "q.variant==5"
+						}
+					],
+					"animations": [
+						"fire_jet_tier_up",
+						"fire_jet_dash_vfx"
+					]
+				},
+				"charge_3": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"charge_1": "q.variant==1"
+						},
+						{
+							"charge_2": "q.variant==2"
+						},
+						{
+							"dash": "q.variant==4"
+						},
+						{
+							"impact": "q.variant==5"
+						}
+					],
+					"animations": [
+						"fire_jet_tier_up",
+						"fire_jet_dash_vfx"
+					]
+				},
+				"dash": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"charge_1": "q.variant==1"
+						},
+						{
+							"charge_2": "q.variant==2"
+						},
+						{
+							"charge_3": "q.variant==3"
+						},
+						{
+							"impact": "q.variant==5"
+						}
+					],
+					"animations": [
+						"fire_jet_tier_up",
+						"fire_jet_dash_vfx",
+						"fire_jet_feet"
+					]
+				},
+				"impact": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"charge_1": "q.variant==1"
+						},
+						{
+							"charge_2": "q.variant==2"
+						},
+						{
+							"charge_3": "q.variant==3"
+						},
+						{
+							"dash": "q.variant==4"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"fire_jet_impact"
+					]
+				}
+			}
+		}
+	}
+}

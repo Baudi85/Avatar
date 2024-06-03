@@ -1,0 +1,22 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.meditation_site.poi_particles": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"particle_effects": [
+						{
+							"effect": "poi_marker",
+							"locator": "poi_1"
+						},
+						{
+							"effect": "poi_marker",
+							"locator": "poi_2"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+{
+    "namespace": "gm1_title_fade",
+    "main": {
+        "type": "stack_panel",
+        "collection_name": "__collection_fade",
+        "size": [ "200%", "200%" ],
+        "factory": { "name": "__factory_fade", "control_name": "gm1_title_fade.content" },
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "/fade",
+                "source_property_name": "((#value = 'start') * 1)",
+                "target_property_name": "#collection_length"
+            }
+        ]
+    },
+    "content": {
+        "type": "image",
+        "size": [ "100%", "100%" ],
+        "texture": "textures/ui/Black",
+        "alpha": 1,
+        "anims": [ "@gm1_title_fade.fade_in", "@gm1_title_fade.fade_wait"  ],
+        "layer": 999
+    },
+    "fade_in": {
+        "anim_type": "alpha",
+        "easing": "out_quad",
+        "from": 0,
+        "to": 1,
+        "duration": 1
+    },
+    "fade_wait": {
+        "anim_type": "wait",
+        "duration": 1.5,
+        "next": "@gm1_title_fade.fade_out"
+    },
+    "fade_out": {
+        "anim_type": "alpha",
+        "easing": "in_quad",
+        "from": 1,
+        "to": 0,
+        "duration": 1,
+        "destroy_at_end": "content"
+    }
+}

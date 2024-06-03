@@ -1,0 +1,98 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.pull_chunk.move_to_target": {
+			"loop": true,
+			"animation_length": 0.75,
+			"bones": {
+				"chunk": {
+					"rotation": {
+						"0.0417": [
+							0,
+							0,
+							0
+						],
+						"0.2917": [
+							"math.random(-15,15)",
+							"math.random(-15,15)",
+							0
+						],
+						"0.3333": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": {
+						"0.0": [
+							0,
+							0,
+							-12
+						],
+						"0.0417": [
+							0,
+							0,
+							-10
+						],
+						"0.2917": [
+							0,
+							0,
+							-10
+						],
+						"0.6667": [
+							0,
+							0,
+							"-(q.mark_variant*16)"
+						]
+					},
+					"scale": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.0417": [
+							1,
+							1,
+							1
+						],
+						"0.625": [
+							1,
+							1,
+							1
+						],
+						"0.6667": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.pull_chunk.look_at_target": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"rotation": [
+						"v.adjusted_x_rotation",
+						"query.target_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.pull_chunk.bob": {
+			"loop": true,
+			"bones": {
+				"chunk": {
+					"scale": [
+						"1+math.sin(q.anim_time*360)*0.25",
+						"1-math.sin(q.anim_time*360)*0.25",
+						"1+math.sin(q.anim_time*360)*0.25"
+					]
+				}
+			}
+		}
+	}
+}

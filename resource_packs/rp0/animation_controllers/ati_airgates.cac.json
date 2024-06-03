@@ -1,0 +1,27 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.ati_airgates.spinning_controller": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"activate": "q.is_sheared"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"spinning"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_sheared&&q.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

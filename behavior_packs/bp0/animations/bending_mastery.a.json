@@ -1,0 +1,53 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.check_bending_mastery": {
+			"loop": true,
+			"animation_length": 1,
+			"timeline": {
+				"0.0": [
+					"/event entity @s[tag=mastered.air,tag=!mastered.air_done] nom:mastered_air",
+					"/event entity @s[tag=mastered.fire,tag=!mastered.fire_done] nom:mastered_fire",
+					"/event entity @s[tag=mastered.earth,tag=!mastered.earth_done] nom:mastered_earth",
+					"/event entity @s[tag=mastered.water,tag=!mastered.water_done] nom:mastered_water"
+				]
+			}
+		},
+		"animation.bending.earth.mastery_end": {
+			"loop": true,
+			"animation_length": 1,
+			"timeline": {
+				"0.9": [
+					"@s nom:earth_mastered_end"
+				]
+			}
+		},
+		"animation.bending.fire.mastery_end": {
+			"loop": true,
+			"animation_length": 1,
+			"timeline": {
+				"0.9": [
+					"@s nom:fire_mastered_end"
+				]
+			}
+		},
+		"animation.bending.water.mastery_end": {
+			"loop": true,
+			"animation_length": 1,
+			"timeline": {
+				"0.9": [
+					"@s nom:water_mastered_end"
+				]
+			}
+		},
+		"animation.bending.air.mastery_end": {
+			"loop": true,
+			"animation_length": 1,
+			"timeline": {
+				"0.9": [
+					"@s nom:air_mastered_end"
+				]
+			}
+		}
+	}
+}

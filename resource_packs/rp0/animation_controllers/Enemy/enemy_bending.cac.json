@@ -1,0 +1,94 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.enemy.bending.teq_manager": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"earth.earth_pull": "query.skin_id==100||query.skin_id==101||query.skin_id==102"
+						},
+						{
+							"earth.earth_wall_spawn": "query.skin_id==110"
+						},
+						{
+							"earth.earth_wall_throw": "query.skin_id==111"
+						},
+						{
+							"earth.earth_quake": "query.skin_id==120||query.skin_id==121||query.skin_id==122"
+						},
+						{
+							"fire.jet": "query.skin_id==420"
+						},
+						{
+							"water.whip": "query.skin_id==200"
+						}
+					]
+				},
+				"earth.earth_wall_spawn": {
+					"animations": [
+						"bending.earth.earth_wall_spawn"
+					],
+					"transitions": [
+						{
+							"default": "query.skin_id!=110"
+						}
+					]
+				},
+				"earth.earth_wall_throw": {
+					"animations": [
+						"bending.earth.earth_wall_throw"
+					],
+					"transitions": [
+						{
+							"default": "query.skin_id!=111"
+						}
+					]
+				},
+				"earth.earth_pull": {
+					"animations": [
+						"bending.earth_pull",
+						"bending.earth_block",
+						"earth_pull_3p_pose"
+					],
+					"transitions": [
+						{
+							"default": "query.skin_id>102||query.skin_id<100"
+						}
+					]
+				},
+				"earth.earth_quake": {
+					"animations": [
+						"bending.earth_quake"
+					],
+					"transitions": [
+						{
+							"default": "query.skin_id>122||query.skin_id<120"
+						}
+					]
+				},
+				"fire.jet": {
+					"animations": [
+						"bending.fire.jet"
+					],
+					"transitions": [
+						{
+							"default": "query.skin_id!=420"
+						}
+					]
+				},
+				"water.whip": {
+					"animations": [
+						"bending.water_whip"
+					],
+					"transitions": [
+						{
+							"default": "query.skin_id!=210"
+						}
+					]
+				}
+			}
+		}
+	}
+}

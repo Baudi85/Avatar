@@ -1,0 +1,1216 @@
+{
+    "format_version": "1.14.0",
+    "sound_definitions": {
+        "cabbage_thump": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/cabbage_cart/thump1", "volume": 2.8, "load_on_low_memory": true },
+                { "name": "sounds/cabbage_cart/thump2", "volume": 2.8, "load_on_low_memory": true },
+                { "name": "sounds/cabbage_cart/thump3", "volume": 2.8, "load_on_low_memory": true },
+                { "name": "sounds/cabbage_cart/thump4", "volume": 2.8, "load_on_low_memory": true }
+            ]
+        },
+        "cabbage_explode": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/cabbage_cart/cabbage_explode1", "volume": 3.0, "load_on_low_memory": true },
+                { "name": "sounds/cabbage_cart/cabbage_explode2", "volume": 3.0, "load_on_low_memory": true }
+            ]
+        },
+        "acrobatics_flip": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/acrobatics/acrobatics_flip", "volume": 1.5, "load_on_low_memory": true }]
+        },
+        "earth_quake_impact1": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/earthbending/earth_quake/earthquake_impact1",
+                    "volume": 0.5,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "earth_quake_impact2": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/earthbending/earth_quake/earthquake_impact2",
+                    "volume": 0.6,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "earth_quake_impact3": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/earthbending/earth_quake/earthquake_impact3",
+                    "volume": 0.8,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "earth_quake_retract": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/earthbending/earth_quake/earthquake_retract",
+                    "volume": 0.1,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "earth_pull_throw1": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_pull/pull_throw1", "volume": 0.8, "load_on_low_memory": true }
+            ]
+        },
+        "earth_pull_throw2": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_pull/pull_throw2", "volume": 0.8, "load_on_low_memory": true }
+            ]
+        },
+        "earth_pull_throw3": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_pull/pull_throw3", "volume": 0.8, "load_on_low_memory": true }
+            ]
+        },
+        "enemy_earth_pull_gather1": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_pull/pull_gather1", "volume": 1.3, "load_on_low_memory": true }
+            ]
+        },
+        "enemy_earth_pull_gather2": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_pull/pull_gather2", "volume": 1.3, "load_on_low_memory": true }
+            ]
+        },
+        "enemy_earth_pull_gather3": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_pull/pull_gather3", "volume": 1.3, "load_on_low_memory": true }
+            ]
+        },
+        "earth_pull_gather1": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_pull/pull_gather1", "volume": 0.6, "load_on_low_memory": true }
+            ]
+        },
+        "earth_pull_gather2": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_pull/pull_gather2", "volume": 0.6, "load_on_low_memory": true }
+            ]
+        },
+        "earth_pull_gather3": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_pull/pull_gather3", "volume": 0.6, "load_on_low_memory": true }
+            ]
+        },
+        "earth_wall_init_rise": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/earthbending/earth_wall/init_rise", "volume": 1.1, "load_on_low_memory": true }]
+        },
+        "earth_wall_loop_charge": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_wall/loop_charge3", "volume": 1.1, "load_on_low_memory": true }
+            ]
+        },
+        "earth_wall_loop_charge_urgent": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_wall/loop_charge_urgent", "volume": 1.2, "load_on_low_memory": true }
+            ]
+        },
+        "earth_wall_full_rise": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/earthbending/earth_wall/full_rise", "volume": 1, "load_on_low_memory": true }]
+        },
+        "earth_wall_throw": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/earthbending/earth_wall/wall_throw", "volume": 0.8, "load_on_low_memory": true }]
+        },
+        "earth_wall_impact": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_wall/wall_impact", "volume": 1.1, "load_on_low_memory": true }
+            ]
+        },
+        "earth_wall_fail": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/earthbending/earth_wall/wall_fail", "volume": 1.2, "load_on_low_memory": true }]
+        },
+        "fire_stream_launch": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/fire_jab/jab_launch3", "volume": 0.4, "load_on_low_memory": true },
+                { "name": "sounds/firebending/fire_jab/jab_launch4", "volume": 0.4, "load_on_low_memory": true }
+            ]
+        },
+        "fire_stream_init": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/fire_stream/fire_stream_init", "volume": 0.4, "load_on_low_memory": true }
+            ]
+        },
+        "fire_stream_loop": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/fire_stream/fire_stream_loop", "volume": 0.3, "load_on_low_memory": true }
+            ]
+        },
+        "fire_stream_release": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/fire_stream/fire_stream_end", "volume": 0.3, "load_on_low_memory": true }
+            ]
+        },
+        "fire_stream_end": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/fire_stream/fire_stream_end", "volume": 0.75, "load_on_low_memory": true }
+            ]
+        },
+        "fire_sweep": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/firebending/fire_sweep/fire_sweep_loop",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "fire_sweep_init": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/firebending/fire_sweep/fire_sweep_init",
+                    "volume": 1,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "fire_sweep_end": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/firebending/fire_sweep/fire_sweep_end",
+                    "volume": 1,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "enemy_fire_sweep": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/firebending/fire_sweep/fire_sweep_loop",
+                    "volume": 0.8,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "enemy_fire_sweep_init": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/firebending/fire_sweep/fire_sweep_init",
+                    "volume": 1,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "enemy_fire_sweep_end": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/firebending/fire_sweep/fire_sweep_end",
+                    "volume": 1,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "air_spawn": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/airbending/air_spawn/enemy_air_spawn", "volume": 1.9, "load_on_low_memory": true }
+            ]
+        },
+        "fire_spawn": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/fire_spawn/enemy_fire_spawn", "volume": 1.9, "load_on_low_memory": true }
+            ]
+        },
+        "earth_spawn": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/earthbending/earth_spawn/enemy_earth_spawn", "volume": 1.9, "load_on_low_memory": true }
+            ]
+        },
+        "jet_prop_charge1": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/jet_propulsion/charge_hit1", "volume": 1, "load_on_low_memory": true }
+            ]
+        },
+        "jet_prop_charge2": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/jet_propulsion/charge_hit2", "volume": 1, "load_on_low_memory": true }
+            ]
+        },
+        "jet_prop_charge3": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/jet_propulsion/charge_hit3", "volume": 1, "load_on_low_memory": true }
+            ]
+        },
+        "jet_prop_charge": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/firebending/jet_propulsion/initial_charge_hit",
+                    "volume": 0.3,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "jet_prop_launch": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/firebending/jet_propulsion/jet_prop_release",
+                    "volume": 0.6,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "jet_prop_loop_ext": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/jet_propulsion/while_loop", "volume": 0.5, "load_on_low_memory": true }
+            ]
+        },
+        "jet_prop_loop": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/firebending/jet_propulsion/while_loop",
+                    "is3D": false,
+                    "volume": 0.5,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "jet_prop_explode": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/firebending/jet_propulsion/jet_prop_explode",
+                    "volume": 0.5,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "fire_jab_launch": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/fire_jab/jab_launch3", "volume": 1, "load_on_low_memory": true },
+                { "name": "sounds/firebending/fire_jab/jab_launch4", "volume": 1, "load_on_low_memory": true }
+            ]
+        },
+        "fire_jab_charge": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/fire_jab/jab_charge_test1", "volume": 1, "load_on_low_memory": true }
+            ]
+        },
+        "fire_jab_fail": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/firebending/fire_jab/fail_explode1", "volume": 0.8, "load_on_low_memory": true },
+                { "name": "sounds/firebending/fire_jab/fail_explode2", "volume": 0.8, "load_on_low_memory": true },
+                { "name": "sounds/firebending/fire_jab/fail_explode3", "volume": 0.8, "load_on_low_memory": true }
+            ]
+        },
+        "ice_projectile_shoot": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/waterbending/ice_projectile/ice_shoot1", "volume": 1, "load_on_low_memory": true },
+                { "name": "sounds/waterbending/ice_projectile/ice_shoot2", "volume": 1, "load_on_low_memory": true },
+                { "name": "sounds/waterbending/ice_projectile/ice_shoot3", "volume": 1, "load_on_low_memory": true },
+                { "name": "sounds/waterbending/ice_projectile/ice_shoot4", "volume": 1, "load_on_low_memory": true },
+                { "name": "sounds/waterbending/ice_projectile/ice_shoot5", "volume": 1, "load_on_low_memory": true }
+            ]
+        },
+        "frost_breath_init": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/waterbending/frost_breath/frost_init", "volume": 0.7, "load_on_low_memory": true }
+            ]
+        },
+        "frost_breath_loop": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/waterbending/frost_breath/frost_loop", "volume": 0.7, "load_on_low_memory": true }
+            ]
+        },
+        "frost_breath_end": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/waterbending/frost_breath/frost_end", "volume": 0.7, "load_on_low_memory": true }
+            ]
+        },
+        "water_spawn": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/waterbending/water_spawn/enemy_water_spawn", "volume": 1.5, "load_on_low_memory": true }
+            ]
+        },
+        "water_charge_whoosh": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/waterbending/water_charge/water_charging1", "volume": 0.6, "load_on_low_memory": true }
+            ]
+        },
+        "water_charge_init": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/waterbending/water_charge/charge_grab2", "volume": 0.6, "load_on_low_memory": true }
+            ]
+        },
+        "water_whip_splash": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/waterbending/water_whip/water_whip_splash", "volume": 2.0, "load_on_low_memory": true }
+            ]
+        },
+        "water_whip_charge_hit": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/waterbending/water_whip/whip_charge_hit", "volume": 0.6, "load_on_low_memory": true }
+            ]
+        },
+        "water_whip_loop": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/waterbending/water_whip/whip_loop_hold", "volume": 0.6, "load_on_low_memory": true }
+            ]
+        },
+        "water_whip_whip": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/waterbending/water_whip/whip_whip", "volume": 0.6, "load_on_low_memory": true }]
+        },
+        "octopus_init": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/waterbending/octopus/octo_init", "volume": 0.4, "load_on_low_memory": true }]
+        },
+        "octopus_loop": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/waterbending/octopus/octo_loop", "volume": 0.25, "load_on_low_memory": true }]
+        },
+        "octopus_release": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/waterbending/octopus/octo_release", "volume": 0.4, "load_on_low_memory": true }]
+        },
+        "octopus_slam": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/waterbending/octopus/octo_slam", "volume": 0.3, "load_on_low_memory": true }]
+        },
+        "unlock_ui_flipup": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/scottmusic/unlock_ui_flipup",
+                    "volume": 1.5,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "tornado_charge1": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/airbending/tornado/tornado_charge",
+                    "volume": 0.2,
+                    "pitch": 0.7,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "tornado_charge2": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/airbending/tornado/tornado_charge",
+                    "volume": 0.2,
+                    "pitch": 1,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "tornado_charge3": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/airbending/tornado/tornado_charge",
+                    "volume": 0.2,
+                    "pitch": 1.3,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "tornado_loop": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/airbending/tornado/tornado_loop", "volume": 0.6, "load_on_low_memory": true }]
+        },
+        "tornado_loop2": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/airbending/tornado/tornado_loop",
+                    "volume": 0.2,
+                    "pitch": 0.8,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "tornado_release": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/airbending/tornado/tornado_release", "volume": 0.3, "load_on_low_memory": true }]
+        },
+        "air_blades_launch": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/airbending/air_blades/air_blades_launch1", "volume": 0.8, "load_on_low_memory": true },
+                { "name": "sounds/airbending/air_blades/air_blades_launch2", "volume": 0.8, "load_on_low_memory": true },
+                { "name": "sounds/airbending/air_blades/air_blades_launch3", "volume": 0.8, "load_on_low_memory": true },
+                { "name": "sounds/airbending/air_blades/air_blades_launch4", "volume": 0.8, "load_on_low_memory": true }
+            ]
+        },
+        "air_gust_init": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/airbending/gust/air_gust_init", "volume": 0.15, "load_on_low_memory": true }]
+        },
+        "air_gust_loop": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/airbending/gust/air_gust_loop", "volume": 0.15, "load_on_low_memory": true }]
+        },
+        "air_gust_release": {
+            "category": "neutral",
+            "sounds": [{ "name": "sounds/airbending/gust/air_gust_end", "volume": 0.6, "load_on_low_memory": true }]
+        },
+        "air_sphere_init": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/airbending/air_sphere/sphere_init_takes", "volume": 0.3, "load_on_low_memory": true }
+            ]
+        },
+        "air_sphere_loop": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/airbending/air_sphere/sphere_loop_takes", "volume": 0.3, "load_on_low_memory": true }
+            ]
+        },
+        "air_sphere_release": {
+            "category": "neutral",
+            "sounds": [
+                { "name": "sounds/airbending/air_sphere/sphere_release_takes", "volume": 0.3, "load_on_low_memory": true }
+            ]
+        },
+        "blue_spirit": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/The Blue Spirit",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "leaves_from_the_vine": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Leaves from the Vine Reprise",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "mastery_point_get": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/mastery_point_get",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "avatar_state_sting": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/avatar_state_sting",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "bison_whistle": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/whistle_single",
+                    "volume": 0.6,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                },
+                {
+                    "name": "sounds/music/jingles/whistle_song1",
+                    "volume": 0.6,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                },
+                {
+                    "name": "sounds/music/jingles/whistle_song2",
+                    "volume": 0.6,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "journey_teleport": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/journey_sfx",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "general_chat": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/general_chat_sound",
+                    "volume": 1.0,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "mastery_art": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/mastery_art_jingle",
+                    "volume": 0.9,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "paisho_collect": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/paisho_collect",
+                    "volume": 1.5,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "region_unlocked": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/end_card",
+                    "volume": 1.0,
+                    "load_on_low_memory": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "paisho_place": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/paisho_place_jingle",
+                    "volume": 1.5,
+                    "load_on_low_memory": true
+                }
+            ]
+        },
+        "duel_music_loop": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/duel_music/Lunchbox_Key_Challenge_loop",
+                    "volume": 0.6,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "duel_music_loop2": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Agni Kai",
+                    "volume": 1.5,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "duel_music_loop3": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Fight Scene - Yu Yan Capture_cut",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "duel_music_loop4": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Firebending Training",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "duel_music_loop5": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Last Agni Kai",
+                    "volume": 1.4,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "duel_music_loop6": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Chi Blockers",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "encampment_music_loop": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/encampment_music/aang_fights_king_loop",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "minigame_upbeat_loop": {
+            "category": "ambient",
+            "sounds": [
+                {
+                    "name": "sounds/music/minigame/spirited_loop",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "minigame_drum_loop": {
+            "category": "ambient",
+            "sounds": [
+                {
+                    "name": "sounds/music/minigame/hot_air_escape_loop",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "encampment_rebuild1": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/encampment/encampment_rebuild1",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "encampment_rebuild2": {
+            "category": "neutral",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/encampment/encampment_rebuild2",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "encampment_start_jingle": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/encampment/omashu_guard_jingle1",
+                    "volume": 2.4,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "encounter_fail": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/encounter_fail",
+                    "volume": 1.2,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "encampment_complete_jingle": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/encampment/omashu_guard_jingle2",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "avatar_main_jingle": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/agni_kai_jingle",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "cutscene_boom": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/A Peaceful Place pt I",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "cutscene_long": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/cutscene/aunt_wu/aunt_wu_aangs_fortune",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "cutscene_xlong": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/cutscene/aunt_wu/to_see_aunt_wu",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "cutscene_medium1": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/cutscene/aunt_wu/aunt_wu",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "cutscene_medium2": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/cutscene/aunt_wu/aunt_wu_2",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "cutscene_wholesome": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/cutscene/pandalilys_at_work",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "cutscene_long_epic": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/cutscene/wait_a_minute",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "cutscene_mysterious": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/cutscene/title_card",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "jingle_complete_wholesome": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/title_card",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "jingle_slight_doom": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/fluffy_bunny_of_doom",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "jingle_mysterious_discover": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/kataras_relization",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "jingle_somber_quest": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/nice_to_meet_you",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "jingle_long_suspense": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/rotten_eggs",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "jingle_harp_intrigue": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/jingles/trust_your_heart_start_jingle",
+                    "volume": 1.8,
+                    "load_on_low_memory": true,
+                    "stream": true,
+                    "is3D": false
+                }
+            ]
+        },
+        "music.random.track1": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/world_music/aang_figures_it_out",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track2": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/world_music/not_to_worry",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track3": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/world_music/nothings_the_same",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track4": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/world_music/spirit",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track5": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/world_music/supposed_to_be_my_history",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track6": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/world_music/tradition_of_not_doing_that",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track7": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/world_music/trust_your_heart_song",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track8": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/A Peaceful Place pt II",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track9": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Hardboiled...Afraid (Separate Ways)",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track10": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/The Legend Of Korra End Credits",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track11": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Before pt I",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track12": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Before pt II",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track13": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Before pt III",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track14": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Good Ol Days",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track15": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/In A Box",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track16": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Balance - Peace Excerpt pt I",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track17": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Balance - Peace Excerpt pt II",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.random.track18": {
+            "category": "music",
+            "sounds": [
+                {
+                    "name": "sounds/music/dump2/Safe Return",
+                    "volume": 0.8,
+                    "load_on_low_memory": true,
+                    "stream": true
+                }
+            ]
+        },
+        "music.game": { "category": "music", "sounds": []}
+    }
+}

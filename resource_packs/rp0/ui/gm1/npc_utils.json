@@ -1,0 +1,60 @@
+{
+    "namespace": "gm1_npc_utils",
+    "simple_close_button@npc_interact.x_close_button": {
+        "$close_button_to_button_id": "button.exit_student",
+        "$visibility_binding_name": "#visible",
+        "controls": [
+            {
+                "default@common.close_button_panel": {
+                    "$close_button_texture": "textures/ui/gm1/close_button_default",
+                    "$button_alpha": 0.75
+                }
+            },
+            {
+                "hover@common.close_button_panel": {
+                    "$close_button_texture": "textures/ui/gm1/close_button_default",
+                    "$button_alpha": 1
+                }
+            },
+            {
+                "pressed@common.close_button_panel": {
+                    "$close_button_texture": "textures/ui/gm1/close_button_default",
+                    "$button_alpha": 0.5
+                }
+            }
+        ]
+    },
+    "close_on_escape": {
+        "type": "button",
+        "button_mappings": [
+            { "from_button_id": "button.menu_cancel", "to_button_id": "button.exit_student", "mapping_type": "global" }
+        ],
+        "size": [ 0, 0 ]
+    },
+    "skins_grid_item": {
+        "type": "panel",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "size": [ "100%", "100%" ],
+        "$skin_model": "gm1_npc_utils.skin_model",
+        "controls": [{ "clip@npc_interact.skin_model_clipper": { "controls": [{ "skin_model@$skin_model": {}}]}}]
+    },
+    "skins_grid": {
+        "type": "grid",
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "offset": [ 0, 0 ],
+        "size": [ "100%", "100%" ],
+        "grid_item_template": "gm1_npc_utils.skins_grid_item",
+        "grid_dimension_binding": "#skins_grid_dimensions",
+        "collection_name": "skins_collection",
+        "bindings": [{ "binding_name": "#skins_grid_dimensions" }]
+    },
+    "skin_model@npc_interact.skin_model": {
+        "offset": [ 0, 0 ],
+        "anchor_from": "center",
+        "anchor_to": "center",
+        "$model_size|default": [ 150, 150 ],
+        "size": "$model_size"
+    }
+}

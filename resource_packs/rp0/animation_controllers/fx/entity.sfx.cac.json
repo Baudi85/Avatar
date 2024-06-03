@@ -1,0 +1,688 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.fire_stream.sfx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=40"
+						},
+						{
+							"init_launch": "q.variant>=1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==40"
+						}
+					]
+				},
+				"init_launch": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=40"
+						},
+						{
+							"pre_loop": "q.variant==2&&q.all_animations_finished"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"fire_stream_launch"
+					]
+				},
+				"pre_loop": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=40"
+						},
+						{
+							"loop": "q.variant==2&&q.any_animation_finished"
+						},
+						{
+							"default": "q.variant!=2"
+						}
+					],
+					"animations": [
+						"fire_stream_init"
+					]
+				},
+				"loop": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=40"
+						},
+						{
+							"release_loop": "q.variant!=2"
+						}
+					],
+					"animations": [
+						"fire_stream_loop"
+					]
+				},
+				"release_loop": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"animations": [
+						"fire_stream_release"
+					]
+				}
+			}
+		},
+		"controller.animation.bending.fire.fire_sweep.sfx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=41"
+						},
+						{
+							"charging": "q.variant==1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==41"
+						}
+					]
+				},
+				"charging": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=41"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"hold": "q.variant==2"
+						}
+					],
+					"animations": [
+						"fire_sweep_init_sound"
+					]
+				},
+				"hold": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=41"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"fire_sweep_sound"
+					]
+				}
+			}
+		},
+		"controller.animation.air_tornado_charge.sfx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=31"
+						},
+						{
+							"charge1": "q.variant==1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==31"
+						}
+					]
+				},
+				"charge1": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=31"
+						},
+						{
+							"charge2": "(q.variant==1||q.variant==2)&&q.all_animations_finished"
+						},
+						{
+							"default": "(q.variant==0)"
+						}
+					],
+					"animations": [
+						"air_tornado_charge1",
+						"air_tornado_charge_timer"
+					]
+				},
+				"charge2": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=31"
+						},
+						{
+							"charge3": "(q.variant==1||q.variant==2)&&q.all_animations_finished"
+						},
+						{
+							"default": "(q.variant==0)"
+						}
+					],
+					"animations": [
+						"air_tornado_charge2",
+						"air_tornado_charge_timer"
+					]
+				},
+				"charge3": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=31"
+						},
+						{
+							"default": "(q.variant==0)"
+						}
+					],
+					"animations": [
+						"air_tornado_charge3"
+					]
+				}
+			}
+		},
+		"controller.animation.air_blades.sfx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=33"
+						},
+						{
+							"projectile_1": "q.variant>=2&&q.variant!=5"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==33"
+						}
+					]
+				},
+				"projectile_1": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=33"
+						},
+						{
+							"projectile_2": "(q.variant>=3&&q.variant!=5)&&q.all_animations_finished"
+						},
+						{
+							"default": "(q.variant==0||q.variant==5)&&q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"air_blades.launch_sound"
+					]
+				},
+				"projectile_2": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=33"
+						},
+						{
+							"projectile_3": "(q.variant>=4&&q.variant!=5)"
+						},
+						{
+							"default": "(q.variant==0||q.variant==5)&&q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"air_blades.launch_sound"
+					]
+				},
+				"projectile_3": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=33"
+						},
+						{
+							"projectile_1": "(q.variant==2&&q.variant!=5)&&q.all_animations_finished"
+						},
+						{
+							"default": "(q.variant==0||q.variant==5)&&q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"air_blades.launch_sound"
+					]
+				}
+			}
+		},
+		"controller.animation.air_sphere.sfx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=32"
+						},
+						{
+							"init": "q.variant==1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==32"
+						}
+					]
+				},
+				"init": {
+					"animations": [
+						"air_sphere.init_sound"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=32"
+						},
+						{
+							"hold": "q.any_animation_finished&&q.variant==2"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					]
+				},
+				"hold": {
+					"transitions": [
+						{
+							"release": "q.variant==0||q.variant==3||q.mark_variant!=32"
+						}
+					],
+					"animations": [
+						"air_sphere.loop_sound"
+					]
+				},
+				"release": {
+					"animations": [
+						"air_sphere.release_sound"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.avatar_state.sfx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"init": "q.is_illager_captain&&!(q.mark_variant==32&&q.variant>=1)"
+						}
+					]
+				},
+				"init": {
+					"animations": [
+						"air_sphere.init_sound"
+					],
+					"transitions": [
+						{
+							"hold": "q.is_illager_captain&&!(q.mark_variant==32&&q.variant>=1)"
+						},
+						{
+							"default": "!q.is_illager_captain||(q.mark_variant==32&&q.variant>=1)"
+						}
+					]
+				},
+				"hold": {
+					"transitions": [
+						{
+							"release": "!q.is_illager_captain||(q.mark_variant==32&&q.variant>=1)"
+						}
+					],
+					"animations": [
+						"air_sphere.loop_sound"
+					]
+				},
+				"release": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.meteor_dash.sfx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"charging": "q.variant==1"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==42"
+						}
+					]
+				},
+				"charging": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"release_loop": "q.variant==4"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"jet_charge_sound"
+					]
+				},
+				"release_loop": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"explode": "q.variant==5"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"jet_launch_sound",
+						{
+							"jet_loop_sound": "q.distance_from_camera<=4"
+						},
+						{
+							"jet_loop_sound_ext": "q.distance_from_camera>=4"
+						}
+					]
+				},
+				"explode": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=42"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"jet_explode_sound"
+					]
+				}
+			}
+		},
+		"controller.animation.water_whip.sfx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"charging": "q.variant==3"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==20"
+						}
+					]
+				},
+				"charging": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"holding": "q.variant==4"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"water_whip_init_sound",
+						"water_whip_charge_hit"
+					]
+				},
+				"holding": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"release": "q.variant==5"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"water_whip_looping_sound",
+						"water_whip_charge_hit"
+					]
+				},
+				"release": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"water_whip_release_sound"
+					]
+				}
+			}
+		},
+		"controller.animation.frost_breath.sfx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=22"
+						},
+						{
+							"init_launch": "q.variant==1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==22"
+						}
+					]
+				},
+				"init_launch": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=22"
+						},
+						{
+							"pre_loop": "q.variant==2&&q.all_animations_finished"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					]
+				},
+				"pre_loop": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=22"
+						},
+						{
+							"loop": "q.variant==2&&q.any_animation_finished"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"frost_breath.init_sound"
+					]
+				},
+				"loop": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=22"
+						},
+						{
+							"release_loop": "q.variant!=2"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"frost_breath.loop_sound"
+					]
+				},
+				"release_loop": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"animations": [
+						"frost_breath.release_sound"
+					]
+				}
+			}
+		},
+		"controller.animation.water_octo.sfx": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"charging": "q.variant==2"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==21"
+						}
+					]
+				},
+				"charging": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"looping": "q.variant==4"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"release": "q.variant==5"
+						}
+					],
+					"animations": [
+						"octo_init_sound"
+					]
+				},
+				"looping": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"release": "q.variant==5"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"octo_loop_sound"
+					]
+				},
+				"release": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"default": "q.variant==0"
+						}
+					],
+					"animations": [
+						"octo_release_sound",
+						"octo_slam_sound"
+					]
+				}
+			}
+		},
+		"controller.animation.humanoid.jump.sfx": {
+			"initial_state": "ground",
+			"states": {
+				"ground": {
+					"transitions": [
+						{
+							"double_jump": "q.is_stackable"
+						}
+					]
+				},
+				"double_jump": {
+					"animations": [
+						"double_jump_sfx"
+					],
+					"transitions": [
+						{
+							"ground": "q.is_on_ground&&q.all_animations_finished"
+						}
+					]
+				}
+			}
+		}
+	}
+}

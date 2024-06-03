@@ -1,0 +1,137 @@
+{
+	"format_version": "1.13.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:bss_kyoshibanner",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"decoration"
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"value": "nom:delete_tool",
+										"domain": "hand",
+										"subject": "other"
+									},
+									{
+										"test": "has_ability",
+										"value": "instabuild",
+										"subject": "other"
+									}
+								]
+							},
+							"event": "gm1:despawn"
+						}
+					},
+					{
+						"swing": true,
+						"on_interact": {
+							"filters": {
+								"test": "has_equipment",
+								"domain": "hand",
+								"subject": "other",
+								"value": "nom:variant_tool"
+							},
+							"event": "gm1:cycle_variant"
+						}
+					}
+				]
+			},
+			"minecraft:skin_id": {
+				"value": 0
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"test": "has_tag",
+					"value": "despawn"
+				}
+			}
+		},
+		"component_groups": {
+			"gm1:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"gm1:variant_0": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"gm1:skin_id_0"
+					]
+				}
+			},
+			"gm1:despawn": {
+				"add": {
+					"component_groups": [
+						"gm1:despawn"
+					]
+				}
+			},
+			"gm1:cycle_variant": {
+				"sequence": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "is_variant",
+									"value": 0
+								}
+							]
+						},
+						"add": {
+							"component_groups": [
+								"gm1:variant_0"
+							]
+						},
+						"remove": {
+							"component_groups": [
+								"gm1:variant_0"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

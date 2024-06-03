@@ -1,0 +1,1 @@
+event entity @e[type=nom:paisho_table] nom:reset

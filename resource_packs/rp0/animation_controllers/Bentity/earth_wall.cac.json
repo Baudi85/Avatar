@@ -1,0 +1,98 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bentity.earth_wall": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"charge": "query.variant==1"
+						},
+						{
+							"hold": "query.variant==2"
+						},
+						{
+							"release": "query.variant==3"
+						},
+						{
+							"retract": "query.is_sheared"
+						}
+					]
+				},
+				"charge": {
+					"animations": [
+						"charge",
+						"earth_wall_tester",
+						"charge_pebbles"
+					],
+					"transitions": [
+						{
+							"hold": "q.all_animations_finished"
+						},
+						{
+							"release": "query.variant==3"
+						},
+						{
+							"expire": "q.is_ignited||q.is_sheared"
+						}
+					]
+				},
+				"hold": {
+					"animations": [
+						"hold",
+						"earth_wall_tester2"
+					],
+					"transitions": [
+						{
+							"release": "query.variant==3"
+						},
+						{
+							"expire": "q.is_ignited||q.is_sheared"
+						}
+					]
+				},
+				"release": {
+					"animations": [
+						"release",
+						"earth_wall_summon_particles"
+					],
+					"transitions": [
+						{
+							"finished": "q.is_baby"
+						},
+						{
+							"retract": "q.is_sheared"
+						}
+					]
+				},
+				"finished": {
+					"transitions": [
+						{
+							"retract": "query.is_sheared"
+						}
+					],
+					"animations": [
+						"explode",
+						"earth_wall_tester4",
+						"earth_wall_explode_particles"
+					]
+				},
+				"retract": {
+					"animations": [
+						"retract",
+						"earth_wall_tester5",
+						"retract_particles"
+					]
+				},
+				"expire": {
+					"animations": [
+						"expire",
+						"earth_wall_tester6",
+						"retract_particles"
+					]
+				}
+			}
+		}
+	}
+}

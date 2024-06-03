@@ -1,0 +1,88 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.enemy.octopus_form": {
+			"geometry": "geometry.octopus_form",
+			"materials": [
+				{
+					"*": "material.water_anim"
+				}
+			],
+			"textures": [
+				"texture.octopus_form"
+			],
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"inside": "(query.skin_id >= 210 && query.skin_id <= 219) && v.variant >= 1"
+				},
+				{
+					"body": "(query.skin_id >= 210 && query.skin_id <= 219) && v.variant >= 1"
+				},
+				{
+					"tentacle*": "(query.skin_id >= 210 && query.skin_id <= 219) && v.variant >= 1"
+				}
+			],
+			"uv_anim": {
+				"offset": [
+					0,
+					"math.round(query.life_time*8)/12"
+				],
+				"scale": [
+					1,
+					"0.08333333333333333"
+				]
+			}
+		},
+		"controller.render.enemy.octopus_form_skirt": {
+			"geometry": "geometry.octopus_form",
+			"materials": [
+				{
+					"*": "material.alpha_water_anim"
+				}
+			],
+			"textures": [
+				"texture.octopus_form_skirt"
+			],
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"body": "(query.skin_id >= 210 && query.skin_id <= 219) && v.variant >= 1"
+				},
+				{
+					"skirt": "(query.skin_id >= 210 && query.skin_id <= 219) && v.variant >= 1"
+				}
+			],
+			"uv_anim": {
+				"offset": [
+					"q.life_time*0.5",
+					"0.05+math.sin(q.life_time*360)*0.05"
+				],
+				"scale": [
+					1,
+					1
+				]
+			}
+		},
+		"controller.render.enemy.bending_entity": {
+			"geometry": "geometry.bending",
+			"materials": [
+				{
+					"*": "material.transparent"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"water_bending": "1"
+				}
+			]
+		}
+	}
+}

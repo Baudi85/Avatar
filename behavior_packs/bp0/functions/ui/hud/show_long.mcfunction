@@ -1,0 +1,1 @@
+scoreboard players set @s ui_hud 20

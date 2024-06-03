@@ -1,0 +1,1 @@
+event entity @s nom:remove_tick_world

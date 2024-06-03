@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.78a8d453fe857544b89dadceb7eb95aaeb192100_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/function bending/earth/earth_quake/on_earth_quake_spawn"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+execute @s[scores={settlement_q_i=6}] ~ ~ ~ function settlement/t_pagoda_plaza/_/_load_queue

@@ -1,0 +1,457 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.trinket_display": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"despawn": "query.variant<1"
+						},
+						{
+							"initialized": "query.is_saddled"
+						},
+						{
+							"aang": "query.variant==1"
+						},
+						{
+							"amon": "query.variant==2"
+						},
+						{
+							"asami": "query.variant==3"
+						},
+						{
+							"azula": "query.variant==4"
+						},
+						{
+							"bolin": "query.variant==5"
+						},
+						{
+							"bumi": "query.variant==6"
+						},
+						{
+							"cabbage": "query.variant==7"
+						},
+						{
+							"iroh": "query.variant==8"
+						},
+						{
+							"jet": "query.variant==9"
+						},
+						{
+							"kai": "query.variant==10"
+						},
+						{
+							"katara": "query.variant==11"
+						},
+						{
+							"korra": "query.variant==12"
+						},
+						{
+							"kyoshi": "query.variant==13"
+						},
+						{
+							"lin": "query.variant==14"
+						},
+						{
+							"long": "query.variant==15"
+						},
+						{
+							"mako": "query.variant==16"
+						},
+						{
+							"opal": "query.variant==17"
+						},
+						{
+							"ozai": "query.variant==18"
+						},
+						{
+							"pathik": "query.variant==19"
+						},
+						{
+							"players": "query.variant==20"
+						},
+						{
+							"roku": "query.variant==21"
+						},
+						{
+							"sokka": "query.variant==22"
+						},
+						{
+							"suki": "query.variant==23"
+						},
+						{
+							"tenzin": "query.variant==24"
+						},
+						{
+							"toph": "query.variant==25"
+						},
+						{
+							"unalaq": "query.variant==26"
+						},
+						{
+							"varrick": "query.variant==27"
+						},
+						{
+							"zaheer": "query.variant==28"
+						},
+						{
+							"zhao": "query.variant==29"
+						},
+						{
+							"zuko": "query.variant==30"
+						}
+					]
+				},
+				"despawn": {
+					"on_entry": [
+						"/say §6nom:trinket_display§r cannot be summoned without a trinket identifier event. Use: §3'/summon nom:trinket_display ~~~ nom:<trinket_identifier>'§r",
+						"/say §6Trinket Identifiers:§r §7aang, §8amon, §7asami, §7azula, §8bolin, §7bumi, §8cabbage, §7iroh, §8jet, §7kai, §8katara, §7korra, §8kyoshi, §7lin, §8long, §7mako, §8opal, §7ozai, §8pathik, §7players, §8roku, §7sokka, §7suki, §8tenzin, §7toph, §8unalaq, §7varrick, §8zaheer, §7zhao, §8zuko",
+						"@s nom:despawn"
+					]
+				},
+				"initialized": {
+					"transitions": [
+						{
+							"default": "query.is_stunned"
+						}
+					],
+					"on_exit": [
+						"@s nom:remove_reinitialize"
+					]
+				},
+				"aang": {
+					"on_entry": [
+						"/tag @s add aang",
+						"/execute @e[name=trinkets,tag=aang] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=aang] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"amon": {
+					"on_entry": [
+						"/tag @s add amon",
+						"/execute @e[name=trinkets,tag=amon] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=amon] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"asami": {
+					"on_entry": [
+						"/tag @s add asami",
+						"/execute @e[name=trinkets,tag=asami] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=asami] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"azula": {
+					"on_entry": [
+						"/tag @s add azula",
+						"/execute @e[name=trinkets,tag=azula] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=azula] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"bolin": {
+					"on_entry": [
+						"/tag @s add bolin",
+						"/execute @e[name=trinkets,tag=bolin] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=bolin] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"bumi": {
+					"on_entry": [
+						"/tag @s add bumi",
+						"/execute @e[name=trinkets,tag=bumi] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=bumi] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"cabbage": {
+					"on_entry": [
+						"/tag @s add cabbage",
+						"/execute @e[name=trinkets,tag=cabbage] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=cabbage] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"iroh": {
+					"on_entry": [
+						"/tag @s add iroh",
+						"/execute @e[name=trinkets,tag=iroh] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=iroh] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"jet": {
+					"on_entry": [
+						"/tag @s add jet",
+						"/execute @e[name=trinkets,tag=jet] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=jet] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"kai": {
+					"on_entry": [
+						"/tag @s add kai",
+						"/execute @e[name=trinkets,tag=kai] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=kai] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"katara": {
+					"on_entry": [
+						"/tag @s add katara",
+						"/execute @e[name=trinkets,tag=katara] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=katara] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"korra": {
+					"on_entry": [
+						"/tag @s add korra",
+						"/execute @e[name=trinkets,tag=korra] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=korra] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"kyoshi": {
+					"on_entry": [
+						"/tag @s add kyoshi",
+						"/execute @e[name=trinkets,tag=kyoshi] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=kyoshi] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"lin": {
+					"on_entry": [
+						"/tag @s add lin",
+						"/execute @e[name=trinkets,tag=lin] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=lin] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"long": {
+					"on_entry": [
+						"/tag @s add long",
+						"/execute @e[name=trinkets,tag=long] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=long] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"mako": {
+					"on_entry": [
+						"/tag @s add mako",
+						"/execute @e[name=trinkets,tag=mako] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=mako] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"opal": {
+					"on_entry": [
+						"/tag @s add opal",
+						"/execute @e[name=trinkets,tag=opal] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=opal] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"ozai": {
+					"on_entry": [
+						"/tag @s add ozai",
+						"/execute @e[name=trinkets,tag=ozai] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=ozai] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"pathik": {
+					"on_entry": [
+						"/tag @s add pathik",
+						"/execute @e[name=trinkets,tag=pathik] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=pathik] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"players": {
+					"on_entry": [
+						"/tag @s add players",
+						"/execute @e[name=trinkets,tag=players] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=players] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"roku": {
+					"on_entry": [
+						"/tag @s add roku",
+						"/execute @e[name=trinkets,tag=roku] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=roku] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"sokka": {
+					"on_entry": [
+						"/tag @s add sokka",
+						"/execute @e[name=trinkets,tag=sokka] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=sokka] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"suki": {
+					"on_entry": [
+						"/tag @s add suki",
+						"/execute @e[name=trinkets,tag=suki] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=suki] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"tenzin": {
+					"on_entry": [
+						"/tag @s add tenzin",
+						"/execute @e[name=trinkets,tag=tenzin] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=tenzin] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"toph": {
+					"on_entry": [
+						"/tag @s add toph",
+						"/execute @e[name=trinkets,tag=toph] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=toph] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"unalaq": {
+					"on_entry": [
+						"/tag @s add unalaq",
+						"/execute @e[name=trinkets,tag=unalaq] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=unalaq] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"varrick": {
+					"on_entry": [
+						"/tag @s add varrick",
+						"/execute @e[name=trinkets,tag=varrick] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=varrick] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"zaheer": {
+					"on_entry": [
+						"/tag @s add zaheer",
+						"/execute @e[name=trinkets,tag=zaheer] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=zaheer] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"zhao": {
+					"on_entry": [
+						"/tag @s add zhao",
+						"/execute @e[name=trinkets,tag=zhao] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=zhao] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				},
+				"zuko": {
+					"on_entry": [
+						"/tag @s add zuko",
+						"/execute @e[name=trinkets,tag=zuko] ~~~ event entity @e[type=nom:trinket_display,c=1,tag=zuko] nom:render"
+					],
+					"transitions": [
+						{
+							"initialized": "1"
+						}
+					]
+				}
+			}
+		}
+	}
+}

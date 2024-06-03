@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_629_cooldown = v.state_nom_fire_dash_cooldown;",
+					"v.metastate_fire_dash_cooldown = v.chain_629_cooldown;"
+				]
+			}
+		},
+		"animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_1": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_952_cooldown = v.state_nom_approach_cooldown||v.state_nom_fire_sweep_cooldown;",
+					"v.metastate_fire_sweep_cooldown = v.chain_952_cooldown;"
+				]
+			}
+		},
+		"animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_2": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_37_cooldown = v.state_nom_fire_stream_medium_cooldown;",
+					"v.metastate_fire_stream_med_cooldown = v.chain_37_cooldown;"
+				]
+			}
+		},
+		"animation.0c0af61fc488046a6b9f0cf2189a6b0e57350e2b_3": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_814_cooldown = v.state_nom_fire_stream_small_cooldown;",
+					"v.metastate_fire_stream_small_cooldown = v.chain_814_cooldown;"
+				]
+			}
+		}
+	}
+}

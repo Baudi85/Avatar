@@ -1,0 +1,2 @@
+tellraw @a {"rawtext":[{"text":"§c [!] You have to manually run the commands in settlement/reset_all.mcfunction§r"}]}
+execute @e[type=minecraft:armor_stand,name=main,tag=travel_ticking_areas_created] ~ ~ ~ tellraw @a {"rawtext":[{"text":"§c [!] You need to remove the travel ticking areas before resetting settlements function debug/remove_travel_ticking_areas §r"}, {"text": "\n §c[!] Make sure you re-add the travel ticking areas function debug/create_travel_ticking_areas to create them§r"}]}

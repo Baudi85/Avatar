@@ -1,0 +1,8 @@
+{
+    "namespace": "crafting_pocket",
+    "pocket_armor_tab_content/equipment_and_renderer": {
+        "modifications": [{ "control_name": "equipment", "operation": "remove" }],
+        "size": [ "100%", "100%" ]
+    },
+    "pocket_armor_tab_content": { "modifications": [{ "control_name": "label_and_renderer", "operation": "remove" }]}
+}

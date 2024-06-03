@@ -1,0 +1,21 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nom:block_breakable_wood_ew",
+			"is_experimental": false,
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.block_breakable_ew",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "glass",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

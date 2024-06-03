@@ -1,0 +1,182 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.god_ray",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 235,
+				"visible_bounds_height": 105,
+				"visible_bounds_offset": [
+					0,
+					-15.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "god_ray",
+					"pivot": [
+						0,
+						8,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-12,
+								32,
+								-12
+							],
+							"size": [
+								24,
+								512,
+								24
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										12,
+										0
+									],
+									"uv_size": [
+										12,
+										256
+									]
+								},
+								"east": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										12,
+										256
+									]
+								},
+								"south": {
+									"uv": [
+										36,
+										0
+									],
+									"uv_size": [
+										12,
+										256
+									]
+								},
+								"west": {
+									"uv": [
+										24,
+										0
+									],
+									"uv_size": [
+										12,
+										256
+									]
+								}
+							}
+						}
+					],
+					"locators": {
+						"god_ray_dust": {
+							"offset": [
+								0,
+								8,
+								0
+							],
+							"rotation": [
+								180,
+								0,
+								0
+							]
+						}
+					}
+				},
+				{
+					"name": "moon_ray",
+					"pivot": [
+						0,
+						8,
+						0
+					],
+					"rotation": [
+						180,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-12,
+								32,
+								-12
+							],
+							"size": [
+								24,
+								512,
+								24
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										12,
+										0
+									],
+									"uv_size": [
+										12,
+										256
+									]
+								},
+								"east": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										12,
+										256
+									]
+								},
+								"south": {
+									"uv": [
+										36,
+										0
+									],
+									"uv_size": [
+										12,
+										256
+									]
+								},
+								"west": {
+									"uv": [
+										24,
+										0
+									],
+									"uv_size": [
+										12,
+										256
+									]
+								}
+							}
+						}
+					],
+					"locators": {
+						"moon_ray_dust": {
+							"offset": [
+								0,
+								8,
+								0
+							],
+							"rotation": [
+								180,
+								0,
+								0
+							]
+						}
+					}
+				}
+			]
+		}
+	]
+}

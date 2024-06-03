@@ -1,0 +1,663 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_air_sphere_defense_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_air_sphere_defense_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_air_sphere_defense_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_air_sphere_defense_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_strafe_avoid_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_strafe_avoid_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_strafe_avoid_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_strafe_avoid_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_air_blades_double_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_air_blades_double_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_air_blades_double_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_air_blades_double_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_3": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_air_tornado_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_air_tornado_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_air_tornado_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_air_tornado_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_4": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_air_blades_single_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_air_blades_single_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_air_blades_single_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_air_blades_single_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_5": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_air_sphere_offense_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_air_sphere_offense_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_air_sphere_offense_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_air_sphere_offense_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_6": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_projectile_defence_strafe_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_projectile_defence_strafe_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_projectile_defence_strafe_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_projectile_defence_strafe_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_7": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.metastate_air_sphere_defense_cooldown=0;",
+						"v.chain_3=0;",
+						"v.chain_3_cooldown=0;",
+						"v.metastate_strafe_avoid_cooldown=0;",
+						"v.chain_835=0;",
+						"v.chain_835_cooldown=0;",
+						"v.metastate_air_blades_double_cooldown=0;",
+						"v.chain_577=0;",
+						"v.chain_577_cooldown=0;",
+						"v.metastate_air_tornado_cooldown=0;",
+						"v.chain_36=0;",
+						"v.chain_36_cooldown=0;",
+						"v.metastate_air_blades_single_cooldown=0;",
+						"v.chain_394=0;",
+						"v.chain_394_cooldown=0;",
+						"v.metastate_air_sphere_offense_cooldown=0;",
+						"v.chain_704=0;",
+						"v.chain_704_cooldown=0;",
+						"v.metastate_projectile_defence_strafe_cooldown=0;",
+						"v.chain_122=0;",
+						"v.chain_122_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_8": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/event entity @s[tag=state_init] gm1:default_state",
+						"/tag @s add state_init"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_9": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1195&&!v.metastate_air_sphere_defense_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_3_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_3=!v.chain_3_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_3_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_10": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1855&&!v.metastate_strafe_avoid_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_835_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_835=!v.chain_835_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_835_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_11": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1275&&!v.metastate_air_blades_double_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_577_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_577=!v.chain_577_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_577_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_12": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1984&&!v.metastate_air_tornado_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_36_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_36=!v.chain_36_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_36_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_13": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1877&&!v.metastate_air_blades_single_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_394_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_394=!v.chain_394_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_394_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_14": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1827&&!v.metastate_air_sphere_offense_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_704_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_704=!v.chain_704_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_704_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_15": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1406&&!v.metastate_projectile_defence_strafe_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_122_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_122=!v.chain_122_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_122_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_16": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_3"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_air_sphere_defense"
+					],
+					"on_exit": [
+						"v.chain_3=0;",
+						"/tag @s add metastate_air_sphere_defense"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_air_sphere_defense=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_17": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_835"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_strafe_avoid"
+					],
+					"on_exit": [
+						"v.chain_835=0;",
+						"/tag @s add metastate_strafe_avoid"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_strafe_away=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_18": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_577"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_air_blades_double"
+					],
+					"on_exit": [
+						"v.chain_577=0;",
+						"/tag @s add metastate_air_blades_double"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_air_blades_double=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"state_1": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				},
+				"state_1": {
+					"on_entry": [
+						"v.state_nom_approach=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_19": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_36"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_air_tornado"
+					],
+					"on_exit": [
+						"v.chain_36=0;",
+						"/tag @s add metastate_air_tornado"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_air_tornado=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"state_1": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				},
+				"state_1": {
+					"on_entry": [
+						"v.state_nom_approach=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_20": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_394"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_air_blades_single"
+					],
+					"on_exit": [
+						"v.chain_394=0;",
+						"/tag @s add metastate_air_blades_single"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_air_blades_single=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_21": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_704"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_air_sphere_offense"
+					],
+					"on_exit": [
+						"v.chain_704=0;",
+						"/tag @s add metastate_air_sphere_offense"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_approach=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"state_1": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				},
+				"state_1": {
+					"on_entry": [
+						"v.state_nom_air_sphere_offense=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.955adb0029c47c098ada70745b6337c7f9eaef2b_22": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_122"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_projectile_defence_strafe"
+					],
+					"on_exit": [
+						"v.chain_122=0;",
+						"/tag @s add metastate_projectile_defence_strafe"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_strafe_side=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		}
+	}
+}

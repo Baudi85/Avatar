@@ -1,0 +1,26 @@
+{
+    "ui_defs": [
+        "ui/gm1/actionbar_chi.json",
+        "ui/gm1/npc_safety_button.json",
+        "ui/gm1/npc_creative.json",
+        "ui/gm1/npc_cutscene_bars.json",
+        "ui/gm1/npc_default.json",
+        "ui/gm1/npc_utils.json",
+        "ui/gm1/npc_splash.json",
+        "ui/gm1/npc_fade.json",
+        "ui/gm1/subtitle_teq.json",
+        "ui/gm1/npc_unlock_teq.json",
+        "ui/gm1/npc_unlock_teq_screens.json",
+        "ui/gm1/npc_unlock_art.json",
+        "ui/gm1/title_boss.json",
+        "ui/gm1/title_encampbar.json",
+        "ui/gm1/title_fade.json",
+        "ui/gm1/title_bars.json",
+        "ui/gm1/title_abpoints.json",
+        "ui/gm1/title_utils.json",
+        "ui/gm1/title_utils.json",
+        "ui/gm1/title_levelup.json",
+        "ui/gm1/title_warning.json",
+        "ui/gm1/experience_bar.json"
+    ]
+}

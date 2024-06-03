@@ -1,0 +1,82 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.credit_projector_light",
+				"texture_width": 112,
+				"texture_height": 516,
+				"visible_bounds_width": 13,
+				"visible_bounds_height": 7,
+				"visible_bounds_offset": [
+					0,
+					2.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "projector",
+					"parent": "root",
+					"pivot": [
+						-4,
+						7,
+						3
+					]
+				},
+				{
+					"name": "screen",
+					"parent": "projector",
+					"pivot": [
+						-4,
+						15.5,
+						-8006
+					]
+				},
+				{
+					"name": "projector_light",
+					"parent": "screen",
+					"pivot": [
+						-0.5,
+						24,
+						-55.75
+					],
+					"cubes": [
+						{
+							"origin": [
+								-24,
+								0,
+								-55.75
+							],
+							"size": [
+								48,
+								48,
+								0
+							],
+							"uv": {
+								"south": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										112,
+										516
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

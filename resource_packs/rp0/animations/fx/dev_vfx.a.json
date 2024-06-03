@@ -1,0 +1,16 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.marker.numbers": {
+			"animation_length": 1,
+			"loop": true,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "numbers_particle"
+					}
+				]
+			}
+		}
+	}
+}

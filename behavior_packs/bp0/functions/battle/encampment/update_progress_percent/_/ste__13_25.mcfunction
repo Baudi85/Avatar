@@ -1,0 +1,2 @@
+execute @s[scores={encampment_pc=13..19}] ~ ~ ~ function battle/encampment/update_progress_percent/_/ste__13_19
+execute @s[scores={encampment_pc=19..25}] ~ ~ ~ function battle/encampment/update_progress_percent/_/ste__19_25

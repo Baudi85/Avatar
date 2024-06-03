@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.edc30b199a47e34d1869ed9aa5d3d3e16a25dc09_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"interact": "q.is_ignited"
+						}
+					]
+				},
+				"interact": {
+					"on_entry": [
+						"/event entity @s nom:stop_interact"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		}
+	}
+}

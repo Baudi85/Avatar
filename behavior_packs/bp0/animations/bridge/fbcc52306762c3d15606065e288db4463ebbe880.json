@@ -1,0 +1,66 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.fbcc52306762c3d15606065e288db4463ebbe880_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_813_cooldown = v.state_nom_fire_dash_far_cooldown;",
+					"v.metastate_fire_dash_far_cooldown = v.chain_813_cooldown;"
+				]
+			}
+		},
+		"animation.fbcc52306762c3d15606065e288db4463ebbe880_1": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_309_cooldown = v.state_nom_fire_stream_large_cooldown;",
+					"v.metastate_fire_stream_long_cooldown = v.chain_309_cooldown;"
+				]
+			}
+		},
+		"animation.fbcc52306762c3d15606065e288db4463ebbe880_2": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_393_cooldown = v.state_nom_strafe_side_cooldown;",
+					"v.metastate_projectile_defence_strafe_cooldown = v.chain_393_cooldown;"
+				]
+			}
+		},
+		"animation.fbcc52306762c3d15606065e288db4463ebbe880_3": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_239_cooldown = v.state_nom_fire_stream_small_cooldown;",
+					"v.chain_852_cooldown = v.state_nom_fire_stream_small_cooldown;",
+					"v.metastate_fire_stream_small_med_cooldown = v.chain_239_cooldown&&v.chain_852_cooldown;"
+				]
+			}
+		},
+		"animation.fbcc52306762c3d15606065e288db4463ebbe880_4": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_183_cooldown = v.state_nom_fire_dash_cooldown;",
+					"v.metastate_fire_dash_cooldown = v.chain_183_cooldown;"
+				]
+			}
+		},
+		"animation.fbcc52306762c3d15606065e288db4463ebbe880_5": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_675_cooldown = v.state_nom_approach_cooldown||v.state_nom_fire_sweep_cooldown;",
+					"v.metastate_fire_sweep_cooldown = v.chain_675_cooldown;"
+				]
+			}
+		}
+	}
+}

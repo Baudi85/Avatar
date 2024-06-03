@@ -1,0 +1,238 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.bss_well",
+				"texture_width": 256,
+				"texture_height": 256,
+				"visible_bounds_width": 5,
+				"visible_bounds_height": 4.5,
+				"visible_bounds_offset": [
+					0,
+					1.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-32,
+								0,
+								-32
+							],
+							"size": [
+								64,
+								2,
+								64
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "bone",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-14,
+								0,
+								-14
+							],
+							"size": [
+								28,
+								16,
+								28
+							],
+							"uv": [
+								0,
+								66
+							]
+						},
+						{
+							"origin": [
+								-8,
+								0,
+								-8
+							],
+							"size": [
+								16,
+								16,
+								16
+							],
+							"uv": [
+								0,
+								32
+							]
+						},
+						{
+							"origin": [
+								-13,
+								16,
+								-2
+							],
+							"size": [
+								4,
+								24,
+								4
+							],
+							"uv": [
+								0,
+								18
+							]
+						},
+						{
+							"origin": [
+								9,
+								16,
+								-2
+							],
+							"size": [
+								4,
+								24,
+								4
+							],
+							"uv": [
+								0,
+								18
+							],
+							"mirror": true
+						},
+						{
+							"origin": [
+								-17,
+								35,
+								-1
+							],
+							"size": [
+								34,
+								2,
+								2
+							],
+							"uv": [
+								84,
+								66
+							]
+						},
+						{
+							"origin": [
+								-17,
+								30,
+								0
+							],
+							"size": [
+								34,
+								5,
+								0
+							],
+							"uv": [
+								84,
+								70
+							]
+						},
+						{
+							"origin": [
+								-15,
+								31,
+								-5
+							],
+							"size": [
+								0,
+								10,
+								10
+							],
+							"pivot": [
+								-15,
+								36,
+								0
+							],
+							"rotation": [
+								45,
+								0,
+								0
+							],
+							"uv": [
+								16,
+								8
+							]
+						}
+					]
+				},
+				{
+					"name": "bucket",
+					"parent": "bone",
+					"pivot": [
+						20,
+						7,
+						-10
+					],
+					"rotation": [
+						0,
+						-45,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								16,
+								2.1,
+								-14
+							],
+							"size": [
+								8,
+								10,
+								8
+							],
+							"uv": [
+								0,
+								0
+							]
+						},
+						{
+							"origin": [
+								15,
+								9,
+								-11
+							],
+							"size": [
+								10,
+								6,
+								2
+							],
+							"pivot": [
+								20,
+								10,
+								-10
+							],
+							"rotation": [
+								-45,
+								0,
+								0
+							],
+							"uv": [
+								24,
+								0
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,7 @@
+execute @e[name=main,tag=settlement.t_ruined_backstreet.state.0] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_ruined_backstreet>:§r§6 Currently settlement_0" }]}
+execute @e[name=main,tag=settlement.t_ruined_backstreet.state.1] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_ruined_backstreet>:§r§6 Currently settlement_1" }]}
+execute @e[name=main,tag=settlement.t_ruined_backstreet.state.2] ~ ~ ~ tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement<t_ruined_backstreet>:§r§6 Currently settlement_2" }]}
+tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement:§r§6 Entity <" }, {"selector": "@e[tag=settlement.save,x=-40,y=10,z=40,dx=12,dy=14,dz=16]"} , {"text":">"}]}
+tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement:§r§6 Entity <" }, {"selector": "@e[tag=settlement.save,x=-55,y=10,z=20,dx=17,dy=14,dz=19]"} , {"text":">"}]}
+tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement:§r§6 Entity <" }, {"selector": "@e[tag=settlement.save,x=-37,y=10,z=30,dx=9,dy=14,dz=9]"} , {"text":">"}]}
+tellraw @a[tag=dev] {"rawtext":[ { "text": "§6Settlement:§r§6 Entity <" }, {"selector": "@e[tag=settlement.save,x=-37,y=10,z=7,dx=16,dy=14,dz=22]"} , {"text":">"}]}

@@ -1,0 +1,34 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:tornado_boost",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"components": {
+			"minecraft:behavior.knockback_roar": {
+				"attack_time": 0.05,
+				"knockback_horizontal_strength": 7,
+				"knockback_height_cap": 0,
+				"knockback_damage": 0,
+				"knockback_range": 1,
+				"cooldown_time": 50,
+				"knockback_filters": {
+					"test": "is_family",
+					"value": "tornado",
+					"subject": "other"
+				},
+				"damage_filters": {
+					"test": "in_nether"
+				}
+			},
+			"minecraft:explode": {
+				"fuse_lit": true,
+				"power": 0,
+				"fuse_length": 0.1
+			}
+		}
+	}
+}

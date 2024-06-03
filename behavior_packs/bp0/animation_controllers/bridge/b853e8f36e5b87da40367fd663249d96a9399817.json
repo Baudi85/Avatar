@@ -1,0 +1,86 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.b853e8f36e5b87da40367fd663249d96a9399817_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/scoreboard players add @s spawner_id 0",
+						"/scoreboard players random @s[scores={spawner_id=0}] spawner_id 1 2147483646",
+						"/tag @s add encampment.spawner"
+					]
+				}
+			}
+		},
+		"controller.animation.b853e8f36e5b87da40367fd663249d96a9399817_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"spawn": "q.is_ignited&&q.is_saddled"
+						}
+					]
+				},
+				"spawn": {
+					"transitions": [
+						{
+							"default": "!q.is_ignited||!q.is_saddled"
+						},
+						{
+							"tick": "q.life_time>v.cooldown"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s tmp 0",
+						"/execute @s[scores={tmp=0..0}] ~ ~ ~ summon nom:enemy_daili",
+						"v.cooldown=q.life_time+math.random(2,20);",
+						"/scoreboard players operation @e[r=1] spawner_id = @s spawner_id",
+						"/scoreboard players operation @e[r=1] battle_id = @s battle_id",
+						"/scoreboard players remove @s spawner_buffer 1"
+					]
+				},
+				"tick": {
+					"transitions": [
+						{
+							"default": "!q.is_ignited||!q.is_saddled"
+						},
+						{
+							"spawn": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.b853e8f36e5b87da40367fd663249d96a9399817_2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"deactivate": "!q.is_ignited"
+						},
+						{
+							"activate": "q.is_ignited"
+						}
+					]
+				},
+				"deactivate": {
+					"on_entry": [
+						"/scoreboard players set @s spawner_buffer 3"
+					],
+					"transitions": [
+						{
+							"activate": "q.is_ignited"
+						}
+					]
+				},
+				"activate": {
+					"transitions": [
+						{
+							"deactivate": "!q.is_ignited"
+						}
+					]
+				}
+			}
+		}
+	}
+}

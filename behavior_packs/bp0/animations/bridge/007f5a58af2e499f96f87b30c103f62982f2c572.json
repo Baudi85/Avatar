@@ -1,0 +1,67 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.007f5a58af2e499f96f87b30c103f62982f2c572_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_910_cooldown = v.state_nom_fire_dash_far_cooldown;",
+					"v.metastate_fire_dash_far_cooldown = v.chain_910_cooldown;"
+				]
+			}
+		},
+		"animation.007f5a58af2e499f96f87b30c103f62982f2c572_1": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_783_cooldown = v.state_nom_fire_stream_large_cooldown;",
+					"v.metastate_fire_stream_long_cooldown = v.chain_783_cooldown;"
+				]
+			}
+		},
+		"animation.007f5a58af2e499f96f87b30c103f62982f2c572_2": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_418_cooldown = v.state_nom_fire_stream_small_cooldown;",
+					"v.chain_871_cooldown = v.state_nom_fire_stream_medium_cooldown;",
+					"v.metastate_fire_stream_small_med_cooldown = v.chain_418_cooldown&&v.chain_871_cooldown;"
+				]
+			}
+		},
+		"animation.007f5a58af2e499f96f87b30c103f62982f2c572_3": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_224_cooldown = v.state_nom_fire_dash_cooldown;",
+					"v.chain_498_cooldown = v.state_nom_fire_dash_cancel_cooldown||v.state_nom_fire_sweep_cooldown;",
+					"v.metastate_fire_dash_cooldown = v.chain_224_cooldown&&v.chain_498_cooldown;"
+				]
+			}
+		},
+		"animation.007f5a58af2e499f96f87b30c103f62982f2c572_4": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_864_cooldown = v.state_nom_approach_cooldown||v.state_nom_fire_sweep_cooldown;",
+					"v.metastate_fire_sweep_cooldown = v.chain_864_cooldown;"
+				]
+			}
+		},
+		"animation.007f5a58af2e499f96f87b30c103f62982f2c572_5": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_971_cooldown = v.state_nom_strafe_side_cooldown;",
+					"v.metastate_projectile_defence_strafe_cooldown = v.chain_971_cooldown;"
+				]
+			}
+		}
+	}
+}

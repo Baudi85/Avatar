@@ -1,0 +1,122 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.0009c10a8348096461be2149a2f1e3d2317e05f0_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==121)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==121"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.0009c10a8348096461be2149a2f1e3d2317e05f0_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function enemy/bending/earth/standing_on",
+						"@s nom:freeze_behavior"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==121)"
+						},
+						{
+							"charging": "1"
+						}
+					]
+				},
+				"charging": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1",
+						"/function bending/earth/earth_quake/on_charging",
+						"v.earth_quake_runtime=q.life_time;"
+					],
+					"animations": [
+						"animation.bending.earth.earth_quake.charging"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==121)"
+						},
+						{
+							"quaking": "q.life_time>=v.earth_quake_runtime+0.65"
+						}
+					]
+				},
+				"quaking": {
+					"on_entry": [
+						"/function bending/earth/earth_quake/on_quaking"
+					],
+					"animations": [
+						{
+							"animation.bending.earth.earth_quake.quaking_1": "q.variant == 3 || q.variant == 4"
+						},
+						{
+							"animation.bending.earth.earth_quake.quaking_2": "q.variant == 3 || q.variant == 5"
+						},
+						{
+							"animation.bending.earth.earth_quake.quaking_3": "q.variant == 3 || q.variant == 6"
+						},
+						{
+							"animation.bending.earth.earth_quake.quaking_4": "q.variant == 3 || q.variant == 7"
+						},
+						{
+							"animation.bending.earth.earth_quake.quaking_5": "q.variant == 3 || q.variant == 8"
+						}
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==121)"
+						},
+						{
+							"cooldown": "1"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.runtime=q.life_time;"
+					],
+					"on_exit": [
+						"/event entity @s[tag=can_end_state] gm1:end_state",
+						"@s nom:unfreeze_behavior"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==121)"
+						},
+						{
+							"default": "q.life_time>=v.runtime+2"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==121"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		}
+	}
+}

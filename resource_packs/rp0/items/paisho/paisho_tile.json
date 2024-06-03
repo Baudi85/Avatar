@@ -1,0 +1,7 @@
+{
+    "format_version": "1.10",
+    "minecraft:item": {
+        "description": { "identifier": "nom:paisho_tile", "category": "Nature" },
+        "components": { "minecraft:icon": "paisho_tile" }
+    }
+}

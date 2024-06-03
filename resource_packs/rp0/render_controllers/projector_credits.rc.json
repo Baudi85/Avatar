@@ -1,0 +1,60 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.credits.camera": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			]
+		},
+		"controller.render.credits.screen": {
+			"geometry": "geometry.screen",
+			"materials": [
+				{
+					"*": "material.projector_light"
+				}
+			],
+			"textures": [
+				"texture.credits"
+			],
+			"overlay_color": {
+				"a": "math.abs(math.sin(q.life_time*1440+90)*0.2)",
+				"r": 0,
+				"g": 0,
+				"b": 0
+			},
+			"uv_anim": {
+				"offset": [
+					0,
+					"q.life_time*0.03"
+				],
+				"scale": [
+					1,
+					1
+				]
+			}
+		},
+		"controller.render.credits.light": {
+			"geometry": "geometry.light",
+			"materials": [
+				{
+					"*": "material.projector_light"
+				}
+			],
+			"textures": [
+				"texture.light"
+			],
+			"overlay_color": {
+				"a": "0.5+math.abs(math.sin(q.life_time*1440)*0.15)",
+				"r": 0,
+				"g": 0,
+				"b": 0
+			}
+		}
+	}
+}

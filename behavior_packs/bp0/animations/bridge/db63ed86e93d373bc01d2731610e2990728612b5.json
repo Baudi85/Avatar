@@ -1,0 +1,16 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.db63ed86e93d373bc01d2731610e2990728612b5_0": {
+			"animation_length": 3.05,
+			"timeline": {
+				"2.5": [
+					"/execute @s[tag=!is_set_up] ~~~ event entity @e[tag=is_set_up] gm1:despawn"
+				],
+				"3.0": [
+					"/function debug/on_world_load"
+				]
+			}
+		}
+	}
+}

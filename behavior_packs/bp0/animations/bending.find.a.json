@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.bending.earth.wall.find": {
+			"loop": true,
+			"animation_length": 1,
+			"timeline": {
+				"0.0": [
+					"/function find_block/block/earth/tick"
+				]
+			}
+		}
+	}
+}

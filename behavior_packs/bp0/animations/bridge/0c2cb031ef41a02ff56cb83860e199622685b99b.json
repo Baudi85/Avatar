@@ -1,0 +1,68 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.0c2cb031ef41a02ff56cb83860e199622685b99b_0": {
+			"timeline": {
+				"0.0": [
+					"/tag @s add self",
+					"/scoreboard players set @s tmp 0",
+					"/execute @a[tag=battle.entity.102.inside] ~ ~ ~ scoreboard players add @e[tag=self] tmp 1",
+					"/execute @s[scores={tmp=1}] ~ ~ ~ execute @a[tag=player.dead,tag=battle.entity.102.inside] ~ ~ ~ scoreboard players set @e[tag=self] battle_exit -2",
+					"/tag @s remove self"
+				]
+			},
+			"animation_length": 0.5,
+			"loop": true
+		},
+		"animation.0c2cb031ef41a02ff56cb83860e199622685b99b_1": {
+			"timeline": {
+				"0.0": [
+					"/tag @s remove battle.occupied.was",
+					"/tag @s[tag=battle.occupied] add battle.occupied.was",
+					"/tag @s remove battle.occupied",
+					"/tag @e remove battle.entity.102",
+					"/tag @e[tag=battle.entity.102.inside] add battle.entity.102",
+					"/tag @e remove battle.entity.inside.102.was",
+					"/tag @e[tag=battle.entity.102.inside] add battle.entity.inside.102.was",
+					"/tag @e[tag=battle.entity.102.inside] remove battle.entity.inside",
+					"/tag @e remove battle.entity.102.inside",
+					"/tag @e[x=-55,y=14,z=24,dx=7,dy=4,dz=5,tag=bender,tag=!enemy.in_water] add battle.entity.102.inside",
+					"/tag @e[x=-54,y=12,z=30,dx=25,dy=6,dz=9,tag=bender,tag=!enemy.in_water] add battle.entity.102.inside",
+					"/tag @e[x=-51,y=14,z=20,dx=3,dy=4,dz=3,tag=bender,tag=!enemy.in_water] add battle.entity.102.inside",
+					"/tag @e[x=-37,y=12,z=15,dx=15,dy=7,dz=14,tag=bender,tag=!enemy.in_water] add battle.entity.102.inside",
+					"/tag @e[x=-47,y=12,z=21,dx=9,dy=6,dz=8,tag=bender,tag=!enemy.in_water] add battle.entity.102.inside",
+					"/tag @e[x=-39,y=12,z=40,dx=10,dy=7,dz=13,tag=bender,tag=!enemy.in_water] add battle.entity.102.inside",
+					"/tag @e[x=-29,y=12,z=8,dx=8,dy=6,dz=6,tag=bender,tag=!enemy.in_water] add battle.entity.102.inside",
+					"/tag @s add self",
+					"/execute @a[tag=battle.entity.102.inside,m=!1,c=1,scores={scene_id=..1}] ~ ~ ~ tag @e[tag=self] add battle.occupied",
+					"/tag @s remove self",
+					"/tag @e[tag=battle.entity.102.inside] add battle.entity.inside",
+					"/tag @e[tag=battle.entity.inside,tag=enemy] add battle.enemy",
+					"/tag @s add battle.current",
+					"/execute @s[scores={battle_state=1}] ~ ~ ~ execute @a[tag=battle.entity.102.inside,tag=!battle.member.102] ~ ~ ~ function battle/state/on_join",
+					"/tag @s remove battle.current",
+					"/tag @a[tag=battle.join] add battle.member.102",
+					"/tag @a[tag=battle.join] add battle.member",
+					"/tag @a remove battle.join",
+					"/scoreboard players set @e[tag=!battle.entity.102.inside,tag=battle.entity.inside.102.was] battle_exit 5",
+					"/scoreboard players set @s[tag=!battle.occupied,tag=battle.occupied.was,scores={battle_exit=-1..}] battle_exit 5",
+					"/scoreboard players remove @s[tag=!battle.occupied,scores={battle_exit=0..}] battle_exit 1"
+				]
+			},
+			"animation_length": 1,
+			"loop": true
+		},
+		"animation.0c2cb031ef41a02ff56cb83860e199622685b99b_2": {
+			"timeline": {
+				"0.0": [
+					"/execute @s[scores={battle_state=0}] ~ ~ ~ particle nom:barrier.ruined_backstreet.before -31 12 24",
+					"/execute @s[scores={battle_state=1},tag=battle.delay] ~ ~ ~ particle nom:barrier.ruined_backstreet.before -31 12 24",
+					"/execute @s[scores={battle_state=1},tag=battle.occupied,tag=!battle.delay] ~ ~ ~ particle nom:barrier.ruined_backstreet.inside -31 12 24",
+					"/execute @s[scores={battle_state=1},tag=!battle.occupied,tag=!battle.delay] ~ ~ ~ particle nom:barrier.ruined_backstreet.outside -31 12 24"
+				]
+			},
+			"animation_length": 0.5,
+			"loop": true
+		}
+	}
+}

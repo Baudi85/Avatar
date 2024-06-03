@@ -1,0 +1,651 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:earth_pull_stone",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball",
+			"animations": {
+				"05a76249535ed391_ac_0": "controller.animation.05a76249535ed391be513c242b9e30a8faf22487_0",
+				"05a76249535ed391_ac_1": "controller.animation.05a76249535ed391be513c242b9e30a8faf22487_1",
+				"d7ec39fa93067add_ac_0": "controller.animation.d7ec39fa93067add14b9391e54e2528b02e30631_0",
+				"d0658e9a14a81e0a_a_0": "animation.d0658e9a14a81e0ab761baeb84a0b021645f9f96_0",
+				"d0658e9a14a81e0a_a_1": "animation.d0658e9a14a81e0ab761baeb84a0b021645f9f96_1"
+			},
+			"scripts": {
+				"animate": [
+					"05a76249535ed391_ac_0",
+					{
+						"05a76249535ed391_ac_1": "1"
+					},
+					"d7ec39fa93067add_ac_0",
+					"d0658e9a14a81e0a_a_0",
+					{
+						"d0658e9a14a81e0a_a_1": "q.variant==3"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"nom:type_0": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			},
+			"nom:type_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"nom:type_2": {
+				"minecraft:skin_id": {
+					"value": 2
+				}
+			},
+			"nom:type_3": {
+				"minecraft:skin_id": {
+					"value": 3
+				}
+			},
+			"nom:type_4": {
+				"minecraft:skin_id": {
+					"value": 4
+				}
+			},
+			"nom:type_5": {
+				"minecraft:skin_id": {
+					"value": 5
+				}
+			},
+			"nom:type_6": {
+				"minecraft:skin_id": {
+					"value": 6
+				}
+			},
+			"nom:type_7": {
+				"minecraft:skin_id": {
+					"value": 7
+				}
+			},
+			"nom:type_8": {
+				"minecraft:skin_id": {
+					"value": 8
+				}
+			},
+			"nom:type_9": {
+				"minecraft:skin_id": {
+					"value": 9
+				}
+			},
+			"nom:type_10": {
+				"minecraft:skin_id": {
+					"value": 10
+				}
+			},
+			"nom:type_11": {
+				"minecraft:skin_id": {
+					"value": 11
+				}
+			},
+			"nom:type_12": {
+				"minecraft:skin_id": {
+					"value": 12
+				}
+			},
+			"nom:type_13": {
+				"minecraft:skin_id": {
+					"value": 13
+				}
+			},
+			"nom:type_14": {
+				"minecraft:skin_id": {
+					"value": 14
+				}
+			},
+			"nom:type_15": {
+				"minecraft:skin_id": {
+					"value": 15
+				}
+			},
+			"nom:type_16": {
+				"minecraft:skin_id": {
+					"value": 16
+				}
+			},
+			"nom:projectile_1": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:mark_variant": {
+					"value": 1
+				},
+				"minecraft:projectile": {
+					"gravity": 0.06,
+					"power": 2,
+					"inertia": 0.97,
+					"uncertainty_base": 0,
+					"offset": [
+						0,
+						1,
+						1
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"definition_event": {
+							"event_trigger": {
+								"event": "nom:on_hit"
+							}
+						},
+						"impact_damage": {
+							"damage": 0,
+							"knockback": true
+						},
+						"stick_in_ground": {}
+					}
+				},
+				"minecraft:timer": {
+					"time": 30,
+					"time_down_event": {
+						"event": "nom:fall_down"
+					}
+				}
+			},
+			"nom:projectile_2": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:mark_variant": {
+					"value": 2
+				},
+				"minecraft:projectile": {
+					"gravity": 0.065,
+					"power": 1.8,
+					"inertia": 0.96,
+					"uncertainty_base": 0,
+					"offset": [
+						0,
+						1,
+						1
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"definition_event": {
+							"event_trigger": {
+								"event": "nom:on_hit"
+							}
+						},
+						"impact_damage": {
+							"damage": 0,
+							"knockback": true
+						},
+						"stick_in_ground": {}
+					}
+				},
+				"minecraft:timer": {
+					"time": 30,
+					"time_down_event": {
+						"event": "nom:fall_down"
+					}
+				}
+			},
+			"nom:projectile_3": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:mark_variant": {
+					"value": 3
+				},
+				"minecraft:projectile": {
+					"gravity": 0.07,
+					"power": 1.6,
+					"inertia": 0.95,
+					"uncertainty_base": 0,
+					"offset": [
+						0,
+						1,
+						1
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"definition_event": {
+							"event_trigger": {
+								"event": "nom:on_hit"
+							}
+						},
+						"impact_damage": {
+							"damage": 0,
+							"knockback": true
+						},
+						"stick_in_ground": {}
+					}
+				},
+				"minecraft:timer": {
+					"time": 30,
+					"time_down_event": {
+						"event": "nom:fall_down"
+					}
+				}
+			},
+			"nom:projectile_1_enemy": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:mark_variant": {
+					"value": 1
+				},
+				"minecraft:projectile": {
+					"gravity": 0.06,
+					"power": 2,
+					"inertia": 0.97,
+					"uncertainty_base": 0,
+					"offset": [
+						0,
+						1,
+						0
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"definition_event": {
+							"event_trigger": {
+								"event": "nom:on_hit"
+							}
+						},
+						"impact_damage": {
+							"damage": 0,
+							"knockback": true
+						},
+						"stick_in_ground": {}
+					}
+				},
+				"minecraft:timer": {
+					"time": 30,
+					"time_down_event": {
+						"event": "nom:fall_down"
+					}
+				}
+			},
+			"nom:projectile_2_enemy": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:mark_variant": {
+					"value": 2
+				},
+				"minecraft:projectile": {
+					"gravity": 0.065,
+					"power": 1.8,
+					"inertia": 0.96,
+					"uncertainty_base": 0,
+					"offset": [
+						0,
+						1,
+						0
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"definition_event": {
+							"event_trigger": {
+								"event": "nom:on_hit"
+							}
+						},
+						"impact_damage": {
+							"damage": 0,
+							"knockback": true
+						},
+						"stick_in_ground": {}
+					}
+				},
+				"minecraft:timer": {
+					"time": 30,
+					"time_down_event": {
+						"event": "nom:fall_down"
+					}
+				}
+			},
+			"nom:projectile_3_enemy": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:mark_variant": {
+					"value": 3
+				},
+				"minecraft:projectile": {
+					"gravity": 0.07,
+					"power": 1.6,
+					"inertia": 0.95,
+					"uncertainty_base": 0,
+					"offset": [
+						0,
+						1,
+						0
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"definition_event": {
+							"event_trigger": {
+								"event": "nom:on_hit"
+							}
+						},
+						"impact_damage": {
+							"damage": 0,
+							"knockback": true
+						},
+						"stick_in_ground": {}
+					}
+				},
+				"minecraft:timer": {
+					"time": 30,
+					"time_down_event": {
+						"event": "nom:fall_down"
+					}
+				}
+			},
+			"nom:enemy": {
+				"minecraft:type_family": {
+					"family": [
+						"enemy_bentity",
+						"earth_pull_stone",
+						"protection_ability_blockable"
+					]
+				}
+			},
+			"nom:fall_down": {
+				"minecraft:variant": {
+					"value": 2
+				},
+				"minecraft:projectile": {
+					"gravity": 0.2,
+					"power": 2,
+					"inertia": 1,
+					"uncertainty_base": 0,
+					"offset": [
+						0,
+						0,
+						0
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"definition_event": {
+							"event_trigger": {
+								"event": "nom:on_hit"
+							}
+						},
+						"impact_damage": {
+							"damage": 0,
+							"knockback": true
+						},
+						"stick_in_ground": {}
+					}
+				}
+			},
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"transform_to_as_explode": {
+				"minecraft:transformation": {
+					"into": "nom:earth_pull_stone<nom:explosion>"
+				}
+			},
+			"nom:explode": {
+				"minecraft:physics": {
+					"has_collision": false,
+					"has_gravity": false
+				},
+				"minecraft:variant": {
+					"value": 3
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"earth_pull_stone",
+					"protection_ability_blockable",
+					"player_ability"
+				]
+			},
+			"minecraft:scale": {
+				"value": 1
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"any_of": [
+						{
+							"test": "in_water"
+						}
+					]
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 0.5
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"nom:block_breakable_wood_ew",
+					"nom:block_breakable_wood_ns",
+					"nom:block_breakable_stone_ew",
+					"nom:block_breakable_stone_ns"
+				]
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"nom:fall_down": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"nom:fall_down"
+							]
+						},
+						"filters": {
+							"test": "is_variant",
+							"value": 1
+						}
+					}
+				]
+			},
+			"nom:type_0": {
+				"add": {
+					"component_groups": [
+						"nom:type_0"
+					]
+				}
+			},
+			"nom:type_1": {
+				"add": {
+					"component_groups": [
+						"nom:type_1"
+					]
+				}
+			},
+			"nom:type_2": {
+				"add": {
+					"component_groups": [
+						"nom:type_2"
+					]
+				}
+			},
+			"nom:type_3": {
+				"add": {
+					"component_groups": [
+						"nom:type_3"
+					]
+				}
+			},
+			"nom:type_4": {
+				"add": {
+					"component_groups": [
+						"nom:type_4"
+					]
+				}
+			},
+			"nom:type_5": {
+				"add": {
+					"component_groups": [
+						"nom:type_5"
+					]
+				}
+			},
+			"nom:type_6": {
+				"add": {
+					"component_groups": [
+						"nom:type_6"
+					]
+				}
+			},
+			"nom:type_7": {
+				"add": {
+					"component_groups": [
+						"nom:type_7"
+					]
+				}
+			},
+			"nom:type_8": {
+				"add": {
+					"component_groups": [
+						"nom:type_8"
+					]
+				}
+			},
+			"nom:type_9": {
+				"add": {
+					"component_groups": [
+						"nom:type_9"
+					]
+				}
+			},
+			"nom:type_10": {
+				"add": {
+					"component_groups": [
+						"nom:type_10"
+					]
+				}
+			},
+			"nom:type_11": {
+				"add": {
+					"component_groups": [
+						"nom:type_11"
+					]
+				}
+			},
+			"nom:type_12": {
+				"add": {
+					"component_groups": [
+						"nom:type_12"
+					]
+				}
+			},
+			"nom:type_13": {
+				"add": {
+					"component_groups": [
+						"nom:type_13"
+					]
+				}
+			},
+			"nom:type_14": {
+				"add": {
+					"component_groups": [
+						"nom:type_14"
+					]
+				}
+			},
+			"nom:type_15": {
+				"add": {
+					"component_groups": [
+						"nom:type_15"
+					]
+				}
+			},
+			"nom:type_16": {
+				"add": {
+					"component_groups": [
+						"nom:type_16"
+					]
+				}
+			},
+			"nom:as_projectile_1": {
+				"add": {
+					"component_groups": [
+						"nom:projectile_1"
+					]
+				}
+			},
+			"nom:as_projectile_2": {
+				"add": {
+					"component_groups": [
+						"nom:projectile_2"
+					]
+				}
+			},
+			"nom:as_projectile_3": {
+				"add": {
+					"component_groups": [
+						"nom:projectile_3"
+					]
+				}
+			},
+			"nom:as_projectile_1_enemy": {
+				"add": {
+					"component_groups": [
+						"nom:projectile_1_enemy",
+						"nom:enemy"
+					]
+				}
+			},
+			"nom:as_projectile_2_enemy": {
+				"add": {
+					"component_groups": [
+						"nom:projectile_2_enemy",
+						"nom:enemy"
+					]
+				}
+			},
+			"nom:as_projectile_3_enemy": {
+				"add": {
+					"component_groups": [
+						"nom:projectile_3_enemy",
+						"nom:enemy"
+					]
+				}
+			},
+			"nom:on_hit": {
+				"add": {
+					"component_groups": [
+						"nom:explode"
+					]
+				}
+			},
+			"nom:explode": {
+				"add": {
+					"component_groups": [
+						"nom:explode"
+					]
+				}
+			},
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

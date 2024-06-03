@@ -1,0 +1,126 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:blue_jet_stream_projectile",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball",
+			"animations": {
+				"4a3f42867219c4ef_ac_0": "controller.animation.4a3f42867219c4ef946ab73da32a2f24a8a8627d_0",
+				"4a3f42867219c4ef_ac_1": "controller.animation.4a3f42867219c4ef946ab73da32a2f24a8a8627d_1"
+			},
+			"scripts": {
+				"animate": [
+					"4a3f42867219c4ef_ac_0",
+					{
+						"4a3f42867219c4ef_ac_1": "1"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"nom:enemy": {
+				"minecraft:projectile": {
+					"gravity": 0,
+					"power": 3.1,
+					"inertia": 0.75,
+					"uncertainty_base": 4,
+					"offset": [
+						0,
+						1,
+						0
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 3,
+							"knockback": false
+						}
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:despawn": {
+				"filters": {
+					"any_of": [
+						{
+							"test": "in_water"
+						}
+					]
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 0.5
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"nom:block_breakable_wood_ew",
+					"nom:block_breakable_wood_ns",
+					"nom:block_breakable_stone_ew",
+					"nom:block_breakable_stone_ns"
+				]
+			},
+			"minecraft:timer": {
+				"time": 0.9,
+				"time_down_event": {
+					"event": "nom:despawn"
+				}
+			},
+			"minecraft:projectile": {
+				"gravity": 0,
+				"power": 3.1,
+				"inertia": 0.75,
+				"uncertainty_base": 4,
+				"offset": [
+					0,
+					0,
+					0
+				],
+				"should_bounce": false,
+				"destroy_on_hurt": false,
+				"on_hit": {
+					"impact_damage": {
+						"damage": 3,
+						"knockback": false
+					}
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:type_family": {
+				"family": [
+					"protection_ability_blockable"
+				]
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			},
+			"nom:as_projectile_enemy": {
+				"add": {
+					"component_groups": [
+						"nom:enemy"
+					]
+				}
+			}
+		}
+	}
+}

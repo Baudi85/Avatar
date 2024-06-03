@@ -1,0 +1,2346 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "minecraft:player",
+			"is_spawnable": false,
+			"is_summonable": false,
+			"is_experimental": false,
+			"scripts": {
+				"animate": [
+					"09463a4e6836a24c_ac_1",
+					"spell_effects",
+					"bending.teq_manager",
+					"bending_teq_selection_manager",
+					"water.bending.sound_cancel",
+					"query_tag.is_riding",
+					"acrobatics.double_jump",
+					"acrobatics.faster_sprint",
+					"chi_manager",
+					{
+						"chi.avatar_state_regenerate": "q.is_illager_captain"
+					},
+					"bending.no_chi",
+					"avatar_state",
+					"sweep.sfx.cancel.controller",
+					"mastery_controller",
+					"health_boost_manager",
+					"mastery_check",
+					"debug.query.variant",
+					"debug.query.mark_variant",
+					"a8eba2ea6af1a276_a_0",
+					"373a5d64b741abdc_ac_0",
+					"8eceae85ecc6badf_ac_0",
+					"09463a4e6836a24c_ac_0",
+					"44663ba33d275568_ac_0",
+					"44663ba33d275568_ac_1",
+					"44663ba33d275568_ac_2",
+					"44663ba33d275568_ac_3",
+					"44663ba33d275568_ac_4",
+					"44663ba33d275568_ac_5"
+				]
+			},
+			"animations": {
+				"spell_effects": "animation.player.spell_effects",
+				"mastery_check": "animation.check_bending_mastery",
+				"query_tag.is_riding": "controller.animation.query_tag.is_riding",
+				"bending_teq_selection_manager": "controller.animation.player.bending_teq_selection_manager",
+				"bending.teq_manager": "controller.animation.bending.teq_manager",
+				"bending.fire.jet.shake": "animation.bending.fire.jet.shake",
+				"bending.fire.jet.charging": "animation.bending.fire.jet.charging",
+				"animation.bending.fire.jet.using": "animation.bending.fire.jet.using",
+				"animation.bending.fire.jet_stream.using": "animation.bending.fire.jet_stream.using",
+				"animation.bending.fire.fire_sweep.using": "animation.bending.fire.fire_sweep.using",
+				"bending.fire.kick": "controller.animation.bending.fire.kick",
+				"bending.fire.jet": "controller.animation.bending.fire.jet",
+				"bending.fire.jet_stream": "controller.animation.bending.fire.jet_stream",
+				"bending.fire.fire_sweep": "controller.animation.bending.fire.fire_sweep",
+				"bending.earth.earth_pull": "controller.animation.bending.earth.earth_pull",
+				"bending.earth.earth_wall": "controller.animation.bending.earth.earth_wall",
+				"bending.earth.earth_quake": "controller.animation.bending.earth.earth_quake",
+				"bending.earth.earth_quake.charging": "animation.bending.earth.earth_quake.charging",
+				"bending.earth.earth_quake.quaking": "animation.bending.earth.earth_quake.quaking",
+				"bending.water.water_whip": "controller.animation.bending.water.water_whip",
+				"bending.water.water_whip.throw": "animation.bending.water.water_whip.throw",
+				"bending.water.frost_breath": "controller.animation.bending.water.frost_breath",
+				"bending.water.frost_breath.using": "animation.bending.water.frost_breath.using",
+				"chi.using.frost_breath": "animation.player.chi.using.frost_breath",
+				"bending.water.octopus_form": "controller.animation.bending.water.octopus_form",
+				"bending.water.octopus_form.using": "animation.bending.water.octopus_form.using",
+				"chi.using.octopus_form": "animation.player.chi.using.octopus_form",
+				"bending.earth.earth_pull.fetching_stone": "animation.bending.earth.earth_pull.fetching_stone",
+				"bending.earth.earth_pull.throwing_stone_1": "animation.bending.earth.earth_pull.throwing_stone_1",
+				"bending.earth.earth_pull.throwing_stone_2": "animation.bending.earth.earth_pull.throwing_stone_2",
+				"bending.earth.earth_pull.throwing_stone_3": "animation.bending.earth.earth_pull.throwing_stone_3",
+				"bending.air.tornado": "controller.animation.bending.air.tornado",
+				"bending.air.tornado.highlight": "animation.bending.air.tornado.highlight",
+				"bending.air.air_blades": "controller.animation.bending.air.air_blades",
+				"bending.air.air_blades.using": "animation.bending.air.air_blades.using",
+				"bending.air.glider.active": "animation.bending.air.glider.active",
+				"bending.air.geyser": "controller.animation.bending.air.geyser",
+				"bending.air.air_scooter": "controller.animation.bending.air.air_scooter",
+				"bending.air.air_sphere": "controller.animation.bending.air.air_sphere",
+				"bending.air.air_sphere.on_channeling_loop": "animation.bending.air.air_sphere.on_channeling_loop",
+				"bending.air.air_sphere.timeout": "animation.bending.air.air_sphere.timeout",
+				"bending.air.air_scooter.scooting": "animation.bending.air.air_scooter.scooting",
+				"bending.special.heal": "controller.animation.bending.special.heal",
+				"acrobatics.double_jump": "controller.animation.player.acrobatics.double_jump",
+				"acrobatics.faster_sprint": "controller.animation.player.acrobatics.faster_sprint",
+				"bending.special.heal.raycast_timeout": "animation.bending.special.heal.raycast_timeout",
+				"water.bending.sound_cancel": "controller.animation.avatar.water_charge_cancel",
+				"chi.using.fire_sweep": "animation.player.chi.using.fire_sweep",
+				"chi.using.jet_stream": "animation.player.chi.using.jet_stream",
+				"chi_manager": "controller.animation.player.chi.chi_manager",
+				"chi.regenerate": "animation.player.chi.regenerate",
+				"chi.avatar_state_regenerate": "animation.player.chi.avatar_state_regenerate",
+				"music_controller": "controller.animation.music.player",
+				"music_changer": "controller.animation.music.changer",
+				"music_duel": "animation.duel.loop",
+				"music_duel2": "animation.duel.loop2",
+				"music_duel3": "animation.duel.loop3",
+				"music_duel4": "animation.duel.loop4",
+				"music_duel5": "animation.duel.loop5",
+				"music_duel6": "animation.duel.loop6",
+				"music_iroh": "animation.iroh.lotv",
+				"cutscene_active": "animation.cutscene.wait",
+				"cutscene_basingse": "animation.cutscene.waitba",
+				"music_encampment": "animation.encampment.loop",
+				"music_minigame1": "animation.minigame1.loop",
+				"music_minigame2": "animation.minigame2.loop",
+				"bending.player.reset_technique_id": "animation.bending.player.reset_technique_id",
+				"bending.no_chi": "controller.animation.player.bending.no_chi",
+				"avatar_state": "controller.animation.player.avatar_state",
+				"sweep.sfx.cancel.controller": "controller.animation.player.cancel_sweep",
+				"sweep.sfx.cancel": "animation.firesweep.cancel.delay",
+				"mastery_controller": "controller.animation.bending_mastered",
+				"health_boost_manager": "controller.animation.player.health_boost",
+				"earth_mastery_ended": "animation.bending.earth.mastery_end",
+				"water_mastery_ended": "animation.bending.water.mastery_end",
+				"air_mastery_ended": "animation.bending.air.mastery_end",
+				"fire_mastery_ended": "animation.bending.fire.mastery_end",
+				"debug.query.variant": "controller.animation.debug.query.variant",
+				"debug.query.mark_variant": "controller.animation.debug.query.mark_variant",
+				"a8eba2ea6af1a276_a_0": "animation.a8eba2ea6af1a276d00d12f1add53452ca76ccfb_0",
+				"373a5d64b741abdc_ac_0": "controller.animation.373a5d64b741abdc007189e260878a6774194a43_0",
+				"8eceae85ecc6badf_a_0": "animation.8eceae85ecc6badf940736a90b45d4a70a189947_0",
+				"8eceae85ecc6badf_ac_0": "controller.animation.8eceae85ecc6badf940736a90b45d4a70a189947_0",
+				"09463a4e6836a24c_a_0": "animation.09463a4e6836a24cbd80838f78f8488ba55cccfc_0",
+				"09463a4e6836a24c_ac_0": "controller.animation.09463a4e6836a24cbd80838f78f8488ba55cccfc_0",
+				"09463a4e6836a24c_ac_1": "controller.animation.09463a4e6836a24cbd80838f78f8488ba55cccfc_1",
+				"44663ba33d275568_ac_0": "controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_0",
+				"44663ba33d275568_ac_1": "controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_1",
+				"44663ba33d275568_ac_2": "controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_2",
+				"44663ba33d275568_ac_3": "controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_3",
+				"44663ba33d275568_ac_4": "controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_4",
+				"44663ba33d275568_ac_5": "controller.animation.44663ba33d2755684f5ce241b2a7732b3c767a71_5"
+			}
+		},
+		"component_groups": {
+			"nom:disable_techniques": {
+				"minecraft:mark_variant": {
+					"value": -1
+				}
+			},
+			"nom:location_discovered": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"display_on_screen_animation": true,
+							"ambient": false,
+							"visible": false,
+							"effect": "bad_omen",
+							"amplifier": 0,
+							"duration": 1
+						}
+					]
+				},
+				"minecraft:timer": {
+					"time": 1,
+					"looping": false,
+					"time_down_event": {
+						"event": "nom:location_discovered_end",
+						"target": "self"
+					}
+				}
+			},
+			"nom:reset_fov": {
+				"minecraft:spell_effects": {
+					"remove_effects": [
+						"slowness"
+					],
+					"add_effects": [
+						{
+							"duration": 999999999,
+							"visible": false,
+							"ambient": false,
+							"amplifier": 0,
+							"effect": "slowness"
+						}
+					]
+				}
+			},
+			"nom:mastered_air": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"duration": 1,
+							"visible": false,
+							"ambient": false,
+							"amplifier": 0,
+							"effect": "haste",
+							"display_on_screen_animation": true
+						}
+					]
+				},
+				"minecraft:skin_id": {
+					"value": 200
+				}
+			},
+			"nom:mastered_earth": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"duration": 1,
+							"visible": false,
+							"ambient": false,
+							"amplifier": 0,
+							"effect": "mining_fatigue",
+							"display_on_screen_animation": true
+						}
+					]
+				},
+				"minecraft:skin_id": {
+					"value": 203
+				}
+			},
+			"nom:mastered_fire": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"duration": 1,
+							"visible": false,
+							"ambient": false,
+							"amplifier": 0,
+							"effect": "fire_resistance",
+							"display_on_screen_animation": true
+						}
+					]
+				},
+				"minecraft:skin_id": {
+					"value": 201
+				}
+			},
+			"nom:mastered_water": {
+				"minecraft:spell_effects": {
+					"add_effects": [
+						{
+							"duration": 1,
+							"visible": false,
+							"ambient": false,
+							"amplifier": 1,
+							"effect": "water_breathing",
+							"display_on_screen_animation": true
+						}
+					]
+				},
+				"minecraft:skin_id": {
+					"value": 202
+				}
+			},
+			"nom:freeze_player": {
+				"minecraft:movement": {
+					"value": 0
+				},
+				"minecraft:spell_effects": {
+					"remove_effects": [
+						"slowness",
+						"jump_boost"
+					],
+					"add_effects": [
+						{
+							"duration": 999999999,
+							"visible": false,
+							"ambient": false,
+							"amplifier": -10,
+							"effect": "jump_boost"
+						},
+						{
+							"duration": 999999999,
+							"visible": false,
+							"ambient": false,
+							"amplifier": 0,
+							"effect": "slowness"
+						}
+					]
+				},
+				"minecraft:on_friendly_anger": {}
+			},
+			"nom:unfreeze_player": {
+				"minecraft:spell_effects": {
+					"remove_effects": [
+						"jump_boost"
+					]
+				}
+			},
+			"nom:teq_cooldown": {
+				"minecraft:is_ignited": {}
+			},
+			"nom:not_enough_chi": {
+				"minecraft:is_saddled": {}
+			},
+			"nom:reset_skin_id": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			},
+			"nom:speed_scooting": {
+				"minecraft:movement": {
+					"value": 2
+				}
+			},
+			"nom:movement": {
+				"minecraft:movement": {
+					"value": 0.1
+				}
+			},
+			"nom:catch_blocks": {
+				"minecraft:is_stunned": {}
+			},
+			"nom:on_start_upgrading": {
+				"minecraft:skin_id": {
+					"value": 2
+				}
+			},
+			"nom:on_water_fetch": {
+				"minecraft:skin_id": {
+					"value": 3
+				}
+			},
+			"nom:is_sheared": {
+				"minecraft:is_sheared": {}
+			},
+			"nom:has_water_charge": {
+				"minecraft:is_tamed": {}
+			},
+			"nom:bending.fire.kick.run": {
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"max_wait_time": 0,
+							"min_wait_time": 0,
+							"num_to_spawn": 1,
+							"single_use": true,
+							"spawn_entity": "nom:fire_kick"
+						}
+					]
+				}
+			},
+			"nom:shoot_water_whip_puddle": {
+				"minecraft:spawn_entity": {
+					"entities": {
+						"max_wait_time": 0,
+						"min_wait_time": 0,
+						"num_to_spawn": 1,
+						"single_use": true,
+						"spawn_event": "nom:should_spawn_puddle",
+						"spawn_entity": "nom:water_whip"
+					}
+				}
+			},
+			"nom:shoot_water_whip": {
+				"minecraft:spawn_entity": {
+					"entities": {
+						"max_wait_time": 0,
+						"min_wait_time": 0,
+						"num_to_spawn": 1,
+						"single_use": true,
+						"spawn_entity": "nom:water_whip"
+					}
+				}
+			},
+			"nom:shoot_jet_stream": {
+				"minecraft:spawn_entity": {
+					"entities": {
+						"max_wait_time": 0,
+						"min_wait_time": 0,
+						"num_to_spawn": 1,
+						"single_use": true,
+						"spawn_entity": "nom:jet_stream_projectile"
+					}
+				}
+			},
+			"nom:shoot_earth_pull_stone_1": {
+				"minecraft:spawn_entity": {
+					"entities": {
+						"max_wait_time": 0,
+						"min_wait_time": 0,
+						"num_to_spawn": 1,
+						"single_use": true,
+						"spawn_entity": "nom:earth_pull_stone",
+						"spawn_event": "nom:as_projectile_1"
+					}
+				}
+			},
+			"nom:shoot_earth_pull_stone_2": {
+				"minecraft:spawn_entity": {
+					"entities": {
+						"max_wait_time": 0,
+						"min_wait_time": 0,
+						"num_to_spawn": 1,
+						"single_use": true,
+						"spawn_entity": "nom:earth_pull_stone",
+						"spawn_event": "nom:as_projectile_2"
+					}
+				}
+			},
+			"nom:shoot_earth_pull_stone_3": {
+				"minecraft:spawn_entity": {
+					"entities": {
+						"max_wait_time": 0,
+						"min_wait_time": 0,
+						"num_to_spawn": 1,
+						"single_use": true,
+						"spawn_entity": "nom:earth_pull_stone",
+						"spawn_event": "nom:as_projectile_3"
+					}
+				}
+			},
+			"nom:shoot_air_blade": {
+				"minecraft:spawn_entity": {
+					"entities": {
+						"max_wait_time": 0,
+						"min_wait_time": 0,
+						"num_to_spawn": 1,
+						"single_use": true,
+						"spawn_entity": "nom:air_blade"
+					}
+				}
+			},
+			"nom:shoot_frost_breath": {
+				"minecraft:spawn_entity": {
+					"entities": {
+						"max_wait_time": 0,
+						"min_wait_time": 0,
+						"num_to_spawn": 1,
+						"single_use": true,
+						"spawn_entity": "nom:frost_breath_projectile"
+					}
+				}
+			},
+			"nom:music_reset": {
+				"minecraft:skin_id": {
+					"value": 99
+				}
+			},
+			"nom:music_encamp": {
+				"minecraft:skin_id": {
+					"value": 100
+				}
+			},
+			"nom:music_duel": {
+				"minecraft:skin_id": {
+					"value": 101
+				}
+			},
+			"nom:music_duel2": {
+				"minecraft:skin_id": {
+					"value": 106
+				}
+			},
+			"nom:music_duel3": {
+				"minecraft:skin_id": {
+					"value": 107
+				}
+			},
+			"nom:music_duel4": {
+				"minecraft:skin_id": {
+					"value": 108
+				}
+			},
+			"nom:music_duel5": {
+				"minecraft:skin_id": {
+					"value": 109
+				}
+			},
+			"nom:music_duel6": {
+				"minecraft:skin_id": {
+					"value": 110
+				}
+			},
+			"nom:music_iroh": {
+				"minecraft:skin_id": {
+					"value": 111
+				}
+			},
+			"nom:music_minigame1": {
+				"minecraft:skin_id": {
+					"value": 102
+				}
+			},
+			"nom:music_minigame2": {
+				"minecraft:skin_id": {
+					"value": 103
+				}
+			},
+			"nom:cutscene_active": {
+				"minecraft:skin_id": {
+					"value": 104
+				}
+			},
+			"nom:cutscene_basingse": {
+				"minecraft:skin_id": {
+					"value": 105
+				}
+			},
+			"nom:visible": {
+				"minecraft:scale": {
+					"value": 1
+				}
+			},
+			"nom:invisible": {
+				"minecraft:scale": {
+					"value": 0
+				}
+			},
+			"nom:avatar_state": {
+				"minecraft:is_illager_captain": {}
+			},
+			"nom:knockback_resistant": {
+				"minecraft:knockback_resistance": {
+					"value": 1
+				}
+			},
+			"nom:normal_knockback": {
+				"minecraft:knockback_resistance": {
+					"value": 0
+				}
+			},
+			"nom:double_jump": {
+				"minecraft:is_stackable": {}
+			},
+			"nom:escaped": {
+				"minecraft:spawn_entity": {
+					"entities": [
+						{
+							"max_wait_time": 0,
+							"min_wait_time": 0,
+							"single_use": true,
+							"num_to_spawn": 1,
+							"spawn_entity": "nom:target_memory"
+						}
+					]
+				}
+			},
+			"nom:logged_in": {
+				"minecraft:skin_id": {
+					"value": -100
+				}
+			},
+			"nom:state_bending_art_earth_0": {
+				"minecraft:mark_variant": {
+					"value": 10
+				}
+			},
+			"nom:state_bending_art_earth_1": {
+				"minecraft:mark_variant": {
+					"value": 11
+				}
+			},
+			"nom:state_bending_art_earth_2": {
+				"minecraft:mark_variant": {
+					"value": 12
+				}
+			},
+			"nom:state_bending_art_earth_3": {
+				"minecraft:mark_variant": {
+					"value": 13
+				}
+			},
+			"nom:state_bending_art_earth_4": {
+				"minecraft:mark_variant": {
+					"value": 14
+				}
+			},
+			"nom:state_bending_art_earth_5": {
+				"minecraft:mark_variant": {
+					"value": 15
+				}
+			},
+			"nom:state_bending_art_water_0": {
+				"minecraft:mark_variant": {
+					"value": 20
+				}
+			},
+			"nom:state_bending_art_water_1": {
+				"minecraft:mark_variant": {
+					"value": 21
+				}
+			},
+			"nom:state_bending_art_water_2": {
+				"minecraft:mark_variant": {
+					"value": 22
+				}
+			},
+			"nom:state_bending_art_water_3": {
+				"minecraft:mark_variant": {
+					"value": 23
+				}
+			},
+			"nom:state_bending_art_water_4": {
+				"minecraft:mark_variant": {
+					"value": 24
+				}
+			},
+			"nom:state_bending_art_water_5": {
+				"minecraft:mark_variant": {
+					"value": 25
+				}
+			},
+			"nom:state_bending_art_water_6": {
+				"minecraft:mark_variant": {
+					"value": 26
+				}
+			},
+			"nom:state_bending_art_air_0": {
+				"minecraft:mark_variant": {
+					"value": 30
+				}
+			},
+			"nom:state_bending_art_air_1": {
+				"minecraft:mark_variant": {
+					"value": 31
+				}
+			},
+			"nom:state_bending_art_air_2": {
+				"minecraft:mark_variant": {
+					"value": 32
+				}
+			},
+			"nom:state_bending_art_air_3": {
+				"minecraft:mark_variant": {
+					"value": 33
+				}
+			},
+			"nom:state_bending_art_air_4": {
+				"minecraft:mark_variant": {
+					"value": 34
+				}
+			},
+			"nom:state_bending_art_air_5": {
+				"minecraft:mark_variant": {
+					"value": 35
+				}
+			},
+			"nom:state_bending_art_fire_0": {
+				"minecraft:mark_variant": {
+					"value": 40
+				}
+			},
+			"nom:state_bending_art_fire_1": {
+				"minecraft:mark_variant": {
+					"value": 41
+				}
+			},
+			"nom:state_bending_art_fire_2": {
+				"minecraft:mark_variant": {
+					"value": 42
+				}
+			},
+			"nom:state_bending_art_fire_3": {
+				"minecraft:mark_variant": {
+					"value": 43
+				}
+			},
+			"nom:state_bending_art_fire_4": {
+				"minecraft:mark_variant": {
+					"value": 44
+				}
+			},
+			"nom:state_bending_art_fire_5": {
+				"minecraft:mark_variant": {
+					"value": 45
+				}
+			},
+			"nom:state_bending_art_special_healing_0": {
+				"minecraft:mark_variant": {
+					"value": 50
+				}
+			},
+			"nom:state_bending_art_special_healing_1": {
+				"minecraft:mark_variant": {
+					"value": 51
+				}
+			},
+			"nom:state_bending_teq_-50": {
+				"minecraft:variant": {
+					"value": -50
+				}
+			},
+			"nom:state_bending_teq_-49": {
+				"minecraft:variant": {
+					"value": -49
+				}
+			},
+			"nom:state_bending_teq_-48": {
+				"minecraft:variant": {
+					"value": -48
+				}
+			},
+			"nom:state_bending_teq_-47": {
+				"minecraft:variant": {
+					"value": -47
+				}
+			},
+			"nom:state_bending_teq_-46": {
+				"minecraft:variant": {
+					"value": -46
+				}
+			},
+			"nom:state_bending_teq_-45": {
+				"minecraft:variant": {
+					"value": -45
+				}
+			},
+			"nom:state_bending_teq_-44": {
+				"minecraft:variant": {
+					"value": -44
+				}
+			},
+			"nom:state_bending_teq_-43": {
+				"minecraft:variant": {
+					"value": -43
+				}
+			},
+			"nom:state_bending_teq_-42": {
+				"minecraft:variant": {
+					"value": -42
+				}
+			},
+			"nom:state_bending_teq_-41": {
+				"minecraft:variant": {
+					"value": -41
+				}
+			},
+			"nom:state_bending_teq_-40": {
+				"minecraft:variant": {
+					"value": -40
+				}
+			},
+			"nom:state_bending_teq_-39": {
+				"minecraft:variant": {
+					"value": -39
+				}
+			},
+			"nom:state_bending_teq_-38": {
+				"minecraft:variant": {
+					"value": -38
+				}
+			},
+			"nom:state_bending_teq_-37": {
+				"minecraft:variant": {
+					"value": -37
+				}
+			},
+			"nom:state_bending_teq_-36": {
+				"minecraft:variant": {
+					"value": -36
+				}
+			},
+			"nom:state_bending_teq_-35": {
+				"minecraft:variant": {
+					"value": -35
+				}
+			},
+			"nom:state_bending_teq_-34": {
+				"minecraft:variant": {
+					"value": -34
+				}
+			},
+			"nom:state_bending_teq_-33": {
+				"minecraft:variant": {
+					"value": -33
+				}
+			},
+			"nom:state_bending_teq_-32": {
+				"minecraft:variant": {
+					"value": -32
+				}
+			},
+			"nom:state_bending_teq_-31": {
+				"minecraft:variant": {
+					"value": -31
+				}
+			},
+			"nom:state_bending_teq_-30": {
+				"minecraft:variant": {
+					"value": -30
+				}
+			},
+			"nom:state_bending_teq_-29": {
+				"minecraft:variant": {
+					"value": -29
+				}
+			},
+			"nom:state_bending_teq_-28": {
+				"minecraft:variant": {
+					"value": -28
+				}
+			},
+			"nom:state_bending_teq_-27": {
+				"minecraft:variant": {
+					"value": -27
+				}
+			},
+			"nom:state_bending_teq_-26": {
+				"minecraft:variant": {
+					"value": -26
+				}
+			},
+			"nom:state_bending_teq_-25": {
+				"minecraft:variant": {
+					"value": -25
+				}
+			},
+			"nom:state_bending_teq_-24": {
+				"minecraft:variant": {
+					"value": -24
+				}
+			},
+			"nom:state_bending_teq_-23": {
+				"minecraft:variant": {
+					"value": -23
+				}
+			},
+			"nom:state_bending_teq_-22": {
+				"minecraft:variant": {
+					"value": -22
+				}
+			},
+			"nom:state_bending_teq_-21": {
+				"minecraft:variant": {
+					"value": -21
+				}
+			},
+			"nom:state_bending_teq_-20": {
+				"minecraft:variant": {
+					"value": -20
+				}
+			},
+			"nom:state_bending_teq_-19": {
+				"minecraft:variant": {
+					"value": -19
+				}
+			},
+			"nom:state_bending_teq_-18": {
+				"minecraft:variant": {
+					"value": -18
+				}
+			},
+			"nom:state_bending_teq_-17": {
+				"minecraft:variant": {
+					"value": -17
+				}
+			},
+			"nom:state_bending_teq_-16": {
+				"minecraft:variant": {
+					"value": -16
+				}
+			},
+			"nom:state_bending_teq_-15": {
+				"minecraft:variant": {
+					"value": -15
+				}
+			},
+			"nom:state_bending_teq_-14": {
+				"minecraft:variant": {
+					"value": -14
+				}
+			},
+			"nom:state_bending_teq_-13": {
+				"minecraft:variant": {
+					"value": -13
+				}
+			},
+			"nom:state_bending_teq_-12": {
+				"minecraft:variant": {
+					"value": -12
+				}
+			},
+			"nom:state_bending_teq_-11": {
+				"minecraft:variant": {
+					"value": -11
+				}
+			},
+			"nom:state_bending_teq_-10": {
+				"minecraft:variant": {
+					"value": -10
+				}
+			},
+			"nom:state_bending_teq_-9": {
+				"minecraft:variant": {
+					"value": -9
+				}
+			},
+			"nom:state_bending_teq_-8": {
+				"minecraft:variant": {
+					"value": -8
+				}
+			},
+			"nom:state_bending_teq_-7": {
+				"minecraft:variant": {
+					"value": -7
+				}
+			},
+			"nom:state_bending_teq_-6": {
+				"minecraft:variant": {
+					"value": -6
+				}
+			},
+			"nom:state_bending_teq_-5": {
+				"minecraft:variant": {
+					"value": -5
+				}
+			},
+			"nom:state_bending_teq_-4": {
+				"minecraft:variant": {
+					"value": -4
+				}
+			},
+			"nom:state_bending_teq_-3": {
+				"minecraft:variant": {
+					"value": -3
+				}
+			},
+			"nom:state_bending_teq_-2": {
+				"minecraft:variant": {
+					"value": -2
+				}
+			},
+			"nom:state_bending_teq_-1": {
+				"minecraft:variant": {
+					"value": -1
+				}
+			},
+			"nom:state_bending_teq_0": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"nom:state_bending_teq_1": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"nom:state_bending_teq_2": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"nom:state_bending_teq_3": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			},
+			"nom:state_bending_teq_4": {
+				"minecraft:variant": {
+					"value": 4
+				}
+			},
+			"nom:state_bending_teq_5": {
+				"minecraft:variant": {
+					"value": 5
+				}
+			},
+			"nom:state_bending_teq_6": {
+				"minecraft:variant": {
+					"value": 6
+				}
+			},
+			"nom:state_bending_teq_7": {
+				"minecraft:variant": {
+					"value": 7
+				}
+			},
+			"nom:state_bending_teq_8": {
+				"minecraft:variant": {
+					"value": 8
+				}
+			},
+			"nom:state_bending_teq_9": {
+				"minecraft:variant": {
+					"value": 9
+				}
+			},
+			"nom:state_bending_teq_10": {
+				"minecraft:variant": {
+					"value": 10
+				}
+			},
+			"nom:state_bending_art_reset": {
+				"minecraft:mark_variant": {
+					"value": 0
+				}
+			},
+			"nom:state_bending_teq_reset": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			}
+		},
+		"components": {
+			"minecraft:experience_reward": {
+				"on_death": "math.min(query.player_level*7,100)"
+			},
+			"minecraft:type_family": {
+				"family": [
+					"player",
+					"player_team"
+				]
+			},
+			"minecraft:is_hidden_when_invisible": {},
+			"minecraft:loot": {
+				"table": "loot_tables/empty.json"
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:can_climb": {},
+			"minecraft:hurt_on_condition": {
+				"damage_conditions": [
+					{
+						"filters": {
+							"test": "in_lava",
+							"subject": "self",
+							"operator": "==",
+							"value": true
+						},
+						"cause": "lava",
+						"damage_per_tick": 4
+					}
+				]
+			},
+			"minecraft:attack": {
+				"damage": 1
+			},
+			"minecraft:player.saturation": {
+				"value": 20
+			},
+			"minecraft:player.exhaustion": {
+				"value": 0,
+				"max": 4
+			},
+			"minecraft:player.level": {
+				"value": 0,
+				"max": 24791
+			},
+			"minecraft:player.experience": {
+				"value": 0,
+				"max": 1
+			},
+			"minecraft:breathable": {
+				"total_supply": 15,
+				"suffocate_time": -1,
+				"inhale_time": 3.75,
+				"generates_bubbles": false
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"on_damage": {
+							"filters": [
+								{
+									"test": "has_damage",
+									"value": "fall"
+								}
+							]
+						},
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"any_of": [
+									{
+										"test": "is_family",
+										"value": "player_ability",
+										"subject": "damager"
+									},
+									{
+										"test": "is_family",
+										"value": "player",
+										"subject": "damager"
+									}
+								]
+							}
+						},
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "self",
+										"value": "avatar_state_ready"
+									},
+									{
+										"test": "has_component",
+										"subject": "self",
+										"operator": "!=",
+										"value": "minecraft:is_illager_captain"
+									},
+									{
+										"test": "has_damage",
+										"subject": "self",
+										"value": "fatal"
+									}
+								]
+							},
+							"event": "nom:add_avatar_state"
+						},
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"any_of": [
+											{
+												"all_of": [
+													{
+														"test": "is_mark_variant",
+														"value": 32
+													},
+													{
+														"test": "is_variant",
+														"operator": ">=",
+														"value": 1
+													}
+												]
+											},
+											{
+												"all_of": [
+													{
+														"test": "is_mark_variant",
+														"value": 21
+													},
+													{
+														"test": "is_variant",
+														"operator": ">=",
+														"value": 3
+													}
+												]
+											}
+										]
+									},
+									{
+										"any_of": [
+											{
+												"test": "is_family",
+												"subject": "other",
+												"value": "protection_ability_blockable"
+											},
+											{
+												"test": "is_family",
+												"subject": "damager",
+												"value": "protection_ability_blockable"
+											},
+											{
+												"test": "has_damage",
+												"value": "lava"
+											}
+										]
+									}
+								]
+							}
+						},
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_mark_variant",
+										"value": 34
+									},
+									{
+										"test": "is_variant",
+										"value": 1
+									}
+								]
+							}
+						},
+						"deals_damage": false
+					},
+					{
+						"on_damage": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_mark_variant",
+										"value": 43
+									},
+									{
+										"test": "is_variant",
+										"value": 2
+									}
+								]
+							}
+						},
+						"deals_damage": false
+					},
+					{
+						"cause": "fly_into_wall",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:nameable": {
+				"always_show": true,
+				"allow_name_tag_renaming": false
+			},
+			"minecraft:physics": {},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:insomnia": {
+				"days_until_insomnia": 3
+			},
+			"minecraft:conditional_bandwidth_optimization": {},
+			"minecraft:scaffolding_climber": {},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_tag",
+									"value": "freeze_player"
+								}
+							]
+						},
+						"event": "nom:freeze_player"
+					},
+					{
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_tag",
+									"value": "freeze_player",
+									"operator": "not"
+								},
+								{
+									"test": "has_component",
+									"value": "minecraft:on_friendly_anger"
+								}
+							]
+						},
+						"event": "nom:unfreeze_player"
+					}
+				]
+			}
+		},
+		"events": {
+			"nom:disable_techniques": {
+				"add": {
+					"component_groups": [
+						"nom:disable_techniques"
+					]
+				}
+			},
+			"nom:enable_techniques": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_reset"
+					]
+				}
+			},
+			"nom:remove_thrown_blocks_hit": {
+				"remove": {
+					"component_groups": [
+						"nom:thrown_blocks_hit"
+					]
+				}
+			},
+			"nom:thrown_blocks_hit": {
+				"add": {
+					"component_groups": [
+						"nom:thrown_blocks_hit"
+					]
+				}
+			},
+			"minecraft:trigger_raid": {
+				"add": {
+					"component_groups": [
+						"minecraft:raid_trigger"
+					]
+				}
+			},
+			"minecraft:remove_raid_trigger": {
+				"remove": {
+					"component_groups": [
+						"minecraft:raid_trigger"
+					]
+				}
+			},
+			"nom:remove_catch_blocks": {
+				"remove": {
+					"component_groups": [
+						"nom:catch_blocks"
+					]
+				}
+			},
+			"nom:catch_blocks": {
+				"add": {
+					"component_groups": [
+						"nom:catch_blocks"
+					]
+				}
+			},
+			"nom:speed_scooting": {
+				"add": {
+					"component_groups": [
+						"nom:speed_scooting"
+					]
+				}
+			},
+			"nom:on_start_upgrading": {
+				"add": {
+					"component_groups": [
+						"nom:on_start_upgrading"
+					]
+				}
+			},
+			"nom:reset_skin_id": {
+				"add": {
+					"component_groups": [
+						"nom:reset_skin_id"
+					]
+				}
+			},
+			"nom:add_teq_cooldown": {
+				"add": {
+					"component_groups": [
+						"nom:teq_cooldown"
+					]
+				}
+			},
+			"nom:remove_teq_cooldown": {
+				"remove": {
+					"component_groups": [
+						"nom:teq_cooldown"
+					]
+				}
+			},
+			"nom:add_not_enough_chi": {
+				"add": {
+					"component_groups": [
+						"nom:not_enough_chi"
+					]
+				}
+			},
+			"nom:remove_not_enough_chi": {
+				"remove": {
+					"component_groups": [
+						"nom:not_enough_chi"
+					]
+				}
+			},
+			"nom:add_bending.fire.kick.run": {
+				"add": {
+					"component_groups": [
+						"nom:bending.fire.kick.run"
+					]
+				}
+			},
+			"nom:remove_bending.fire.kick.run": {
+				"remove": {
+					"component_groups": [
+						"nom:bending.fire.kick.run"
+					]
+				}
+			},
+			"nom:add_is_sheared": {
+				"add": {
+					"component_groups": [
+						"nom:is_sheared"
+					]
+				}
+			},
+			"nom:remove_is_sheared": {
+				"remove": {
+					"component_groups": [
+						"nom:is_sheared"
+					]
+				}
+			},
+			"nom:add_has_water_charge": {
+				"add": {
+					"component_groups": [
+						"nom:has_water_charge"
+					]
+				}
+			},
+			"nom:remove_has_water_charge": {
+				"remove": {
+					"component_groups": [
+						"nom:has_water_charge"
+					]
+				}
+			},
+			"nom:shoot_water_whip_puddle": {
+				"add": {
+					"component_groups": [
+						"nom:shoot_water_whip_puddle"
+					]
+				}
+			},
+			"nom:shoot_water_whip": {
+				"add": {
+					"component_groups": [
+						"nom:shoot_water_whip"
+					]
+				}
+			},
+			"nom:shoot_earth_pull_stone_1": {
+				"add": {
+					"component_groups": [
+						"nom:shoot_earth_pull_stone_1"
+					]
+				}
+			},
+			"nom:shoot_earth_pull_stone_2": {
+				"add": {
+					"component_groups": [
+						"nom:shoot_earth_pull_stone_2"
+					]
+				}
+			},
+			"nom:shoot_earth_pull_stone_3": {
+				"add": {
+					"component_groups": [
+						"nom:shoot_earth_pull_stone_3"
+					]
+				}
+			},
+			"nom:shoot_air_blade": {
+				"add": {
+					"component_groups": [
+						"nom:shoot_air_blade"
+					]
+				}
+			},
+			"nom:shoot_jet_stream": {
+				"add": {
+					"component_groups": [
+						"nom:shoot_jet_stream"
+					]
+				}
+			},
+			"nom:shoot_frost_breath": {
+				"add": {
+					"component_groups": [
+						"nom:shoot_frost_breath"
+					]
+				}
+			},
+			"nom:freeze_player": {
+				"add": {
+					"component_groups": [
+						"nom:freeze_player"
+					]
+				}
+			},
+			"nom:unfreeze_player": {
+				"sequence": [
+					{
+						"remove": {
+							"component_groups": [
+								"nom:freeze_player"
+							]
+						},
+						"add": {
+							"component_groups": [
+								"nom:unfreeze_player"
+							]
+						},
+						"filters": {
+							"test": "has_component",
+							"value": "minecraft:on_friendly_anger"
+						}
+					}
+				]
+			},
+			"nom:to_invisible": {
+				"add": {
+					"component_groups": [
+						"nom:invisible"
+					]
+				}
+			},
+			"nom:to_visible": {
+				"add": {
+					"component_groups": [
+						"nom:visible"
+					]
+				}
+			},
+			"nom:add_avatar_state": {
+				"add": {
+					"component_groups": [
+						"nom:avatar_state",
+						"nom:knockback_resistant"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"nom:normal_knockback"
+					]
+				}
+			},
+			"nom:remove_avatar_state": {
+				"remove": {
+					"component_groups": [
+						"nom:avatar_state",
+						"nom:knockback_resistant"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"nom:normal_knockback"
+					]
+				}
+			},
+			"nom:music_duel": {
+				"add": {
+					"component_groups": [
+						"nom:music_duel"
+					]
+				}
+			},
+			"nom:music_duel2": {
+				"add": {
+					"component_groups": [
+						"nom:music_duel2"
+					]
+				}
+			},
+			"nom:music_duel3": {
+				"add": {
+					"component_groups": [
+						"nom:music_duel3"
+					]
+				}
+			},
+			"nom:music_duel4": {
+				"add": {
+					"component_groups": [
+						"nom:music_duel4"
+					]
+				}
+			},
+			"nom:music_duel5": {
+				"add": {
+					"component_groups": [
+						"nom:music_duel5"
+					]
+				}
+			},
+			"nom:music_duel6": {
+				"add": {
+					"component_groups": [
+						"nom:music_duel6"
+					]
+				}
+			},
+			"nom:music_iroh": {
+				"add": {
+					"component_groups": [
+						"nom:music_iroh"
+					]
+				}
+			},
+			"nom:music_reset": {
+				"add": {
+					"component_groups": [
+						"nom:music_reset"
+					]
+				}
+			},
+			"nom:cutscene_active": {
+				"add": {
+					"component_groups": [
+						"nom:cutscene_active"
+					]
+				}
+			},
+			"nom:cutscene_basingse": {
+				"add": {
+					"component_groups": [
+						"nom:cutscene_basingse"
+					]
+				}
+			},
+			"nom:music_encampment": {
+				"add": {
+					"component_groups": [
+						"nom:music_encamp"
+					]
+				}
+			},
+			"nom:music_pre_stop": {
+				"add": {
+					"component_groups": [
+						"nom:music_minigame1"
+					]
+				}
+			},
+			"nom:double_jump": {
+				"add": {
+					"component_groups": [
+						"nom:double_jump"
+					]
+				}
+			},
+			"nom:double_jump_end": {
+				"remove": {
+					"component_groups": [
+						"nom:double_jump"
+					]
+				}
+			},
+			"nom:mastered_air": {
+				"add": {
+					"component_groups": [
+						"nom:mastered_air"
+					]
+				}
+			},
+			"nom:mastered_earth": {
+				"add": {
+					"component_groups": [
+						"nom:mastered_earth"
+					]
+				}
+			},
+			"nom:mastered_fire": {
+				"add": {
+					"component_groups": [
+						"nom:mastered_fire"
+					]
+				}
+			},
+			"nom:mastered_water": {
+				"add": {
+					"component_groups": [
+						"nom:mastered_water"
+					]
+				}
+			},
+			"nom:mastered_earth_end": {
+				"remove": {
+					"component_groups": [
+						"nom:mastered_earth"
+					]
+				}
+			},
+			"nom:mastered_air_end": {
+				"remove": {
+					"component_groups": [
+						"nom:mastered_air"
+					]
+				}
+			},
+			"nom:mastered_water_end": {
+				"remove": {
+					"component_groups": [
+						"nom:mastered_water"
+					]
+				}
+			},
+			"nom:mastered_fire_end": {
+				"remove": {
+					"component_groups": [
+						"nom:mastered_fire"
+					]
+				}
+			},
+			"nom:location_discovered": {
+				"add": {
+					"component_groups": [
+						"nom:location_discovered"
+					]
+				}
+			},
+			"nom:location_discovered_end": {
+				"remove": {
+					"component_groups": [
+						"nom:location_discovered"
+					]
+				}
+			},
+			"nom:on_escape": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"nom:escaped"
+							]
+						}
+					}
+				]
+			},
+			"nom:logged_in": {
+				"add": {
+					"component_groups": [
+						"nom:logged_in"
+					]
+				}
+			},
+			"nom:state_bending_art_earth_0": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_earth_0"
+					]
+				}
+			},
+			"nom:state_bending_art_earth_1": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_earth_1"
+					]
+				}
+			},
+			"nom:state_bending_art_earth_2": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_earth_2"
+					]
+				}
+			},
+			"nom:state_bending_art_earth_3": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_earth_3"
+					]
+				}
+			},
+			"nom:state_bending_art_earth_4": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_earth_4"
+					]
+				}
+			},
+			"nom:state_bending_art_earth_5": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_earth_5"
+					]
+				}
+			},
+			"nom:state_bending_art_water_0": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_water_0"
+					]
+				}
+			},
+			"nom:state_bending_art_water_1": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_water_1"
+					]
+				}
+			},
+			"nom:state_bending_art_water_2": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_water_2"
+					]
+				}
+			},
+			"nom:state_bending_art_water_3": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_water_3"
+					]
+				}
+			},
+			"nom:state_bending_art_water_4": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_water_4"
+					]
+				}
+			},
+			"nom:state_bending_art_water_5": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_water_5"
+					]
+				}
+			},
+			"nom:state_bending_art_water_6": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_water_6"
+					]
+				}
+			},
+			"nom:state_bending_art_air_0": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_air_0"
+					]
+				}
+			},
+			"nom:state_bending_art_air_1": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_air_1"
+					]
+				}
+			},
+			"nom:state_bending_art_air_2": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_air_2"
+					]
+				}
+			},
+			"nom:state_bending_art_air_3": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_air_3"
+					]
+				}
+			},
+			"nom:state_bending_art_air_4": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_air_4"
+					]
+				}
+			},
+			"nom:state_bending_art_air_5": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_air_5"
+					]
+				}
+			},
+			"nom:state_bending_art_fire_0": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_fire_0"
+					]
+				}
+			},
+			"nom:state_bending_art_fire_1": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_fire_1"
+					]
+				}
+			},
+			"nom:state_bending_art_fire_2": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_fire_2"
+					]
+				}
+			},
+			"nom:state_bending_art_fire_3": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_fire_3"
+					]
+				}
+			},
+			"nom:state_bending_art_fire_4": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_fire_4"
+					]
+				}
+			},
+			"nom:state_bending_art_fire_5": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_fire_5"
+					]
+				}
+			},
+			"nom:state_bending_art_special_healing_0": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_special_healing_0"
+					]
+				}
+			},
+			"nom:state_bending_art_special_healing_1": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_art_special_healing_1"
+					]
+				}
+			},
+			"nom:state_bending_teq_-50": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-50"
+					]
+				}
+			},
+			"nom:state_bending_teq_-49": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-49"
+					]
+				}
+			},
+			"nom:state_bending_teq_-48": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-48"
+					]
+				}
+			},
+			"nom:state_bending_teq_-47": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-47"
+					]
+				}
+			},
+			"nom:state_bending_teq_-46": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-46"
+					]
+				}
+			},
+			"nom:state_bending_teq_-45": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-45"
+					]
+				}
+			},
+			"nom:state_bending_teq_-44": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-44"
+					]
+				}
+			},
+			"nom:state_bending_teq_-43": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-43"
+					]
+				}
+			},
+			"nom:state_bending_teq_-42": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-42"
+					]
+				}
+			},
+			"nom:state_bending_teq_-41": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-41"
+					]
+				}
+			},
+			"nom:state_bending_teq_-40": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-40"
+					]
+				}
+			},
+			"nom:state_bending_teq_-39": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-39"
+					]
+				}
+			},
+			"nom:state_bending_teq_-38": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-38"
+					]
+				}
+			},
+			"nom:state_bending_teq_-37": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-37"
+					]
+				}
+			},
+			"nom:state_bending_teq_-36": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-36"
+					]
+				}
+			},
+			"nom:state_bending_teq_-35": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-35"
+					]
+				}
+			},
+			"nom:state_bending_teq_-34": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-34"
+					]
+				}
+			},
+			"nom:state_bending_teq_-33": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-33"
+					]
+				}
+			},
+			"nom:state_bending_teq_-32": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-32"
+					]
+				}
+			},
+			"nom:state_bending_teq_-31": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-31"
+					]
+				}
+			},
+			"nom:state_bending_teq_-30": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-30"
+					]
+				}
+			},
+			"nom:state_bending_teq_-29": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-29"
+					]
+				}
+			},
+			"nom:state_bending_teq_-28": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-28"
+					]
+				}
+			},
+			"nom:state_bending_teq_-27": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-27"
+					]
+				}
+			},
+			"nom:state_bending_teq_-26": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-26"
+					]
+				}
+			},
+			"nom:state_bending_teq_-25": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-25"
+					]
+				}
+			},
+			"nom:state_bending_teq_-24": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-24"
+					]
+				}
+			},
+			"nom:state_bending_teq_-23": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-23"
+					]
+				}
+			},
+			"nom:state_bending_teq_-22": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-22"
+					]
+				}
+			},
+			"nom:state_bending_teq_-21": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-21"
+					]
+				}
+			},
+			"nom:state_bending_teq_-20": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-20"
+					]
+				}
+			},
+			"nom:state_bending_teq_-19": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-19"
+					]
+				}
+			},
+			"nom:state_bending_teq_-18": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-18"
+					]
+				}
+			},
+			"nom:state_bending_teq_-17": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-17"
+					]
+				}
+			},
+			"nom:state_bending_teq_-16": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-16"
+					]
+				}
+			},
+			"nom:state_bending_teq_-15": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-15"
+					]
+				}
+			},
+			"nom:state_bending_teq_-14": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-14"
+					]
+				}
+			},
+			"nom:state_bending_teq_-13": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-13"
+					]
+				}
+			},
+			"nom:state_bending_teq_-12": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-12"
+					]
+				}
+			},
+			"nom:state_bending_teq_-11": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-11"
+					]
+				}
+			},
+			"nom:state_bending_teq_-10": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-10"
+					]
+				}
+			},
+			"nom:state_bending_teq_-9": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-9"
+					]
+				}
+			},
+			"nom:state_bending_teq_-8": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-8"
+					]
+				}
+			},
+			"nom:state_bending_teq_-7": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-7"
+					]
+				}
+			},
+			"nom:state_bending_teq_-6": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-6"
+					]
+				}
+			},
+			"nom:state_bending_teq_-5": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-5"
+					]
+				}
+			},
+			"nom:state_bending_teq_-4": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-4"
+					]
+				}
+			},
+			"nom:state_bending_teq_-3": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-3"
+					]
+				}
+			},
+			"nom:state_bending_teq_-2": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-2"
+					]
+				}
+			},
+			"nom:state_bending_teq_-1": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_-1"
+					]
+				}
+			},
+			"nom:state_bending_teq_0": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_0"
+					]
+				}
+			},
+			"nom:state_bending_teq_1": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_1"
+					]
+				}
+			},
+			"nom:state_bending_teq_2": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_2"
+					]
+				}
+			},
+			"nom:state_bending_teq_3": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_3"
+					]
+				}
+			},
+			"nom:state_bending_teq_4": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_4"
+					]
+				}
+			},
+			"nom:state_bending_teq_5": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_5"
+					]
+				}
+			},
+			"nom:state_bending_teq_6": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_6"
+					]
+				}
+			},
+			"nom:state_bending_teq_7": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_7"
+					]
+				}
+			},
+			"nom:state_bending_teq_8": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_8"
+					]
+				}
+			},
+			"nom:state_bending_teq_9": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_9"
+					]
+				}
+			},
+			"nom:state_bending_teq_10": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_10"
+					]
+				}
+			},
+			"nom:state_bending_art_reset": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "is_mark_variant",
+							"value": -1,
+							"operator": "not"
+						},
+						"add": {
+							"component_groups": [
+								"nom:state_bending_art_reset"
+							]
+						}
+					}
+				]
+			},
+			"nom:state_bending_teq_reset": {
+				"add": {
+					"component_groups": [
+						"nom:state_bending_teq_reset"
+					]
+				}
+			}
+		}
+	}
+}

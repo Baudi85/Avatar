@@ -1,0 +1,204 @@
+{
+    "root_panel": {
+        "modifications": [
+            {
+                "control_name": "hud_actionbar_text_area",
+                "operation": "replace",
+                "value": { "teq_rend@teq_renderer": {}}
+            },
+            {
+                "control_name": "mob_effects_renderer", "operation": "remove"
+            }
+        ]
+    },
+    "hud_title_text": { "modifications": [{ "control_name": "subtitle_frame", "operation": "remove" }]},
+    "teq_renderer": {
+        "type": "panel",
+        "size": [ "100%c", "100%c" ],
+        "offset": [ 0, "50%-75px" ],
+        "controls": [{"main@gm1_subtitle_teq.main":{}}]
+    },
+    "chi_renderer": {
+        "type": "panel",
+        "size": [ 91, 8 ],
+        "factory": {
+            "name": "hud_actionbar_text_factory",
+            "control_ids": { "hud_actionbar_text": "hud_actionbar_text@gm1_actionbar_chi.contents" }
+        }
+    },
+    "centered_gui_elements_at_bottom_middle": {
+        "modifications": [
+            {
+                "control_name": "hunger_rend",
+                "operation": "insert_before",
+                "value": [
+                    {
+                        "chi_rend@chi_renderer": {
+                            "offset": [ "191px - 100%x", -33 ],
+                            "anchor_from": "bottom_left",
+                            "anchor_to": "bottom_left"
+                        }
+                    }
+                ]
+            },
+            { "control_name": "hunger_rend", "operation": "remove" }
+        ]
+    },
+    "not_centered_gui_elements": {
+        "modifications": [
+            {
+                "control_name": "hunger_rend",
+                "operation": "insert_before",
+                "value": [
+                    { "chi_rend@chi_renderer": { "offset": [ -2, 2 ], "anchor_from": "top_right", "anchor_to": "top_right" }}
+                ]
+            },
+            { "control_name": "hunger_rend", "operation": "remove" }
+        ]
+    },
+    "hud_title_text/title_frame/title": {
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "/title",
+                "source_property_name": "#value",
+                "target_property_name": "#text"
+            }
+        ]
+    },
+    "hud_content": {
+        "controls": [
+            {
+                "root_panel_parent": {
+                    "type": "panel",
+                    "controls": [{ "root_panel@hud.root_panel": {}}],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "/showhud",
+                            "source_property_name": "#value",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            },
+            { "custom_title@custom_title": {}},
+            { "camera_renderer@camera_renderer": {}}
+        ]
+    },
+    "custom_title": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "commands": {
+                    "type": "panel",
+                    "controls": [
+                        { "/title@gm1_title_utils.default": {}},
+                        { "/showhud@gm1_title_utils.command": { "$command": "/showhud ", "$command_max": "/showhud 􀐏" }},
+                        { "/fade@gm1_title_utils.command": { "$command": "/fade ", "$command_max": "/fade 􀐏" }},
+                        { "/warning@gm1_title_utils.command": { "$command": "/warning ", "$command_max": "/warning 􀐏" }},
+                        { "/bars@gm1_title_utils.command": { "$command": "/bars ", "$command_max": "/bars 􀐏" }},
+                        {
+                            "/abpoints@gm1_title_utils.command": {
+                                "$command": "/abpoints ",
+                                "$command_max": "/abpoints 􀐏"
+                            }
+                        },
+                        { "/levelup@gm1_title_utils.command": { "$command": "/levelup ", "$command_max": "/levelup 􀐏" }},
+                        {
+                            "/bossbar_0_value@gm1_title_utils.command": {
+                                "$command": "/bossbar 0 value ",
+                                "$command_max": "/bossbar 0 value 􀐏"
+                            }
+                        },
+                        {
+                            "/bossbar_1_value@gm1_title_utils.command": {
+                                "$command": "/bossbar 1 value ",
+                                "$command_max": "/bossbar 1 value 􀐏"
+                            }
+                        },
+                        {
+                            "/bossbar_2_value@gm1_title_utils.command": {
+                                "$command": "/bossbar 2 value ",
+                                "$command_max": "/bossbar 2 value 􀐏"
+                            }
+                        },
+                        {
+                            "/bossbar_0_name@gm1_title_utils.command": {
+                                "$command": "/bossbar 0 name ",
+                                "$command_max": "/bossbar 0 name 􀐏"
+                            }
+                        },
+                        {
+                            "/bossbar_1_name@gm1_title_utils.command": {
+                                "$command": "/bossbar 1 name ",
+                                "$command_max": "/bossbar 1 name 􀐏"
+                            }
+                        },
+                        {
+                            "/bossbar_2_name@gm1_title_utils.command": {
+                                "$command": "/bossbar 2 name ",
+                                "$command_max": "/bossbar 2 name 􀐏"
+                            }
+                        },
+                        {
+                            "/encampbar_value@gm1_title_utils.command": {
+                                "$command": "/encampbar value",
+                                "$command_max": "/encampbar value 􀐏"
+                            }
+                        },
+                        {
+                            "/encampbar_id@gm1_title_utils.command": {
+                                "$command": "/encampbar id",
+                                "$command_max": "/encampbar id 􀐏"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "content": {
+                    "type": "panel",
+                    "size": [ "100%", "100%" ],
+                    "controls": [
+                        { "fade@gm1_title_fade.main": {}},
+                        { "abpoints@gm1_title_abpoints.main": {}},
+                        { "bars@gm1_title_bars.main": {}}
+                    ]
+                }
+            },
+            {
+                "hud_content": {
+                    "type": "panel",
+                    "size": [ "100%", "100%" ],
+                    "controls": [
+                        { "boss@gm1_title_boss.main": {}},
+                        { "encampbar@gm1_title_encampbar.main": {}},
+                        { "levelup@gm1_title_levelup.main": {}},
+                        { "warning@gm1_title_warning.main": {}}
+                    ],
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "/showhud",
+                            "source_property_name": "#value",
+                            "target_property_name": "#visible"
+                        }
+                    ]
+                }
+            }
+        ]
+    },
+    "exp_progress_bar_and_hotbar_pocket": { "modifications": [{ "control_name": "item_text", "operation": "remove" }]},
+    "exp_progress_bar_and_hotbar": {
+        "modifications": [
+            { "control_name": "item_text_factory", "operation": "remove" },
+            {
+                "control_name": "resizing_xp_bar_with_hotbar",
+                "operation": "replace",
+                "value": { "resizing_xp_bar_with_hotbar@gm1_exp_bar.custom_expbar": {}}
+            }
+        ]
+    }
+}

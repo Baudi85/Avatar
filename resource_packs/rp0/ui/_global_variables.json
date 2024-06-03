@@ -1,0 +1,19 @@
+{
+  //////// Color format colors ////////
+  "$0_color_format": [ 0.0, 0.0, 0.0 ], // Black
+  "$1_color_format": [ 0.0, 0.0, 0.667 ], // Dark Blue
+  "$2_color_format": [ 0.64, 1.0, 0.33 ], // Dark Green - Earthbending
+  "$3_color_format": [ 0, 0.78, 1.0 ], // Dark Aqua - Waterbending
+  "$4_color_format": [ 0.667, 0.0, 0.0 ], // Dark Red
+  "$5_color_format": [ 0.667, 0.0, 0.667 ], // Dark Purple
+  "$6_color_format": [ 1.0, 0.47, 0.0 ], // Gold - Firebending
+  "$7_color_format": [ 0.667, 0.667, 0.667 ], // Gray
+  "$8_color_format": [ 0.333, 0.333, 0.333 ], // Dark Gray
+  "$9_color_format": [ 0.333, 0.333, 1.0 ], // Blue
+  "$a_color_format": [ 0.333, 1.0, 0.333 ], // Green
+  "$b_color_format": [ 0.29, 0.95, 0.88 ], // Aqua - Airbending
+  "$c_color_format": [ 1.0, 0.333, 0.333 ], // Red
+  "$d_color_format": [ 1.0, 0.333, 1.0 ], // Light Purple
+  "$e_color_format": [ 1.0, 0.667, 0.0 ], // Yellow - Gold
+  "$f_color_format": [ 1.0, 1.0, 1.0 ] // White
+}

@@ -1,0 +1,12 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.9e7cf6b6bfe6ce4612d4fa20e738ee866d0156e1_0": {
+			"states": {
+				"default": {
+					"on_entry": []
+				}
+			}
+		}
+	}
+}

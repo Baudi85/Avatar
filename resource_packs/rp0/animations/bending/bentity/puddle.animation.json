@@ -1,0 +1,158 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.puddle.snap_to_grid": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"position": [
+						"-1*v.snap_x",
+						0,
+						"v.snap_z"
+					],
+					"scale": 1
+				}
+			}
+		},
+		"animation.puddle.grow": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.9,
+			"bones": {
+				"puddle_east": {
+					"scale": {
+						"0.4": [
+							0,
+							0,
+							0
+						],
+						"0.7": [
+							1.1,
+							1.1,
+							1.1
+						],
+						"0.8": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				"puddle_south": {
+					"scale": {
+						"0.5": [
+							0,
+							0,
+							0
+						],
+						"0.8": [
+							1.1,
+							1.1,
+							1.1
+						],
+						"0.9": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				"puddle_north": {
+					"scale": {
+						"0.5": [
+							0,
+							0,
+							0
+						],
+						"0.8": [
+							1.1,
+							1.1,
+							1.1
+						],
+						"0.9": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				"puddle_west": {
+					"scale": {
+						"0.4": [
+							0,
+							0,
+							0
+						],
+						"0.7": [
+							1.1,
+							1.1,
+							1.1
+						],
+						"0.8": [
+							1,
+							1,
+							1
+						]
+					}
+				},
+				"puddle_core": {
+					"scale": {
+						"0.2": [
+							0,
+							0,
+							0
+						],
+						"0.5": [
+							1.1,
+							1.1,
+							1.1
+						],
+						"0.6": [
+							1,
+							1,
+							1
+						]
+					}
+				}
+			}
+		},
+		"animation.puddle.bucket_source_1": {
+			"animation_length": 1,
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "bucket_source",
+					"locator": "effect_locator"
+				}
+			}
+		},
+		"animation.puddle.bucket_source_2": {
+			"animation_length": 1,
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "bucket_source",
+					"locator": "effect_locator_1"
+				}
+			}
+		},
+		"animation.puddle.trough_source": {
+			"animation_length": 1,
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "trough_source",
+					"locator": "effect_locator_2"
+				}
+			}
+		},
+		"animation.puddle.source": {
+			"animation_length": 1,
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "source"
+				}
+			}
+		}
+	}
+}

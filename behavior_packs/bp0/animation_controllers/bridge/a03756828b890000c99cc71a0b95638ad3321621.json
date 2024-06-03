@@ -1,0 +1,37 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.a03756828b890000c99cc71a0b95638ad3321621_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"spawning": "q.is_sheared"
+						}
+					],
+					"on_entry": [
+						"/event entity @s[tag=!spawned] gm1:add_custom_spawn"
+					]
+				},
+				"spawning": {
+					"transitions": [
+						{
+							"spawned": "q.life_time>=v.runtime_custom_spawn+1.25"
+						}
+					],
+					"on_entry": [
+						"/effect @s slowness 100 10 true",
+						"v.runtime_custom_spawn=q.life_time;"
+					]
+				},
+				"spawned": {
+					"on_entry": [
+						"/tag @s add spawned",
+						"/effect @s slowness 0 0",
+						"@s gm1:remove_custom_spawn"
+					]
+				}
+			}
+		}
+	}
+}

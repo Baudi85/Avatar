@@ -1,0 +1,205 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:npc_skybison",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"cf2f6b3e071ffcb1_ac_0": "controller.animation.cf2f6b3e071ffcb134fd04a421b0b517e6cc7dea_0"
+			},
+			"scripts": {
+				"animate": [
+					"cf2f6b3e071ffcb1_ac_0"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:collision": {
+				"minecraft:collision_box": {
+					"width": 4,
+					"height": 4
+				}
+			},
+			"nom:oaklogue.frozen": {
+				"minecraft:behavior.nap": {
+					"priority": -99,
+					"cooldown_max": 0,
+					"cooldown_min": 0,
+					"mob_detect_dist": 0,
+					"mob_detect_height": 0
+				}
+			},
+			"nom:oaklogue.on_interact": {
+				"minecraft:is_ignited": {}
+			},
+			"nom:oaklogue.on_force": {
+				"minecraft:is_saddled": {}
+			},
+			"nom:npc.hide": {
+				"minecraft:scale": {
+					"value": 0
+				}
+			},
+			"gm1:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:is_saddled": {},
+			"minecraft:collision_box": {
+				"width": 1,
+				"height": 2
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"event": "nom:oaklogue.on_interact"
+						},
+						"interact_text": "action.interact.npc"
+					},
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"value": "nom:delete_tool",
+										"domain": "hand",
+										"subject": "other"
+									},
+									{
+										"test": "has_ability",
+										"value": "instabuild",
+										"subject": "other"
+									}
+								]
+							},
+							"event": "gm1:despawn"
+						}
+					}
+				]
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:type_family": {
+				"family": [
+					"npc"
+				]
+			},
+			"minecraft:physics": {
+				"has_gravity": false,
+				"has_collision": false
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"test": "has_tag",
+					"value": "despawn"
+				}
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:skin_id": {
+				"value": 0
+			}
+		},
+		"events": {
+			"nom:collision": {
+				"add": {
+					"component_groups": [
+						"nom:collision"
+					]
+				}
+			},
+			"nom:oaklogue.freeze": {
+				"add": {
+					"component_groups": [
+						"nom:oaklogue.frozen"
+					]
+				}
+			},
+			"nom:oaklogue.unfreeze": {
+				"remove": {
+					"component_groups": [
+						"nom:oaklogue.frozen"
+					]
+				}
+			},
+			"nom:oaklogue.on_interact": {
+				"add": {
+					"component_groups": [
+						"nom:oaklogue.on_interact"
+					]
+				}
+			},
+			"nom:oaklogue.on_force": {
+				"add": {
+					"component_groups": [
+						"nom:oaklogue.on_force"
+					]
+				}
+			},
+			"nom:oaklogue.on_interact_end": {
+				"remove": {
+					"component_groups": [
+						"nom:oaklogue.on_interact",
+						"nom:oaklogue.on_force"
+					]
+				}
+			},
+			"nom:npc.hide": {
+				"add": {
+					"component_groups": [
+						"nom:npc.hide"
+					]
+				}
+			},
+			"nom:npc.show": {
+				"remove": {
+					"component_groups": [
+						"nom:npc.hide"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"gm1:skin_id_0"
+					]
+				}
+			},
+			"gm1:despawn": {
+				"add": {
+					"component_groups": [
+						"gm1:despawn"
+					]
+				}
+			}
+		}
+	}
+}

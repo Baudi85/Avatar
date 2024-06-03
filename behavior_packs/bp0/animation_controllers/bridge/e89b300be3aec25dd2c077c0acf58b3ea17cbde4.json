@@ -1,0 +1,63 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.e89b300be3aec25dd2c077c0acf58b3ea17cbde4_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"has_rider": "q.is_ignited"
+						}
+					],
+					"on_entry": [
+						"@s nom:on_interact_end"
+					]
+				},
+				"has_rider": {
+					"transitions": [
+						{
+							"default": "!q.has_rider"
+						}
+					],
+					"on_entry": [
+						"/function unlock/on_meditate"
+					],
+					"on_exit": [
+						"/function unlock/on_meditate_end",
+						"@s nom:on_interact_end"
+					]
+				}
+			}
+		},
+		"controller.animation.e89b300be3aec25dd2c077c0acf58b3ea17cbde4_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/function utils/centre_in_block_xz"
+					]
+				}
+			}
+		},
+		"controller.animation.e89b300be3aec25dd2c077c0acf58b3ea17cbde4_2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"chat": "q.is_sheared"
+						}
+					]
+				},
+				"chat": {
+					"transitions": [
+						{
+							"default": "!q.is_sheared"
+						}
+					],
+					"on_entry": [
+						"/function onboarding/meditation_site_text"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.b0196bf6ecfb7c448c8c057784ce3e7e7b82ceca_0": {
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/tag @s add self",
+					"/execute @p[tag=dev] ~~~ execute @e[tag=self] ~~~ particle gm1:dev_hidden",
+					"/tag @s remove self"
+				]
+			},
+			"animation_length": 1
+		},
+		"animation.b0196bf6ecfb7c448c8c057784ce3e7e7b82ceca_1": {
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/tellraw  @a[tag=dev.hidden_nearby,tag=!dev.hidden_nearby.was,r=0.5] {\"rawtext\":[{\"text\":\"§c[DEBUG]§r \" },{\"text\":\" Indentifier -> nom:e_zhao_ship\" }]}"
+				]
+			},
+			"animation_length": 1
+		}
+	}
+}

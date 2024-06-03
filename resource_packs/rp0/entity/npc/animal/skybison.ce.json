@@ -1,0 +1,140 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"scripts": {
+				"initialize": [
+					"v.skin_id = q.skin_id;",
+					"v.mark_variant = q.mark_variant;",
+					"v.variant = q.variant;",
+					"v.is_ignited = q.is_ignited;",
+					"v.is_sheared = q.is_sheared;",
+					"v.is_chested = q.is_chested;",
+					"v.is_saddled = q.is_saddled;",
+					"v.is_baby = q.is_baby;",
+					"v.is_stunned = q.is_stunned;",
+					"v.is_charged = q.is_charged;",
+					"v.is_illager_captain = q.is_illager_captain;",
+					"v.camera_rotation_y = q.camera_rotation(1);",
+					"v.camera_rotation_x = q.camera_rotation(0);",
+					"v.distance_from_camera = q.distance_from_camera;",
+					"v.rotation_to_camera_y = q.rotation_to_camera(1);",
+					"v.rotation_to_camera_x = q.rotation_to_camera(0);",
+					"v.emotion_id = 0;",
+					"v.target_x_rotation = 0;",
+					"v.target_y_rotation = 0;",
+					"v.movement_direction_y = 0;",
+					"v.defeated_overlay = 0;",
+					"v.time_since_defeated = 0;",
+					"v.fade_away = 0;",
+					"v.ground_speed=0;",
+					"v.mod_move_speed=0;",
+					"v.is_first_person=0;"
+				],
+				"pre_animation": [
+					"v.skin_id = q.skin_id;",
+					"v.mark_variant = q.mark_variant;",
+					"v.variant = q.variant;",
+					"v.is_ignited = q.is_ignited;",
+					"v.is_sheared = q.is_sheared;",
+					"v.is_chested = q.is_chested;",
+					"v.is_saddled = q.is_saddled;",
+					"v.is_baby = q.is_baby;",
+					"v.is_stunned = q.is_stunned;",
+					"v.is_charged = q.is_charged;",
+					"v.distance_from_camera = q.distance_from_camera;",
+					"v.is_illager_captain = q.is_illager_captain;",
+					"v.camera_rotation_y = q.camera_rotation(1);",
+					"v.camera_rotation_x = q.camera_rotation(0);",
+					"v.rotation_to_camera_y = q.rotation_to_camera(1);",
+					"v.rotation_to_camera_x = q.rotation_to_camera(0);",
+					"v.target_x_rotation = query.target_x_rotation;",
+					"v.target_y_rotation = query.target_y_rotation;",
+					"v.movement_direction_y = q.movement_direction(1);",
+					"v.ground_speed=q.ground_speed;",
+					"v.mod_move_speed=query.modified_move_speed;",
+					"v.yfactor = 150;",
+					"v.xfactor = 250;",
+					"v.interact_range = 5.5;",
+					"v.cam_y_rot = q.camera_rotation(1) - q.rotation_to_camera(1) + 180;",
+					"v.cam_y_rot = v.cam_y_rot > 180 ? v.cam_y_rot-360: v.cam_y_rot;",
+					"v.cam_y_size = (1/query.distance_from_camera)*v.yfactor;",
+					"v.cam_y_size = query.distance_from_camera < 2.5 ? v.cam_y_size*2: v.cam_y_size;",
+					"v.cam_y_size = query.distance_from_camera < 1.5 ? v.cam_y_size*2 : v.cam_y_size;",
+					"v.is_selected_y = (v.cam_y_rot > v.cam_y_size || v.cam_y_rot < -v.cam_y_size) ? 0 : 1;",
+					"v.cam_x_rot = -q.camera_rotation(0) - q.rotation_to_camera(0) - (60/query.distance_from_camera);",
+					"v.cam_x_rot = v.cam_x_rot > 180 ? v.cam_x_rot-360: v.cam_x_rot;",
+					"v.cam_x_size = (1/query.distance_from_camera)*v.xfactor;",
+					"v.cam_x_size = query.distance_from_camera < 2.5 ? v.cam_x_size*2 : v.cam_x_size;",
+					"v.cam_x_size = query.distance_from_camera < 1.5 ? v.cam_x_size*1.4 : v.cam_x_size;",
+					"v.is_selected_x = (v.cam_x_rot > v.cam_x_size || v.cam_x_rot < -v.cam_x_size) ? 0 : 1;",
+					"v.is_selected_range = query.distance_from_camera <= v.interact_range;",
+					"v.is_selected = v.is_selected_x && v.is_selected_y && v.is_selected_range;"
+				],
+				"animate": [
+					"look_at_target",
+					"bob",
+					"icon",
+					{
+						"float": "v.is_selected"
+					},
+					"bison_idle"
+				]
+			},
+			"materials": {
+				"default": "entity_alphatest",
+				"outline": "outline",
+				"charged": "charged_creeper",
+				"emissive": "magma_cube",
+				"transparent": "entity_alphablend",
+				"transparent_additive": "entity_beam_additive",
+				"death_fade": "death_fade",
+				"collected": "grey_scale_shine"
+			},
+			"animations": {
+				"look_at_target": "controller.animation.humanoid.look_at_target",
+				"look_at_target_default": "animation.humanoid.look_at_target.default.v1.0",
+				"look_at_target_gliding": "animation.humanoid.look_at_target.gliding.v1.0",
+				"look_at_target_swimming": "animation.humanoid.look_at_target.swimming.v1.0",
+				"bob": "animation.humanoid.bob.v1.0",
+				"icon": "animation.npc_icon.loop",
+				"float": "animation.npc_icon.float",
+				"bison_idle": "animation.npc_skybison.idle",
+				"bison_sleep": "animation.npc_skybison.sleep",
+				"bison_takeoff": "animation.npc_skybison.takeoff",
+				"bison_land": "animation.npc_skybison.land"
+			},
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "animal",
+				"texture_index": 3
+			},
+			"textures": {
+				"icon": "textures/entity/npc_icon",
+				"default": "textures/entity/animal/skybison"
+			},
+			"geometry": {
+				"icon": "geometry.npc_icon_travel",
+				"icon_inflated": "geometry.npc_icon_travel_inflated",
+				"inflated": "geometry.npc_skybison_inflated",
+				"default": "geometry.npc_skybison"
+			},
+			"render_controllers": [
+				{
+					"controller.render.icon": "!q.is_illager_captain&&q.distance_from_camera<40"
+				},
+				{
+					"controller.render.icon_outline_highlight": "!q.is_illager_captain&&q.distance_from_camera<40"
+				},
+				{
+					"controller.render.icon_collected": "q.is_illager_captain&&q.distance_from_camera<40"
+				},
+				{
+					"controller.render.outline_highlight": "!v.defeated_overlay&&q.distance_from_camera<=11"
+				},
+				"controller.render.default"
+			],
+			"identifier": "nom:npc_skybison"
+		}
+	}
+}

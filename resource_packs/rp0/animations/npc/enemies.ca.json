@@ -1,0 +1,41 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.humanoid.look_at_target.default": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [
+						"query.target_x_rotation",
+						"query.target_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.humanoid.look_at_target.gliding": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [
+						-45,
+						"query.target_y_rotation",
+						0
+					]
+				}
+			}
+		},
+		"animation.humanoid.look_at_target.swimming": {
+			"loop": true,
+			"bones": {
+				"head": {
+					"rotation": [
+						"math.lerp(query.target_x_rotation,-45,variable.swim_amount)",
+						"query.target_y_rotation",
+						0
+					]
+				}
+			}
+		}
+	}
+}

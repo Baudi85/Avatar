@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.d7ec39fa93067add14b9391e54e2528b02e30631_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/function bending/earth/earth_pull/on_projectile_spawn"
+					],
+					"transitions": [
+						{
+							"proj_1": "query.mark_variant==1"
+						},
+						{
+							"proj_2": "query.mark_variant==2"
+						},
+						{
+							"proj_3": "query.mark_variant==3"
+						}
+					]
+				},
+				"proj_1": {
+					"on_entry": [
+						"/tag @s add stage_1"
+					]
+				},
+				"proj_2": {
+					"on_entry": [
+						"/tag @s add stage_2"
+					]
+				},
+				"proj_3": {
+					"on_entry": [
+						"/tag @s add stage_3"
+					]
+				}
+			}
+		}
+	}
+}

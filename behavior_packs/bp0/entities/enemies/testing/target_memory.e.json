@@ -1,0 +1,59 @@
+{
+	"format_version": "1.18.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:target_memory",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"d623b9af72a56bb3_ac_0": "controller.animation.d623b9af72a56bb3f4fa038e89a0bea22033bd02_0"
+			},
+			"scripts": {
+				"animate": [
+					"d623b9af72a56bb3_ac_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:explode": {
+				"fuse_lit": true,
+				"fuse_length": 10,
+				"power": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false,
+						"on_damage": {
+							"event": "nom:despawn"
+						}
+					}
+				]
+			},
+			"minecraft:type_family": {
+				"family": [
+					"target_memory",
+					"player_team"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {
+					"remove_child_entities": false
+				}
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

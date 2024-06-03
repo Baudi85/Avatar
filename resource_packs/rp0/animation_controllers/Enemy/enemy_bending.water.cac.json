@@ -1,0 +1,318 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.enemy.bending.teq_manager_water": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"water_whip.default": "query.skin_id>=200&&query.skin_id<=209"
+						},
+						{
+							"octopus_form.default": "query.skin_id>=210&&query.skin_id<=219"
+						},
+						{
+							"frost_breath.default": "query.skin_id>=220&&query.skin_id<=229"
+						}
+					]
+				},
+				"water_whip.default": {
+					"transitions": [
+						{
+							"water_whip.charge": "q.variant>=1"
+						},
+						{
+							"default": "query.skin_id<200||query.skin_id>209"
+						}
+					]
+				},
+				"water_whip.charge": {
+					"animations": [
+						"water_whip.charge",
+						"water_whip_init_sound",
+						"water_whip_charge_hit"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"water_whip.holding": "q.variant>=1&&q.all_animations_finished"
+						},
+						{
+							"default": "query.skin_id<200||query.skin_id>209"
+						}
+					]
+				},
+				"water_whip.holding": {
+					"animations": [
+						"water_whip.hold",
+						"water_whip_looping_sound",
+						"water_whip_charge_hit",
+						"water_whip.particle"
+					],
+					"transitions": [
+						{
+							"water_whip.release": "q.variant==0"
+						},
+						{
+							"default": "query.skin_id<200||query.skin_id>209"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"water_whip.release": {
+					"animations": [
+						"water_whip.release",
+						"water_whip_release_sound"
+					],
+					"transitions": [
+						{
+							"default": "(query.skin_id<200||query.skin_id>209)&&q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"frost_breath.default": {
+					"transitions": [
+						{
+							"frost_breath.charging": "q.variant>=1"
+						},
+						{
+							"default": "query.skin_id<220||query.skin_id>229"
+						}
+					]
+				},
+				"frost_breath.charging": {
+					"transitions": [
+						{
+							"frost_breath.init": "q.any_animation_finished"
+						},
+						{
+							"frost_breath.release": "q.variant==0"
+						},
+						{
+							"default": "query.skin_id<220||query.skin_id>229"
+						}
+					],
+					"blend_transition": 0.2,
+					"animations": [
+						"frost_breath.charge"
+					]
+				},
+				"frost_breath.init": {
+					"transitions": [
+						{
+							"frost_breath.hold": "q.any_animation_finished"
+						},
+						{
+							"default": "query.skin_id<220||query.skin_id>229"
+						}
+					],
+					"animations": [
+						"frost_breath.init_sound"
+					]
+				},
+				"frost_breath.hold": {
+					"transitions": [
+						{
+							"frost_breath.release": "q.variant==0"
+						},
+						{
+							"default": "query.skin_id<220||query.skin_id>229"
+						}
+					],
+					"animations": [
+						"frost_breath.hold",
+						"frost_breath.loop_sound"
+					],
+					"blend_transition": 0.1
+				},
+				"frost_breath.release": {
+					"transitions": [
+						{
+							"default": "q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.2,
+					"animations": [
+						"frost_breath.release",
+						"frost_breath.release_sound"
+					]
+				},
+				"octopus_form.default": {
+					"animations": [
+						"water_octopusform_hidden"
+					],
+					"transitions": [
+						{
+							"octopus_form.charge": "q.variant>=1"
+						},
+						{
+							"default": "query.skin_id<210||query.skin_id>219"
+						}
+					]
+				},
+				"octopus_form.charge": {
+					"animations": [
+						"octopus_form.charge",
+						"water_octopusform_spawn",
+						"octo_init_sound"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"octopus_form.holding": "q.variant>=1&&q.all_animations_finished"
+						},
+						{
+							"octopus_form.release": "q.variant==2"
+						},
+						{
+							"default": "query.skin_id<210||query.skin_id>219"
+						}
+					]
+				},
+				"octopus_form.holding": {
+					"animations": [
+						"octopus_form.hold",
+						"octo_loop_sound",
+						"water_octopusform_bob",
+						"water_octopusform_attack",
+						"water_octopusform_attack_vfx"
+					],
+					"transitions": [
+						{
+							"octopus_form.release": "q.variant==2"
+						},
+						{
+							"default": "query.skin_id<210||query.skin_id>219"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"octopus_form.release": {
+					"animations": [
+						"octopus_form.release",
+						"octo_release_sound",
+						"octo_slam_sound",
+						"water_octopusform_pop_vfx",
+						"water_octopusform_pop"
+					],
+					"transitions": [
+						{
+							"default": "(query.skin_id<210||query.skin_id>219)&&q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.frozen": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"grow": "q.is_shaking"
+						}
+					],
+					"animations": [
+						"unfrozen"
+					]
+				},
+				"grow": {
+					"transitions": [
+						{
+							"default": "!q.is_shaking"
+						},
+						{
+							"frozen": "q.is_shaking&&q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"grow"
+					]
+				},
+				"frozen": {
+					"transitions": [
+						{
+							"shrink": "!q.is_shaking"
+						}
+					],
+					"blend_transition": 0.2,
+					"animations": [
+						"shake",
+						"wet_enemy_vfx"
+					]
+				},
+				"shrink": {
+					"transitions": [
+						{
+							"default": "!q.is_shaking&&q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"shrink"
+					]
+				}
+			}
+		},
+		"controller.animation.enemy.water.bending_trainer": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"water_whip.charge": "q.variant>=1&&!q.is_tamed"
+						}
+					]
+				},
+				"water_whip.charge": {
+					"animations": [
+						"water_whip.charge",
+						"water_whip_init_sound",
+						"water_whip_charge_hit"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"water_whip.holding": "q.variant>=1&&q.all_animations_finished&&!q.is_tamed"
+						},
+						{
+							"default": "q.all_animations_finished&&q.is_tamed"
+						}
+					]
+				},
+				"water_whip.holding": {
+					"animations": [
+						"water_whip.hold",
+						"water_whip_looping_sound",
+						"water_whip_charge_hit",
+						"water_whip.particle"
+					],
+					"transitions": [
+						{
+							"water_whip.release": "q.variant==0&&!q.is_tamed"
+						},
+						{
+							"default": "q.all_animations_finished&&q.is_tamed"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"water_whip.release": {
+					"animations": [
+						"water_whip.release",
+						"water_whip_release_sound"
+					],
+					"transitions": [
+						{
+							"default": "q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		}
+	}
+}

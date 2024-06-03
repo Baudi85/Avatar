@@ -1,0 +1,404 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.npc.pose_manager": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pose1": "query.variant==1"
+						},
+						{
+							"pose2": "query.variant==2"
+						},
+						{
+							"pose3": "query.variant==3"
+						},
+						{
+							"pose4": "query.variant==4"
+						},
+						{
+							"pose5": "query.variant==5"
+						},
+						{
+							"pose6": "query.variant==6"
+						},
+						{
+							"pose7": "query.variant==7"
+						},
+						{
+							"pose8": "query.variant==8"
+						},
+						{
+							"pose9": "query.variant==9"
+						},
+						{
+							"pose10": "query.variant==10"
+						},
+						{
+							"pose11": "query.variant==11"
+						},
+						{
+							"pose12": "query.variant==12"
+						},
+						{
+							"pose13": "query.variant==13"
+						},
+						{
+							"pose14": "query.variant==14"
+						},
+						{
+							"pose15": "query.variant==15"
+						},
+						{
+							"pose16": "query.variant==16"
+						},
+						{
+							"pose17": "query.variant==17"
+						},
+						{
+							"pose18": "query.variant==18"
+						},
+						{
+							"pose19": "query.variant==19"
+						},
+						{
+							"pose20": "query.variant==20"
+						},
+						{
+							"pose21": "query.variant==21"
+						},
+						{
+							"pose22": "query.variant==22"
+						},
+						{
+							"pose23": "query.variant==23"
+						},
+						{
+							"pose24": "query.variant==24"
+						},
+						{
+							"pose25": "query.variant==25"
+						},
+						{
+							"pose26": "query.variant==26"
+						}
+					]
+				},
+				"pose1": {
+					"animations": [
+						{
+							"pose1": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=1"
+						}
+					]
+				},
+				"pose2": {
+					"animations": [
+						{
+							"pose2": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=2"
+						}
+					]
+				},
+				"pose3": {
+					"animations": [
+						{
+							"pose3": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=3"
+						}
+					]
+				},
+				"pose4": {
+					"animations": [
+						{
+							"pose4": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=4"
+						}
+					]
+				},
+				"pose5": {
+					"animations": [
+						{
+							"pose5": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=5"
+						}
+					]
+				},
+				"pose6": {
+					"animations": [
+						{
+							"pose6": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=6"
+						}
+					]
+				},
+				"pose7": {
+					"animations": [
+						{
+							"pose7": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=7"
+						}
+					]
+				},
+				"pose8": {
+					"animations": [
+						{
+							"pose8": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=8"
+						}
+					]
+				},
+				"pose9": {
+					"animations": [
+						{
+							"pose9": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=9"
+						}
+					]
+				},
+				"pose10": {
+					"animations": [
+						{
+							"pose10": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=10"
+						}
+					]
+				},
+				"pose11": {
+					"animations": [
+						{
+							"pose11": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=11"
+						}
+					]
+				},
+				"pose12": {
+					"animations": [
+						{
+							"pose12": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=12"
+						}
+					]
+				},
+				"pose13": {
+					"animations": [
+						{
+							"pose13": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=13"
+						}
+					]
+				},
+				"pose14": {
+					"animations": [
+						{
+							"pose14": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=14"
+						}
+					]
+				},
+				"pose15": {
+					"animations": [
+						{
+							"pose15": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=15"
+						}
+					]
+				},
+				"pose16": {
+					"animations": [
+						{
+							"pose16": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=16"
+						}
+					]
+				},
+				"pose17": {
+					"animations": [
+						{
+							"pose17": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=17"
+						}
+					]
+				},
+				"pose18": {
+					"animations": [
+						{
+							"pose18": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=18"
+						}
+					]
+				},
+				"pose19": {
+					"animations": [
+						{
+							"pose19": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=19"
+						}
+					]
+				},
+				"pose20": {
+					"animations": [
+						{
+							"pose20": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=20"
+						}
+					]
+				},
+				"pose21": {
+					"animations": [
+						{
+							"pose21": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=21"
+						}
+					]
+				},
+				"pose22": {
+					"animations": [
+						{
+							"pose22": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=22"
+						}
+					]
+				},
+				"pose23": {
+					"animations": [
+						{
+							"pose23": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=23"
+						}
+					]
+				},
+				"pose24": {
+					"animations": [
+						{
+							"pose24": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=24"
+						}
+					]
+				},
+				"pose25": {
+					"animations": [
+						{
+							"pose25": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=25"
+						}
+					]
+				},
+				"pose26": {
+					"animations": [
+						{
+							"pose26": "v.emotion_id==0"
+						}
+					],
+					"transitions": [
+						{
+							"default": "query.variant!=26"
+						}
+					]
+				}
+			}
+		}
+	}
+}

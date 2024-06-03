@@ -1,0 +1,204 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"scripts": {
+				"initialize": [
+					"v.skin_id = q.skin_id;",
+					"v.mark_variant = q.mark_variant;",
+					"v.variant = q.variant;",
+					"v.is_ignited = q.is_ignited;",
+					"v.is_sheared = q.is_sheared;",
+					"v.is_chested = q.is_chested;",
+					"v.is_saddled = q.is_saddled;",
+					"v.is_baby = q.is_baby;",
+					"v.is_stunned = q.is_stunned;",
+					"v.is_charged = q.is_charged;",
+					"v.is_illager_captain = q.is_illager_captain;",
+					"v.camera_rotation_y = q.camera_rotation(1);",
+					"v.camera_rotation_x = q.camera_rotation(0);",
+					"v.distance_from_camera = q.distance_from_camera;",
+					"v.rotation_to_camera_y = q.rotation_to_camera(1);",
+					"v.rotation_to_camera_x = q.rotation_to_camera(0);",
+					"v.emotion_id = 0;",
+					"v.target_x_rotation = 0;",
+					"v.target_y_rotation = 0;",
+					"v.movement_direction_y = 0;",
+					"v.defeated_overlay = 0;",
+					"v.time_since_defeated = 0;",
+					"v.fade_away = 0;",
+					"v.ground_speed=0;",
+					"v.mod_move_speed=0;",
+					"v.is_first_person=0;"
+				],
+				"pre_animation": [
+					"v.skin_id = q.skin_id;",
+					"v.mark_variant = q.mark_variant;",
+					"v.variant = q.variant;",
+					"v.is_ignited = q.is_ignited;",
+					"v.is_sheared = q.is_sheared;",
+					"v.is_chested = q.is_chested;",
+					"v.is_saddled = q.is_saddled;",
+					"v.is_baby = q.is_baby;",
+					"v.is_stunned = q.is_stunned;",
+					"v.is_charged = q.is_charged;",
+					"v.distance_from_camera = q.distance_from_camera;",
+					"v.is_illager_captain = q.is_illager_captain;",
+					"v.camera_rotation_y = q.camera_rotation(1);",
+					"v.camera_rotation_x = q.camera_rotation(0);",
+					"v.rotation_to_camera_y = q.rotation_to_camera(1);",
+					"v.rotation_to_camera_x = q.rotation_to_camera(0);",
+					"v.target_x_rotation = query.target_x_rotation;",
+					"v.target_y_rotation = query.target_y_rotation;",
+					"v.movement_direction_y = q.movement_direction(1);",
+					"v.ground_speed=q.ground_speed;",
+					"v.mod_move_speed=query.modified_move_speed;",
+					"v.yfactor = 22;",
+					"v.xfactor = 80;",
+					"v.interact_range = 3.9;",
+					"v.cam_y_rot = q.camera_rotation(1) - q.rotation_to_camera(1) + 180;",
+					"v.cam_y_rot = v.cam_y_rot > 180 ? v.cam_y_rot-360: v.cam_y_rot;",
+					"v.cam_y_size = (1/query.distance_from_camera)*v.yfactor;",
+					"v.cam_y_size = query.distance_from_camera < 2.5 ? v.cam_y_size*2: v.cam_y_size;",
+					"v.cam_y_size = query.distance_from_camera < 1.5 ? v.cam_y_size*2 : v.cam_y_size;",
+					"v.is_selected_y = (v.cam_y_rot > v.cam_y_size || v.cam_y_rot < -v.cam_y_size) ? 0 : 1;",
+					"v.cam_x_rot = -q.camera_rotation(0) - q.rotation_to_camera(0) - (60/query.distance_from_camera);",
+					"v.cam_x_rot = v.cam_x_rot > 180 ? v.cam_x_rot-360: v.cam_x_rot;",
+					"v.cam_x_size = (1/query.distance_from_camera)*v.xfactor;",
+					"v.cam_x_size = query.distance_from_camera < 2.5 ? v.cam_x_size*2 : v.cam_x_size;",
+					"v.cam_x_size = query.distance_from_camera < 1.5 ? v.cam_x_size*1.4 : v.cam_x_size;",
+					"v.is_selected_x = (v.cam_x_rot > v.cam_x_size || v.cam_x_rot < -v.cam_x_size) ? 0 : 1;",
+					"v.is_selected_range = query.distance_from_camera <= v.interact_range;",
+					"v.is_selected = v.is_selected_x && v.is_selected_y && v.is_selected_range;"
+				],
+				"animate": [
+					"emotion_controller",
+					{
+						"pose_controller": "q.is_stunned"
+					},
+					{
+						"numbers_animation": "q.is_stackable"
+					},
+					"look_at_target",
+					"bob",
+					"icon",
+					{
+						"float": "v.is_selected"
+					}
+				]
+			},
+			"materials": {
+				"default": "entity_alphatest",
+				"outline": "outline",
+				"charged": "charged_creeper",
+				"emissive": "magma_cube",
+				"transparent": "entity_alphablend",
+				"transparent_additive": "entity_beam_additive",
+				"death_fade": "death_fade",
+				"collected": "grey_scale_shine",
+				"cape": "entity_alphatest",
+				"animated": "player_animated"
+			},
+			"animations": {
+				"neutral": "animation.humanoid.emotion.neutral",
+				"punching": "animation.humanoid.punching",
+				"taunt": "animation.humanoid.taunt",
+				"bending_practice": "animation.humanoid.bending_practice",
+				"standing": "animation.humanoid.standing",
+				"sleeping": "animation.humanoid.sleeping",
+				"leaning": "animation.humanoid.leaning",
+				"sitting": "animation.humanoid.sitting",
+				"sitting_bench": "animation.humanoid.sitting_bench",
+				"talking": "animation.humanoid.talking",
+				"talking2": "animation.humanoid.talking2",
+				"waving": "animation.humanoid.waving",
+				"beckon": "animation.humanoid.beckon",
+				"looking": "animation.humanoid.looking",
+				"angry": "animation.humanoid.emotion.angry",
+				"sad": "animation.humanoid.emotion.sad",
+				"suprised": "animation.humanoid.emotion.suprised",
+				"scared": "animation.humanoid.emotion.scared",
+				"happy": "animation.humanoid.emotion.happy",
+				"additional": "animation.humanoid.emotion.neutral",
+				"meditating": "animation.humanoid.meditating",
+				"bow": "animation.humanoid.bow",
+				"arguing": "animation.humanoid.arguing",
+				"defeat": "animation.humanoid.defeat",
+				"arguing2": "animation.humanoid.argue2",
+				"flexing": "animation.humanoid.flexing",
+				"laying1": "animation.humanoid.laying1",
+				"laying2": "animation.humanoid.laying2",
+				"emotion_controller": "controller.animation.emotion_poses",
+				"pose1": "animation.humanoid.punching",
+				"pose2": "animation.humanoid.taunt",
+				"pose3": "animation.humanoid.bending_practice",
+				"pose4": "animation.humanoid.standing",
+				"pose5": "animation.humanoid.sleeping",
+				"pose6": "animation.humanoid.leaning",
+				"pose7": "animation.humanoid.sitting",
+				"pose8": "animation.humanoid.sitting_bench",
+				"pose9": "animation.humanoid.talking",
+				"pose10": "animation.humanoid.talking2",
+				"pose11": "animation.humanoid.waving",
+				"pose12": "animation.humanoid.beckon",
+				"pose13": "animation.humanoid.looking",
+				"pose14": "animation.humanoid.emotion.angry",
+				"pose15": "animation.humanoid.emotion.sad",
+				"pose16": "animation.humanoid.emotion.suprised",
+				"pose17": "animation.humanoid.emotion.scared",
+				"pose18": "animation.humanoid.emotion.happy",
+				"pose19": "animation.humanoid.meditating",
+				"pose20": "animation.humanoid.bow",
+				"pose21": "animation.humanoid.arguing",
+				"pose22": "animation.humanoid.defeat",
+				"pose23": "animation.humanoid.argue2",
+				"pose24": "animation.humanoid.flexing",
+				"pose25": "animation.humanoid.laying1",
+				"pose26": "animation.humanoid.laying2",
+				"pose_controller": "controller.animation.npc.pose_manager",
+				"numbers_animation": "animation.marker.numbers",
+				"look_at_target": "controller.animation.humanoid.look_at_target",
+				"look_at_target_default": "animation.humanoid.look_at_target.default.v1.0",
+				"look_at_target_gliding": "animation.humanoid.look_at_target.gliding.v1.0",
+				"look_at_target_swimming": "animation.humanoid.look_at_target.swimming.v1.0",
+				"bob": "animation.humanoid.bob.v1.0",
+				"icon": "animation.npc_icon.loop",
+				"float": "animation.npc_icon.float"
+			},
+			"particle_effects": {
+				"numbers_particle": "nom:numbers"
+			},
+			"enable_attachables": true,
+			"spawn_egg": {
+				"texture": "spawn_egg",
+				"texture_index": 4
+			},
+			"geometry": {
+				"inflated": "geometry.npc_guard_female_inflated",
+				"icon": "geometry.npc_icon_information",
+				"icon_inflated": "geometry.npc_icon_information_inflated",
+				"default": "geometry.npc_guard_female"
+			},
+			"render_controllers": [
+				{
+					"controller.render.outline_highlight": "!v.defeated_overlay&&q.distance_from_camera<=11"
+				},
+				{
+					"controller.render.icon": "!q.is_illager_captain&&q.distance_from_camera<40"
+				},
+				{
+					"controller.render.icon_outline_highlight": "!q.is_illager_captain&&q.distance_from_camera<40"
+				},
+				{
+					"controller.render.icon_collected": "q.is_illager_captain&&q.distance_from_camera<40"
+				},
+				"controller.render.default"
+			],
+			"textures": {
+				"icon": "textures/entity/npc_icon",
+				"default": "textures/entity/citizen/ati_performance_guard"
+			},
+			"identifier": "nom:speaker_perf_ati_female"
+		}
+	}
+}

@@ -1,0 +1,32 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.g_banner_2x3": {
+			"geometry": "array.g[query.variant]",
+			"textures": [
+				"array.t[query.variant]"
+			],
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"array.t": [
+						"Texture.variant_0",
+						"Texture.variant_1",
+						"Texture.variant_2",
+						"Texture.variant_3",
+						"Texture.variant_4"
+					]
+				},
+				"geometries": {
+					"array.g": [
+						"Geometry.variant_0"
+					]
+				}
+			}
+		}
+	}
+}

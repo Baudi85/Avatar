@@ -1,0 +1,66 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.e115326750528c7c7d4cf0e8225650cafc712261_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_766_cooldown = v.state_nom_earth_pull_small_cooldown;",
+					"v.chain_408_cooldown = v.state_nom_earth_pull_medium_cooldown;",
+					"v.metastate_range_cooldown = v.chain_766_cooldown&&v.chain_408_cooldown;"
+				]
+			}
+		},
+		"animation.e115326750528c7c7d4cf0e8225650cafc712261_1": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_791_cooldown = v.state_nom_strafe_side_cooldown;",
+					"v.metastate_projectile_defence_strafe_cooldown = v.chain_791_cooldown;"
+				]
+			}
+		},
+		"animation.e115326750528c7c7d4cf0e8225650cafc712261_2": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_350_cooldown = v.state_nom_earth_quake_small_cooldown;",
+					"v.metastate_quake_small_cooldown = v.chain_350_cooldown;"
+				]
+			}
+		},
+		"animation.e115326750528c7c7d4cf0e8225650cafc712261_3": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_838_cooldown = v.state_nom_earth_wall_throw_cooldown;",
+					"v.metastate_throw_wall_cooldown = v.chain_838_cooldown;"
+				]
+			}
+		},
+		"animation.e115326750528c7c7d4cf0e8225650cafc712261_4": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_733_cooldown = v.state_nom_earth_wall_spawn_cooldown;",
+					"v.metastate_spawn_wall_cooldown = v.chain_733_cooldown;"
+				]
+			}
+		},
+		"animation.e115326750528c7c7d4cf0e8225650cafc712261_5": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_33_cooldown = v.state_nom_approach_cooldown||v.state_nom_earth_quake_medium_cooldown;",
+					"v.metastate_quake_med_cooldown = v.chain_33_cooldown;"
+				]
+			}
+		}
+	}
+}

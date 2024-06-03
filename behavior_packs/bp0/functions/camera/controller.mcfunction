@@ -1,0 +1,17 @@
+execute @s[scores={scene_id=1}] ~~~ function camera/controller/_/scene_1
+execute @s[scores={scene_id=2}] ~~~ function camera/controller/_/scene_2
+execute @s[scores={scene_id=3}] ~~~ function camera/controller/_/scene_3
+execute @s[scores={scene_id=4}] ~~~ function camera/controller/_/scene_4
+execute @s[scores={scene_id=5}] ~~~ function camera/controller/_/scene_5
+execute @s[scores={scene_id=6}] ~~~ function camera/controller/_/scene_6
+execute @s[scores={scene_id=7}] ~~~ function camera/controller/_/scene_7
+execute @s[scores={scene_id=8}] ~~~ function camera/controller/_/scene_8
+execute @s[scores={scene_id=9}] ~~~ function camera/controller/_/scene_9
+execute @s[scores={scene_id=10}] ~~~ function camera/controller/_/scene_10
+execute @s[scores={scene_id=11}] ~~~ function camera/controller/_/scene_11
+execute @s[scores={scene_id=12}] ~~~ function camera/controller/_/scene_12
+execute @s[scores={scene_id=13}] ~~~ function camera/controller/_/scene_13
+execute @s[scores={scene_id=14}] ~~~ function camera/controller/_/scene_14
+execute @s[scores={scene_id=15}] ~~~ function camera/controller/_/scene_15
+execute @s[scores={scene_id=16}] ~~~ function camera/controller/_/scene_16
+execute @s[scores={scene_id=100}] ~~~ function camera/controller/_/scene_100

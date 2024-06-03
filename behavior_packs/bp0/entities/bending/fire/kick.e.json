@@ -1,0 +1,99 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:fire_kick",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball"
+		},
+		"components": {
+			"minecraft:explode": {
+				"fuse_lit": true,
+				"power": 0,
+				"fuse_length": 0.1
+			},
+			"minecraft:collision_box": {
+				"height": 1.5,
+				"width": 1.5
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:projectile": {
+				"gravity": 0,
+				"power": 6,
+				"inertia": 0,
+				"offset": [
+					0,
+					0,
+					0
+				],
+				"should_bounce": false,
+				"on_hit": {
+					"impact_damage": {
+						"damage": 4,
+						"knockback": true,
+						"destroy_on_hit": false,
+						"catch_fire": true
+					},
+					"catch_fire": {},
+					"stick_in_ground": {}
+				},
+				"on_fire_time": 2
+			},
+			"minecraft:type_family": {
+				"family": [
+					"player_ability"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:player_arrow": {
+				"minecraft:projectile": {
+					"gravity": 0,
+					"power": 6,
+					"inertia": 0,
+					"offset": [
+						0,
+						0,
+						0
+					],
+					"should_bounce": false,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 4,
+							"knockback": true,
+							"destroy_on_hit": true,
+							"catch_fire": true
+						},
+						"stick_in_ground": {}
+					}
+				}
+			}
+		},
+		"events": {
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"nom:player_arrow"
+							]
+						},
+						"filters": {
+							"test": "is_family",
+							"subject": "other",
+							"value": "player"
+						}
+					}
+				]
+			}
+		}
+	}
+}

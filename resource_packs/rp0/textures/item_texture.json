@@ -1,0 +1,320 @@
+{
+	"resource_pack_name": "project nomad",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"bending_air_1": {
+			"textures": {
+				"path": "textures/items/bending/air_1"
+			}
+		},
+		"bending_air_2": {
+			"textures": {
+				"path": "textures/items/bending/air_2"
+			}
+		},
+		"bending_air_3": {
+			"textures": {
+				"path": "textures/items/bending/air_3"
+			}
+		},
+		"bending_air_4": {
+			"textures": {
+				"path": "textures/items/bending/air_4"
+			}
+		},
+		"bending_water_0": {
+			"textures": {
+				"path": "textures/items/bending/water_0"
+			}
+		},
+		"bending_water_1": {
+			"textures": {
+				"path": "textures/items/bending/water_1"
+			}
+		},
+		"bending_water_2": {
+			"textures": {
+				"path": "textures/items/bending/water_2"
+			}
+		},
+		"bending_fire_0": {
+			"textures": {
+				"path": "textures/items/bending/fire_0"
+			}
+		},
+		"bending_fire_1": {
+			"textures": {
+				"path": "textures/items/bending/fire_1"
+			}
+		},
+		"bending_fire_2": {
+			"textures": {
+				"path": "textures/items/bending/fire_2"
+			}
+		},
+		"bending_earth_0": {
+			"textures": {
+				"path": "textures/items/bending/earth_0"
+			}
+		},
+		"bending_earth_1": {
+			"textures": {
+				"path": "textures/items/bending/earth_1"
+			}
+		},
+		"bending_earth_2": {
+			"textures": {
+				"path": "textures/items/bending/earth_2"
+			}
+		},
+		"rotation_tool": {
+			"textures": {
+				"path": "textures/items/misc/rotation_tool"
+			}
+		},
+		"delete_tool": {
+			"textures": {
+				"path": "textures/items/misc/delete_tool"
+			}
+		},
+		"variant_tool": {
+			"textures": {
+				"path": "textures/items/misc/variant_tool"
+			}
+		},
+		"copy_coordinates_tool": {
+			"textures": {
+				"path": "textures/items/misc/copy_coordinates_tool"
+			}
+		},
+		"cycle_tool": {
+			"textures": {
+				"path": "textures/items/misc/cycle_tool"
+			}
+		},
+		"pose_tool": {
+			"textures": {
+				"path": "textures/items/misc/pose_tool"
+			}
+		},
+		"g_banner_1x3_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/g_banner_1x3"
+			]
+		},
+		"g_banner_2x3_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/g_banner_2x3"
+			]
+		},
+		"swt_tent_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/swt_tent"
+			]
+		},
+		"swt_bonfire_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/swt_bonfire"
+			]
+		},
+		"swt_weapons_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/swt_weapons"
+			]
+		},
+		"bss_bundles_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_bundles"
+			]
+		},
+		"bss_cart_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_cart"
+			]
+		},
+		"bss_kyoshistatue_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_kyoshistatue"
+			]
+		},
+		"bss_lantern_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_lantern"
+			]
+		},
+		"bss_streetlight_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_streetlight"
+			]
+		},
+		"bss_kyoshibanner_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_kyoshibanner"
+			]
+		},
+		"bss_teahouse_sign_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_teahouse_sign"
+			]
+		},
+		"bss_teahouse_frames_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_teahouse_frames"
+			]
+		},
+		"bss_teahouse_table_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_teahouse_table"
+			]
+		},
+		"bss_teahouse_shelves_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_teahouse_shelves"
+			]
+		},
+		"bss_memorial_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_memorial"
+			]
+		},
+		"bss_well_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_well"
+			]
+		},
+		"swt_helmet_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/swt_helmet"
+			]
+		},
+		"nat_bisonstatue_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/nat_bisonstatue"
+			]
+		},
+		"g_cabbagecart_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/g_cabbagecart"
+			]
+		},
+		"g_watersource_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/g_watersource"
+			]
+		},
+		"nat_avatarstatue_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/nat_avatarstatue"
+			]
+		},
+		"bss_teahouse_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_teahouse"
+			]
+		},
+		"bss_fountain_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_fountain"
+			]
+		},
+		"bss_restaurant_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_restaurant"
+			]
+		},
+		"bss_gateway_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_gateway"
+			]
+		},
+		"bss_kyoshisquare_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_kyoshisquare"
+			]
+		},
+		"bss_market_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/bss_market"
+			]
+		},
+		"paisho_tile": {
+			"textures": {
+				"path": "textures/items/paisho_tile"
+			}
+		},
+		"ati_airgates_spawn_egg": {
+			"textures": [
+				"textures/items/static_entity/ati_airgates"
+			]
+		},
+		"npc": {
+			"textures": [
+				"textures/items/npc/aang",
+				"textures/items/npc/aangeip",
+				"textures/items/npc/amon",
+				"textures/items/npc/asami",
+				"textures/items/npc/azula",
+				"textures/items/npc/bolin",
+				"textures/items/npc/bumi",
+				"textures/items/npc/cabbagemerchant",
+				"textures/items/npc/desna",
+				"textures/items/npc/eska",
+				"textures/items/npc/ghazan",
+				"textures/items/npc/ikki",
+				"textures/items/npc/iroh",
+				"textures/items/npc/jet",
+				"textures/items/npc/jinora",
+				"textures/items/npc/joodee",
+				"textures/items/npc/kai",
+				"textures/items/npc/kanna",
+				"textures/items/npc/katara",
+				"textures/items/npc/kataraeip",
+				"textures/items/npc/kingbumi",
+				"textures/items/npc/korra",
+				"textures/items/npc/kuvira",
+				"textures/items/npc/kya",
+				"textures/items/npc/kyoshi",
+				"textures/items/npc/lin",
+				"textures/items/npc/longfeng",
+				"textures/items/npc/mai",
+				"textures/items/npc/mako",
+				"textures/items/npc/meelo",
+				"textures/items/npc/minghua",
+				"textures/items/npc/opal",
+				"textures/items/npc/ozai",
+				"textures/items/npc/pathik",
+				"textures/items/npc/pli",
+				"textures/items/npc/roku",
+				"textures/items/npc/sokka",
+				"textures/items/npc/sokkaeip",
+				"textures/items/npc/suki",
+				"textures/items/npc/suyin",
+				"textures/items/npc/tenzin",
+				"textures/items/npc/theboulder",
+				"textures/items/npc/tonraq",
+				"textures/items/npc/toph",
+				"textures/items/npc/topheip",
+				"textures/items/npc/tylee",
+				"textures/items/npc/unalaq",
+				"textures/items/npc/varrick",
+				"textures/items/npc/xinfu",
+				"textures/items/npc/zaheer",
+				"textures/items/npc/zhao",
+				"textures/items/npc/zhuli",
+				"textures/items/npc/zuko",
+				"textures/items/npc/zukoeip",
+				"textures/items/npc/zukoexiled"
+			]
+		},
+		"animal": {
+			"textures": [
+				"textures/items/animal/batlemur",
+				"textures/items/animal/fireferret",
+				"textures/items/animal/otterpenguin",
+				"textures/items/animal/skybison",
+				"textures/items/animal/skybisonbaby",
+				"textures/items/animal/turtleduck"
+			]
+		}
+	}
+}

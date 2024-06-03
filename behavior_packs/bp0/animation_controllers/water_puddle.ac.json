@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending.water.puddle_detect_sides": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"grounded": "q.is_on_ground&&q.vertical_speed==0"
+						}
+					]
+				},
+				"grounded": {
+					"animations": [
+						"puddle_detect_a"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.water.puddle": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"puddle_initialized": "q.is_on_ground&&q.vertical_speed==0"
+						}
+					]
+				},
+				"puddle_initialized": {
+					"animations": [
+						"puddle_grow",
+						{
+							"particle_source": "q.is_chested"
+						}
+					]
+				}
+			}
+		}
+	}
+}

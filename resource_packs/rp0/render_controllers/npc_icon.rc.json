@@ -1,0 +1,54 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.icon_outline_highlight": {
+			"geometry": "geometry.icon_inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"textures": [
+				"texture.icon"
+			],
+			"overlay_color": {
+				"a": 1,
+				"r": 0.5,
+				"g": 0.5,
+				"b": 0.5
+			},
+			"ignore_lighting": true,
+			"light_color_multiplier": "v.is_selected ? 100000 : -1"
+		},
+		"controller.render.icon": {
+			"geometry": "geometry.icon",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.icon"
+			],
+			"ignore_lighting": true
+		},
+		"controller.render.icon_collected": {
+			"materials": [
+				{
+					"*": "material.collected"
+				}
+			],
+			"overlay_color": {
+				"a": 1,
+				"r": 0.75,
+				"g": 0.75,
+				"b": 0.75
+			},
+			"light_color_multiplier": 0.5,
+			"geometry": "geometry.icon",
+			"textures": [
+				"texture.icon"
+			]
+		}
+	}
+}

@@ -1,0 +1,72 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.bb176e4c51a87b3c7db950bc932707286136dd92_0": {
+			"timeline": {
+				"0.0": [
+					"/tag @s add self",
+					"/scoreboard players set @s tmp 0",
+					"/execute @a[tag=battle.entity.4.inside] ~ ~ ~ scoreboard players add @e[tag=self] tmp 1",
+					"/execute @s[scores={tmp=1}] ~ ~ ~ execute @a[tag=player.dead,tag=battle.entity.4.inside] ~ ~ ~ scoreboard players set @e[tag=self] battle_exit -2",
+					"/tag @s remove self"
+				]
+			},
+			"animation_length": 0.5,
+			"loop": true
+		},
+		"animation.bb176e4c51a87b3c7db950bc932707286136dd92_1": {
+			"timeline": {
+				"0.0": [
+					"/tag @s remove battle.occupied.was",
+					"/tag @s[tag=battle.occupied] add battle.occupied.was",
+					"/tag @s remove battle.occupied",
+					"/tag @e remove battle.entity.4",
+					"/tag @e[tag=battle.entity.4.inside] add battle.entity.4",
+					"/tag @e remove battle.entity.inside.4.was",
+					"/tag @e[tag=battle.entity.4.inside] add battle.entity.inside.4.was",
+					"/tag @e[tag=battle.entity.4.inside] remove battle.entity.inside",
+					"/tag @e remove battle.entity.4.inside",
+					"/tag @e[x=39,y=75,z=-1942,dx=2,dy=7,dz=19,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @e[x=42,y=75,z=-1944,dx=1,dy=7,dz=23,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @e[x=44,y=75,z=-1946,dx=1,dy=7,dz=27,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @e[x=46,y=75,z=-1949,dx=1,dy=7,dz=32,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @e[x=48,y=75,z=-1950,dx=1,dy=7,dz=35,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @e[x=50,y=75,z=-1951,dx=15,dy=7,dz=37,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @e[x=66,y=75,z=-1950,dx=1,dy=7,dz=34,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @e[x=68,y=75,z=-1948,dx=1,dy=7,dz=31,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @e[x=70,y=75,z=-1946,dx=1,dy=7,dz=27,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @e[x=72,y=75,z=-1944,dx=1,dy=7,dz=23,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @e[x=74,y=75,z=-1942,dx=2,dy=7,dz=19,tag=bender,tag=!enemy.in_water] add battle.entity.4.inside",
+					"/tag @s add self",
+					"/execute @a[tag=battle.entity.4.inside,m=!1,c=1,scores={scene_id=..1}] ~ ~ ~ tag @e[tag=self] add battle.occupied",
+					"/tag @s remove self",
+					"/tag @e[tag=battle.entity.4.inside] add battle.entity.inside",
+					"/tag @e[tag=battle.entity.inside,tag=enemy] add battle.enemy",
+					"/tag @s add battle.current",
+					"/execute @s[scores={battle_state=1}] ~ ~ ~ execute @a[tag=battle.entity.4.inside,tag=!battle.member.4] ~ ~ ~ function battle/state/on_join",
+					"/tag @s remove battle.current",
+					"/tag @a[tag=battle.join] add battle.member.4",
+					"/tag @a[tag=battle.join] add battle.member",
+					"/tag @a remove battle.join",
+					"/scoreboard players set @e[tag=!battle.entity.4.inside,tag=battle.entity.inside.4.was] battle_exit 3",
+					"/scoreboard players set @s[tag=!battle.occupied,tag=battle.occupied.was,scores={battle_exit=-1..}] battle_exit 3",
+					"/scoreboard players remove @s[tag=!battle.occupied,scores={battle_exit=0..}] battle_exit 1"
+				]
+			},
+			"animation_length": 1,
+			"loop": true
+		},
+		"animation.bb176e4c51a87b3c7db950bc932707286136dd92_2": {
+			"timeline": {
+				"0.0": [
+					"/execute @s[scores={battle_state=1},tag=battle.occupied,tag=!battle.delay] ~ ~ ~ particle nom:barrier.air_temple_island1.inside 58 75 -1932",
+					"/execute @s[scores={battle_state=1},tag=battle.occupied,tag=!battle.delay] ~ ~ ~ particle nom:barrier.air_temple_island2.inside 58 75 -1932",
+					"/execute @s[scores={battle_state=1},tag=!battle.occupied,tag=!battle.delay] ~ ~ ~ particle nom:barrier.air_temple_island1.outside 58 75 -1932",
+					"/execute @s[scores={battle_state=1},tag=!battle.occupied,tag=!battle.delay] ~ ~ ~ particle nom:barrier.air_temple_island2.outside 58 75 -1932"
+				]
+			},
+			"animation_length": 0.5,
+			"loop": true
+		}
+	}
+}

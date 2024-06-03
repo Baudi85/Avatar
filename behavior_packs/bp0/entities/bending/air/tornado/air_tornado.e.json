@@ -1,0 +1,367 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:air_tornado",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"b3c15393e5fd4ca4_a_0": "animation.b3c15393e5fd4ca4b5c419c4dd43bf918834cdd7_0",
+				"b3c15393e5fd4ca4_a_1": "animation.b3c15393e5fd4ca4b5c419c4dd43bf918834cdd7_1"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"b3c15393e5fd4ca4_a_0": "q.is_stunned"
+					},
+					{
+						"b3c15393e5fd4ca4_a_1": "q.is_ignited"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"nom:slow_despawn": {
+				"minecraft:is_ignited": {}
+			},
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"nom:state_progress_0": {
+				"minecraft:variant": {
+					"value": 0
+				},
+				"minecraft:scale": {
+					"value": 0
+				}
+			},
+			"nom:state_progress_1": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:scale": {
+					"value": 1
+				}
+			},
+			"nom:state_progress_2": {
+				"minecraft:variant": {
+					"value": 2
+				},
+				"minecraft:scale": {
+					"value": 1
+				},
+				"minecraft:is_stunned": {}
+			},
+			"nom:locomotion": {
+				"minecraft:movement": {
+					"value": 0.4
+				},
+				"minecraft:follow_range": {
+					"value": 15
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 3,
+					"attack_once": false,
+					"track_target": true,
+					"require_complete_path": false,
+					"random_stop_interval": 0,
+					"reach_multiplier": 1,
+					"speed_multiplier": 1,
+					"attack_duration": 0.5,
+					"hit_delay_pct": 1
+				},
+				"minecraft:attack": {
+					"damage": 0
+				},
+				"minecraft:navigation.generic": {
+					"can_path_over_water": false,
+					"can_open_doors": false,
+					"can_pass_doors": false,
+					"can_walk": true,
+					"avoid_water": true,
+					"can_sink": false
+				},
+				"minecraft:movement.generic": {
+					"max_turn": 30
+				}
+			},
+			"nom:locomotion_enemy": {
+				"minecraft:movement": {
+					"value": 0.3
+				},
+				"minecraft:follow_range": {
+					"value": 15
+				},
+				"minecraft:behavior.delayed_attack": {
+					"priority": 3,
+					"attack_once": false,
+					"track_target": true,
+					"require_complete_path": false,
+					"random_stop_interval": 0,
+					"reach_multiplier": 1,
+					"speed_multiplier": 1,
+					"attack_duration": 0.5,
+					"hit_delay_pct": 1
+				},
+				"minecraft:attack": {
+					"damage": 0
+				},
+				"minecraft:navigation.generic": {
+					"can_path_over_water": false,
+					"can_open_doors": false,
+					"can_pass_doors": false,
+					"can_walk": true,
+					"avoid_water": true,
+					"can_sink": false
+				},
+				"minecraft:movement.generic": {
+					"max_turn": 30
+				}
+			},
+			"nom:player_created": {
+				"minecraft:mark_variant": {
+					"value": 1
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"must_reach": false,
+					"scan_interval": 20,
+					"reselect_targets": true,
+					"must_see_forget_duration": 6,
+					"entity_types": [
+						{
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_tag",
+										"subject": "other",
+										"value": "enemy"
+									}
+								]
+							},
+							"max_dist": 20
+						}
+					],
+					"must_see": true
+				}
+			},
+			"nom:enemy_created": {
+				"minecraft:mark_variant": {
+					"value": 2
+				},
+				"minecraft:behavior.nearest_attackable_target": {
+					"priority": 2,
+					"must_reach": false,
+					"scan_interval": 20,
+					"reselect_targets": true,
+					"must_see_forget_duration": 6,
+					"entity_types": [
+						{
+							"filters": {
+								"all_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									}
+								]
+							},
+							"max_dist": 20
+						}
+					],
+					"must_see": true
+				}
+			},
+			"nom:player_created_roar_pull": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.05,
+					"cooldown_time": 1,
+					"duration": 0.05,
+					"knockback_horizontal_strength": -3,
+					"knockback_vertical_strength": 2,
+					"knockback_height_cap": 1,
+					"knockback_range": 2,
+					"knockback_damage": 6,
+					"knockback_filters": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "enemy"
+							}
+						]
+					},
+					"damage_filters": {
+						"all_of": [
+							{
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "enemy"
+									}
+								]
+							}
+						]
+					}
+				}
+			},
+			"nom:enemy_created_roar_pull": {
+				"minecraft:behavior.knockback_roar": {
+					"priority": 0,
+					"attack_time": 0.05,
+					"cooldown_time": 1,
+					"duration": 0.05,
+					"knockback_horizontal_strength": -3,
+					"knockback_vertical_strength": 2,
+					"knockback_height_cap": 1,
+					"knockback_range": 2,
+					"knockback_damage": 4,
+					"knockback_filters": {
+						"all_of": [
+							{
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									}
+								]
+							}
+						]
+					},
+					"damage_filters": {
+						"all_of": [
+							{
+								"any_of": [
+									{
+										"test": "is_family",
+										"subject": "other",
+										"value": "player"
+									}
+								]
+							}
+						]
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:type_family": {
+				"family": [
+					"tornado",
+					"air_gate"
+				]
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:physics": {}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			},
+			"nom:state_progress_0": {
+				"add": {
+					"component_groups": [
+						"nom:state_progress_0",
+						"nom:highlight"
+					]
+				}
+			},
+			"nom:state_progress_1": {
+				"add": {
+					"component_groups": [
+						"nom:state_progress_1"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"nom:state_progress_0"
+					]
+				}
+			},
+			"nom:state_progress_2": {
+				"add": {
+					"component_groups": [
+						"nom:state_progress_2"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"nom:state_progress_1"
+					]
+				}
+			},
+			"nom:player_created_roar_pull": {
+				"add": {
+					"component_groups": [
+						"nom:player_created_roar_pull"
+					]
+				}
+			},
+			"nom:enemy_created_roar_pull": {
+				"add": {
+					"component_groups": [
+						"nom:enemy_created_roar_pull"
+					]
+				}
+			},
+			"nom:roar_remove": {
+				"remove": {
+					"component_groups": [
+						"nom:enemy_created_roar_pull",
+						"nom:player_created_roar_pull",
+						"nom:locomotion"
+					]
+				}
+			},
+			"nom:remove_highlight": {
+				"remove": {
+					"component_groups": [
+						"nom:highlight"
+					]
+				}
+			},
+			"nom:slow_despawn": {
+				"add": {
+					"component_groups": [
+						"nom:slow_despawn"
+					]
+				}
+			},
+			"nom:player_created": {
+				"add": {
+					"component_groups": [
+						"nom:player_created",
+						"nom:locomotion"
+					]
+				}
+			},
+			"nom:enemy_created": {
+				"add": {
+					"component_groups": [
+						"nom:enemy_created",
+						"nom:locomotion_enemy"
+					]
+				}
+			}
+		}
+	}
+}

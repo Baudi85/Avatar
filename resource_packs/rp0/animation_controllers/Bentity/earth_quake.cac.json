@@ -1,0 +1,36 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bentity.earth_quake": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"rise": "query.variant==1"
+						},
+						{
+							"fall": "query.is_ignited"
+						}
+					]
+				},
+				"rise": {
+					"animations": [
+						"rise"
+					],
+					"transitions": [
+						{
+							"fall": "q.all_animations_finished"
+						}
+					]
+				},
+				"fall": {
+					"animations": [
+						"fall",
+						"earth_wall_tester5"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1980 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.f44da7e24d584ce2f886b270f8ca3918e2d793f7_0": {
+			"initial_state": "init",
+			"states": {
+				"init": {
+					"on_exit": [
+						"v.healthp=-1;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"on_entry": [
+						"v.healthp=math.round(q.health/q.max_health*100);"
+					],
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"percentage_0": "v.healthp==0"
+						},
+						{
+							"percentage_1": "v.healthp==1"
+						},
+						{
+							"percentage_2": "v.healthp==2"
+						},
+						{
+							"percentage_3": "v.healthp==3"
+						},
+						{
+							"percentage_4": "v.healthp==4"
+						},
+						{
+							"percentage_5": "v.healthp==5"
+						},
+						{
+							"percentage_6": "v.healthp==6"
+						},
+						{
+							"percentage_7": "v.healthp==7"
+						},
+						{
+							"percentage_8": "v.healthp==8"
+						},
+						{
+							"percentage_9": "v.healthp==9"
+						},
+						{
+							"percentage_10": "v.healthp==10"
+						},
+						{
+							"percentage_11": "v.healthp==11"
+						},
+						{
+							"percentage_12": "v.healthp==12"
+						},
+						{
+							"percentage_13": "v.healthp==13"
+						},
+						{
+							"percentage_14": "v.healthp==14"
+						},
+						{
+							"percentage_15": "v.healthp==15"
+						},
+						{
+							"percentage_16": "v.healthp==16"
+						},
+						{
+							"percentage_17": "v.healthp==17"
+						},
+						{
+							"percentage_18": "v.healthp==18"
+						},
+						{
+							"percentage_19": "v.healthp==19"
+						},
+						{
+							"percentage_20": "v.healthp==20"
+						},
+						{
+							"percentage_21": "v.healthp==21"
+						},
+						{
+							"percentage_22": "v.healthp==22"
+						},
+						{
+							"percentage_23": "v.healthp==23"
+						},
+						{
+							"percentage_24": "v.healthp==24"
+						},
+						{
+							"percentage_25": "v.healthp==25"
+						},
+						{
+							"percentage_26": "v.healthp==26"
+						},
+						{
+							"percentage_27": "v.healthp==27"
+						},
+						{
+							"percentage_28": "v.healthp==28"
+						},
+						{
+							"percentage_29": "v.healthp==29"
+						},
+						{
+							"percentage_30": "v.healthp==30"
+						},
+						{
+							"percentage_31": "v.healthp==31"
+						},
+						{
+							"percentage_32": "v.healthp==32"
+						},
+						{
+							"percentage_33": "v.healthp==33"
+						},
+						{
+							"percentage_34": "v.healthp==34"
+						},
+						{
+							"percentage_35": "v.healthp==35"
+						},
+						{
+							"percentage_36": "v.healthp==36"
+						},
+						{
+							"percentage_37": "v.healthp==37"
+						},
+						{
+							"percentage_38": "v.healthp==38"
+						},
+						{
+							"percentage_39": "v.healthp==39"
+						},
+						{
+							"percentage_40": "v.healthp==40"
+						},
+						{
+							"percentage_41": "v.healthp==41"
+						},
+						{
+							"percentage_42": "v.healthp==42"
+						},
+						{
+							"percentage_43": "v.healthp==43"
+						},
+						{
+							"percentage_44": "v.healthp==44"
+						},
+						{
+							"percentage_45": "v.healthp==45"
+						},
+						{
+							"percentage_46": "v.healthp==46"
+						},
+						{
+							"percentage_47": "v.healthp==47"
+						},
+						{
+							"percentage_48": "v.healthp==48"
+						},
+						{
+							"percentage_49": "v.healthp==49"
+						},
+						{
+							"percentage_50": "v.healthp==50"
+						},
+						{
+							"percentage_51": "v.healthp==51"
+						},
+						{
+							"percentage_52": "v.healthp==52"
+						},
+						{
+							"percentage_53": "v.healthp==53"
+						},
+						{
+							"percentage_54": "v.healthp==54"
+						},
+						{
+							"percentage_55": "v.healthp==55"
+						},
+						{
+							"percentage_56": "v.healthp==56"
+						},
+						{
+							"percentage_57": "v.healthp==57"
+						},
+						{
+							"percentage_58": "v.healthp==58"
+						},
+						{
+							"percentage_59": "v.healthp==59"
+						},
+						{
+							"percentage_60": "v.healthp==60"
+						},
+						{
+							"percentage_61": "v.healthp==61"
+						},
+						{
+							"percentage_62": "v.healthp==62"
+						},
+						{
+							"percentage_63": "v.healthp==63"
+						},
+						{
+							"percentage_64": "v.healthp==64"
+						},
+						{
+							"percentage_65": "v.healthp==65"
+						},
+						{
+							"percentage_66": "v.healthp==66"
+						},
+						{
+							"percentage_67": "v.healthp==67"
+						},
+						{
+							"percentage_68": "v.healthp==68"
+						},
+						{
+							"percentage_69": "v.healthp==69"
+						},
+						{
+							"percentage_70": "v.healthp==70"
+						},
+						{
+							"percentage_71": "v.healthp==71"
+						},
+						{
+							"percentage_72": "v.healthp==72"
+						},
+						{
+							"percentage_73": "v.healthp==73"
+						},
+						{
+							"percentage_74": "v.healthp==74"
+						},
+						{
+							"percentage_75": "v.healthp==75"
+						},
+						{
+							"percentage_76": "v.healthp==76"
+						},
+						{
+							"percentage_77": "v.healthp==77"
+						},
+						{
+							"percentage_78": "v.healthp==78"
+						},
+						{
+							"percentage_79": "v.healthp==79"
+						},
+						{
+							"percentage_80": "v.healthp==80"
+						},
+						{
+							"percentage_81": "v.healthp==81"
+						},
+						{
+							"percentage_82": "v.healthp==82"
+						},
+						{
+							"percentage_83": "v.healthp==83"
+						},
+						{
+							"percentage_84": "v.healthp==84"
+						},
+						{
+							"percentage_85": "v.healthp==85"
+						},
+						{
+							"percentage_86": "v.healthp==86"
+						},
+						{
+							"percentage_87": "v.healthp==87"
+						},
+						{
+							"percentage_88": "v.healthp==88"
+						},
+						{
+							"percentage_89": "v.healthp==89"
+						},
+						{
+							"percentage_90": "v.healthp==90"
+						},
+						{
+							"percentage_91": "v.healthp==91"
+						},
+						{
+							"percentage_92": "v.healthp==92"
+						},
+						{
+							"percentage_93": "v.healthp==93"
+						},
+						{
+							"percentage_94": "v.healthp==94"
+						},
+						{
+							"percentage_95": "v.healthp==95"
+						},
+						{
+							"percentage_96": "v.healthp==96"
+						},
+						{
+							"percentage_97": "v.healthp==97"
+						},
+						{
+							"percentage_98": "v.healthp==98"
+						},
+						{
+							"percentage_99": "v.healthp==99"
+						},
+						{
+							"percentage_100": "v.healthp==100"
+						}
+					]
+				},
+				"percentage_0": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=0||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 0",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_1": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=1||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 1",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_2": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=2||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 2",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_3": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=3||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 3",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_4": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=4||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 4",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_5": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=5||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 5",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_6": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=6||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 6",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_7": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=7||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 7",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_8": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=8||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 8",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_9": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=9||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 9",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_10": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=10||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 10",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_11": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=11||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 11",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_12": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=12||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 12",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_13": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=13||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 13",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_14": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=14||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 14",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_15": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=15||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 15",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_16": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=16||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 16",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_17": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=17||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 17",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_18": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=18||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 18",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_19": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=19||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 19",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_20": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=20||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 20",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_21": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=21||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 21",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_22": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=22||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 22",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_23": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=23||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 23",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_24": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=24||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 24",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_25": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=25||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 25",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_26": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=26||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 26",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_27": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=27||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 27",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_28": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=28||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 28",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_29": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=29||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 29",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_30": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=30||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 30",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_31": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=31||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 31",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_32": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=32||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 32",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_33": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=33||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 33",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_34": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=34||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 34",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_35": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=35||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 35",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_36": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=36||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 36",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_37": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=37||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 37",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_38": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=38||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 38",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_39": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=39||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 39",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_40": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=40||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 40",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_41": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=41||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 41",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_42": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=42||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 42",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_43": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=43||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 43",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_44": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=44||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 44",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_45": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=45||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 45",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_46": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=46||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 46",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_47": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=47||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 47",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_48": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=48||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 48",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_49": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=49||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 49",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_50": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=50||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 50",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_51": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=51||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 51",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_52": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=52||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 52",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_53": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=53||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 53",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_54": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=54||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 54",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_55": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=55||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 55",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_56": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=56||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 56",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_57": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=57||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 57",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_58": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=58||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 58",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_59": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=59||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 59",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_60": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=60||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 60",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_61": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=61||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 61",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_62": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=62||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 62",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_63": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=63||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 63",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_64": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=64||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 64",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_65": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=65||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 65",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_66": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=66||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 66",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_67": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=67||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 67",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_68": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=68||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 68",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_69": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=69||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 69",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_70": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=70||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 70",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_71": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=71||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 71",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_72": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=72||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 72",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_73": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=73||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 73",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_74": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=74||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 74",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_75": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=75||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 75",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_76": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=76||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 76",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_77": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=77||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 77",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_78": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=78||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 78",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_79": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=79||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 79",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_80": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=80||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 80",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_81": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=81||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 81",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_82": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=82||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 82",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_83": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=83||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 83",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_84": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=84||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 84",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_85": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=85||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 85",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_86": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=86||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 86",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_87": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=87||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 87",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_88": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=88||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 88",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_89": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=89||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 89",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_90": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=90||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 90",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_91": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=91||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 91",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_92": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=92||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 92",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_93": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=93||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 93",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_94": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=94||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 94",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_95": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=95||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 95",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_96": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=96||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 96",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_97": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=97||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 97",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_98": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=98||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 98",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_99": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=99||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 99",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				},
+				"percentage_100": {
+					"transitions": [
+						{
+							"percentage_0": "q.can_power_jump"
+						},
+						{
+							"default": "math.round(q.health/q.max_health*100)!=100||q.is_stunned"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players set @s bossbar_health 100",
+						"/tag @a[r=32] add bossbar.update",
+						"/function bossbar/update/_/value",
+						"/tag @a[r=32] remove bossbar.update"
+					]
+				}
+			}
+		},
+		"controller.animation.f44da7e24d584ce2f886b270f8ca3918e2d793f7_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"update": "q.is_stunned"
+						}
+					]
+				},
+				"update": {
+					"on_entry": [
+						"@s nom:update_bossbar_end"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.f44da7e24d584ce2f886b270f8ca3918e2d793f7_2": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/scoreboard players set @s bossbar_id -1",
+						"/tag @s remove bossbar.loaded"
+					]
+				}
+			}
+		}
+	}
+}

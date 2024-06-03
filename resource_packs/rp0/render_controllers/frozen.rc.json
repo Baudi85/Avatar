@@ -1,0 +1,17 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.frozen": {
+			"geometry": "geometry.frozen",
+			"materials": [
+				{
+					"*": "material.frozen"
+				}
+			],
+			"textures": [
+				"texture.frozen"
+			],
+			"ignore_lighting": true
+		}
+	}
+}

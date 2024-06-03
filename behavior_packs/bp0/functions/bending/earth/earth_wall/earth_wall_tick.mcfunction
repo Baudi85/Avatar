@@ -1,0 +1,1 @@
+execute @s[tag=being_thrown] ~~~ function bending/earth/earth_wall/earth_wall_thrown_tick

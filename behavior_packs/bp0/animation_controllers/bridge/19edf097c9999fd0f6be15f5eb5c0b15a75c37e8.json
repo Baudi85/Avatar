@@ -1,0 +1,546 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_approach"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_approach=0;",
+						"/event entity @s[tag=state_init] nom:approach._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:approach._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:approach._set",
+						"v.state_length=-1;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=6"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_approach=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_approach"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_approach_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=6"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_approach_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_approach_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_approach_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_approach_cooldown_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_2": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_approach=0;",
+						"v.state_nom_approach_cooldown=0;",
+						"v.false_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_3": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_random_wait"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_random_wait=0;",
+						"/event entity @s[tag=state_init] nom:random_wait._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:random_wait._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:random_wait._set",
+						"v.state_length=60;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=7"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_random_wait=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_4": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_random_wait"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_random_wait_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=7"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_random_wait_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_random_wait_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_random_wait_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_random_wait_cooldown_time+120"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_5": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_random_wait=0;",
+						"v.state_nom_random_wait_cooldown=0;",
+						"v.false_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_6": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_earth_wall_throw"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_earth_wall_throw=0;",
+						"/event entity @s[tag=state_init] nom:earth.wall.throw._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:earth.wall.throw._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:earth.wall.throw._set",
+						"v.state_length=100;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=130"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_earth_wall_throw=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_7": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_earth_wall_throw"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_earth_wall_throw_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=130"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_earth_wall_throw_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_earth_wall_throw_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_earth_wall_throw_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_earth_wall_throw_cooldown_time+200"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_8": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_earth_wall_throw=0;",
+						"v.state_nom_earth_wall_throw_cooldown=0;",
+						"v.false_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_9": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_earth_pull_small"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_earth_pull_small=0;",
+						"/event entity @s[tag=state_init] nom:earth.pull.small._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:earth.pull.small._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:earth.pull.small._set",
+						"v.state_length=1000;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=100"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_earth_pull_small=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_10": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_earth_pull_small"
+						},
+						{
+							"group_cooldown": "v.group_earth_pull_cooldown"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_earth_pull_small_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=100"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_earth_pull_small_cooldown=1;",
+						"v.group_earth_pull_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_earth_pull_small_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_earth_pull_small_cooldown=0;",
+						"v.group_earth_pull_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_earth_pull_small_cooldown_time+160"
+						}
+					]
+				},
+				"group_cooldown": {
+					"on_entry": [
+						"v.state_nom_earth_pull_small_cooldown=1;"
+					],
+					"on_exit": [
+						"v.state_nom_earth_pull_small_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "!v.group_earth_pull_cooldown"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_11": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_earth_pull_small=0;",
+						"v.state_nom_earth_pull_small_cooldown=0;",
+						"v.group_earth_pull_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_12": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_earth_quake_medium"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_earth_quake_medium=0;",
+						"/event entity @s[tag=state_init] nom:earth.quake.medium._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:earth.quake.medium._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:earth.quake.medium._set",
+						"v.state_length=-1;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=121"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_earth_quake_medium=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_13": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_earth_quake_medium"
+						},
+						{
+							"group_cooldown": "v.group_earth_quake_cooldown"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_earth_quake_medium_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=121"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_earth_quake_medium_cooldown=1;",
+						"v.group_earth_quake_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_earth_quake_medium_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_earth_quake_medium_cooldown=0;",
+						"v.group_earth_quake_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_earth_quake_medium_cooldown_time+240"
+						}
+					]
+				},
+				"group_cooldown": {
+					"on_entry": [
+						"v.state_nom_earth_quake_medium_cooldown=1;"
+					],
+					"on_exit": [
+						"v.state_nom_earth_quake_medium_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "!v.group_earth_quake_cooldown"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.19edf097c9999fd0f6be15f5eb5c0b15a75c37e8_14": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_earth_quake_medium=0;",
+						"v.state_nom_earth_quake_medium_cooldown=0;",
+						"v.group_earth_quake_cooldown=0;"
+					]
+				}
+			}
+		}
+	}
+}

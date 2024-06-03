@@ -1,0 +1,35 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.c407d335176d62d5110839a7b5450570cbdba23f_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_607_cooldown = v.state_nom_earth_pull_small_cooldown;",
+					"v.metastate_range_cooldown = v.chain_607_cooldown;"
+				]
+			}
+		},
+		"animation.c407d335176d62d5110839a7b5450570cbdba23f_1": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_936_cooldown = v.state_nom_earth_wall_throw_cooldown;",
+					"v.metastate_throw_wall_cooldown = v.chain_936_cooldown;"
+				]
+			}
+		},
+		"animation.c407d335176d62d5110839a7b5450570cbdba23f_2": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_913_cooldown = v.state_nom_approach_cooldown||v.state_nom_earth_quake_medium_cooldown;",
+					"v.metastate_quake_cooldown = v.chain_913_cooldown;"
+				]
+			}
+		}
+	}
+}

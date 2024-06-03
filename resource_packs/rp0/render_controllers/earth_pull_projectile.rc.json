@@ -1,0 +1,28 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.earth_pull": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"ignore_lighting": true,
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"earth_cube1*": "q.mark_variant == 1"
+				},
+				{
+					"earth_cube2*": "q.mark_variant == 2"
+				},
+				{
+					"earth_cube3*": "q.mark_variant == 3"
+				}
+			]
+		}
+	}
+}

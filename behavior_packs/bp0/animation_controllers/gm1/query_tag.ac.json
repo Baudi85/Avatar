@@ -1,0 +1,111 @@
+{
+	"format_version": "1.17.0",
+	"animation_controllers": {
+		"controller.animation.query_tag.is_moving": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s remove is_moving"
+					],
+					"transitions": [
+						{
+							"is_moving": "q.is_moving"
+						}
+					]
+				},
+				"is_moving": {
+					"on_entry": [
+						"/tag @s add is_moving"
+					],
+					"transitions": [
+						{
+							"pre_not_is_moving": "!q.is_moving"
+						}
+					]
+				},
+				"pre_not_is_moving": {
+					"transitions": [
+						{
+							"is_moving": "q.is_moving"
+						},
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.query_tag.is_on_ground": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"is_on_ground": "q.is_on_ground==1"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove is_on_ground"
+					]
+				},
+				"is_on_ground": {
+					"transitions": [
+						{
+							"default": "q.is_on_ground==0"
+						}
+					],
+					"on_entry": [
+						"/tag @s add is_on_ground"
+					]
+				}
+			}
+		},
+		"controller.animation.query_tag.is_jumping": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"is_jumping": "q.is_jumping==1"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove is_jumping"
+					]
+				},
+				"is_jumping": {
+					"transitions": [
+						{
+							"default": "q.is_jumping==0"
+						}
+					],
+					"on_entry": [
+						"/tag @s add is_jumping"
+					]
+				}
+			}
+		},
+		"controller.animation.query_tag.is_riding": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"is_riding": "q.is_riding==1"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove is_riding"
+					]
+				},
+				"is_riding": {
+					"transitions": [
+						{
+							"default": "q.is_riding==0"
+						}
+					],
+					"on_entry": [
+						"/tag @s add is_riding"
+					]
+				}
+			}
+		}
+	}
+}

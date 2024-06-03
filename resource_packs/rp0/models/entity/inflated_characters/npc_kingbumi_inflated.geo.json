@@ -1,0 +1,889 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.npc_kingbumi_inflated",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 4,
+				"visible_bounds_offset": [
+					0,
+					2,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "body",
+					"parent": "root",
+					"pivot": [
+						0,
+						24,
+						0
+					],
+					"reset": true,
+					"cubes": [
+						{
+							"origin": [
+								-4.1,
+								12.9,
+								-2.1
+							],
+							"size": [
+								8.2,
+								5.2,
+								4.2
+							],
+							"uv": [
+								16,
+								75
+							]
+						},
+						{
+							"origin": [
+								-5.1,
+								17.9,
+								-2.6
+							],
+							"size": [
+								10.2,
+								8.2,
+								5.2
+							],
+							"uv": [
+								32,
+								45
+							]
+						}
+					]
+				},
+				{
+					"name": "jacket",
+					"parent": "body",
+					"pivot": [
+						0,
+						24,
+						0
+					]
+				},
+				{
+					"name": "bodyArmor",
+					"parent": "body",
+					"pivot": [
+						0,
+						24,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-5.6,
+								13.4,
+								-2.6
+							],
+							"size": [
+								11.2,
+								13.2,
+								5.2
+							],
+							"inflate": 0.25,
+							"uv": [
+								0,
+								14
+							]
+						},
+						{
+							"origin": [
+								-6.1,
+								18.9,
+								-3.1
+							],
+							"size": [
+								12.2,
+								8.2,
+								6.2
+							],
+							"inflate": 0.125,
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "belt",
+					"parent": "body",
+					"pivot": [
+						0,
+						24,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-4.6,
+								13.4,
+								-2.6
+							],
+							"size": [
+								9.2,
+								3.2,
+								5.2
+							],
+							"uv": [
+								64,
+								14
+							]
+						}
+					]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [
+						0,
+						24,
+						-2
+					],
+					"reset": true,
+					"cubes": [
+						{
+							"origin": [
+								-4.1,
+								23.9,
+								-6.1
+							],
+							"size": [
+								8.2,
+								8.2,
+								8.2
+							],
+							"uv": [
+								0,
+								35
+							]
+						},
+						{
+							"origin": [
+								-4.1,
+								23.9,
+								-6.1
+							],
+							"size": [
+								8.2,
+								8.2,
+								8.2
+							],
+							"inflate": 0.25,
+							"uv": [
+								32,
+								6
+							]
+						},
+						{
+							"origin": [
+								-7.6,
+								24.4,
+								-3.6
+							],
+							"size": [
+								15.2,
+								5.2,
+								0.2
+							],
+							"uv": [
+								30,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [
+						0,
+						24,
+						-2
+					]
+				},
+				{
+					"name": "helmet",
+					"parent": "head",
+					"pivot": [
+						0,
+						24,
+						-2
+					],
+					"cubes": [
+						{
+							"origin": [
+								-1.1,
+								33.9,
+								-2.1
+							],
+							"size": [
+								2.2,
+								2.2,
+								2.2
+							],
+							"uv": [
+								24,
+								35
+							]
+						},
+						{
+							"origin": [
+								-4.6,
+								31.4,
+								-6.6
+							],
+							"size": [
+								9.2,
+								3.2,
+								9.2
+							],
+							"uv": [
+								23,
+								23
+							]
+						},
+						{
+							"origin": [
+								-6.6,
+								26.4,
+								-1.6
+							],
+							"size": [
+								13.2,
+								5.2,
+								5.2
+							],
+							"uv": [
+								32,
+								35
+							]
+						},
+						{
+							"origin": [
+								-7.6,
+								26.4,
+								-1.4
+							],
+							"size": [
+								15.2,
+								7.2,
+								0
+							],
+							"uv": [
+								50,
+								22
+							]
+						},
+						{
+							"origin": [
+								-7.6,
+								26.4,
+								-1.6
+							],
+							"size": [
+								15.2,
+								7.2,
+								0
+							],
+							"uv": [
+								65,
+								22
+							]
+						},
+						{
+							"origin": [
+								-3.1,
+								35.9,
+								-2.1
+							],
+							"size": [
+								2.2,
+								2.2,
+								2.2
+							],
+							"uv": [
+								0,
+								34
+							]
+						},
+						{
+							"origin": [
+								0.9,
+								35.9,
+								-2.1
+							],
+							"size": [
+								2.2,
+								2.2,
+								2.2
+							],
+							"uv": [
+								0,
+								34
+							]
+						},
+						{
+							"origin": [
+								2.9,
+								36.9,
+								-2.1
+							],
+							"size": [
+								6.2,
+								0.2,
+								2.2
+							],
+							"uv": [
+								0,
+								32
+							]
+						},
+						{
+							"origin": [
+								6.9,
+								36.9,
+								-2.1
+							],
+							"size": [
+								2.2,
+								8.2,
+								8.2
+							],
+							"uv": [
+								62,
+								37
+							]
+						},
+						{
+							"origin": [
+								-9.1,
+								36.9,
+								-2.1
+							],
+							"size": [
+								2.2,
+								8.2,
+								8.2
+							],
+							"uv": [
+								62,
+								37
+							],
+							"mirror": true
+						},
+						{
+							"origin": [
+								-9.1,
+								36.9,
+								-2.1
+							],
+							"size": [
+								6.2,
+								0.2,
+								2.2
+							],
+							"uv": [
+								0,
+								32
+							],
+							"mirror": true
+						},
+						{
+							"origin": [
+								-1.6,
+								35.4,
+								-2.6
+							],
+							"size": [
+								3.2,
+								3.2,
+								3.2
+							],
+							"uv": [
+								20,
+								51
+							]
+						}
+					]
+				},
+				{
+					"name": "helmetArmorOffset",
+					"parent": "head",
+					"pivot": [
+						0,
+						24,
+						-2
+					]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [
+						6,
+						24,
+						0
+					],
+					"reset": true,
+					"cubes": [
+						{
+							"origin": [
+								4.9,
+								12.9,
+								-2.1
+							],
+							"size": [
+								4.2,
+								13.2,
+								4.2
+							],
+							"uv": [
+								74,
+								70
+							],
+							"mirror": true
+						},
+						{
+							"origin": [
+								4.9,
+								12.9,
+								-2.1
+							],
+							"size": [
+								4.2,
+								13.2,
+								4.2
+							],
+							"inflate": 0.25,
+							"uv": [
+								0,
+								71
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "leftSleeve",
+					"parent": "leftArm",
+					"pivot": [
+						6,
+						24,
+						0
+					]
+				},
+				{
+					"name": "leftItem",
+					"parent": "leftArm",
+					"pivot": [
+						7.5,
+						14,
+						0
+					]
+				},
+				{
+					"name": "leftArmArmor",
+					"parent": "leftArm",
+					"pivot": [
+						6,
+						24,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								4.9,
+								18.9,
+								-3.1
+							],
+							"size": [
+								6.2,
+								8.2,
+								6.2
+							],
+							"uv": [
+								56,
+								0
+							],
+							"mirror": true
+						},
+						{
+							"origin": [
+								4.4,
+								11.4,
+								-2.6
+							],
+							"size": [
+								5.2,
+								15.2,
+								5.2
+							],
+							"uv": [
+								0,
+								51
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [
+						-6,
+						24,
+						0
+					],
+					"reset": true,
+					"cubes": [
+						{
+							"origin": [
+								-9.1,
+								12.9,
+								-2.1
+							],
+							"size": [
+								4.2,
+								13.2,
+								4.2
+							],
+							"uv": [
+								74,
+								70
+							]
+						},
+						{
+							"origin": [
+								-9.1,
+								12.9,
+								-2.1
+							],
+							"size": [
+								4.2,
+								13.2,
+								4.2
+							],
+							"inflate": 0.25,
+							"uv": [
+								0,
+								71
+							]
+						}
+					]
+				},
+				{
+					"name": "rightSleeve",
+					"parent": "rightArm",
+					"pivot": [
+						-6,
+						24,
+						0
+					]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [
+						-7.5,
+						14,
+						0
+					]
+				},
+				{
+					"name": "rightArmArmor",
+					"parent": "rightArm",
+					"pivot": [
+						-6,
+						24,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-11.1,
+								18.9,
+								-3.1
+							],
+							"size": [
+								6.2,
+								8.2,
+								6.2
+							],
+							"uv": [
+								56,
+								0
+							]
+						},
+						{
+							"origin": [
+								-9.6,
+								11.4,
+								-2.6
+							],
+							"size": [
+								5.2,
+								15.2,
+								5.2
+							],
+							"uv": [
+								0,
+								51
+							]
+						}
+					]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "root",
+					"pivot": [
+						2,
+						13,
+						0
+					],
+					"reset": true,
+					"cubes": [
+						{
+							"origin": [
+								-0.1,
+								-0.1,
+								-2.1
+							],
+							"size": [
+								4.2,
+								13.2,
+								4.2
+							],
+							"uv": [
+								58,
+								70
+							],
+							"mirror": true
+						},
+						{
+							"origin": [
+								-0.1,
+								-0.1,
+								-2.1
+							],
+							"size": [
+								4.2,
+								13.2,
+								4.2
+							],
+							"inflate": 0.25,
+							"uv": [
+								42,
+								66
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "leftPants",
+					"parent": "leftLeg",
+					"pivot": [
+						2,
+						0,
+						0
+					]
+				},
+				{
+					"name": "leftBootArmorOffset",
+					"parent": "leftLeg",
+					"pivot": [
+						2,
+						12,
+						0
+					]
+				},
+				{
+					"name": "leftLegging",
+					"parent": "leftLeg",
+					"pivot": [
+						2,
+						12,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-0.6,
+								1.4,
+								-2.6
+							],
+							"size": [
+								6.2,
+								12.2,
+								5.2
+							],
+							"inflate": 0.075,
+							"uv": [
+								20,
+								58
+							]
+						},
+						{
+							"origin": [
+								-0.6,
+								6.4,
+								-2.6
+							],
+							"size": [
+								5.2,
+								7.2,
+								5.2
+							],
+							"uv": [
+								74,
+								31
+							]
+						}
+					]
+				},
+				{
+					"name": "leftBoot",
+					"parent": "leftLeg",
+					"pivot": [
+						2,
+						0,
+						0
+					]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "root",
+					"pivot": [
+						-2,
+						13,
+						0
+					],
+					"reset": true,
+					"cubes": [
+						{
+							"origin": [
+								-4.1,
+								-0.1,
+								-2.1
+							],
+							"size": [
+								4.2,
+								13.2,
+								4.2
+							],
+							"uv": [
+								58,
+								70
+							]
+						},
+						{
+							"origin": [
+								-4.1,
+								-0.1,
+								-2.1
+							],
+							"size": [
+								4.2,
+								13.2,
+								4.2
+							],
+							"inflate": 0.25,
+							"uv": [
+								42,
+								66
+							]
+						}
+					]
+				},
+				{
+					"name": "rightPants",
+					"parent": "rightLeg",
+					"pivot": [
+						-2,
+						0,
+						0
+					]
+				},
+				{
+					"name": "rightBootArmorOffset",
+					"parent": "rightLeg",
+					"pivot": [
+						-2,
+						12,
+						0
+					]
+				},
+				{
+					"name": "rightLegging",
+					"parent": "rightLeg",
+					"pivot": [
+						-2,
+						12,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-5.6,
+								1.4,
+								-2.6
+							],
+							"size": [
+								6.2,
+								12.2,
+								5.2
+							],
+							"inflate": 0.125,
+							"uv": [
+								57,
+								53
+							]
+						},
+						{
+							"origin": [
+								-4.6,
+								6.4,
+								-2.6
+							],
+							"size": [
+								5.2,
+								7.2,
+								5.2
+							],
+							"uv": [
+								74,
+								31
+							],
+							"mirror": true
+						}
+					]
+				},
+				{
+					"name": "rightBoot",
+					"parent": "rightLeg",
+					"pivot": [
+						-2,
+						0,
+						0
+					]
+				}
+			]
+		}
+	]
+}

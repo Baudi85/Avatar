@@ -1,0 +1,19 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.paisho_table": {
+			"materials": [
+				{
+					"*": "material.default"
+				},
+				{
+					"slot*": "material.shiny"
+				}
+			],
+			"geometry": "geometry.default",
+			"textures": [
+				"texture.default"
+			]
+		}
+	}
+}

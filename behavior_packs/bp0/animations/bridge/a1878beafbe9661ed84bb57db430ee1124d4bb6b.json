@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.a1878beafbe9661ed84bb57db430ee1124d4bb6b_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"/function enemy/bending/earth/wall/target_tick"
+				]
+			}
+		}
+	}
+}

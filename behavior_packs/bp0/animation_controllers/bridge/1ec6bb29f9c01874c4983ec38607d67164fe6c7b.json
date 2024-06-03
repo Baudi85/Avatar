@@ -1,0 +1,338 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.1ec6bb29f9c01874c4983ec38607d67164fe6c7b_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==220)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==220"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.1ec6bb29f9c01874c4983ec38607d67164fe6c7b_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:enemy.bending.water.breath.764965.move",
+						"@s nom:enemy.bending.water.breath.764965.shooter",
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==220)"
+						},
+						{
+							"charged": "query.is_charged&&query.is_saddled&&query.ground_speed<0.25"
+						}
+					]
+				},
+				"charged": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==220)"
+						},
+						{
+							"default": "!query.is_saddled"
+						},
+						{
+							"attack": "!query.is_charged"
+						}
+					]
+				},
+				"attack": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_2"
+					],
+					"on_exit": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:enemy.bending.water.breath.764965.stop"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==220)"
+						},
+						{
+							"cooldown": "q.life_time>=v.runtime+0.5"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.runtime=q.life_time;"
+					],
+					"on_exit": [
+						"@s nom:enemy.bending.water.breath.764965.end",
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==220)"
+						},
+						{
+							"end": "q.life_time>=v.runtime+0.75"
+						}
+					]
+				},
+				"end": {
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==220)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==220"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.1ec6bb29f9c01874c4983ec38607d67164fe6c7b_2": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==221)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==221"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.1ec6bb29f9c01874c4983ec38607d67164fe6c7b_3": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:enemy.bending.water.breath.105891.move",
+						"@s nom:enemy.bending.water.breath.105891.shooter",
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==221)"
+						},
+						{
+							"charged": "query.is_charged&&query.is_saddled&&query.ground_speed<0.25"
+						}
+					]
+				},
+				"charged": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==221)"
+						},
+						{
+							"default": "!query.is_saddled"
+						},
+						{
+							"attack": "!query.is_charged"
+						}
+					]
+				},
+				"attack": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_2"
+					],
+					"on_exit": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:enemy.bending.water.breath.105891.stop"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==221)"
+						},
+						{
+							"cooldown": "q.life_time>=v.runtime+1"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.runtime=q.life_time;"
+					],
+					"on_exit": [
+						"@s nom:enemy.bending.water.breath.105891.end",
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==221)"
+						},
+						{
+							"end": "q.life_time>=v.runtime+0.75"
+						}
+					]
+				},
+				"end": {
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==221)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==221"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.1ec6bb29f9c01874c4983ec38607d67164fe6c7b_4": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==222)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==222"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.1ec6bb29f9c01874c4983ec38607d67164fe6c7b_5": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:enemy.bending.water.breath.420224.move",
+						"@s nom:enemy.bending.water.breath.420224.shooter",
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==222)"
+						},
+						{
+							"charged": "query.is_charged&&query.is_saddled&&query.ground_speed<0.25"
+						}
+					]
+				},
+				"charged": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==222)"
+						},
+						{
+							"default": "!query.is_saddled"
+						},
+						{
+							"attack": "!query.is_charged"
+						}
+					]
+				},
+				"attack": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_2"
+					],
+					"on_exit": [
+						"@s nom:state_bending_teq_0",
+						"@s nom:enemy.bending.water.breath.420224.stop"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==222)"
+						},
+						{
+							"cooldown": "q.life_time>=v.runtime+1.5"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.runtime=q.life_time;"
+					],
+					"on_exit": [
+						"@s nom:enemy.bending.water.breath.420224.end",
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==222)"
+						},
+						{
+							"end": "q.life_time>=v.runtime+0.75"
+						}
+					]
+				},
+				"end": {
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==222)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==222"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		}
+	}
+}

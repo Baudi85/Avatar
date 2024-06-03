@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.bison_whistle.use_normal": {
+			"animation_length": 1,
+			"loop": true,
+			"timeline": {
+				"0": [
+					"/function region_bounds/whistle/use_normal"
+				]
+			}
+		},
+		"animation.bison_whistle.use_confirm": {
+			"animation_length": 1,
+			"loop": true,
+			"timeline": {
+				"0": [
+					"/function region_bounds/whistle/use_confirm"
+				]
+			}
+		}
+	}
+}

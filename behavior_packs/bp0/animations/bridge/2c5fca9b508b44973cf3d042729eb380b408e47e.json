@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.2c5fca9b508b44973cf3d042729eb380b408e47e_0": {
+			"loop": true,
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"/function bending/generic/on_homing_tick_fast"
+				]
+			}
+		},
+		"animation.2c5fca9b508b44973cf3d042729eb380b408e47e_1": {
+			"loop": true,
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"/function bending/generic/on_homing_tick_fast_enemy"
+				]
+			}
+		}
+	}
+}

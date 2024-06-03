@@ -1,0 +1,564 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:trinket_display",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"controller.animation.trinket_display": "controller.animation.trinket_display"
+			},
+			"scripts": {
+				"animate": [
+					"controller.animation.trinket_display"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {},
+				"minecraft:knockback_resistance": {
+					"value": 1
+				}
+			},
+			"nom:render": {
+				"minecraft:is_saddled": {}
+			},
+			"nom:reinitialize": {
+				"minecraft:is_stunned": {}
+			},
+			"nom:aang": {
+				"minecraft:variant": {
+					"value": 1
+				},
+				"minecraft:collision_box": {
+					"height": 1.5,
+					"width": 0.25
+				}
+			},
+			"nom:amon": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"nom:asami": {
+				"minecraft:variant": {
+					"value": 3
+				},
+				"minecraft:collision_box": {
+					"height": 0.25,
+					"width": 0.25
+				}
+			},
+			"nom:azula": {
+				"minecraft:variant": {
+					"value": 4
+				}
+			},
+			"nom:bolin": {
+				"minecraft:variant": {
+					"value": 5
+				}
+			},
+			"nom:bumi": {
+				"minecraft:variant": {
+					"value": 6
+				}
+			},
+			"nom:cabbage": {
+				"minecraft:variant": {
+					"value": 7
+				},
+				"minecraft:collision_box": {
+					"height": 0,
+					"width": 0.25
+				}
+			},
+			"nom:iroh": {
+				"minecraft:variant": {
+					"value": 8
+				},
+				"minecraft:collision_box": {
+					"height": 0,
+					"width": 0.25
+				}
+			},
+			"nom:jet": {
+				"minecraft:variant": {
+					"value": 9
+				}
+			},
+			"nom:kai": {
+				"minecraft:variant": {
+					"value": 10
+				}
+			},
+			"nom:katara": {
+				"minecraft:variant": {
+					"value": 11
+				}
+			},
+			"nom:korra": {
+				"minecraft:variant": {
+					"value": 12
+				},
+				"minecraft:collision_box": {
+					"height": 1.5,
+					"width": 0.25
+				}
+			},
+			"nom:kyoshi": {
+				"minecraft:variant": {
+					"value": 13
+				},
+				"minecraft:collision_box": {
+					"height": 1.5,
+					"width": 0.25
+				}
+			},
+			"nom:lin": {
+				"minecraft:variant": {
+					"value": 14
+				}
+			},
+			"nom:long": {
+				"minecraft:variant": {
+					"value": 15
+				},
+				"minecraft:collision_box": {
+					"height": 0.25,
+					"width": 0.25
+				}
+			},
+			"nom:mako": {
+				"minecraft:variant": {
+					"value": 16
+				}
+			},
+			"nom:opal": {
+				"minecraft:variant": {
+					"value": 17
+				}
+			},
+			"nom:ozai": {
+				"minecraft:variant": {
+					"value": 18
+				}
+			},
+			"nom:pathik": {
+				"minecraft:variant": {
+					"value": 19
+				},
+				"minecraft:collision_box": {
+					"height": 1.75,
+					"width": 0.25
+				}
+			},
+			"nom:players": {
+				"minecraft:variant": {
+					"value": 20
+				},
+				"minecraft:collision_box": {
+					"height": 1.5,
+					"width": 0.25
+				}
+			},
+			"nom:roku": {
+				"minecraft:variant": {
+					"value": 21
+				},
+				"minecraft:collision_box": {
+					"height": 1.5,
+					"width": 0.25
+				}
+			},
+			"nom:sokka": {
+				"minecraft:variant": {
+					"value": 22
+				}
+			},
+			"nom:suki": {
+				"minecraft:variant": {
+					"value": 23
+				}
+			},
+			"nom:tenzin": {
+				"minecraft:variant": {
+					"value": 24
+				}
+			},
+			"nom:toph": {
+				"minecraft:variant": {
+					"value": 25
+				}
+			},
+			"nom:unalaq": {
+				"minecraft:variant": {
+					"value": 26
+				},
+				"minecraft:collision_box": {
+					"height": 0.75,
+					"width": 0.25
+				}
+			},
+			"nom:varrick": {
+				"minecraft:variant": {
+					"value": 27
+				},
+				"minecraft:collision_box": {
+					"height": 0.25,
+					"width": 0.25
+				}
+			},
+			"nom:zaheer": {
+				"minecraft:variant": {
+					"value": 28
+				},
+				"minecraft:collision_box": {
+					"height": 0.75,
+					"width": 0.25
+				}
+			},
+			"nom:zhao": {
+				"minecraft:variant": {
+					"value": 29
+				}
+			},
+			"nom:zuko": {
+				"minecraft:variant": {
+					"value": 30
+				}
+			},
+			"gm1:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					},
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": true,
+				"always_show": false
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 0.25
+			},
+			"minecraft:health": {
+				"value": 1,
+				"max": 1
+			},
+			"minecraft:physics": {
+				"has_collision": false,
+				"has_gravity": false
+			},
+			"minecraft:pushable": {
+				"is_pushable": false,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"value": "nom:delete_tool",
+										"domain": "hand",
+										"subject": "other"
+									},
+									{
+										"test": "has_ability",
+										"value": "instabuild",
+										"subject": "other"
+									}
+								]
+							},
+							"event": "gm1:despawn"
+						}
+					}
+				]
+			},
+			"minecraft:skin_id": {
+				"value": 0
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"test": "has_tag",
+					"value": "despawn"
+				}
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			},
+			"nom:render": {
+				"add": {
+					"component_groups": [
+						"nom:render"
+					]
+				}
+			},
+			"nom:reinitialize": {
+				"add": {
+					"component_groups": [
+						"nom:reinitialize"
+					]
+				},
+				"remove": {
+					"component_groups": [
+						"nom:render"
+					]
+				}
+			},
+			"nom:remove_reinitialize": {
+				"remove": {
+					"component_groups": [
+						"nom:reinitialize"
+					]
+				}
+			},
+			"nom:aang": {
+				"add": {
+					"component_groups": [
+						"nom:aang"
+					]
+				}
+			},
+			"nom:amon": {
+				"add": {
+					"component_groups": [
+						"nom:amon"
+					]
+				}
+			},
+			"nom:asami": {
+				"add": {
+					"component_groups": [
+						"nom:asami"
+					]
+				}
+			},
+			"nom:azula": {
+				"add": {
+					"component_groups": [
+						"nom:azula"
+					]
+				}
+			},
+			"nom:bolin": {
+				"add": {
+					"component_groups": [
+						"nom:bolin"
+					]
+				}
+			},
+			"nom:bumi": {
+				"add": {
+					"component_groups": [
+						"nom:bumi"
+					]
+				}
+			},
+			"nom:cabbage": {
+				"add": {
+					"component_groups": [
+						"nom:cabbage"
+					]
+				}
+			},
+			"nom:iroh": {
+				"add": {
+					"component_groups": [
+						"nom:iroh"
+					]
+				}
+			},
+			"nom:jet": {
+				"add": {
+					"component_groups": [
+						"nom:jet"
+					]
+				}
+			},
+			"nom:kai": {
+				"add": {
+					"component_groups": [
+						"nom:kai"
+					]
+				}
+			},
+			"nom:katara": {
+				"add": {
+					"component_groups": [
+						"nom:katara"
+					]
+				}
+			},
+			"nom:korra": {
+				"add": {
+					"component_groups": [
+						"nom:korra"
+					]
+				}
+			},
+			"nom:kyoshi": {
+				"add": {
+					"component_groups": [
+						"nom:kyoshi"
+					]
+				}
+			},
+			"nom:lin": {
+				"add": {
+					"component_groups": [
+						"nom:lin"
+					]
+				}
+			},
+			"nom:long": {
+				"add": {
+					"component_groups": [
+						"nom:long"
+					]
+				}
+			},
+			"nom:mako": {
+				"add": {
+					"component_groups": [
+						"nom:mako"
+					]
+				}
+			},
+			"nom:opal": {
+				"add": {
+					"component_groups": [
+						"nom:opal"
+					]
+				}
+			},
+			"nom:ozai": {
+				"add": {
+					"component_groups": [
+						"nom:ozai"
+					]
+				}
+			},
+			"nom:pathik": {
+				"add": {
+					"component_groups": [
+						"nom:pathik"
+					]
+				}
+			},
+			"nom:players": {
+				"add": {
+					"component_groups": [
+						"nom:players"
+					]
+				}
+			},
+			"nom:roku": {
+				"add": {
+					"component_groups": [
+						"nom:roku"
+					]
+				}
+			},
+			"nom:sokka": {
+				"add": {
+					"component_groups": [
+						"nom:sokka"
+					]
+				}
+			},
+			"nom:suki": {
+				"add": {
+					"component_groups": [
+						"nom:suki"
+					]
+				}
+			},
+			"nom:tenzin": {
+				"add": {
+					"component_groups": [
+						"nom:tenzin"
+					]
+				}
+			},
+			"nom:toph": {
+				"add": {
+					"component_groups": [
+						"nom:toph"
+					]
+				}
+			},
+			"nom:unalaq": {
+				"add": {
+					"component_groups": [
+						"nom:unalaq"
+					]
+				}
+			},
+			"nom:varrick": {
+				"add": {
+					"component_groups": [
+						"nom:varrick"
+					]
+				}
+			},
+			"nom:zaheer": {
+				"add": {
+					"component_groups": [
+						"nom:zaheer"
+					]
+				}
+			},
+			"nom:zhao": {
+				"add": {
+					"component_groups": [
+						"nom:zhao"
+					]
+				}
+			},
+			"nom:zuko": {
+				"add": {
+					"component_groups": [
+						"nom:zuko"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"gm1:skin_id_0"
+					]
+				}
+			},
+			"gm1:despawn": {
+				"add": {
+					"component_groups": [
+						"gm1:despawn"
+					]
+				}
+			}
+		}
+	}
+}

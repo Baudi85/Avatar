@@ -1,0 +1,273 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.npc_icon_travel_inflated",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 9,
+				"visible_bounds_height": 8,
+				"visible_bounds_offset": [
+					0,
+					4,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						84,
+						-16
+					]
+				},
+				{
+					"name": "root_icon",
+					"parent": "root",
+					"pivot": [
+						0,
+						58,
+						-16
+					]
+				},
+				{
+					"name": "travel",
+					"parent": "root_icon",
+					"pivot": [
+						0,
+						98,
+						-16
+					],
+					"rotation": [
+						0,
+						0,
+						-15
+					],
+					"reset": true
+				},
+				{
+					"name": "travel_map",
+					"parent": "travel",
+					"pivot": [
+						0,
+						98,
+						-16
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2.6,
+								93.4,
+								-15.9
+							],
+							"size": [
+								5.2,
+								9.2,
+								0
+							],
+							"uv": [
+								9,
+								29
+							]
+						},
+						{
+							"origin": [
+								-2.6,
+								93.4,
+								-16.1
+							],
+							"size": [
+								5.2,
+								9.2,
+								0
+							],
+							"uv": [
+								14,
+								29
+							]
+						}
+					]
+				},
+				{
+					"name": "travel_target",
+					"parent": "travel_map",
+					"pivot": [
+						1,
+						98,
+						-16
+					],
+					"rotation": [
+						0,
+						0,
+						-45
+					],
+					"cubes": [
+						{
+							"origin": [
+								-0.6,
+								96.4,
+								-16.6
+							],
+							"size": [
+								3.2,
+								3.2,
+								0
+							],
+							"uv": [
+								31,
+								30
+							]
+						},
+						{
+							"origin": [
+								-0.6,
+								96.4,
+								-16.4
+							],
+							"size": [
+								3.2,
+								3.2,
+								0
+							],
+							"uv": [
+								28,
+								30
+							]
+						},
+						{
+							"origin": [
+								-3.6,
+								98.1,
+								-23.6
+							],
+							"size": [
+								5.2,
+								0,
+								5.2
+							],
+							"uv": [
+								9,
+								38
+							]
+						},
+						{
+							"origin": [
+								-3.6,
+								97.9,
+								-23.6
+							],
+							"size": [
+								5.2,
+								0,
+								5.2
+							],
+							"uv": [
+								4,
+								38
+							]
+						}
+					]
+				},
+				{
+					"name": "travel_map_1",
+					"parent": "travel_map",
+					"pivot": [
+						-2.5,
+						98,
+						-16
+					],
+					"rotation": [
+						0,
+						-30,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-5.6,
+								93.4,
+								-15.9
+							],
+							"size": [
+								3.2,
+								9.2,
+								0
+							],
+							"uv": [
+								0,
+								29
+							]
+						},
+						{
+							"origin": [
+								-5.6,
+								93.4,
+								-16.1
+							],
+							"size": [
+								3.2,
+								9.2,
+								0
+							],
+							"uv": [
+								3,
+								29
+							]
+						}
+					]
+				},
+				{
+					"name": "travel_map_2",
+					"parent": "travel_map",
+					"pivot": [
+						2.5,
+						98,
+						-16
+					],
+					"rotation": [
+						0,
+						-30,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								2.4,
+								93.4,
+								-15.9
+							],
+							"size": [
+								3.2,
+								9.2,
+								0
+							],
+							"uv": [
+								21,
+								29
+							],
+							"mirror": true
+						},
+						{
+							"origin": [
+								2.4,
+								93.4,
+								-16.1
+							],
+							"size": [
+								3.2,
+								9.2,
+								0
+							],
+							"uv": [
+								24,
+								29
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

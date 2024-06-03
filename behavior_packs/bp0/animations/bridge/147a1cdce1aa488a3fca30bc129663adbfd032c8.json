@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.147a1cdce1aa488a3fca30bc129663adbfd032c8_0": {
+			"animation_length": 1,
+			"timeline": {
+				"0.15": [
+					"/tag @e[r=1 ] remove boost_target"
+				]
+			}
+		}
+	}
+}

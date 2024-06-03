@@ -1,0 +1,645 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.var.id.set.1": {
+			"anim_time_update": "v.id=1;"
+		},
+		"animation.var.id.set.2": {
+			"anim_time_update": "v.id=2;"
+		},
+		"animation.var.id.set.3": {
+			"anim_time_update": "v.id=3;"
+		},
+		"animation.var.id.set.4": {
+			"anim_time_update": "v.id=4;"
+		},
+		"animation.var.id.set.5": {
+			"anim_time_update": "v.id=5;"
+		},
+		"animation.var.id.set.6": {
+			"anim_time_update": "v.id=6;"
+		},
+		"animation.var.id.set.7": {
+			"anim_time_update": "v.id=7;"
+		},
+		"animation.var.id.add": {
+			"anim_time_update": "v.id=(v.id??0)+1;"
+		},
+		"animation.var.id.remove": {
+			"anim_time_update": "v.id=(v.id??0)-1;"
+		},
+		"animation.set_var.is_active.0": {
+			"anim_time_update": "v.is_active=0;"
+		},
+		"animation.set_var.is_active.1": {
+			"anim_time_update": "v.is_active=1;"
+		},
+		"animation.set_var.selected_cube.0": {
+			"anim_time_update": "v.selected_cube=0;"
+		},
+		"animation.set_var.selected_cube.1": {
+			"anim_time_update": "v.selected_cube=1;"
+		},
+		"animation.set_var.selected_cube.2": {
+			"anim_time_update": "v.selected_cube=2;"
+		},
+		"animation.set_var.selected_cube.3": {
+			"anim_time_update": "v.selected_cube=3;"
+		},
+		"animation.set_var.selected_cube.4": {
+			"anim_time_update": "v.selected_cube=4;"
+		},
+		"animation.set_var.selected_cube.5": {
+			"anim_time_update": "v.selected_cube=5;"
+		},
+		"animation.set_var.selected_cube.6": {
+			"anim_time_update": "v.selected_cube=6;"
+		},
+		"animation.set_var.selected_cube.7": {
+			"anim_time_update": "v.selected_cube=7;"
+		},
+		"animation.set_var.selected_cube.8": {
+			"anim_time_update": "v.selected_cube=8;"
+		},
+		"animation.set_var.poi_1_enemies.0": {
+			"anim_time_update": "v.poi_1_enemies=0;"
+		},
+		"animation.set_var.poi_1_enemies.1": {
+			"anim_time_update": "v.poi_1_enemies=1;"
+		},
+		"animation.set_var.poi_1_enemies.2": {
+			"anim_time_update": "v.poi_1_enemies=2;"
+		},
+		"animation.set_var.poi_1_enemies.3": {
+			"anim_time_update": "v.poi_1_enemies=3;"
+		},
+		"animation.set_var.poi_1_enemies.4": {
+			"anim_time_update": "v.poi_1_enemies=4;"
+		},
+		"animation.set_var.poi_1_enemies.5": {
+			"anim_time_update": "v.poi_1_enemies=5;"
+		},
+		"animation.set_var.poi_1_enemies.6": {
+			"anim_time_update": "v.poi_1_enemies=6;"
+		},
+		"animation.set_var.poi_1_enemies.7": {
+			"anim_time_update": "v.poi_1_enemies=7;"
+		},
+		"animation.set_var.poi_1_enemies.8": {
+			"anim_time_update": "v.poi_1_enemies=8;"
+		},
+		"animation.set_var.poi_1_enemies.9": {
+			"anim_time_update": "v.poi_1_enemies=9;"
+		},
+		"animation.set_var.poi_1_enemies.10": {
+			"anim_time_update": "v.poi_1_enemies=10;"
+		},
+		"animation.set_var.poi_2_enemies.0": {
+			"anim_time_update": "v.poi_2_enemies=0;"
+		},
+		"animation.set_var.poi_2_enemies.1": {
+			"anim_time_update": "v.poi_2_enemies=1;"
+		},
+		"animation.set_var.poi_2_enemies.2": {
+			"anim_time_update": "v.poi_2_enemies=2;"
+		},
+		"animation.set_var.poi_2_enemies.3": {
+			"anim_time_update": "v.poi_2_enemies=3;"
+		},
+		"animation.set_var.poi_2_enemies.4": {
+			"anim_time_update": "v.poi_2_enemies=4;"
+		},
+		"animation.set_var.poi_2_enemies.5": {
+			"anim_time_update": "v.poi_2_enemies=5;"
+		},
+		"animation.set_var.poi_2_enemies.6": {
+			"anim_time_update": "v.poi_2_enemies=6;"
+		},
+		"animation.set_var.poi_2_enemies.7": {
+			"anim_time_update": "v.poi_2_enemies=7;"
+		},
+		"animation.set_var.poi_2_enemies.8": {
+			"anim_time_update": "v.poi_2_enemies=8;"
+		},
+		"animation.set_var.poi_2_enemies.9": {
+			"anim_time_update": "v.poi_2_enemies=9;"
+		},
+		"animation.set_var.poi_2_enemies.10": {
+			"anim_time_update": "v.poi_2_enemies=10;"
+		},
+		"animation.set_var.poi_3_enemies.0": {
+			"anim_time_update": "v.poi_3_enemies=0;"
+		},
+		"animation.set_var.poi_3_enemies.1": {
+			"anim_time_update": "v.poi_3_enemies=1;"
+		},
+		"animation.set_var.poi_3_enemies.2": {
+			"anim_time_update": "v.poi_3_enemies=2;"
+		},
+		"animation.set_var.poi_3_enemies.3": {
+			"anim_time_update": "v.poi_3_enemies=3;"
+		},
+		"animation.set_var.poi_3_enemies.4": {
+			"anim_time_update": "v.poi_3_enemies=4;"
+		},
+		"animation.set_var.poi_3_enemies.5": {
+			"anim_time_update": "v.poi_3_enemies=5;"
+		},
+		"animation.set_var.poi_3_enemies.6": {
+			"anim_time_update": "v.poi_3_enemies=6;"
+		},
+		"animation.set_var.poi_3_enemies.7": {
+			"anim_time_update": "v.poi_3_enemies=7;"
+		},
+		"animation.set_var.poi_3_enemies.8": {
+			"anim_time_update": "v.poi_3_enemies=8;"
+		},
+		"animation.set_var.poi_3_enemies.9": {
+			"anim_time_update": "v.poi_3_enemies=9;"
+		},
+		"animation.set_var.poi_3_enemies.10": {
+			"anim_time_update": "v.poi_3_enemies=10;"
+		},
+		"animation.set_var.poi_4_enemies.0": {
+			"anim_time_update": "v.poi_4_enemies=0;"
+		},
+		"animation.set_var.poi_4_enemies.1": {
+			"anim_time_update": "v.poi_4_enemies=1;"
+		},
+		"animation.set_var.poi_4_enemies.2": {
+			"anim_time_update": "v.poi_4_enemies=2;"
+		},
+		"animation.set_var.poi_4_enemies.3": {
+			"anim_time_update": "v.poi_4_enemies=3;"
+		},
+		"animation.set_var.poi_4_enemies.4": {
+			"anim_time_update": "v.poi_4_enemies=4;"
+		},
+		"animation.set_var.poi_4_enemies.5": {
+			"anim_time_update": "v.poi_4_enemies=5;"
+		},
+		"animation.set_var.poi_4_enemies.6": {
+			"anim_time_update": "v.poi_4_enemies=6;"
+		},
+		"animation.set_var.poi_4_enemies.7": {
+			"anim_time_update": "v.poi_4_enemies=7;"
+		},
+		"animation.set_var.poi_4_enemies.8": {
+			"anim_time_update": "v.poi_4_enemies=8;"
+		},
+		"animation.set_var.poi_4_enemies.9": {
+			"anim_time_update": "v.poi_4_enemies=9;"
+		},
+		"animation.set_var.poi_4_enemies.10": {
+			"anim_time_update": "v.poi_4_enemies=10;"
+		},
+		"animation.set_var.poi_5_enemies.0": {
+			"anim_time_update": "v.poi_5_enemies=0;"
+		},
+		"animation.set_var.poi_5_enemies.1": {
+			"anim_time_update": "v.poi_5_enemies=1;"
+		},
+		"animation.set_var.poi_5_enemies.2": {
+			"anim_time_update": "v.poi_5_enemies=2;"
+		},
+		"animation.set_var.poi_5_enemies.3": {
+			"anim_time_update": "v.poi_5_enemies=3;"
+		},
+		"animation.set_var.poi_5_enemies.4": {
+			"anim_time_update": "v.poi_5_enemies=4;"
+		},
+		"animation.set_var.poi_5_enemies.5": {
+			"anim_time_update": "v.poi_5_enemies=5;"
+		},
+		"animation.set_var.poi_5_enemies.6": {
+			"anim_time_update": "v.poi_5_enemies=6;"
+		},
+		"animation.set_var.poi_5_enemies.7": {
+			"anim_time_update": "v.poi_5_enemies=7;"
+		},
+		"animation.set_var.poi_5_enemies.8": {
+			"anim_time_update": "v.poi_5_enemies=8;"
+		},
+		"animation.set_var.poi_5_enemies.9": {
+			"anim_time_update": "v.poi_5_enemies=9;"
+		},
+		"animation.set_var.poi_5_enemies.10": {
+			"anim_time_update": "v.poi_5_enemies=10;"
+		},
+		"animation.set_var.poi_6_enemies.0": {
+			"anim_time_update": "v.poi_6_enemies=0;"
+		},
+		"animation.set_var.poi_6_enemies.1": {
+			"anim_time_update": "v.poi_6_enemies=1;"
+		},
+		"animation.set_var.poi_6_enemies.2": {
+			"anim_time_update": "v.poi_6_enemies=2;"
+		},
+		"animation.set_var.poi_6_enemies.3": {
+			"anim_time_update": "v.poi_6_enemies=3;"
+		},
+		"animation.set_var.poi_6_enemies.4": {
+			"anim_time_update": "v.poi_6_enemies=4;"
+		},
+		"animation.set_var.poi_6_enemies.5": {
+			"anim_time_update": "v.poi_6_enemies=5;"
+		},
+		"animation.set_var.poi_6_enemies.6": {
+			"anim_time_update": "v.poi_6_enemies=6;"
+		},
+		"animation.set_var.poi_6_enemies.7": {
+			"anim_time_update": "v.poi_6_enemies=7;"
+		},
+		"animation.set_var.poi_6_enemies.8": {
+			"anim_time_update": "v.poi_6_enemies=8;"
+		},
+		"animation.set_var.poi_6_enemies.9": {
+			"anim_time_update": "v.poi_6_enemies=9;"
+		},
+		"animation.set_var.poi_6_enemies.10": {
+			"anim_time_update": "v.poi_6_enemies=10;"
+		},
+		"animation.set_var.poi_7_enemies.0": {
+			"anim_time_update": "v.poi_7_enemies=0;"
+		},
+		"animation.set_var.poi_7_enemies.1": {
+			"anim_time_update": "v.poi_7_enemies=1;"
+		},
+		"animation.set_var.poi_7_enemies.2": {
+			"anim_time_update": "v.poi_7_enemies=2;"
+		},
+		"animation.set_var.poi_7_enemies.3": {
+			"anim_time_update": "v.poi_7_enemies=3;"
+		},
+		"animation.set_var.poi_7_enemies.4": {
+			"anim_time_update": "v.poi_7_enemies=4;"
+		},
+		"animation.set_var.poi_7_enemies.5": {
+			"anim_time_update": "v.poi_7_enemies=5;"
+		},
+		"animation.set_var.poi_7_enemies.6": {
+			"anim_time_update": "v.poi_7_enemies=6;"
+		},
+		"animation.set_var.poi_7_enemies.7": {
+			"anim_time_update": "v.poi_7_enemies=7;"
+		},
+		"animation.set_var.poi_7_enemies.8": {
+			"anim_time_update": "v.poi_7_enemies=8;"
+		},
+		"animation.set_var.poi_7_enemies.9": {
+			"anim_time_update": "v.poi_7_enemies=9;"
+		},
+		"animation.set_var.poi_7_enemies.10": {
+			"anim_time_update": "v.poi_7_enemies=10;"
+		},
+		"animation.set_var.poi_8_enemies.0": {
+			"anim_time_update": "v.poi_8_enemies=0;"
+		},
+		"animation.set_var.poi_8_enemies.1": {
+			"anim_time_update": "v.poi_8_enemies=1;"
+		},
+		"animation.set_var.poi_8_enemies.2": {
+			"anim_time_update": "v.poi_8_enemies=2;"
+		},
+		"animation.set_var.poi_8_enemies.3": {
+			"anim_time_update": "v.poi_8_enemies=3;"
+		},
+		"animation.set_var.poi_8_enemies.4": {
+			"anim_time_update": "v.poi_8_enemies=4;"
+		},
+		"animation.set_var.poi_8_enemies.5": {
+			"anim_time_update": "v.poi_8_enemies=5;"
+		},
+		"animation.set_var.poi_8_enemies.6": {
+			"anim_time_update": "v.poi_8_enemies=6;"
+		},
+		"animation.set_var.poi_8_enemies.7": {
+			"anim_time_update": "v.poi_8_enemies=7;"
+		},
+		"animation.set_var.poi_8_enemies.8": {
+			"anim_time_update": "v.poi_8_enemies=8;"
+		},
+		"animation.set_var.poi_8_enemies.9": {
+			"anim_time_update": "v.poi_8_enemies=9;"
+		},
+		"animation.set_var.poi_8_enemies.10": {
+			"anim_time_update": "v.poi_8_enemies=10;"
+		},
+		"animation.set_var.prop_1.0": {
+			"anim_time_update": "v.prop_1=0;"
+		},
+		"animation.set_var.prop_1.1": {
+			"anim_time_update": "v.prop_1=1;"
+		},
+		"animation.set_var.prop_1.2": {
+			"anim_time_update": "v.prop_1=2;"
+		},
+		"animation.set_var.prop_1.3": {
+			"anim_time_update": "v.prop_1=3;"
+		},
+		"animation.set_var.prop_1.4": {
+			"anim_time_update": "v.prop_1=4;"
+		},
+		"animation.set_var.prop_1.5": {
+			"anim_time_update": "v.prop_1=5;"
+		},
+		"animation.set_var.prop_1.6": {
+			"anim_time_update": "v.prop_1=6;"
+		},
+		"animation.set_var.prop_1.7": {
+			"anim_time_update": "v.prop_1=7;"
+		},
+		"animation.set_var.prop_1.8": {
+			"anim_time_update": "v.prop_1=8;"
+		},
+		"animation.set_var.prop_1.9": {
+			"anim_time_update": "v.prop_1=9;"
+		},
+		"animation.set_var.prop_1.10": {
+			"anim_time_update": "v.prop_1=10;"
+		},
+		"animation.set_var.prop_1.11": {
+			"anim_time_update": "v.prop_1=11;"
+		},
+		"animation.set_var.prop_1.12": {
+			"anim_time_update": "v.prop_1=12;"
+		},
+		"animation.set_var.prop_1.13": {
+			"anim_time_update": "v.prop_1=13;"
+		},
+		"animation.set_var.prop_1.14": {
+			"anim_time_update": "v.prop_1=14;"
+		},
+		"animation.set_var.prop_1.15": {
+			"anim_time_update": "v.prop_1=15;"
+		},
+		"animation.set_var.prop_1.16": {
+			"anim_time_update": "v.prop_1=16;"
+		},
+		"animation.set_var.prop_1.17": {
+			"anim_time_update": "v.prop_1=17;"
+		},
+		"animation.set_var.prop_1.18": {
+			"anim_time_update": "v.prop_1=18;"
+		},
+		"animation.set_var.prop_1.19": {
+			"anim_time_update": "v.prop_1=19;"
+		},
+		"animation.set_var.prop_1.20": {
+			"anim_time_update": "v.prop_1=20;"
+		},
+		"animation.set_var.prop_1.21": {
+			"anim_time_update": "v.prop_1=21;"
+		},
+		"animation.set_var.prop_1.22": {
+			"anim_time_update": "v.prop_1=22;"
+		},
+		"animation.set_var.prop_1.23": {
+			"anim_time_update": "v.prop_1=23;"
+		},
+		"animation.set_var.prop_1.24": {
+			"anim_time_update": "v.prop_1=24;"
+		},
+		"animation.set_var.prop_1.25": {
+			"anim_time_update": "v.prop_1=25;"
+		},
+		"animation.set_var.prop_1.26": {
+			"anim_time_update": "v.prop_1=26;"
+		},
+		"animation.set_var.prop_1.27": {
+			"anim_time_update": "v.prop_1=27;"
+		},
+		"animation.set_var.prop_1.28": {
+			"anim_time_update": "v.prop_1=28;"
+		},
+		"animation.set_var.prop_1.29": {
+			"anim_time_update": "v.prop_1=29;"
+		},
+		"animation.set_var.prop_1.30": {
+			"anim_time_update": "v.prop_1=30;"
+		},
+		"animation.set_var.prop_1.31": {
+			"anim_time_update": "v.prop_1=31;"
+		},
+		"animation.set_var.prop_1.32": {
+			"anim_time_update": "v.prop_1=32;"
+		},
+		"animation.set_var.prop_1.33": {
+			"anim_time_update": "v.prop_1=33;"
+		},
+		"animation.set_var.prop_1.34": {
+			"anim_time_update": "v.prop_1=34;"
+		},
+		"animation.set_var.prop_1.35": {
+			"anim_time_update": "v.prop_1=35;"
+		},
+		"animation.set_var.prop_1.36": {
+			"anim_time_update": "v.prop_1=36;"
+		},
+		"animation.set_var.prop_1.37": {
+			"anim_time_update": "v.prop_1=37;"
+		},
+		"animation.set_var.prop_1.38": {
+			"anim_time_update": "v.prop_1=38;"
+		},
+		"animation.set_var.prop_1.39": {
+			"anim_time_update": "v.prop_1=39;"
+		},
+		"animation.set_var.prop_1.40": {
+			"anim_time_update": "v.prop_1=40;"
+		},
+		"animation.set_var.prop_1.41": {
+			"anim_time_update": "v.prop_1=41;"
+		},
+		"animation.set_var.prop_1.42": {
+			"anim_time_update": "v.prop_1=42;"
+		},
+		"animation.set_var.prop_1.43": {
+			"anim_time_update": "v.prop_1=43;"
+		},
+		"animation.set_var.prop_1.44": {
+			"anim_time_update": "v.prop_1=44;"
+		},
+		"animation.set_var.prop_1.45": {
+			"anim_time_update": "v.prop_1=45;"
+		},
+		"animation.set_var.prop_1.46": {
+			"anim_time_update": "v.prop_1=46;"
+		},
+		"animation.set_var.prop_1.47": {
+			"anim_time_update": "v.prop_1=47;"
+		},
+		"animation.set_var.prop_1.48": {
+			"anim_time_update": "v.prop_1=48;"
+		},
+		"animation.set_var.prop_1.49": {
+			"anim_time_update": "v.prop_1=49;"
+		},
+		"animation.set_var.prop_1.50": {
+			"anim_time_update": "v.prop_1=50;"
+		},
+		"animation.set_var.prop_1.51": {
+			"anim_time_update": "v.prop_1=51;"
+		},
+		"animation.set_var.prop_1.52": {
+			"anim_time_update": "v.prop_1=52;"
+		},
+		"animation.set_var.prop_1.53": {
+			"anim_time_update": "v.prop_1=53;"
+		},
+		"animation.set_var.prop_1.54": {
+			"anim_time_update": "v.prop_1=54;"
+		},
+		"animation.set_var.prop_1.55": {
+			"anim_time_update": "v.prop_1=55;"
+		},
+		"animation.set_var.prop_1.56": {
+			"anim_time_update": "v.prop_1=56;"
+		},
+		"animation.set_var.emotion_id.0": {
+			"anim_time_update": "v.emotion_id=0;"
+		},
+		"animation.set_var.emotion_id.1": {
+			"anim_time_update": "v.emotion_id=1;"
+		},
+		"animation.set_var.emotion_id.2": {
+			"anim_time_update": "v.emotion_id=2;"
+		},
+		"animation.set_var.emotion_id.3": {
+			"anim_time_update": "v.emotion_id=3;"
+		},
+		"animation.set_var.emotion_id.4": {
+			"anim_time_update": "v.emotion_id=4;"
+		},
+		"animation.set_var.emotion_id.5": {
+			"anim_time_update": "v.emotion_id=5;"
+		},
+		"animation.set_var.emotion_id.6": {
+			"anim_time_update": "v.emotion_id=6;"
+		},
+		"animation.set_var.emotion_id.7": {
+			"anim_time_update": "v.emotion_id=7;"
+		},
+		"animation.set_var.emotion_id.8": {
+			"anim_time_update": "v.emotion_id=8;"
+		},
+		"animation.set_var.emotion_id.9": {
+			"anim_time_update": "v.emotion_id=9;"
+		},
+		"animation.set_var.emotion_id.10": {
+			"anim_time_update": "v.emotion_id=10;"
+		},
+		"animation.set_var.emotion_id.11": {
+			"anim_time_update": "v.emotion_id=11;"
+		},
+		"animation.set_var.emotion_id.12": {
+			"anim_time_update": "v.emotion_id=12;"
+		},
+		"animation.set_var.emotion_id.13": {
+			"anim_time_update": "v.emotion_id=13;"
+		},
+		"animation.set_var.emotion_id.14": {
+			"anim_time_update": "v.emotion_id=14;"
+		},
+		"animation.set_var.emotion_id.15": {
+			"anim_time_update": "v.emotion_id=15;"
+		},
+		"animation.set_var.emotion_id.16": {
+			"anim_time_update": "v.emotion_id=16;"
+		},
+		"animation.set_var.emotion_id.17": {
+			"anim_time_update": "v.emotion_id=17;"
+		},
+		"animation.set_var.emotion_id.18": {
+			"anim_time_update": "v.emotion_id=18;"
+		},
+		"animation.set_var.emotion_id.19": {
+			"anim_time_update": "v.emotion_id=19;"
+		},
+		"animation.set_var.emotion_id.20": {
+			"anim_time_update": "v.emotion_id=20;"
+		},
+		"animation.set_var.emotion_id.21": {
+			"anim_time_update": "v.emotion_id=21;"
+		},
+		"animation.set_var.emotion_id.22": {
+			"anim_time_update": "v.emotion_id=22;"
+		},
+		"animation.set_var.emotion_id.23": {
+			"anim_time_update": "v.emotion_id=23;"
+		},
+		"animation.set_var.emotion_id.24": {
+			"anim_time_update": "v.emotion_id=24;"
+		},
+		"animation.set_var.emotion_id.25": {
+			"anim_time_update": "v.emotion_id=25;"
+		},
+		"animation.set_var.emotion_id.26": {
+			"anim_time_update": "v.emotion_id=26;"
+		},
+		"animation.set_var.emotion_id.27": {
+			"anim_time_update": "v.emotion_id=27;"
+		},
+		"animation.set_var.emotion_id.28": {
+			"anim_time_update": "v.emotion_id=28;"
+		},
+		"animation.set_var.emotion_id.29": {
+			"anim_time_update": "v.emotion_id=29;"
+		},
+		"animation.set_var.emotion_id.30": {
+			"anim_time_update": "v.emotion_id=30;"
+		},
+		"animation.set_var.unlock_head": {
+			"anim_time_update": "v.lock_head=0;"
+		},
+		"animation.set_var.lock_head": {
+			"anim_time_update": "v.lock_head=1;"
+		},
+		"animation.set_var.unlock_all": {
+			"anim_time_update": "v.lock_all=0;"
+		},
+		"animation.set_var.lock_all": {
+			"anim_time_update": "v.lock_all=1;"
+		},
+		"animation.set_var.unlock_movement": {
+			"anim_time_update": "v.lock_movement=0;"
+		},
+		"animation.set_var.lock_movement": {
+			"anim_time_update": "v.lock_movement=1;"
+		},
+		"animation.set_var.unlock_sneak": {
+			"anim_time_update": "v.lock_sneak=0;"
+		},
+		"animation.set_var.lock_sneak": {
+			"anim_time_update": "v.lock_sneak=1;"
+		},
+		"animation.set_var.unlock_jump": {
+			"anim_time_update": "v.lock_jump=0;"
+		},
+		"animation.set_var.lock_jump": {
+			"anim_time_update": "v.lock_jump=1;"
+		},
+		"animation.set_var.unlock_attack": {
+			"anim_time_update": "v.lock_attack=0;"
+		},
+		"animation.set_var.lock_attack": {
+			"anim_time_update": "v.lock_attack=1;"
+		},
+		"animation.set_var.lock_double_jump": {
+			"anim_time_update": "v.double_jump=3;"
+		},
+		"animation.set_var.tornado_start": {
+			"anim_time_update": "v.tornado_start=1;"
+		},
+		"animation.set_var.tornado_stop": {
+			"anim_time_update": "v.tornado_start=0;",
+			"animation_length": 1.1
+		},
+		"animation.set_var.jump_start": {
+			"anim_time_update": "v.is_jumping=1;"
+		},
+		"animation.set_var.jump_end": {
+			"anim_time_update": "v.is_jumping=0;"
+		}
+	}
+}

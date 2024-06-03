@@ -1,0 +1,85 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.puddle": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"puddle": true
+				},
+				{
+					"puddle_core": true
+				},
+				{
+					"puddle_north": "q.is_sheared"
+				},
+				{
+					"puddle_south": "q.is_powered"
+				},
+				{
+					"puddle_east": "q.is_illager_captain"
+				},
+				{
+					"puddle_west": "q.is_baby"
+				}
+			],
+			"uv_anim": {
+				"offset": [
+					0,
+					"math.round(query.life_time*8)/11"
+				],
+				"scale": [
+					1,
+					"0.09090909090909091"
+				]
+			}
+		},
+		"controller.render.puddle_outline": {
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"puddle": true
+				},
+				{
+					"puddle_core": true
+				},
+				{
+					"puddle_north": "q.is_sheared"
+				},
+				{
+					"puddle_south": "q.is_powered"
+				},
+				{
+					"puddle_east": "q.is_illager_captain"
+				},
+				{
+					"puddle_west": "q.is_baby"
+				}
+			],
+			"light_color_multiplier": -1000,
+			"ignore_lighting": true
+		}
+	}
+}

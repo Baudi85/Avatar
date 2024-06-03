@@ -1,0 +1,1 @@
+schedule on_area_loaded add 1335 125 -1778 1333 127 -1778 breakable_walls/reset/nat/wall_1

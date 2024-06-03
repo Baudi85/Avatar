@@ -1,0 +1,65 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.avatar_state": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"initalize_state": "q.is_illager_captain"
+						}
+					]
+				},
+				"initalize_state": {
+					"transitions": [
+						{
+							"in_state": "q.is_illager_captain&&q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"earth_ring_init",
+						"earth_ring_spin",
+						"avatar_fire_state_animation_init",
+						"avatar_state_sting",
+						{
+							"avatar_air_state_animation_init": "!(q.mark_variant==32&&q.variant>=1)"
+						},
+						{
+							"air_sphere_spin": "!(q.mark_variant==32&&q.variant>=1)"
+						}
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"leaving_state": "!q.is_illager_captain&&q.all_animations_finished"
+						}
+					],
+					"animations": [
+						"earth_ring_spin",
+						"avatar_fire_state_animation",
+						"avatar_water_state_animation",
+						{
+							"avatar_air_state_animation": "!(q.mark_variant==32&&q.variant>=1)"
+						},
+						{
+							"air_sphere_spin": "!(q.mark_variant==32&&q.variant>=1)"
+						}
+					]
+				},
+				"leaving_state": {
+					"transitions": [
+						{
+							"default": "!q.is_illager_captain&&query.all_animations_finished"
+						}
+					],
+					"animations": [
+						"earth_ring_exit",
+						"earth_ring_spin"
+					]
+				}
+			}
+		}
+	}
+}

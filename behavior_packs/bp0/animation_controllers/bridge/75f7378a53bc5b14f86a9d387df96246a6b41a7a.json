@@ -1,0 +1,27 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.75f7378a53bc5b14f86a9d387df96246a6b41a7a_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"place_tile": "q.is_ignited"
+						}
+					]
+				},
+				"place_tile": {
+					"on_entry": [
+						"/function paisho/table/place_tile",
+						"@s nom:remove_place_tile"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_ignited"
+						}
+					]
+				}
+			}
+		}
+	}
+}

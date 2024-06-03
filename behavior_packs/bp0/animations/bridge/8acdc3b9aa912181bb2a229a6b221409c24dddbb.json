@@ -1,0 +1,61 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.8acdc3b9aa912181bb2a229a6b221409c24dddbb_0": {
+			"timeline": {
+				"0.0": [
+					"/tag @s add self",
+					"/scoreboard players set @s tmp 0",
+					"/execute @a[tag=battle.entity.403.inside] ~ ~ ~ scoreboard players add @e[tag=self] tmp 1",
+					"/execute @s[scores={tmp=1}] ~ ~ ~ execute @a[tag=player.dead,tag=battle.entity.403.inside] ~ ~ ~ scoreboard players set @e[tag=self] battle_exit -2",
+					"/tag @s remove self"
+				]
+			},
+			"animation_length": 0.5,
+			"loop": true
+		},
+		"animation.8acdc3b9aa912181bb2a229a6b221409c24dddbb_1": {
+			"timeline": {
+				"0.0": [
+					"/tag @s remove battle.occupied.was",
+					"/tag @s[tag=battle.occupied] add battle.occupied.was",
+					"/tag @s remove battle.occupied",
+					"/tag @e remove battle.entity.403",
+					"/tag @e[tag=battle.entity.403.inside] add battle.entity.403",
+					"/tag @e remove battle.entity.inside.403.was",
+					"/tag @e[tag=battle.entity.403.inside] add battle.entity.inside.403.was",
+					"/tag @e[tag=battle.entity.403.inside] remove battle.entity.inside",
+					"/tag @e remove battle.entity.403.inside",
+					"/tag @e[x=1583,y=38,z=-205,dx=23,dy=5,dz=30,tag=bender,tag=!enemy.in_water] add battle.entity.403.inside",
+					"/tag @e[x=1584,y=36,z=-204,dx=21,dy=1,dz=28,tag=bender,tag=!enemy.in_water] add battle.entity.403.inside",
+					"/tag @s add self",
+					"/execute @a[tag=battle.entity.403.inside,m=!1,c=1,scores={scene_id=..1}] ~ ~ ~ tag @e[tag=self] add battle.occupied",
+					"/tag @s remove self",
+					"/tag @e[tag=battle.entity.403.inside] add battle.entity.inside",
+					"/tag @e[tag=battle.entity.inside,tag=enemy] add battle.enemy",
+					"/tag @s add battle.current",
+					"/execute @s[scores={battle_state=1}] ~ ~ ~ execute @a[tag=battle.entity.403.inside,tag=!battle.member.403] ~ ~ ~ function battle/state/on_join",
+					"/tag @s remove battle.current",
+					"/tag @a[tag=battle.join] add battle.member.403",
+					"/tag @a[tag=battle.join] add battle.member",
+					"/tag @a remove battle.join",
+					"/scoreboard players set @e[tag=!battle.entity.403.inside,tag=battle.entity.inside.403.was] battle_exit 5",
+					"/scoreboard players set @s[tag=!battle.occupied,tag=battle.occupied.was,scores={battle_exit=-1..}] battle_exit 5",
+					"/scoreboard players remove @s[tag=!battle.occupied,scores={battle_exit=0..}] battle_exit 1"
+				]
+			},
+			"animation_length": 1,
+			"loop": true
+		},
+		"animation.8acdc3b9aa912181bb2a229a6b221409c24dddbb_2": {
+			"timeline": {
+				"0.0": [
+					"/execute @s[scores={battle_state=1},tag=battle.occupied,tag=!battle.delay] ~ ~ ~ particle nom:barrier.ozai_courtyard.inside 1596 36 -189",
+					"/execute @s[scores={battle_state=1},tag=!battle.occupied,tag=!battle.delay] ~ ~ ~ particle nom:barrier.ozai_courtyard.outside 1596 36 -189"
+				]
+			},
+			"animation_length": 0.5,
+			"loop": true
+		}
+	}
+}

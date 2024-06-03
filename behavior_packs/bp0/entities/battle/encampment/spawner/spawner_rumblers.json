@@ -1,0 +1,125 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:spawner_rumblers",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"cd9f40acc1717374_a_0": "animation.cd9f40acc171737490018d7df3bbbb01eb87e68d_0",
+				"cd9f40acc1717374_a_1": "animation.cd9f40acc171737490018d7df3bbbb01eb87e68d_1",
+				"cd9f40acc1717374_ac_0": "controller.animation.cd9f40acc171737490018d7df3bbbb01eb87e68d_0",
+				"cd9f40acc1717374_ac_1": "controller.animation.cd9f40acc171737490018d7df3bbbb01eb87e68d_1",
+				"cd9f40acc1717374_ac_2": "controller.animation.cd9f40acc171737490018d7df3bbbb01eb87e68d_2",
+				"41094c6f15c1aae4_a_0": "animation.41094c6f15c1aae45d63adc363f2c9840e65c3fc_0",
+				"41094c6f15c1aae4_a_1": "animation.41094c6f15c1aae45d63adc363f2c9840e65c3fc_1",
+				"41094c6f15c1aae4_ac_0": "controller.animation.41094c6f15c1aae45d63adc363f2c9840e65c3fc_0"
+			},
+			"scripts": {
+				"animate": [
+					"cd9f40acc1717374_a_0",
+					{
+						"cd9f40acc1717374_a_1": "q.is_ignited"
+					},
+					"cd9f40acc1717374_ac_0",
+					"cd9f40acc1717374_ac_1",
+					"cd9f40acc1717374_ac_2",
+					"41094c6f15c1aae4_a_0",
+					"41094c6f15c1aae4_a_1",
+					"41094c6f15c1aae4_ac_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:despawn": {
+				"filters": {
+					"test": "has_tag",
+					"value": "despawn"
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:environment_sensor": {
+				"triggers": [
+					{
+						"event": "nom:spawning.deactivate",
+						"filters": {
+							"all_of": [
+								{
+									"test": "has_component",
+									"value": "minecraft:is_saddled"
+								},
+								{
+									"test": "distance_to_nearest_player",
+									"value": 5,
+									"operator": "<"
+								}
+							]
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"nom:activate": {
+				"add": {
+					"component_groups": [
+						"nom:activate"
+					]
+				}
+			},
+			"nom:deactivate": {
+				"remove": {
+					"component_groups": [
+						"nom:activate"
+					]
+				}
+			},
+			"nom:spawning.activate": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"nom:spawning"
+							]
+						},
+						"filters": {
+							"test": "distance_to_nearest_player",
+							"value": 5,
+							"operator": ">="
+						}
+					}
+				]
+			},
+			"nom:spawning.deactivate": {
+				"remove": {
+					"component_groups": [
+						"nom:spawning"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"nom:activate": {
+				"minecraft:is_ignited": {}
+			},
+			"nom:spawning": {
+				"minecraft:is_saddled": {}
+			}
+		}
+	}
+}

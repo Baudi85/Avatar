@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.28db04706bde13872fbdf1c14484204d7d11f0e2_0": {
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/tag @s add self",
+					"/execute @p[tag=dev] ~~~ execute @e[tag=self] ~~~ particle gm1:dev_hidden",
+					"/tag @s remove self"
+				]
+			},
+			"animation_length": 1
+		},
+		"animation.28db04706bde13872fbdf1c14484204d7d11f0e2_1": {
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/tellraw  @a[tag=dev.hidden_nearby,tag=!dev.hidden_nearby.was,r=0.5] {\"rawtext\":[{\"text\":\"§c[DEBUG]§r \" },{\"text\":\" Indentifier -> nom:duel.spawn\" }]}"
+				]
+			},
+			"animation_length": 1
+		}
+	}
+}

@@ -1,0 +1,115 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.bss_teahouse_sign",
+				"texture_width": 128,
+				"texture_height": 128,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 2.5,
+				"visible_bounds_offset": [
+					0,
+					0.75,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "bb_main",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-22,
+								-2,
+								4
+							],
+							"size": [
+								44,
+								22,
+								4
+							],
+							"pivot": [
+								0,
+								0,
+								8
+							],
+							"rotation": [
+								22.5,
+								0,
+								0
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										0,
+										26
+									],
+									"uv_size": [
+										88,
+										44
+									]
+								},
+								"east": {
+									"uv": [
+										0,
+										4
+									],
+									"uv_size": [
+										4,
+										22
+									]
+								},
+								"south": {
+									"uv": [
+										52,
+										4
+									],
+									"uv_size": [
+										44,
+										22
+									]
+								},
+								"west": {
+									"uv": [
+										48,
+										4
+									],
+									"uv_size": [
+										4,
+										22
+									]
+								},
+								"up": {
+									"uv": [
+										4,
+										0
+									],
+									"uv_size": [
+										44,
+										4
+									]
+								},
+								"down": {
+									"uv": [
+										48,
+										4
+									],
+									"uv_size": [
+										44,
+										-4
+									]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

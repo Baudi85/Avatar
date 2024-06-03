@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.enemy.spawn": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"spawn": "q.is_sheared"
+						}
+					]
+				},
+				"spawn": {
+					"animations": [
+						"spawn_animation",
+						"spawn_vfx",
+						"spawn_sound"
+					],
+					"transitions": [
+						{
+							"default": "q.all_animations_finished&&!q.is_sheared"
+						}
+					]
+				}
+			}
+		}
+	}
+}

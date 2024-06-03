@@ -1,0 +1,32 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.animals": {
+			"initial_state": "idle",
+			"states": {
+				"idle": {
+					"animations": [
+						"idle"
+					],
+					"transitions": [
+						{
+							"jumping": "q.is_ignited"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"jumping": {
+					"animations": [
+						"interact"
+					],
+					"transitions": [
+						{
+							"idle": "!q.is_ignited&&q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

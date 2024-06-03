@@ -1,0 +1,58 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.g_watersource": {
+			"geometry": "array.g[query.variant]",
+			"textures": [
+				"array.t[query.variant]"
+			],
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"arrays": {
+				"textures": {
+					"array.t": [
+						"Texture.variant_0"
+					]
+				},
+				"geometries": {
+					"array.g": [
+						"Geometry.variant_0",
+						"Geometry.variant_1",
+						"Geometry.variant_2",
+						"Geometry.variant_3"
+					]
+				}
+			}
+		},
+		"controller.render.g_watersource_outline": {
+			"geometry": "array.g[query.variant]",
+			"textures": [
+				"array.t[query.variant]"
+			],
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"light_color_multiplier": -1000,
+			"arrays": {
+				"textures": {
+					"array.t": [
+						"Texture.variant_0"
+					]
+				},
+				"geometries": {
+					"array.g": [
+						"Geometry.variant_0_inflated",
+						"Geometry.variant_1_inflated",
+						"Geometry.variant_2_inflated",
+						"Geometry.variant_3_inflated"
+					]
+				}
+			}
+		}
+	}
+}

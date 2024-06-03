@@ -1,0 +1,91 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.4d8e0af8dfda01c1810164b217200b2134445364_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"run": "v.state_nom_strafe_side"
+						}
+					]
+				},
+				"run": {
+					"on_entry": [
+						"/tag @p remove count",
+						"/tag @s add boost_target",
+						"/tp @s ~ ~ ~",
+						"/execute @s ~ ~ ~ playanimation @s animation.set_var.jump_start",
+						"/summon nom:boost ~ ~ ~ nom:distance_7",
+						"/execute @e[type=nom:boost,c=1] ~ ~ ~ tp @s ~ ~ ~ facing @e[tag=defence.projectile,c=1]",
+						"/execute @s ~ ~ ~ tp @s ~ ~ ~ facing @e[tag=defence.projectile,c=1]",
+						"/execute @s[tag=!defence.projectile.incoming.left] ~ ~ ~ execute @e[type=nom:boost,c=1] ~ ~ ~ tp @s ^0.2 ^ ^",
+						"/execute @s[tag=defence.projectile.incoming.left] ~ ~ ~ execute @e[type=nom:boost,c=1] ~ ~ ~ tp @s ^-0.2 ^ ^",
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "!v.state_nom_strafe_side"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.4d8e0af8dfda01c1810164b217200b2134445364_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==4)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==4"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.4d8e0af8dfda01c1810164b217200b2134445364_2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"run": "v.state_nom_strafe_away"
+						}
+					]
+				},
+				"run": {
+					"on_entry": [
+						"/tag @p remove count",
+						"/tag @s add boost_target",
+						"/tp @s ~ ~ ~",
+						"/execute @s ~ ~ ~ playanimation @s animation.set_var.jump_start",
+						"/summon nom:boost ~ ~ ~ nom:distance_5",
+						"/execute @e[type=nom:boost,c=1] ~ ~ ~ tp @s ~ ~ ~ facing undefined",
+						"/execute @s ~ ~ ~ tp @s ~ ~ ~ facing undefined",
+						"/scoreboard players random @e[type=nom:boost,c=1] boost_dir 0 1",
+						"/execute @e[type=nom:boost,c=1,scores={boost_dir=0}] ~ ~ ~ tp @s ^0.2 ^ ^",
+						"/execute @e[type=nom:boost,c=1,scores={boost_dir=1}] ~ ~ ~ tp @s ^-0.2 ^ ^",
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "!v.state_nom_strafe_away"
+						}
+					]
+				}
+			}
+		}
+	}
+}

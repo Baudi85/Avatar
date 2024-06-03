@@ -1,0 +1,68 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.glider_flap": {
+			"loop": true,
+			"bones": {
+				"glider": {
+					"position": [
+						"math.random(-0.5,0.5)",
+						"math.random(-0.5,0.5)",
+						0
+					]
+				},
+				"wing_left": {
+					"rotation": [
+						0,
+						"-math.sin(q.anim_time*3600)*1",
+						0
+					],
+					"scale": "1+math.sin(q.anim_time*3600)*0.025"
+				},
+				"wing_right": {
+					"rotation": [
+						0,
+						"math.sin(q.anim_time*3600)*1",
+						0
+					],
+					"scale": "1+math.sin(q.anim_time*3600)*0.025"
+				},
+				"wing_right2": {
+					"rotation": [
+						0,
+						0,
+						0
+					]
+				},
+				"wing_right3": {
+					"rotation": [
+						"math.abs(math.sin(q.anim_time*3600)*0.5)",
+						0,
+						0
+					]
+				},
+				"wing_right4": {
+					"rotation": [
+						"math.abs(math.sin(q.anim_time*3600)*0.5)",
+						0,
+						0
+					]
+				},
+				"wing_right5": {
+					"rotation": [
+						0,
+						"math.sin(q.anim_time*3600)*1",
+						0
+					]
+				},
+				"wing_left5": {
+					"rotation": [
+						0,
+						"-math.sin(q.anim_time*3600)*1",
+						0
+					]
+				}
+			}
+		}
+	}
+}

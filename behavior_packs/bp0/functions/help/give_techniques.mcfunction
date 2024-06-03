@@ -1,0 +1,12 @@
+give @s nom:bending_earth_0
+give @s nom:bending_earth_1
+give @s nom:bending_earth_2
+give @s nom:bending_water_0
+give @s nom:bending_water_1
+give @s nom:bending_water_2
+give @s nom:bending_fire_0
+give @s nom:bending_fire_1
+give @s nom:bending_fire_2
+give @s nom:bending_air_3
+give @s nom:bending_air_1
+give @s nom:bending_air_2

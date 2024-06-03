@@ -1,0 +1,454 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.earth.earth_pull": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==10"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.earth.earth_pull",
+						"bending.earth_block",
+						{
+							"controller_earth_block_rotation": "q.variant>=3"
+						},
+						{
+							"earth_pull_1p_pose": "v.is_first_person"
+						},
+						{
+							"earth_pull_3p_pose": "!v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=10&&v.technique_swap>=2"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.earth.earth_wall": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==11"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.earth.earth_wall"
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=11&&v.technique_swap>=2"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.earth.earth_quake": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==12"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.earth.earth_quake"
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=12&&v.technique_swap>=2"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.air.air_blades": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==33"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.air.blades.sfx",
+						"bending.air_blades"
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=33&&v.technique_swap>=2"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.fire.stream": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==40"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.fire.stream",
+						"bending.fire.stream.sfx"
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=40&&v.technique_swap>=2"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.fire.fire_sweep": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==41"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.fire.fire_sweep",
+						"bending.fire.sweep.sfx"
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=41&&v.technique_swap>=7"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.fire.meteor_dash": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==42"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.fire.jet",
+						"fire_jet_fx_controller",
+						"bending.fire.meteor_dash.sfx"
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=42&&v.technique_swap>=2"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.water.water_whip": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==20"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.water.water_whips_particle",
+						"bending.water.water_whip",
+						"bending.water.whip.sfx"
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=20&&v.technique_swap>=2"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.water.frost_breath": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==22"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.water.frost_breath",
+						"bending.water.frost_breath.sfx"
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=22&&v.technique_swap>=2"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.water.octopus_form": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==21"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.water.octopus_form",
+						"bending.water.octo.sfx",
+						"water_octopusform_geo_controller",
+						{
+							"water_octopusform_bob": "q.variant>1"
+						}
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=21&&v.technique_swap>=2"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.air.tornado": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==31"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.air.tornado"
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=31&&v.technique_swap>=10"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.air.sphere": {
+			"initial_state": "default",
+			"states": {
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"active": "q.mark_variant==32"
+						}
+					]
+				},
+				"active": {
+					"animations": [
+						"bending.air_sphere",
+						"bending.air.sphere.sfx"
+					],
+					"transitions": [
+						{
+							"unlock": "q.mark_variant!=32&&v.technique_swap>=10"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		}
+	}
+}

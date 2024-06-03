@@ -1,0 +1,81 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:air_blade_trainer",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball",
+			"animations": {
+				"animation.bending.player.air_blade.spawn": "animation.bending.player.air_blade.spawn",
+				"animation.bending.player.air_blade.tick": "animation.bending.player.air_blade.tick"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"animation.bending.player.air_blade.spawn": "!q.is_saddled"
+					},
+					{
+						"animation.bending.player.air_blade.tick": "!q.is_saddled"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			}
+		},
+		"components": {
+			"minecraft:despawn": {
+				"filters": {
+					"any_of": [
+						{
+							"test": "in_water"
+						}
+					]
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 0.5
+			},
+			"minecraft:projectile": {
+				"gravity": 0,
+				"power": 1.5,
+				"inertia": 1.1,
+				"offset": [
+					0,
+					-0.5,
+					1
+				],
+				"should_bounce": false,
+				"destroy_on_hurt": false,
+				"multiple_targets": true
+			},
+			"minecraft:timer": {
+				"time": 0.45,
+				"time_down_event": {
+					"event": "nom:despawn"
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

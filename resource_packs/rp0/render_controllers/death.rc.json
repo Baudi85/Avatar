@@ -1,0 +1,58 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.npc_death_front": {
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"geometry": "geometry.variant_0",
+			"textures": [
+				"texture.variant_0"
+			],
+			"overlay_color": {
+				"a": 0,
+				"r": 0,
+				"b": 0,
+				"g": 0
+			}
+		},
+		"controller.render.npc_death_1": {
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"geometry": "geometry.default",
+			"textures": [
+				"texture.default"
+			],
+			"overlay_color": {
+				"a": "v.defeated_overlay_state_1",
+				"r": 1,
+				"b": 1,
+				"g": 1
+			},
+			"light_color_multiplier": "1+math.clamp((v.defeated_overlay_state_1*3),0,3)"
+		},
+		"controller.render.npc_death_2": {
+			"materials": [
+				{
+					"*": "material.death_fade"
+				}
+			],
+			"geometry": "geometry.default",
+			"textures": [
+				"texture.default"
+			],
+			"overlay_color": {
+				"a": "v.defeated_overlay_state_2",
+				"r": 0,
+				"b": 0,
+				"g": 0
+			},
+			"light_color_multiplier": "4-math.clamp((v.defeated_overlay_state_2*4),0,4)"
+		}
+	}
+}

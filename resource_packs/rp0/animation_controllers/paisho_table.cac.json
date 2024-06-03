@@ -1,0 +1,579 @@
+{
+	"format_version": "1.19.0",
+	"animation_controllers": {
+		"controller.animation.paisho_table.sound": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"activated": "query.is_ignited"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"unlock_sound"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_ignited"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_1": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<1"
+						},
+						{
+							"activated": "query.variant>=1"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_1"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=1"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_1"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_1_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<1"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_2": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<2"
+						},
+						{
+							"activated": "query.variant>=2"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_2"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=2"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_2"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_2_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<2"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_3": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<3"
+						},
+						{
+							"activated": "query.variant>=3"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_3"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=3"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_3"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_3_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<3"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_4": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<4"
+						},
+						{
+							"activated": "query.variant>=4"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_4"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=4"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_4"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_4_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<4"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_5": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<5"
+						},
+						{
+							"activated": "query.variant>=5"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_5"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=5"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_5"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_5_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<5"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_6": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<6"
+						},
+						{
+							"activated": "query.variant>=6"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_6"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=6"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_6"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_6_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<6"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_7": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<7"
+						},
+						{
+							"activated": "query.variant>=7"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_7"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=7"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_7"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_7_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<7"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_8": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<8"
+						},
+						{
+							"activated": "query.variant>=8"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_8"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=8"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_8"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_8_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<8"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_9": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<9"
+						},
+						{
+							"activated": "query.variant>=9"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_9"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=9"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_9"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_9_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<9"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_10": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<10"
+						},
+						{
+							"activated": "query.variant>=10"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_10"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=10"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_10"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_10_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<10"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_11": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<11"
+						},
+						{
+							"activated": "query.variant>=11"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_11"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=11"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_11"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_11_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<11"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.paisho_table.c_12": {
+			"initial_state": "start",
+			"states": {
+				"start": {
+					"transitions": [
+						{
+							"empty": "query.variant<12"
+						},
+						{
+							"activated": "query.variant>=12"
+						}
+					]
+				},
+				"empty": {
+					"animations": [
+						"empty_12"
+					],
+					"transitions": [
+						{
+							"activate": "query.variant>=12"
+						}
+					]
+				},
+				"activate": {
+					"animations": [
+						"tile_12"
+					],
+					"transitions": [
+						{
+							"activated": "query.all_animations_finished"
+						}
+					]
+				},
+				"activated": {
+					"animations": [
+						"tile_12_got"
+					],
+					"transitions": [
+						{
+							"empty": "query.variant<12"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		}
+	}
+}

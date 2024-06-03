@@ -1,0 +1,477 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending.earth.earth_pull": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=10"
+						},
+						{
+							"lock": "q.variant==1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==10"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_movement",
+						"lock_jump",
+						"lock_head",
+						"lock_sneak"
+					],
+					"transitions": [
+						{
+							"charge": "1"
+						}
+					]
+				},
+				"charge": {
+					"animations": [
+						{
+							"earth_throw.charge": "!v.is_first_person"
+						},
+						{
+							"FP.earth_throw.charge": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=10"
+						},
+						{
+							"hold": "q.any_animation_finished"
+						},
+						{
+							"release": "q.variant==6"
+						},
+						{
+							"unlock": "q.variant==0"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"hold": {
+					"animations": [
+						{
+							"earth_throw.hold": "!v.is_first_person"
+						},
+						{
+							"FP.earth_throw.hold": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=10"
+						},
+						{
+							"release": "q.variant==6"
+						},
+						{
+							"unlock": "q.variant==0"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"release": {
+					"animations": [
+						{
+							"earth_throw.release": "!v.is_first_person"
+						},
+						{
+							"FP.earth_throw.release": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=10"
+						},
+						{
+							"unlock": "q.any_animation_finished"
+						},
+						{
+							"charge": "q.variant==1"
+						}
+					],
+					"blend_transition": 0.25
+				},
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=10"
+						},
+						{
+							"default": "v.lock_timer>=0.25||q.variant!=0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.earth.earth_pull_block": {
+			"initial_state": "stage_0",
+			"states": {
+				"swapped": {
+					"transitions": [
+						{
+							"stage_0": "q.mark_variant==10"
+						}
+					]
+				},
+				"stage_0": {
+					"animations": [
+						"earth_block_stage_0"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=10"
+						},
+						{
+							"stage_1": "q.variant==3&&q.all_animations_finished"
+						}
+					]
+				},
+				"stage_1": {
+					"animations": [
+						"earth_block_stage_1",
+						"earth_block_dust_animation"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=10"
+						},
+						{
+							"stage_2": "q.variant==4&&q.all_animations_finished"
+						},
+						{
+							"stage_0": "q.variant<3"
+						}
+					]
+				},
+				"stage_2": {
+					"animations": [
+						"earth_block_stage_2",
+						"earth_block_dust_animation"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=10"
+						},
+						{
+							"stage_3": "q.variant==5&&q.all_animations_finished"
+						},
+						{
+							"stage_0": "q.variant<4"
+						}
+					]
+				},
+				"stage_3": {
+					"animations": [
+						"earth_block_stage_3",
+						"earth_block_dust_animation"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=10"
+						},
+						{
+							"stage_0": "q.variant<5"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.earth.earth_quake": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=12"
+						},
+						{
+							"lock": "q.variant==1"
+						}
+					],
+					"blend_transition": 0.25
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==12"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_movement",
+						"lock_jump",
+						"lock_sneak"
+					],
+					"transitions": [
+						{
+							"charge": "1"
+						}
+					]
+				},
+				"charge": {
+					"animations": [
+						{
+							"earth_quake.charge.L": "v.earth_throw==1&&!v.is_first_person"
+						},
+						{
+							"earth_quake.charge.R": "v.earth_throw==2&&!v.is_first_person"
+						},
+						{
+							"FP.earth_quake.charge.L": "v.earth_throw==1&&v.is_first_person"
+						},
+						{
+							"FP.earth_quake.charge.R": "v.earth_throw==2&&v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=12"
+						},
+						{
+							"hold": "q.any_animation_finished"
+						},
+						{
+							"unlock": "q.variant==0"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"hold": {
+					"animations": [
+						{
+							"earth_quake.hold.L": "v.earth_throw==1&&!v.is_first_person"
+						},
+						{
+							"earth_quake.hold.R": "v.earth_throw==2&&!v.is_first_person"
+						},
+						{
+							"FP.earth_quake.hold.L": "v.earth_throw==1&&v.is_first_person"
+						},
+						{
+							"FP.earth_quake.hold.R": "v.earth_throw==2&&v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=12"
+						},
+						{
+							"unlock": "q.variant==0"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"release": "1"
+						}
+					]
+				},
+				"release": {
+					"animations": [
+						{
+							"earth_quake.release.L": "v.earth_throw==1&&!v.is_first_person"
+						},
+						{
+							"earth_quake.release.R": "v.earth_throw==2&&!v.is_first_person"
+						},
+						{
+							"FP.earth_quake.release.L": "v.earth_throw==1&&v.is_first_person"
+						},
+						{
+							"FP.earth_quake.release.R": "v.earth_throw==2&&v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=12"
+						},
+						{
+							"default": "q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.bending.earth.earth_wall": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=11"
+						},
+						{
+							"lock": "q.variant==1"
+						},
+						{
+							"release": "q.variant==3"
+						},
+						{
+							"lock2": "q.variant==4"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==11"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_movement",
+						"lock_jump",
+						"lock_sneak"
+					],
+					"transitions": [
+						{
+							"charge": "1"
+						}
+					]
+				},
+				"charge": {
+					"animations": [
+						{
+							"earth_wall.charge": "!v.is_first_person"
+						},
+						{
+							"FP.earth_wall.charge": "v.is_first_person"
+						}
+					],
+					"blend_transition": 0.2,
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=11"
+						},
+						{
+							"hold": "q.any_animation_finished"
+						}
+					]
+				},
+				"hold": {
+					"animations": [
+						{
+							"earth_wall.hold": "!v.is_first_person"
+						},
+						{
+							"FP.earth_wall.hold": "v.is_first_person"
+						}
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=11"
+						},
+						{
+							"unlock": "q.variant==3||q.variant==0"
+						}
+					]
+				},
+				"lock2": {
+					"animations": [
+						"lock_movement",
+						"lock_jump",
+						"lock_sneak"
+					],
+					"transitions": [
+						{
+							"unlock2": "1"
+						}
+					]
+				},
+				"shoot": {
+					"animations": [
+						{
+							"earth_wall.throw": "!v.is_first_person"
+						},
+						{
+							"FP.earth_wall.throw": "v.is_first_person"
+						}
+					],
+					"blend_transition": 0.3,
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=11"
+						},
+						{
+							"default": "q.any_animation_finished&&q.variant==0"
+						}
+					]
+				},
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"release": "1"
+						}
+					]
+				},
+				"unlock2": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"shoot": "1"
+						}
+					]
+				},
+				"release": {
+					"animations": [
+						{
+							"earth_wall.release": "!v.is_first_person"
+						},
+						{
+							"FP.earth_wall.release": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=11"
+						},
+						{
+							"default": "q.any_animation_finished"
+						},
+						{
+							"lock2": "q.variant==4"
+						}
+					]
+				}
+			}
+		}
+	}
+}

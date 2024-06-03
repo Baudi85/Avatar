@@ -1,0 +1,316 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.trinkets_display": {
+			"geometry": "geometry.trinkets",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.trinkets"
+			],
+			"part_visibility": [
+				{
+					"*aang*": "q.variant == 1"
+				},
+				{
+					"*amon*": "q.variant == 2"
+				},
+				{
+					"*asami*": "q.variant == 3"
+				},
+				{
+					"*azula*": "q.variant == 4"
+				},
+				{
+					"*bolin*": "q.variant == 5"
+				},
+				{
+					"*bumi*": "q.variant == 6"
+				},
+				{
+					"*cabbage*": "q.variant == 7"
+				},
+				{
+					"*iroh*": "q.variant == 8"
+				},
+				{
+					"*jet*": "q.variant == 9"
+				},
+				{
+					"*kai*": "q.variant == 10"
+				},
+				{
+					"*katara*": "q.variant == 11"
+				},
+				{
+					"*korra*": "q.variant == 12"
+				},
+				{
+					"*kyoshi*": "q.variant == 13"
+				},
+				{
+					"*linbeifong*": "q.variant == 14"
+				},
+				{
+					"*long*": "q.variant == 15"
+				},
+				{
+					"*mako*": "q.variant == 16"
+				},
+				{
+					"*opal*": "q.variant == 17"
+				},
+				{
+					"*ozai*": "q.variant == 18"
+				},
+				{
+					"*pathik*": "q.variant == 19"
+				},
+				{
+					"*players*": "q.variant == 20"
+				},
+				{
+					"*roku*": "q.variant == 21"
+				},
+				{
+					"*sokka*": "q.variant == 22"
+				},
+				{
+					"*suki*": "q.variant == 23"
+				},
+				{
+					"*tenzin*": "q.variant == 24"
+				},
+				{
+					"*toph*": "q.variant == 25"
+				},
+				{
+					"*unalaq*": "q.variant == 26"
+				},
+				{
+					"*varrick*": "q.variant == 27"
+				},
+				{
+					"*zaheer*": "q.variant == 28"
+				},
+				{
+					"*zhao*": "q.variant == 29"
+				},
+				{
+					"*zuko*": "q.variant == 30"
+				}
+			]
+		},
+		"controller.render.slots_display": {
+			"geometry": "geometry.slots",
+			"materials": [
+				{
+					"*": "material.shine"
+				}
+			],
+			"textures": [
+				"texture.slots"
+			],
+			"part_visibility": [
+				{
+					"*aang*": "q.variant == 1"
+				},
+				{
+					"*amon*": "q.variant == 2"
+				},
+				{
+					"*asami*": "q.variant == 3"
+				},
+				{
+					"*azula*": "q.variant == 4"
+				},
+				{
+					"*bolin*": "q.variant == 5"
+				},
+				{
+					"*bumi*": "q.variant == 6"
+				},
+				{
+					"*cabbage*": "q.variant == 7"
+				},
+				{
+					"*iroh*": "q.variant == 8"
+				},
+				{
+					"*jet*": "q.variant == 9"
+				},
+				{
+					"*kai*": "q.variant == 10"
+				},
+				{
+					"*katara*": "q.variant == 11"
+				},
+				{
+					"*korra*": "q.variant == 12"
+				},
+				{
+					"*kyoshi*": "q.variant == 13"
+				},
+				{
+					"*linbeifong*": "q.variant == 14"
+				},
+				{
+					"*long*": "q.variant == 15"
+				},
+				{
+					"*mako*": "q.variant == 16"
+				},
+				{
+					"*opal*": "q.variant == 17"
+				},
+				{
+					"*ozai*": "q.variant == 18"
+				},
+				{
+					"*pathik*": "q.variant == 19"
+				},
+				{
+					"*players*": "q.variant == 20"
+				},
+				{
+					"*roku*": "q.variant == 21"
+				},
+				{
+					"*sokka*": "q.variant == 22"
+				},
+				{
+					"*suki*": "q.variant == 23"
+				},
+				{
+					"*tenzin*": "q.variant == 24"
+				},
+				{
+					"*toph*": "q.variant == 25"
+				},
+				{
+					"*unalaq*": "q.variant == 26"
+				},
+				{
+					"*varrick*": "q.variant == 27"
+				},
+				{
+					"*zaheer*": "q.variant == 28"
+				},
+				{
+					"*zhao*": "q.variant == 29"
+				},
+				{
+					"*zuko*": "q.variant == 30"
+				}
+			]
+		},
+		"controller.render.trinkets_outline": {
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"textures": [
+				"texture.trinkets"
+			],
+			"light_color_multiplier": -1000,
+			"ignore_lighting": true,
+			"part_visibility": [
+				{
+					"*aang*": "q.variant == 1"
+				},
+				{
+					"*amon*": "q.variant == 2"
+				},
+				{
+					"*asami*": "q.variant == 3"
+				},
+				{
+					"*azula*": "q.variant == 4"
+				},
+				{
+					"*bolin*": "q.variant == 5"
+				},
+				{
+					"*bumi*": "q.variant == 6"
+				},
+				{
+					"*cabbage*": "q.variant == 7"
+				},
+				{
+					"*iroh*": "q.variant == 8"
+				},
+				{
+					"*jet*": "q.variant == 9"
+				},
+				{
+					"*kai*": "q.variant == 10"
+				},
+				{
+					"*katara*": "q.variant == 11"
+				},
+				{
+					"*korra*": "q.variant == 12"
+				},
+				{
+					"*kyoshi*": "q.variant == 13"
+				},
+				{
+					"*linbeifong*": "q.variant == 14"
+				},
+				{
+					"*long*": "q.variant == 15"
+				},
+				{
+					"*mako*": "q.variant == 16"
+				},
+				{
+					"*opal*": "q.variant == 17"
+				},
+				{
+					"*ozai*": "q.variant == 18"
+				},
+				{
+					"*pathik*": "q.variant == 19"
+				},
+				{
+					"*players*": "q.variant == 20"
+				},
+				{
+					"*roku*": "q.variant == 21"
+				},
+				{
+					"*sokka*": "q.variant == 22"
+				},
+				{
+					"*suki*": "q.variant == 23"
+				},
+				{
+					"*tenzin*": "q.variant == 24"
+				},
+				{
+					"*toph*": "q.variant == 25"
+				},
+				{
+					"*unalaq*": "q.variant == 26"
+				},
+				{
+					"*varrick*": "q.variant == 27"
+				},
+				{
+					"*zaheer*": "q.variant == 28"
+				},
+				{
+					"*zhao*": "q.variant == 29"
+				},
+				{
+					"*zuko*": "q.variant == 30"
+				}
+			]
+		}
+	}
+}

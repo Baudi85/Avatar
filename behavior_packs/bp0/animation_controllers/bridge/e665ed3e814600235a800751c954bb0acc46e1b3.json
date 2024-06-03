@@ -1,0 +1,88 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.e665ed3e814600235a800751c954bb0acc46e1b3_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/scoreboard players add @s spawner_id 0",
+						"/scoreboard players random @s[scores={spawner_id=0}] spawner_id 1 2147483646",
+						"/tag @s add encampment.spawner"
+					]
+				}
+			}
+		},
+		"controller.animation.e665ed3e814600235a800751c954bb0acc46e1b3_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"spawn": "q.is_ignited&&q.is_saddled"
+						}
+					]
+				},
+				"spawn": {
+					"transitions": [
+						{
+							"default": "!q.is_ignited||!q.is_saddled"
+						},
+						{
+							"tick": "q.life_time>v.cooldown"
+						}
+					],
+					"on_entry": [
+						"/scoreboard players random @s tmp 0 2",
+						"/execute @s[scores={tmp=0..0}] ~ ~ ~ summon nom:enemy_daofei_earthbender",
+						"/execute @s[scores={tmp=1..1}] ~ ~ ~ summon nom:enemy_daofei_firebender",
+						"/execute @s[scores={tmp=2..2}] ~ ~ ~ summon nom:enemy_daofei_waterbender",
+						"v.cooldown=q.life_time+math.random(2,10);",
+						"/scoreboard players operation @e[r=1] spawner_id = @s spawner_id",
+						"/scoreboard players operation @e[r=1] battle_id = @s battle_id",
+						"/scoreboard players remove @s spawner_buffer 1"
+					]
+				},
+				"tick": {
+					"transitions": [
+						{
+							"default": "!q.is_ignited||!q.is_saddled"
+						},
+						{
+							"spawn": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.e665ed3e814600235a800751c954bb0acc46e1b3_2": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"deactivate": "!q.is_ignited"
+						},
+						{
+							"activate": "q.is_ignited"
+						}
+					]
+				},
+				"deactivate": {
+					"on_entry": [
+						"/scoreboard players set @s spawner_buffer 3"
+					],
+					"transitions": [
+						{
+							"activate": "q.is_ignited"
+						}
+					]
+				},
+				"activate": {
+					"transitions": [
+						{
+							"deactivate": "!q.is_ignited"
+						}
+					]
+				}
+			}
+		}
+	}
+}

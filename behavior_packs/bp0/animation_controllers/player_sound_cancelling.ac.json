@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.avatar.water_charge_cancel": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"avatar": "q.variant>3&&q.variant<7"
+						}
+					]
+				},
+				"avatar": {
+					"transitions": [
+						{
+							"default": "q.variant==7||q.variant==0"
+						}
+					],
+					"on_exit": [
+						"/stopsound @s water_charge_whoosh"
+					]
+				}
+			}
+		}
+	}
+}

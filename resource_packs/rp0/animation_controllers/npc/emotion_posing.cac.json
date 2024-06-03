@@ -1,0 +1,339 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.emotion_poses": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"neutral": "v.emotion_id==0"
+						},
+						{
+							"punching": "v.emotion_id==1"
+						},
+						{
+							"taunt": "v.emotion_id==2"
+						},
+						{
+							"bending_practice": "v.emotion_id==3"
+						},
+						{
+							"standing": "v.emotion_id==4"
+						},
+						{
+							"sleeping": "v.emotion_id==5"
+						},
+						{
+							"leaning": "v.emotion_id==6"
+						},
+						{
+							"sitting": "v.emotion_id==7"
+						},
+						{
+							"sitting_bench": "v.emotion_id==8"
+						},
+						{
+							"talking": "v.emotion_id==9"
+						},
+						{
+							"talking2": "v.emotion_id==10"
+						},
+						{
+							"waving": "v.emotion_id==11"
+						},
+						{
+							"beckon": "v.emotion_id==12"
+						},
+						{
+							"looking": "v.emotion_id==13"
+						},
+						{
+							"angry": "v.emotion_id==14"
+						},
+						{
+							"sad": "v.emotion_id==15"
+						},
+						{
+							"suprised": "v.emotion_id==16"
+						},
+						{
+							"scared": "v.emotion_id==17"
+						},
+						{
+							"happy": "v.emotion_id==18"
+						},
+						{
+							"meditating": "v.emotion_id==19"
+						},
+						{
+							"bow": "v.emotion_id==20"
+						},
+						{
+							"arguing": "v.emotion_id==21"
+						},
+						{
+							"defeat": "v.emotion_id==22"
+						},
+						{
+							"arguing2": "v.emotion_id==23"
+						},
+						{
+							"flexing": "v.emotion_id==24"
+						}
+					]
+				},
+				"neutral": {
+					"animations": [
+						"neutral"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=0"
+						}
+					]
+				},
+				"punching": {
+					"animations": [
+						"punching"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=1"
+						}
+					]
+				},
+				"taunt": {
+					"animations": [
+						"taunt"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=2"
+						}
+					]
+				},
+				"bending_practice": {
+					"animations": [
+						"bending_practice"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=3"
+						}
+					]
+				},
+				"standing": {
+					"animations": [
+						"standing"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=4"
+						}
+					]
+				},
+				"sleeping": {
+					"animations": [
+						"sleeping"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=5"
+						}
+					]
+				},
+				"leaning": {
+					"animations": [
+						"leaning"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=6"
+						}
+					]
+				},
+				"sitting": {
+					"animations": [
+						"sitting"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=7"
+						}
+					]
+				},
+				"sitting_bench": {
+					"animations": [
+						"sitting_bench"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=8"
+						}
+					]
+				},
+				"talking": {
+					"animations": [
+						"talking"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=9"
+						}
+					]
+				},
+				"talking2": {
+					"animations": [
+						"talking2"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=10"
+						}
+					]
+				},
+				"waving": {
+					"animations": [
+						"waving"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=11"
+						}
+					]
+				},
+				"beckon": {
+					"animations": [
+						"beckon"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=12"
+						}
+					]
+				},
+				"looking": {
+					"animations": [
+						"looking"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=13"
+						}
+					]
+				},
+				"angry": {
+					"animations": [
+						"angry"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=14"
+						}
+					]
+				},
+				"sad": {
+					"animations": [
+						"sad"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=15"
+						}
+					]
+				},
+				"suprised": {
+					"animations": [
+						"suprised"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=16"
+						}
+					]
+				},
+				"scared": {
+					"animations": [
+						"scared"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=17"
+						}
+					]
+				},
+				"happy": {
+					"animations": [
+						"happy"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=18"
+						}
+					]
+				},
+				"meditating": {
+					"animations": [
+						"meditating"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=19"
+						}
+					]
+				},
+				"bow": {
+					"animations": [
+						"bow"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=20"
+						}
+					]
+				},
+				"arguing": {
+					"animations": [
+						"arguing"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=21"
+						}
+					]
+				},
+				"defeat": {
+					"animations": [
+						"defeat"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=22"
+						}
+					]
+				},
+				"arguing2": {
+					"animations": [
+						"arguing2"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=23"
+						}
+					]
+				},
+				"flexing": {
+					"animations": [
+						"flexing"
+					],
+					"transitions": [
+						{
+							"default": "v.emotion_id!=24"
+						}
+					]
+				}
+			}
+		}
+	}
+}

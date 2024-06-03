@@ -1,0 +1,98 @@
+{
+    "materials": {
+        "version": "1.0.0",
+        "entity_seethrough:charged_creeper": {
+            "+defines": [ "USE_UV_ANIM" ],
+            "+states": [ "DisableCulling", "DisableDepthWrite" ],
+            "depthFunc": "Always"
+        },
+        "outline:entity_static": {
+            "+states": ["InvertCulling"],
+            "+defines": ["ALPHA_TEST","USE_OVERLAY"]
+        },
+        "outline_avatars:entity_beam_additive": {
+            "+defines": ["ALPHA_TEST","USE_OVERLAY"]
+        },
+        "tornado:entity_alphatest": {
+            "+defines": ["USE_UV_ANIM"],
+            "+states": ["DisableCulling"],
+            "+samplerStates":[
+                {
+                    "samplerIndex":0,
+                    "textureWrap":"Repeat"
+                }
+            ],
+            "msaaSupport": "Both"
+        },
+        "water_animated_outside:entity_beam_additive": {
+            "+defines": [ "USE_UV_ANIM" ],
+            "+samplerStates":[
+                {
+                    "samplerIndex":0,
+                    "textureWrap":"Repeat"
+                }
+            ],
+            "msaaSupport": "Both"
+        },
+        "water_animated:entity_alphablend": { 
+            "+defines": [ "USE_UV_ANIM" ],
+            "+states": ["DisableAlphaWrite","DisableDepthWrite", "DisableCulling"],
+            "+samplerStates":[
+                {
+                    "samplerIndex":0,
+                    "textureWrap":"Repeat"
+                }
+            ],
+            "msaaSupport": "Both"
+        },
+        "puddle_animated:entity_alphatest": { 
+            "+defines": [ "USE_UV_ANIM" ],
+            "+samplerStates":[
+                {
+                    "samplerIndex":0,
+                    "textureWrap":"Repeat"
+                }
+            ],
+            "msaaSupport": "Both"
+        },
+        "air_animated:entity_beam_additive": { 
+            "+defines": [ "USE_UV_ANIM", "USE_OVERLAY" ],
+            "+states": ["DisableAlphaWrite","DisableDepthWrite"],
+            "+samplerStates":[
+                {
+                    "samplerIndex":0,
+                    "textureWrap":"Repeat"
+                }
+            ],
+            "msaaSupport": "Both"
+        },
+        "god_ray:entity_beam_additive": {
+            "+samplerStates": [{"textureWrap": "Repeat", "samplerIndex": 0}],
+            "+defines": ["USE_UV_ANIM"]
+        },
+        "galaxy:entity_alphatest": {
+            "+samplerStates": [{"textureWrap": "Repeat", "samplerIndex": 0}],
+            "+defines": ["USE_UV_ANIM"]
+        },
+        "death_fade:entity_beam_additive":{
+            "+defines": ["USE_OVERLAY"]
+        },
+        "water_animated_no_repeat:entity_alphablend": { 
+            "+defines": [ "USE_UV_ANIM" ],
+            "+samplerStates":[
+                {
+                    "samplerIndex":0,
+                    "textureWrap":"Clamp"
+                }
+            ],
+            "msaaSupport": "Both"
+        },
+        "grey_scale_shine:entity_beam_additive": {
+            "+defines": [ "USE_UV_ANIM","USE_OVERLAY"]
+        },
+        "projector_light:entity_beam_additive": { 
+            "+samplerStates": [{"textureWrap": "Repeat", "samplerIndex": 0}],
+            "+defines": ["USE_OVERLAY", "USE_UV_ANIM"]
+        }
+    }
+}

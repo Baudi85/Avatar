@@ -1,0 +1,64 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.cabbage_cart.controller": {
+			"initial_state": "determine",
+			"states": {
+				"determine": {
+					"transitions": [
+						{
+							"default": "!q.is_ignited"
+						},
+						{
+							"destroyed": "q.is_ignited"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"damage": "q.is_sheared"
+						},
+						{
+							"explode": "q.is_ignited"
+						}
+					]
+				},
+				"damage": {
+					"animations": [
+						"damage"
+					],
+					"transitions": [
+						{
+							"explode": "q.is_ignited"
+						},
+						{
+							"default": "q.all_animations_finished&&!q.is_sheared"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"explode": {
+					"animations": [
+						"explode"
+					],
+					"transitions": [
+						{
+							"destroyed": "q.all_animations_finished"
+						}
+					]
+				},
+				"destroyed": {
+					"animations": [
+						"exploded_pose"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_ignited"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+schedule on_area_loaded add 1565 38 -193 1565 46 -189 breakable_walls/reset/emi/wall_1

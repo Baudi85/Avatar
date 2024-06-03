@@ -1,0 +1,192 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.npc_icon_travel",
+				"texture_width": 64,
+				"texture_height": 64,
+				"visible_bounds_width": 9,
+				"visible_bounds_height": 8,
+				"visible_bounds_offset": [
+					0,
+					4,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						84,
+						-16
+					]
+				},
+				{
+					"name": "root_icon",
+					"parent": "root",
+					"pivot": [
+						0,
+						58,
+						-16
+					]
+				},
+				{
+					"name": "travel",
+					"parent": "root_icon",
+					"pivot": [
+						0,
+						98,
+						-16
+					],
+					"rotation": [
+						0,
+						0,
+						-15
+					],
+					"reset": true
+				},
+				{
+					"name": "travel_map",
+					"parent": "travel",
+					"pivot": [
+						0,
+						98,
+						-16
+					],
+					"cubes": [
+						{
+							"origin": [
+								-2.5,
+								93.5,
+								-16
+							],
+							"size": [
+								5,
+								9,
+								0
+							],
+							"uv": [
+								14,
+								29
+							]
+						}
+					]
+				},
+				{
+					"name": "travel_target",
+					"parent": "travel_map",
+					"pivot": [
+						1,
+						98,
+						-16
+					],
+					"rotation": [
+						0,
+						0,
+						-45
+					],
+					"cubes": [
+						{
+							"origin": [
+								-0.5,
+								96.5,
+								-16.5
+							],
+							"size": [
+								3,
+								3,
+								1
+							],
+							"uv": [
+								30,
+								29
+							]
+						},
+						{
+							"origin": [
+								-3.5,
+								98,
+								-23.5
+							],
+							"size": [
+								5,
+								0,
+								5
+							],
+							"uv": [
+								9,
+								38
+							]
+						}
+					]
+				},
+				{
+					"name": "travel_map_1",
+					"parent": "travel_map",
+					"pivot": [
+						-2.5,
+						98,
+						-16
+					],
+					"rotation": [
+						0,
+						-30,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-5.5,
+								93.5,
+								-16
+							],
+							"size": [
+								3,
+								9,
+								0
+							],
+							"uv": [
+								3,
+								29
+							]
+						}
+					]
+				},
+				{
+					"name": "travel_map_",
+					"parent": "travel_map",
+					"pivot": [
+						2.5,
+						98,
+						-16
+					],
+					"rotation": [
+						0,
+						-30,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								2.5,
+								93.5,
+								-16
+							],
+							"size": [
+								3,
+								9,
+								0
+							],
+							"uv": [
+								24,
+								29
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

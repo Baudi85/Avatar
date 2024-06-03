@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.elements": {
+			"geometry": "geometry.default",
+			"textures": [
+				"texture.default"
+			],
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"part_visibility": [
+				{
+					"air": "q.variant == 0"
+				},
+				{
+					"water": "q.variant == 1"
+				},
+				{
+					"earth": "q.variant == 2"
+				},
+				{
+					"fire": "q.variant == 3"
+				}
+			],
+			"overlay_color": {
+				"a": 1,
+				"r": "math.abs(math.sin(q.life_time*120))",
+				"g": "math.abs(math.sin(q.life_time*120))",
+				"b": "math.abs(math.sin(q.life_time*120))"
+			},
+			"ignore_lighting": true
+		}
+	}
+}

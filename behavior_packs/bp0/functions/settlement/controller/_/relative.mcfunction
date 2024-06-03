@@ -1,0 +1,10 @@
+function settlement/t_air_temple_rooftop/_/controller
+function settlement/t_air_temple_sanctuary/_/controller
+function settlement/t_back_alley/_/controller
+function settlement/t_box_apartment/_/controller
+function settlement/t_clover_courtyard/_/controller
+function settlement/t_main_street/_/controller
+function settlement/t_pagoda_plaza/_/controller
+function settlement/t_ruined_backstreet/_/controller
+function settlement/t_rumble_arena/_/controller
+function settlement/t_zhao_ship/_/controller

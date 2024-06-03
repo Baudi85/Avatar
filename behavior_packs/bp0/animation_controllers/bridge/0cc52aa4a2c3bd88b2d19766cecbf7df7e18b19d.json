@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.0cc52aa4a2c3bd88b2d19766cecbf7df7e18b19d_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"earth": "query.skin_id==0"
+						}
+					]
+				},
+				"earth": {
+					"on_entry": [
+						"/scoreboard players set @s block_to_find 0"
+					]
+				}
+			}
+		}
+	}
+}

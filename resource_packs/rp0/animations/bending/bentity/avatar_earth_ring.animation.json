@@ -1,0 +1,300 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.earth_ring.spin": {
+			"loop": true,
+			"bones": {
+				"earth_ring": {
+					"rotation": [
+						0,
+						0,
+						-45
+					],
+					"position": [
+						0,
+						20,
+						0
+					]
+				},
+				"small_cube_1": {
+					"rotation": [
+						0,
+						"(q.life_time*360)+math.sin(q.life_time*180)*10",
+						"math.sin(q.life_time*180)*25"
+					],
+					"position": [
+						"math.sin(q.life_time*360)*3",
+						0,
+						0
+					]
+				},
+				"large_cube_1": {
+					"rotation": [
+						0,
+						"300+(q.life_time*360)+math.sin(q.life_time*180)*10",
+						"math.sin(q.life_time*180+45)*30"
+					]
+				},
+				"small_cube_2": {
+					"rotation": [
+						0,
+						"110+(q.life_time*360)+math.sin(q.life_time*180)*10",
+						"-math.sin(q.life_time*180+45)*10"
+					]
+				},
+				"small_cube_3": {
+					"rotation": [
+						0,
+						"240+(q.life_time*360)+math.sin(q.life_time*180)*10",
+						"-math.sin(q.life_time*180)*15"
+					],
+					"position": [
+						"-math.sin(q.life_time*360)*3",
+						0,
+						0
+					]
+				},
+				"small_cube_4": {
+					"rotation": [
+						0,
+						"200+(q.life_time*360)+math.sin(q.life_time*180)*10",
+						"math.sin(q.life_time*180)*15"
+					]
+				},
+				"large_cube_2": {
+					"rotation": [
+						0,
+						"270+(q.life_time*360)+math.sin(q.life_time*180)*10",
+						"-math.sin(q.life_time*180)*15"
+					],
+					"position": [
+						"math.sin(q.life_time*360)*3",
+						0,
+						0
+					]
+				},
+				"large_cube_3": {
+					"rotation": [
+						0,
+						"150+(q.life_time*360)+math.sin(q.life_time*180)*10",
+						"math.sin(q.life_time*180)*25"
+					],
+					"position": [
+						"-math.sin(q.life_time*360)*3",
+						0,
+						0
+					]
+				},
+				"large_cube_4": {
+					"rotation": [
+						0,
+						"90+(q.life_time*360)+math.sin(q.life_time*180)*10",
+						"-math.sin(q.life_time*180)*15"
+					]
+				},
+				"large_cube_5": {
+					"rotation": [
+						0,
+						"30+(q.life_time*360)+math.sin(q.life_time*180)*10",
+						"math.sin(q.life_time*180+60)*15"
+					]
+				},
+				"small_cube_5": {
+					"rotation": [
+						0,
+						"180+(q.life_time*360)+math.sin(q.life_time*180)*10",
+						"math.sin(q.life_time*180)*15"
+					],
+					"position": [
+						"math.sin(q.life_time*360)*5",
+						0,
+						0
+					]
+				}
+			}
+		},
+		"animation.earth_ring.init": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"earth_ring": {
+					"scale": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.3333": [
+							1.2,
+							1.2,
+							1.2
+						],
+						"0.5": [
+							1,
+							1,
+							1
+						]
+					}
+				}
+			}
+		},
+		"animation.earth_ring.exit": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"small_cube_1": {
+					"scale": {
+						"0.3333": [
+							1,
+							1,
+							1
+						],
+						"0.5833": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"small_cube_2": {
+					"scale": {
+						"0.5833": [
+							1,
+							1,
+							1
+						],
+						"0.8333": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"small_cube_3": {
+					"scale": {
+						"0.4583": [
+							1,
+							1,
+							1
+						],
+						"0.7083": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"small_cube_4": {
+					"scale": {
+						"0.5": [
+							1,
+							1,
+							1
+						],
+						"0.75": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"small_cube_5": {
+					"scale": {
+						"0.5417": [
+							1,
+							1,
+							1
+						],
+						"0.7917": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"large_cube_1": {
+					"scale": {
+						"0.375": [
+							1,
+							1,
+							1
+						],
+						"0.625": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"large_cube_2": {
+					"scale": {
+						"0.4167": [
+							1,
+							1,
+							1
+						],
+						"0.6667": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"large_cube_3": {
+					"scale": {
+						"0.5833": [
+							1,
+							1,
+							1
+						],
+						"0.8333": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"large_cube_4": {
+					"scale": {
+						"0.25": [
+							1,
+							1,
+							1
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"large_cube_5": {
+					"scale": {
+						"0.2917": [
+							1,
+							1,
+							1
+						],
+						"0.5417": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.earth_ring.fp": {
+			"loop": "hold_on_last_frame",
+			"bones": {
+				"earth_ring": {
+					"position": [
+						10,
+						0,
+						0
+					]
+				}
+			}
+		}
+	}
+}

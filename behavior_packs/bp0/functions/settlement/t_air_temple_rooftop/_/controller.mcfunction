@@ -1,0 +1,1 @@
+execute @s[scores={settlement_q_i=-1}] ~ ~ ~ function settlement/t_air_temple_rooftop/_/_load_queue

@@ -1,0 +1,86 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.earth_wall.earth_wall_particles": {
+			"animation_length": 1,
+			"loop": false,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "summon_base"
+					},
+					{
+						"effect": "summon"
+					}
+				]
+			}
+		},
+		"animation.earth_wall.retract": {
+			"animation_length": 1,
+			"loop": false,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "summon_base"
+					}
+				]
+			}
+		},
+		"animation.earth_wall.explode_particles": {
+			"animation_length": 1,
+			"loop": false,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "dust",
+						"locator": "effect_c1"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_c2"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_c3"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_c4"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_r1"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_r2"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_r3"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_r4"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_l1"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_l2"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_l3"
+					},
+					{
+						"effect": "dust",
+						"locator": "effect_l4"
+					}
+				]
+			}
+		}
+	}
+}

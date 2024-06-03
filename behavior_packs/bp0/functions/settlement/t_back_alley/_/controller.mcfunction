@@ -1,0 +1,1 @@
+execute @s[scores={settlement_q_i=2}] ~ ~ ~ function settlement/t_back_alley/_/_load_queue

@@ -1,0 +1,26 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.8eceae85ecc6badf940736a90b45d4a70a189947_0": {
+			"states": {
+				"default": {
+					"animations": [
+						"8eceae85ecc6badf_a_0"
+					],
+					"transitions": [
+						{
+							"logged_in": "q.skin_id==-100"
+						}
+					]
+				},
+				"logged_in": {
+					"on_entry": [
+						"/execute @s[tag=!first_time_logged_in] ~~~ function player/login/first_time",
+						"/function player/login/every_time",
+						"@s nom:reset_skin_id"
+					]
+				}
+			}
+		}
+	}
+}

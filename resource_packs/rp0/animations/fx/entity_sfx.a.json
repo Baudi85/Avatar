@@ -1,0 +1,559 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.earth_wall.test": {
+			"loop": true,
+			"animation_length": 2,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "test"
+					}
+				]
+			}
+		},
+		"animation.earth_wall.test2": {
+			"loop": true,
+			"animation_length": 1.5,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "test2"
+					}
+				]
+			}
+		},
+		"animation.earth_wall.test3": {
+			"loop": true,
+			"animation_length": 0.2,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "test3"
+					}
+				]
+			}
+		},
+		"animation.earth_wall.test4": {
+			"loop": false,
+			"animation_length": 0.2,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "test4"
+					}
+				]
+			}
+		},
+		"animation.earth_wall.test5": {
+			"loop": false,
+			"animation_length": 0.2,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "test5"
+					}
+				]
+			}
+		},
+		"animation.earth_wall.test6": {
+			"loop": true,
+			"animation_length": 0.2,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "test6"
+					}
+				]
+			}
+		},
+		"animation.jet_prop.charge_sound": {
+			"loop": false,
+			"animation_length": 1,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "prop_charging"
+					}
+				]
+			}
+		},
+		"animation.jet_prop.launch_sound": {
+			"loop": false,
+			"animation_length": 1,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "jet_prop_launch"
+					}
+				]
+			}
+		},
+		"animation.jet_prop.loop_sound_ext": {
+			"loop": true,
+			"animation_length": 0.6,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "jet_prop_loop_ext"
+					}
+				]
+			}
+		},
+		"animation.jet_prop.loop_sound": {
+			"loop": true,
+			"animation_length": 0.6,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "jet_prop_loop"
+					}
+				]
+			}
+		},
+		"animation.jet_prop.explode_sound": {
+			"loop": false,
+			"animation_length": 1,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "jet_prop_explode"
+					}
+				]
+			}
+		},
+		"animation.water_charge.loop_sound": {
+			"loop": true,
+			"animation_length": 0.8,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "water_whooshing"
+					}
+				]
+			}
+		},
+		"animation.water_charge.init_sound": {
+			"animation_length": 1,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "water_charge_init"
+					}
+				]
+			}
+		},
+		"animation.fire_spawn.sound": {
+			"animation_length": 1,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "spawn"
+					}
+				]
+			}
+		},
+		"animation.water_spawn.sound": {
+			"animation_length": 1,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "spawn"
+					}
+				]
+			}
+		},
+		"animation.earth_spawn.sound": {
+			"animation_length": 1,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "spawn"
+					}
+				]
+			}
+		},
+		"animation.air_spawn.sound": {
+			"animation_length": 1,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "spawn"
+					}
+				]
+			}
+		},
+		"animation.fire_sweep.loop_sound": {
+			"animation_length": 0.805,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "fire_sweep"
+					}
+				]
+			}
+		},
+		"animation.fire_sweep.init_sound": {
+			"animation_length": 0.805,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "fire_sweep_init"
+					}
+				]
+			}
+		},
+		"animation.fire_sweep.end_sound": {
+			"animation_length": 0.805,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "fire_sweep_end"
+					}
+				]
+			}
+		},
+		"animation.fire_stream.init": {
+			"animation_length": 0.08,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "fire_stream_init"
+					}
+				]
+			}
+		},
+		"animation.fire_stream.loop": {
+			"animation_length": 0.6,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "fire_stream_loop"
+					}
+				]
+			}
+		},
+		"animation.fire_stream.release": {
+			"animation_length": 1,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "fire_stream_release"
+					}
+				]
+			}
+		},
+		"animation.fire_stream.launch": {
+			"animation_length": 0.4,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "fire_stream_launch"
+					}
+				]
+			}
+		},
+		"animation.air_tornado.loop": {
+			"animation_length": 0.45,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "loop"
+					}
+				],
+				"0.25": [
+					{
+						"effect": "loop2"
+					}
+				]
+			}
+		},
+		"animation.air_tornado.charge_timer": {
+			"animation_length": 0.5,
+			"loop": false
+		},
+		"animation.air_tornado.charge1": {
+			"animation_length": 0.72,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "tornado_charge1"
+					}
+				]
+			}
+		},
+		"animation.air_tornado.charge2": {
+			"animation_length": 0.4,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "tornado_charge2"
+					}
+				]
+			}
+		},
+		"animation.air_tornado.charge3": {
+			"animation_length": 0.35,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "tornado_charge3"
+					}
+				]
+			}
+		},
+		"animation.air_tornado.release": {
+			"animation_length": 0.82,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "tornado_release"
+					}
+				]
+			}
+		},
+		"animation.acrobatics_flip": {
+			"animation_length": 0.5,
+			"loop": false,
+			"sound_effects": {
+				"0.0": {
+					"effect": "acrobatics_flip"
+				}
+			}
+		},
+		"animation.enemy_quake_charge": {
+			"animation_length": 0.5,
+			"sound_effects": {
+				"0.0": {
+					"effect": "earth_quake_charging"
+				}
+			}
+		},
+		"animation.air_blades.launch": {
+			"animation_length": 0.27,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "air_blades_launch"
+					}
+				]
+			}
+		},
+		"animation.air_blades.init": {
+			"animation_length": 0.27,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "air_gust_init"
+					}
+				]
+			}
+		},
+		"animation.air_blades.loop": {
+			"animation_length": 0.5,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "air_gust_loop"
+					}
+				]
+			}
+		},
+		"animation.air_blades.release": {
+			"animation_length": 0.22,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "air_gust_end"
+					}
+				]
+			}
+		},
+		"animation.air_sphere.init": {
+			"animation_length": 0.22,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "sphere_init"
+					}
+				]
+			}
+		},
+		"animation.air_sphere.loop": {
+			"animation_length": 0.5,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "sphere_loop"
+					}
+				]
+			}
+		},
+		"animation.air_sphere.release": {
+			"animation_length": 0.22,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "sphere_release"
+					}
+				]
+			}
+		},
+		"animation.frost_breath.init": {
+			"animation_length": 0.22,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "frost_breath_init"
+					}
+				]
+			}
+		},
+		"animation.frost_breath.loop": {
+			"animation_length": 0.5,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "frost_breath_loop"
+					}
+				]
+			}
+		},
+		"animation.frost_breath.end": {
+			"animation_length": 0.22,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "frost_breath_end"
+					}
+				]
+			}
+		},
+		"animation.frost_breath.launch": {
+			"animation_length": 0.22,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "frost_breath_launch"
+					}
+				]
+			}
+		},
+		"animation.water_whip.whip": {
+			"animation_length": 0.22,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "water_whip_whip"
+					}
+				]
+			}
+		},
+		"animation.water_whip.charge_hit": {
+			"animation_length": 0.22,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "water_whip_charge_hit"
+					}
+				]
+			}
+		},
+		"animation.octo_form.init": {
+			"animation_length": 0.22,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "octo_init"
+					}
+				]
+			}
+		},
+		"animation.octo_form.loop": {
+			"animation_length": 0.6,
+			"loop": true,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "octo_loop"
+					}
+				]
+			}
+		},
+		"animation.octo_form.release": {
+			"animation_length": 0.22,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "octo_release"
+					}
+				]
+			}
+		},
+		"animation.octo_form.slam": {
+			"animation_length": 1.93,
+			"loop": true,
+			"sound_effects": {
+				"0.2": [
+					{
+						"effect": "octo_slam"
+					}
+				]
+			}
+		},
+		"animation.paisho.collect_sound": {
+			"animation_length": 0.5,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "paisho_place"
+					}
+				]
+			}
+		},
+		"animation.avatar_state_sting": {
+			"animation_length": 1.93,
+			"loop": false,
+			"sound_effects": {
+				"0.0": [
+					{
+						"effect": "avatar_state_sting"
+					}
+				]
+			}
+		}
+	}
+}

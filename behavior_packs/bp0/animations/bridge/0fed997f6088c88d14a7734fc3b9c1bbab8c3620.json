@@ -1,0 +1,82 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.0fed997f6088c88d14a7734fc3b9c1bbab8c3620_0": {
+			"timeline": {
+				"2": [
+					"/tag @a[tag=battle.member.202] add battle.member",
+					"/execute @a[tag=battle.member.202] ~ ~ ~ function ui/hud/hide",
+					"/function music/music_pre_stop",
+					"/tag @s remove battle.delay",
+					"/playsound encampment_start_jingle @a[tag=battle.member.202]",
+					"/event entity @e[tag=hide_me] nom:npc.hide",
+					"/event entity @s nom:npc.hide"
+				],
+				"0.0": [
+					"/tag @a[r=16] add battle.member.202"
+				],
+				"0.5": [
+					"/execute @a[tag=battle.member.202] ~ ~ ~ dialogue open @e[type=nom:ui_handler,c=1] @s splash.duel_unalaq"
+				],
+				"3.45": [
+					"/summon nom:enemy_unalaq ~ ~ ~ nom:enemy_idle",
+					"/scoreboard players operation @e[type=nom:enemy_unalaq,c=1] battle_id = @s battle_id",
+					"/tp @e[type=nom:enemy_unalaq,c=1] -1969 48 -14 -90 0",
+					"/summon nom:duel.spawn -1969 48 -14",
+					"/tag @e[type=nom:duel.spawn,tag=] add duel.spawn.duel_unalaq",
+					"/summon nom:enemy_eska ~ ~ ~ nom:enemy_idle",
+					"/scoreboard players operation @e[type=nom:enemy_eska,c=1] battle_id = @s battle_id",
+					"/tp @e[type=nom:enemy_eska,c=1] -1965 49 -19 17 0",
+					"/summon nom:duel.spawn -1965 49 -19",
+					"/tag @e[type=nom:duel.spawn,tag=] add duel.spawn.duel_unalaq",
+					"/summon nom:enemy_desna ~ ~ ~ nom:enemy_idle",
+					"/scoreboard players operation @e[type=nom:enemy_desna,c=1] battle_id = @s battle_id",
+					"/tp @e[type=nom:enemy_desna,c=1] -1966 48 -9 -135 0",
+					"/summon nom:duel.spawn -1966 48 -9",
+					"/tag @e[type=nom:duel.spawn,tag=] add duel.spawn.duel_unalaq"
+				],
+				"4.45": [
+					"/scoreboard players set @a[tag=battle.member.202] scene_id 1"
+				],
+				"11.0": [
+					"/tag @s add duel.cutscene_over",
+					"/event entity @e[tag=duel.enemy] nom:duel_start",
+					"/execute @a[tag=battle.member.202] ~~~ function music/duel_player",
+					"/function bossbar/update/_/universal"
+				]
+			},
+			"loop": false,
+			"animation_length": 12.05
+		},
+		"animation.0fed997f6088c88d14a7734fc3b9c1bbab8c3620_1": {
+			"timeline": {
+				"0.0": [
+					"/execute @a[tag=battle.member.202] ~ ~ ~ dialogue open @e[type=nom:ui_handler,c=1] @s ui.fade",
+					"/scoreboard players set @a[tag=battle.member.202] close_ui_in 50"
+				],
+				"1.25": [
+					"/tag @a[tag=battle.member.202] add eiqs",
+					"/function battle/duel/on_teleport_back",
+					"/execute @a[tag=battle.member.202] ~ ~ ~ tp @s ~ ~ ~ ~30 ~",
+					"/event entity @e[tag=hide_me] nom:npc.show",
+					"/event entity @s nom:npc.show"
+				],
+				"2.5": [
+					"/event entity @s nom:oaklogue.on_force",
+					"/event entity @s nom:remove_tick_world"
+				]
+			},
+			"loop": false,
+			"animation_length": 2.55
+		},
+		"animation.0fed997f6088c88d14a7734fc3b9c1bbab8c3620_2": {
+			"loop": true,
+			"animation_length": 0.25,
+			"timeline": {
+				"0.0": [
+					"/execute @s[tag=duel.cutscene_over] ~ ~ ~ function battle/duel/end_check"
+				]
+			}
+		}
+	}
+}

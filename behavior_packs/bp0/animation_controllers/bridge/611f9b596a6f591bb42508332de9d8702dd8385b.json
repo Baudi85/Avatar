@@ -1,0 +1,146 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.611f9b596a6f591bb42508332de9d8702dd8385b_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==110)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==110"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.611f9b596a6f591bb42508332de9d8702dd8385b_1": {
+			"states": {
+				"not_on_ground": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/earth/earth_wall/on_in_air"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==110)"
+						},
+						{
+							"default": "q.is_on_ground&&!q.is_in_water"
+						}
+					]
+				},
+				"default": {
+					"on_entry": [
+						"@s nom:enemy.bending.earth.wall.spawn.777435.move",
+						"v.const_charge_time=0.25;",
+						"v.const_deploy_time=0.25;",
+						"v.const_deploy_wait=0.25;",
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_0"
+					],
+					"animations": [
+						"animation.bending.earth.wall.find"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==110)"
+						},
+						{
+							"not_on_ground": "!q.is_on_ground||q.is_in_water"
+						},
+						{
+							"deploying_1": "q.variant==1"
+						}
+					]
+				},
+				"deploying_1": {
+					"on_entry": [
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==110)"
+						},
+						{
+							"not_on_ground": "!q.is_on_ground||q.is_in_water"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"deploying_2": "q.life_time>=v.runtime+v.const_charge_time"
+						}
+					],
+					"animations": [
+						"611f9b596a6f591b_a_0"
+					]
+				},
+				"deploying_2": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_2",
+						"/function bending/earth/earth_wall/on_deploying_2"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==110)"
+						},
+						{
+							"deploying_3": "q.life_time>v.runtime+v.const_deploy_time"
+						}
+					]
+				},
+				"deploying_3": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_3",
+						"/function bending/earth/earth_wall/on_deploying_3"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==110)"
+						},
+						{
+							"cooldown": "q.life_time>v.runtime+v.const_deploy_wait"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==110)"
+						},
+						{
+							"default": "q.life_time>v.runtime+5"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==110"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		}
+	}
+}

@@ -1,0 +1,73 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.duel.spawn": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"spawn": "q.is_sheared"
+						}
+					]
+				},
+				"spawn": {
+					"animations": [
+						"wait"
+					],
+					"transitions": [
+						{
+							"duel": "q.anim_time>=2.5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"duel": {
+					"animations": [
+						"duel_pose"
+					],
+					"transitions": [
+						{
+							"default": "q.anim_time>=10||q.all_animations_finished"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.enemy.spawn_duel": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"spawn": "q.is_sheared"
+						}
+					]
+				},
+				"spawn": {
+					"animations": [
+						"wait"
+					],
+					"transitions": [
+						{
+							"duel": "q.anim_time>=2"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"duel": {
+					"animations": [
+						"spawn_animation",
+						"spawn_vfx",
+						"spawn_sound"
+					],
+					"transitions": [
+						{
+							"default": "q.all_animations_finished&&!q.is_sheared"
+						}
+					]
+				}
+			}
+		}
+	}
+}

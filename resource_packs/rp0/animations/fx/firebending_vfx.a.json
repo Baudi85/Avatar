@@ -1,0 +1,346 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.jet_prop.fire_jets": {
+			"loop": true,
+			"animation_length": 0.05,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				]
+			}
+		},
+		"animation.jet_prop.fire_jets_end": {
+			"loop": true,
+			"animation_length": 1.1667,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.05": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.1": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.15": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.2": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.25": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.3": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.35": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.4": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.45": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.5": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.55": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.6": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.65": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.7": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.75": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.8": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.85": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.9": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"0.95": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"1.0": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"1.05": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"1.1": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				],
+				"1.15": [
+					{
+						"effect": "fire_jet_rightarm",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_leftarm",
+						"locator": "lefthand_locator"
+					}
+				]
+			}
+		},
+		"animation.fire_sweep.fire_from_legs": {
+			"loop": false,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "fire_sweep",
+						"locator": "fire_sweep_locator"
+					}
+				]
+			}
+		},
+		"animation.fp.fire_sweep.fire_from_legs": {
+			"animation_length": 0.125,
+			"particle_effects": {
+				"0.0": {
+					"effect": "fire_sweep_fp",
+					"locator": "leftfoot_locator"
+				}
+			}
+		},
+		"animation.fire_stream.fire_stream_fireball": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "fire_stream",
+						"locator": "effect_locator"
+					}
+				]
+			}
+		},
+		"animation.fire_jet.fire_jet_tier_up": {
+			"loop": false,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "fire_jet_tier_up",
+						"locator": "righthand_locator"
+					},
+					{
+						"effect": "fire_jet_tier_up",
+						"locator": "lefthand_locator"
+					}
+				]
+			}
+		},
+		"animation.fire_jet.impact": {
+			"animation_length": 1,
+			"bones": {
+				"body_locator": {
+					"rotation": [
+						0,
+						"v.is_first_person?160:0",
+						0
+					]
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "fire_jet_impact",
+					"locator": "body_locator"
+				}
+			}
+		},
+		"animation.fire_jet.feet": {
+			"loop": true,
+			"animation_length": 1,
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "fire_jet_feet",
+						"locator": "feet_locator"
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,2211 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.water_octopusform",
+				"texture_width": 80,
+				"texture_height": 80,
+				"visible_bounds_width": 11,
+				"visible_bounds_height": 7,
+				"visible_bounds_offset": [
+					0,
+					2.5,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "octopusform",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"locators": {
+						"tentacle_locator_0": {
+							"offset": [
+								38,
+								0,
+								-54
+							],
+							"rotation": [
+								180,
+								0,
+								0
+							]
+						},
+						"tentacle_locator_1": {
+							"offset": [
+								61,
+								0,
+								-24
+							],
+							"rotation": [
+								180,
+								0,
+								0
+							]
+						},
+						"tentacle_locator_2": {
+							"offset": [
+								59,
+								0,
+								23
+							],
+							"rotation": [
+								180,
+								0,
+								0
+							]
+						},
+						"tentacle_locator_3": {
+							"offset": [
+								36,
+								0,
+								53
+							],
+							"rotation": [
+								180,
+								0,
+								0
+							]
+						},
+						"tentacle_locator_4": {
+							"offset": [
+								-30,
+								0,
+								53
+							],
+							"rotation": [
+								180,
+								0,
+								0
+							]
+						},
+						"tentacle_locator_5": {
+							"offset": [
+								-53,
+								0,
+								20
+							],
+							"rotation": [
+								180,
+								0,
+								0
+							]
+						},
+						"tentacle_locator_6": {
+							"offset": [
+								-53,
+								0,
+								-26
+							],
+							"rotation": [
+								180,
+								0,
+								0
+							]
+						},
+						"tentacle_locator_7": {
+							"offset": [
+								-33,
+								0,
+								-53
+							],
+							"rotation": [
+								180,
+								0,
+								0
+							]
+						}
+					}
+				},
+				{
+					"name": "inside",
+					"parent": "octopusform",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-20,
+								0,
+								-20
+							],
+							"size": [
+								40,
+								40,
+								40
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										40,
+										40
+									]
+								},
+								"east": {
+									"uv": [
+										40,
+										0
+									],
+									"uv_size": [
+										40,
+										40
+									]
+								},
+								"south": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										40,
+										40
+									]
+								},
+								"west": {
+									"uv": [
+										40,
+										0
+									],
+									"uv_size": [
+										40,
+										40
+									]
+								},
+								"up": {
+									"uv": [
+										80,
+										80
+									],
+									"uv_size": [
+										-40,
+										-40
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_0",
+					"parent": "octopusform",
+					"pivot": [
+						-12,
+						8,
+						-16
+					],
+					"rotation": [
+						30,
+						30,
+						0
+					]
+				},
+				{
+					"name": "tentacle_segment_0",
+					"parent": "tentacle_0",
+					"pivot": [
+						-12,
+						8,
+						-16
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								8,
+								-16
+							],
+							"size": [
+								8,
+								24,
+								8
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"east": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"south": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"west": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"up": {
+									"uv": [
+										40,
+										56
+									],
+									"uv_size": [
+										-8,
+										-8
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_1",
+					"parent": "tentacle_segment_0",
+					"pivot": [
+						-12,
+						32,
+						-10
+					],
+					"cubes": [
+						{
+							"origin": [
+								-15,
+								32,
+								-16
+							],
+							"size": [
+								6,
+								16,
+								6
+							],
+							"inflate": 0.01,
+							"uv": {
+								"north": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"east": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"south": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"west": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"up": {
+									"uv": [
+										30,
+										64
+									],
+									"uv_size": [
+										-6,
+										-6
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_2",
+					"parent": "tentacle_segment_1",
+					"pivot": [
+						-12,
+						48,
+						-12
+					],
+					"cubes": [
+						{
+							"origin": [
+								-14,
+								48,
+								-16
+							],
+							"size": [
+								4,
+								12,
+								4
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"east": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"south": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"west": {
+									"uv": [
+										18,
+										68
+									],
+									"uv_size": [
+										4,
+										12
+									]
+								},
+								"up": {
+									"uv": [
+										22,
+										68
+									],
+									"uv_size": [
+										-4,
+										-4
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_1",
+					"parent": "octopusform",
+					"pivot": [
+						-16,
+						4,
+						-6
+					],
+					"rotation": [
+						30,
+						67.5,
+						0
+					]
+				},
+				{
+					"name": "tentacle_segment_4",
+					"parent": "tentacle_1",
+					"pivot": [
+						-16,
+						4,
+						-6
+					],
+					"cubes": [
+						{
+							"origin": [
+								-20,
+								4,
+								-6
+							],
+							"size": [
+								8,
+								24,
+								8
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"east": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"south": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"west": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"up": {
+									"uv": [
+										40,
+										56
+									],
+									"uv_size": [
+										-8,
+										-8
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_5",
+					"parent": "tentacle_segment_4",
+					"pivot": [
+						-16,
+						28,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-19,
+								28,
+								-6
+							],
+							"size": [
+								6,
+								16,
+								6
+							],
+							"inflate": 0.01,
+							"uv": {
+								"north": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"east": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"south": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"west": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"up": {
+									"uv": [
+										30,
+										64
+									],
+									"uv_size": [
+										-6,
+										-6
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_6",
+					"parent": "tentacle_segment_5",
+					"pivot": [
+						-16,
+						44,
+						-2
+					],
+					"cubes": [
+						{
+							"origin": [
+								-18,
+								44,
+								-6
+							],
+							"size": [
+								4,
+								12,
+								4
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"east": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"south": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"west": {
+									"uv": [
+										18,
+										68
+									],
+									"uv_size": [
+										4,
+										12
+									]
+								},
+								"up": {
+									"uv": [
+										22,
+										68
+									],
+									"uv_size": [
+										-4,
+										-4
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_2",
+					"parent": "octopusform",
+					"pivot": [
+						-16,
+						4,
+						6
+					],
+					"rotation": [
+						30,
+						112.5,
+						0
+					]
+				},
+				{
+					"name": "tentacle_segment_8",
+					"parent": "tentacle_2",
+					"pivot": [
+						-16,
+						4,
+						6
+					],
+					"cubes": [
+						{
+							"origin": [
+								-20,
+								4,
+								6
+							],
+							"size": [
+								8,
+								24,
+								8
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"east": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"south": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"west": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"up": {
+									"uv": [
+										40,
+										56
+									],
+									"uv_size": [
+										-8,
+										-8
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_9",
+					"parent": "tentacle_segment_8",
+					"pivot": [
+						-16,
+						28,
+						12
+					],
+					"cubes": [
+						{
+							"origin": [
+								-19,
+								28,
+								6
+							],
+							"size": [
+								6,
+								16,
+								6
+							],
+							"inflate": 0.01,
+							"uv": {
+								"north": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"east": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"south": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"west": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"up": {
+									"uv": [
+										30,
+										64
+									],
+									"uv_size": [
+										-6,
+										-6
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_10",
+					"parent": "tentacle_segment_9",
+					"pivot": [
+						-16,
+						44,
+						10
+					],
+					"cubes": [
+						{
+							"origin": [
+								-18,
+								44,
+								6
+							],
+							"size": [
+								4,
+								12,
+								4
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"east": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"south": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"west": {
+									"uv": [
+										18,
+										68
+									],
+									"uv_size": [
+										4,
+										12
+									]
+								},
+								"up": {
+									"uv": [
+										22,
+										68
+									],
+									"uv_size": [
+										-4,
+										-4
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_3",
+					"parent": "octopusform",
+					"pivot": [
+						-12,
+						8,
+						16
+					],
+					"rotation": [
+						30,
+						155,
+						0
+					]
+				},
+				{
+					"name": "tentacle_segment_12",
+					"parent": "tentacle_3",
+					"pivot": [
+						-12,
+						8,
+						16
+					],
+					"cubes": [
+						{
+							"origin": [
+								-16,
+								8,
+								16
+							],
+							"size": [
+								8,
+								24,
+								8
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"east": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"south": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"west": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"up": {
+									"uv": [
+										40,
+										56
+									],
+									"uv_size": [
+										-8,
+										-8
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_13",
+					"parent": "tentacle_segment_12",
+					"pivot": [
+						-12,
+						32,
+						22
+					],
+					"cubes": [
+						{
+							"origin": [
+								-15,
+								32,
+								16
+							],
+							"size": [
+								6,
+								16,
+								6
+							],
+							"inflate": 0.01,
+							"uv": {
+								"north": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"east": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"south": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"west": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"up": {
+									"uv": [
+										30,
+										64
+									],
+									"uv_size": [
+										-6,
+										-6
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_14",
+					"parent": "tentacle_segment_13",
+					"pivot": [
+						-12,
+						48,
+						20
+					],
+					"cubes": [
+						{
+							"origin": [
+								-14,
+								48,
+								16
+							],
+							"size": [
+								4,
+								12,
+								4
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"east": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"south": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"west": {
+									"uv": [
+										18,
+										68
+									],
+									"uv_size": [
+										4,
+										12
+									]
+								},
+								"up": {
+									"uv": [
+										22,
+										68
+									],
+									"uv_size": [
+										-4,
+										-4
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_4",
+					"parent": "octopusform",
+					"pivot": [
+						12,
+						8,
+						16
+					],
+					"rotation": [
+						30,
+						-150,
+						0
+					]
+				},
+				{
+					"name": "tentacle_segment_16",
+					"parent": "tentacle_4",
+					"pivot": [
+						12,
+						8,
+						16
+					],
+					"cubes": [
+						{
+							"origin": [
+								8,
+								8,
+								16
+							],
+							"size": [
+								8,
+								24,
+								8
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"east": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"south": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"west": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"up": {
+									"uv": [
+										40,
+										56
+									],
+									"uv_size": [
+										-8,
+										-8
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_17",
+					"parent": "tentacle_segment_16",
+					"pivot": [
+						12,
+						32,
+						22
+					],
+					"cubes": [
+						{
+							"origin": [
+								9,
+								32,
+								16
+							],
+							"size": [
+								6,
+								16,
+								6
+							],
+							"inflate": 0.01,
+							"uv": {
+								"north": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"east": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"south": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"west": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"up": {
+									"uv": [
+										30,
+										64
+									],
+									"uv_size": [
+										-6,
+										-6
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_18",
+					"parent": "tentacle_segment_17",
+					"pivot": [
+						12,
+						48,
+						20
+					],
+					"cubes": [
+						{
+							"origin": [
+								10,
+								48,
+								16
+							],
+							"size": [
+								4,
+								12,
+								4
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"east": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"south": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"west": {
+									"uv": [
+										18,
+										68
+									],
+									"uv_size": [
+										4,
+										12
+									]
+								},
+								"up": {
+									"uv": [
+										22,
+										68
+									],
+									"uv_size": [
+										-4,
+										-4
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_5",
+					"parent": "octopusform",
+					"pivot": [
+						16,
+						4,
+						6
+					],
+					"rotation": [
+						30,
+						-112.5,
+						0
+					]
+				},
+				{
+					"name": "tentacle_segment_20",
+					"parent": "tentacle_5",
+					"pivot": [
+						16,
+						4,
+						6
+					],
+					"cubes": [
+						{
+							"origin": [
+								12,
+								4,
+								6
+							],
+							"size": [
+								8,
+								24,
+								8
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"east": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"south": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"west": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"up": {
+									"uv": [
+										40,
+										56
+									],
+									"uv_size": [
+										-8,
+										-8
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_21",
+					"parent": "tentacle_segment_20",
+					"pivot": [
+						16,
+						28,
+						12
+					],
+					"cubes": [
+						{
+							"origin": [
+								13,
+								28,
+								6
+							],
+							"size": [
+								6,
+								16,
+								6
+							],
+							"inflate": 0.01,
+							"uv": {
+								"north": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"east": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"south": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"west": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"up": {
+									"uv": [
+										30,
+										64
+									],
+									"uv_size": [
+										-6,
+										-6
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_22",
+					"parent": "tentacle_segment_21",
+					"pivot": [
+						16,
+						44,
+						10
+					],
+					"cubes": [
+						{
+							"origin": [
+								14,
+								44,
+								6
+							],
+							"size": [
+								4,
+								12,
+								4
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"east": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"south": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"west": {
+									"uv": [
+										18,
+										68
+									],
+									"uv_size": [
+										4,
+										12
+									]
+								},
+								"up": {
+									"uv": [
+										22,
+										68
+									],
+									"uv_size": [
+										-4,
+										-4
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_6",
+					"parent": "octopusform",
+					"pivot": [
+						16,
+						4,
+						-6
+					],
+					"rotation": [
+						30,
+						-67.5,
+						0
+					]
+				},
+				{
+					"name": "tentacle_segment_24",
+					"parent": "tentacle_6",
+					"pivot": [
+						16,
+						4,
+						-6
+					],
+					"cubes": [
+						{
+							"origin": [
+								12,
+								4,
+								-6
+							],
+							"size": [
+								8,
+								24,
+								8
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"east": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"south": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"west": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"up": {
+									"uv": [
+										40,
+										56
+									],
+									"uv_size": [
+										-8,
+										-8
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_25",
+					"parent": "tentacle_segment_24",
+					"pivot": [
+						16,
+						28,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								13,
+								28,
+								-6
+							],
+							"size": [
+								6,
+								16,
+								6
+							],
+							"inflate": 0.01,
+							"uv": {
+								"north": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"east": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"south": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"west": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"up": {
+									"uv": [
+										30,
+										64
+									],
+									"uv_size": [
+										-6,
+										-6
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_26",
+					"parent": "tentacle_segment_25",
+					"pivot": [
+						16,
+						44,
+						-2
+					],
+					"cubes": [
+						{
+							"origin": [
+								14,
+								44,
+								-6
+							],
+							"size": [
+								4,
+								12,
+								4
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"east": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"south": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"west": {
+									"uv": [
+										18,
+										68
+									],
+									"uv_size": [
+										4,
+										12
+									]
+								},
+								"up": {
+									"uv": [
+										22,
+										68
+									],
+									"uv_size": [
+										-4,
+										-4
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_7",
+					"parent": "octopusform",
+					"pivot": [
+						12,
+						8,
+						-16
+					],
+					"rotation": [
+						30,
+						-30,
+						0
+					]
+				},
+				{
+					"name": "tentacle_segment_28",
+					"parent": "tentacle_7",
+					"pivot": [
+						12,
+						8,
+						-16
+					],
+					"cubes": [
+						{
+							"origin": [
+								8,
+								8,
+								-16
+							],
+							"size": [
+								8,
+								24,
+								8
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"east": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"south": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"west": {
+									"uv": [
+										32,
+										56
+									],
+									"uv_size": [
+										8,
+										24
+									]
+								},
+								"up": {
+									"uv": [
+										40,
+										56
+									],
+									"uv_size": [
+										-8,
+										-8
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_29",
+					"parent": "tentacle_segment_28",
+					"pivot": [
+						12,
+						32,
+						-10
+					],
+					"cubes": [
+						{
+							"origin": [
+								9,
+								32,
+								-16
+							],
+							"size": [
+								6,
+								16,
+								6
+							],
+							"inflate": 0.01,
+							"uv": {
+								"north": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"east": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"south": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"west": {
+									"uv": [
+										24,
+										64
+									],
+									"uv_size": [
+										6,
+										16
+									]
+								},
+								"up": {
+									"uv": [
+										30,
+										64
+									],
+									"uv_size": [
+										-6,
+										-6
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "tentacle_segment_30",
+					"parent": "tentacle_segment_29",
+					"pivot": [
+						12,
+						48,
+						-12
+					],
+					"cubes": [
+						{
+							"origin": [
+								10,
+								48,
+								-16
+							],
+							"size": [
+								4,
+								12,
+								4
+							],
+							"uv": {
+								"north": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"east": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"south": {
+									"uv": [
+										18,
+										68.25
+									],
+									"uv_size": [
+										4,
+										11.75
+									]
+								},
+								"west": {
+									"uv": [
+										18,
+										68
+									],
+									"uv_size": [
+										4,
+										12
+									]
+								},
+								"up": {
+									"uv": [
+										22,
+										68
+									],
+									"uv_size": [
+										-4,
+										-4
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "skirt",
+					"parent": "octopusform",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-20,
+								0,
+								-20
+							],
+							"size": [
+								40,
+								40,
+								40
+							],
+							"inflate": 0.2,
+							"uv": {
+								"north": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										80,
+										80
+									]
+								},
+								"east": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										80,
+										80
+									]
+								},
+								"south": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										80,
+										80
+									]
+								},
+								"west": {
+									"uv": [
+										0,
+										0
+									],
+									"uv_size": [
+										80,
+										80
+									]
+								}
+							}
+						}
+					]
+				},
+				{
+					"name": "octopusform_locator",
+					"pivot": [
+						0,
+						20,
+						0
+					],
+					"locators": {
+						"octopus_body_locator": [
+							0,
+							20,
+							0
+						]
+					}
+				}
+			]
+		}
+	]
+}

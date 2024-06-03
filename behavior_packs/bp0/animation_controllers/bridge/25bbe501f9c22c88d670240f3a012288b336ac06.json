@@ -1,0 +1,92 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.25bbe501f9c22c88d670240f3a012288b336ac06_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==320)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==320"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.25bbe501f9c22c88d670240f3a012288b336ac06_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==320)"
+						},
+						{
+							"channeling": "1"
+						}
+					]
+				},
+				"channeling": {
+					"on_entry": [
+						"@s nom:state_bending_teq_1",
+						"v.air_shield_runtime=q.life_time;",
+						"@s nom:freeze_behavior"
+					],
+					"animations": [
+						"animation.enemy.bending.air.air_shield.channeling"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==320)"
+						},
+						{
+							"release": "(q.life_time>=v.air_shield_runtime+3||(q.skin_id<320||q.skin_id>329))"
+						}
+					]
+				},
+				"release": {
+					"on_entry": [
+						"v.air_shield_runtime=q.life_time;",
+						"@s nom:state_bending_teq_2",
+						"/summon nom:roar ~~~ nom:air_sphere_explosion_enemy"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==320)"
+						},
+						{
+							"default": "q.life_time>=v.air_shield_runtime+2.5"
+						}
+					],
+					"on_exit": [
+						"/event entity @s[tag=can_end_state] gm1:end_state",
+						"@s nom:unfreeze_behavior"
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==320"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		}
+	}
+}

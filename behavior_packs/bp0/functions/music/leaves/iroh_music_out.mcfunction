@@ -1,0 +1,2 @@
+function music/music_f_stop
+function music/music_stop

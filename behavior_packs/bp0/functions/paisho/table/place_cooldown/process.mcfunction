@@ -1,0 +1,2 @@
+execute @e[type=nom:paisho_table,tag=block_tile_place] ~~~ scoreboard players add @s tile_place_cd 1
+execute @e[type=nom:paisho_table,scores={tile_place_cd=40..}] ~~~ function paisho/table/place_cooldown/process_unblock

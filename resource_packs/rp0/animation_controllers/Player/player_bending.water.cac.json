@@ -1,0 +1,491 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending.water.water_whips_particle": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"animations": [
+						"water_whip.pre_holding_particle"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"holding_particle": "q.variant==3"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==20"
+						}
+					]
+				},
+				"holding_particle": {
+					"animations": [
+						"water_whip.holding_particle",
+						"water_whip.particle"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"default": "q.variant==0||q.variant==7"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.water.water_whip": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"lock": "q.variant>=3"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==20"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_movement",
+						"lock_jump"
+					],
+					"transitions": [
+						{
+							"charge": "1"
+						}
+					]
+				},
+				"charge": {
+					"animations": [
+						{
+							"water_whip.charge": "!v.is_first_person"
+						},
+						{
+							"FP.water_whip.charge": "v.is_first_person"
+						}
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"holding": "q.variant>=4&&q.any_animation_finished"
+						},
+						{
+							"unlock": "q.variant==5"
+						},
+						{
+							"unlock2": "q.variant==0"
+						}
+					]
+				},
+				"holding": {
+					"animations": [
+						{
+							"water_whip.hold": "!v.is_first_person"
+						},
+						{
+							"FP.water_whip.hold": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"unlock": "q.variant==5"
+						},
+						{
+							"unlock2": "q.variant==0"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump"
+					],
+					"transitions": [
+						{
+							"release": "1"
+						}
+					]
+				},
+				"release": {
+					"animations": [
+						{
+							"water_whip.release": "!v.is_first_person"
+						},
+						{
+							"FP.water_whip.release": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"default": "(q.variant==0&&q.any_animation_finished)||(q.variant!=0&&q.variant!=5)"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"unlock2": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump"
+					],
+					"transitions": [
+						{
+							"cancel": "1"
+						}
+					]
+				},
+				"cancel": {
+					"animations": [
+						{
+							"water_whip.cancel": "!v.is_first_person"
+						},
+						{
+							"FP.water_whip.cancel": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=20"
+						},
+						{
+							"default": "q.any_animation_finished||q.variant>0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.frost_breath": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=22"
+						},
+						{
+							"lock": "q.variant==1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==22"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_head",
+						"lock_jump",
+						"lock_sneak"
+					],
+					"transitions": [
+						{
+							"charging": "1"
+						}
+					]
+				},
+				"charging": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=22"
+						},
+						{
+							"hold": "q.any_animation_finished"
+						},
+						{
+							"release": "q.variant==0"
+						}
+					],
+					"blend_transition": 0.2,
+					"animations": [
+						{
+							"frost_breath.charge": "!v.is_first_person"
+						},
+						{
+							"FP.frost_breath.charge": "v.is_first_person"
+						}
+					]
+				},
+				"hold": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=22"
+						},
+						{
+							"release": "q.variant==0"
+						}
+					],
+					"animations": [
+						{
+							"frost_breath.hold": "!v.is_first_person"
+						},
+						{
+							"FP.frost_breath.hold": "v.is_first_person"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"release": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=22"
+						},
+						{
+							"unlock": "q.any_animation_finished"
+						},
+						{
+							"charging": "q.variant==1"
+						}
+					],
+					"blend_transition": 0.2,
+					"animations": [
+						{
+							"frost_breath.release": "!v.is_first_person"
+						},
+						{
+							"FP.frost_breath.release": "v.is_first_person"
+						}
+					]
+				},
+				"unlock": {
+					"animations": [
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak",
+						"unlock_movement"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=22"
+						},
+						{
+							"default": "v.lock_timer>=0.1||q.variant!=0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.water.octopus_form": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"lock": "q.variant>=2&&q.variant<4"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_movement",
+						"lock_jump"
+					],
+					"transitions": [
+						{
+							"charge": "1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==21"
+						}
+					]
+				},
+				"charge": {
+					"animations": [
+						{
+							"octopus_form.charge": "!v.is_first_person"
+						},
+						{
+							"FP.octopus_form.charge": "v.is_first_person"
+						},
+						"water_octopusform_spawn"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"holding": "q.variant>=4&&q.any_animation_finished"
+						},
+						{
+							"unlock2": "q.variant==0"
+						},
+						{
+							"unlock": "q.variant==5"
+						}
+					]
+				},
+				"holding": {
+					"animations": [
+						{
+							"octopus_form.hold": "!v.is_first_person"
+						},
+						{
+							"FP.octopus_form.hold": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"unlock": "q.variant==5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump"
+					],
+					"transitions": [
+						{
+							"release": "1"
+						}
+					]
+				},
+				"release": {
+					"animations": [
+						{
+							"octopus_form.release": "!v.is_first_person"
+						},
+						{
+							"FP.octopus_form.release": "v.is_first_person"
+						},
+						"water_octopusform_pop_vfx"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"default": "q.variant==0&&q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"unlock2": {
+					"animations": [
+						"unlock_movement",
+						"unlock_jump"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"default": "v.lock_timer>=0.2||q.variant>0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.water.octopus_form_geo": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"charge": "q.variant>=2&&q.variant<4"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==21"
+						}
+					]
+				},
+				"charge": {
+					"animations": [
+						"water_octopusform_spawn"
+					],
+					"blend_transition": 0.1,
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"holding": "q.variant>=4&&q.any_animation_finished"
+						},
+						{
+							"release": "q.variant==5"
+						}
+					]
+				},
+				"holding": {
+					"animations": [
+						"water_octopusform_attack",
+						"water_octopusform_attack_vfx"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"release": "q.variant==5"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"release": {
+					"animations": [
+						"water_octopusform_pop_vfx",
+						"water_octopusform_pop"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=21"
+						},
+						{
+							"default": "q.all_animations_finished"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		}
+	}
+}

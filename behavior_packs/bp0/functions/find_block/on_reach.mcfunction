@@ -1,0 +1,1 @@
+execute @s[scores={block_to_find=0}] ~ ~ ~ function find_block/block/earth/search

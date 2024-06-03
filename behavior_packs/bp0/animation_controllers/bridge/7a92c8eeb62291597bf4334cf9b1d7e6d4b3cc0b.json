@@ -1,0 +1,208 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.7a92c8eeb62291597bf4334cf9b1d7e6d4b3cc0b_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_water_whip_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_water_whip_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_water_whip_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_water_whip_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.7a92c8eeb62291597bf4334cf9b1d7e6d4b3cc0b_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"cooldown": "v.metastate_water_octopus_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_water_octopus_cooldown"
+					]
+				},
+				"cooldown": {
+					"transitions": [
+						{
+							"default": "!v.metastate_water_octopus_cooldown"
+						}
+					],
+					"on_entry": [
+						"/tag @s add metastate_water_octopus_cooldown"
+					]
+				}
+			}
+		},
+		"controller.animation.7a92c8eeb62291597bf4334cf9b1d7e6d4b3cc0b_2": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.metastate_water_whip_cooldown=0;",
+						"v.chain_948=0;",
+						"v.chain_948_cooldown=0;",
+						"v.metastate_water_octopus_cooldown=0;",
+						"v.chain_616=0;",
+						"v.chain_616_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.7a92c8eeb62291597bf4334cf9b1d7e6d4b3cc0b_3": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/event entity @s[tag=state_init] gm1:default_state",
+						"/tag @s add state_init"
+					]
+				}
+			}
+		},
+		"controller.animation.7a92c8eeb62291597bf4334cf9b1d7e6d4b3cc0b_4": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1696&&!v.metastate_water_whip_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_948_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_948=!v.chain_948_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_948_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.7a92c8eeb62291597bf4334cf9b1d7e6d4b3cc0b_5": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_metastate": "q.skin_id==1574&&!v.metastate_water_octopus_cooldown"
+						}
+					]
+				},
+				"in_metastate": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.state_chain_count=0;",
+						"v.state_chain_count=!v.chain_616_cooldown?v.state_chain_count+1:v.state_chain_count;",
+						"v.state_chain_rnd=math.mod(math.random_integer(0,2147483646),v.state_chain_count);",
+						"v.chain_616=!v.chain_616_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0;",
+						"v.state_chain_rnd=v.chain_616_cooldown&&v.state_chain_rnd>=0&&v.state_chain_rnd<=0?v.state_chain_rnd+1:v.state_chain_rnd;"
+					]
+				}
+			}
+		},
+		"controller.animation.7a92c8eeb62291597bf4334cf9b1d7e6d4b3cc0b_6": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_948"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_water_whip"
+					],
+					"on_exit": [
+						"v.chain_948=0;",
+						"/tag @s add metastate_water_whip"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_water_whip=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.7a92c8eeb62291597bf4334cf9b1d7e6d4b3cc0b_7": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "v.chain_616"
+						}
+					],
+					"on_entry": [
+						"/tag @s remove metastate_water_octopus"
+					],
+					"on_exit": [
+						"v.chain_616=0;",
+						"/tag @s add metastate_water_octopus"
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"v.state_nom_approach=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"state_1": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				},
+				"state_1": {
+					"on_entry": [
+						"v.state_nom_water_octopus_offense=1;",
+						"v.chain_start_time=q.time_stamp;"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "q.skin_id==-1"
+						},
+						{
+							"default": "(q.skin_id>=1000||q.skin_id==-2)&&q.time_stamp!=v.chain_start_time"
+						}
+					]
+				}
+			}
+		}
+	}
+}

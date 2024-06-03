@@ -1,0 +1,113 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"scripts": {
+				"initialize": [
+					"v.skin_id = q.skin_id;",
+					"v.mark_variant = q.mark_variant;",
+					"v.variant = q.variant;",
+					"v.is_ignited = q.is_ignited;",
+					"v.is_sheared = q.is_sheared;",
+					"v.is_chested = q.is_chested;",
+					"v.is_saddled = q.is_saddled;",
+					"v.is_baby = q.is_baby;",
+					"v.is_stunned = q.is_stunned;",
+					"v.is_charged = q.is_charged;",
+					"v.is_illager_captain = q.is_illager_captain;",
+					"v.camera_rotation_y = q.camera_rotation(1);",
+					"v.camera_rotation_x = q.camera_rotation(0);",
+					"v.distance_from_camera = q.distance_from_camera;",
+					"v.rotation_to_camera_y = q.rotation_to_camera(1);",
+					"v.rotation_to_camera_x = q.rotation_to_camera(0);",
+					"v.emotion_id = 0;",
+					"v.target_x_rotation = 0;",
+					"v.target_y_rotation = 0;",
+					"v.movement_direction_y = 0;",
+					"v.defeated_overlay = 0;",
+					"v.time_since_defeated = 0;",
+					"v.fade_away = 0;",
+					"v.ground_speed=0;",
+					"v.mod_move_speed=0;",
+					"v.is_first_person=0;",
+					"v.runtime = 0;",
+					"v.world_x = q.position(0);",
+					"v.world_z = q.position(2);",
+					"v.world_x_snapped = math.floor(v.world_x)+0.5;",
+					"v.world_z_snapped = math.floor(v.world_z)+0.5;",
+					"v.highlight_x = (v.world_x-v.world_x_snapped)*16;",
+					"v.highlight_z = (v.world_z-v.world_z_snapped)*16;"
+				],
+				"pre_animation": [
+					"v.skin_id = q.skin_id;",
+					"v.mark_variant = q.mark_variant;",
+					"v.variant = q.variant;",
+					"v.is_ignited = q.is_ignited;",
+					"v.is_sheared = q.is_sheared;",
+					"v.is_chested = q.is_chested;",
+					"v.is_saddled = q.is_saddled;",
+					"v.is_baby = q.is_baby;",
+					"v.is_stunned = q.is_stunned;",
+					"v.is_charged = q.is_charged;",
+					"v.distance_from_camera = q.distance_from_camera;",
+					"v.is_illager_captain = q.is_illager_captain;",
+					"v.camera_rotation_y = q.camera_rotation(1);",
+					"v.camera_rotation_x = q.camera_rotation(0);",
+					"v.rotation_to_camera_y = q.rotation_to_camera(1);",
+					"v.rotation_to_camera_x = q.rotation_to_camera(0);",
+					"v.target_x_rotation = query.target_x_rotation;",
+					"v.target_y_rotation = query.target_y_rotation;",
+					"v.movement_direction_y = q.movement_direction(1);",
+					"v.ground_speed=q.ground_speed;",
+					"v.mod_move_speed=query.modified_move_speed;",
+					"v.world_x = q.position(0);",
+					"v.world_z = q.position(2);",
+					"v.world_x_snapped = math.floor(v.world_x)+0.5;",
+					"v.world_z_snapped = math.floor(v.world_z)+0.5;",
+					"v.snap_x = (v.world_x-v.world_x_snapped)*16;",
+					"v.snap_z = (v.world_z-v.world_z_snapped)*16;"
+				],
+				"animate": [
+					"static_dir",
+					"puddle_snap",
+					"controller"
+				]
+			},
+			"materials": {
+				"default": "puddle_animated",
+				"outline": "outline",
+				"charged": "charged_creeper",
+				"emissive": "magma_cube",
+				"transparent": "entity_alphablend",
+				"transparent_additive": "entity_beam_additive",
+				"death_fade": "death_fade"
+			},
+			"identifier": "nom:water_puddle",
+			"textures": {
+				"default": "textures/entity/puddle"
+			},
+			"geometry": {
+				"default": "geometry.puddle",
+				"inflated": "geometry.puddle_inflated"
+			},
+			"render_controllers": [
+				{
+					"controller.render.puddle": "q.vertical_speed==0"
+				},
+				{
+					"controller.render.puddle_outline": "q.vertical_speed==0"
+				}
+			],
+			"animations": {
+				"static_dir": "animation.direction.static",
+				"puddle_snap": "animation.puddle.snap_to_grid",
+				"controller": "controller.animation.water.puddle",
+				"puddle_grow": "animation.puddle.grow",
+				"particle_source": "animation.puddle.source"
+			},
+			"particle_effects": {
+				"source": "nom:water_source"
+			}
+		}
+	}
+}

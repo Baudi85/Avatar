@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.41094c6f15c1aae45d63adc363f2c9840e65c3fc_0": {
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/tag @s add self",
+					"/execute @p[tag=dev] ~~~ execute @e[tag=self] ~~~ particle gm1:dev_hidden",
+					"/tag @s remove self"
+				]
+			},
+			"animation_length": 1
+		},
+		"animation.41094c6f15c1aae45d63adc363f2c9840e65c3fc_1": {
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/tellraw  @a[tag=dev.hidden_nearby,tag=!dev.hidden_nearby.was,r=0.5] {\"rawtext\":[{\"text\":\"§c[DEBUG]§r \" },{\"text\":\" Indentifier -> nom:spawner_rumblers\" }]}"
+				]
+			},
+			"animation_length": 1
+		}
+	}
+}

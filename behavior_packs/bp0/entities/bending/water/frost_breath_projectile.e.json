@@ -1,0 +1,152 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:frost_breath_projectile",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball",
+			"animations": {
+				"b6b480b80f59c5e7_ac_0": "controller.animation.b6b480b80f59c5e77ef55638216fad99fa623dfc_0",
+				"b6b480b80f59c5e7_ac_1": "controller.animation.b6b480b80f59c5e77ef55638216fad99fa623dfc_1",
+				"5a8592c8e816f87a_a_0": "animation.5a8592c8e816f87ae83478f796cd49fb24d14c4a_0"
+			},
+			"scripts": {
+				"animate": [
+					"b6b480b80f59c5e7_ac_0",
+					{
+						"b6b480b80f59c5e7_ac_1": "1"
+					},
+					"5a8592c8e816f87a_a_0"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"nom:enemy": {
+				"minecraft:is_baby": {},
+				"minecraft:projectile": {
+					"gravity": 0,
+					"power": 3,
+					"inertia": 0.75,
+					"uncertainty_base": 10,
+					"offset": [
+						0,
+						1,
+						0
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"on_hit": {
+						"impact_damage": {
+							"damage": 1,
+							"knockback": false
+						},
+						"stick_in_ground": {}
+					}
+				},
+				"minecraft:type_family": {
+					"family": [
+						"protection_ability_blockable"
+					]
+				},
+				"minecraft:mob_effect": {
+					"effect_range": 0.2,
+					"effect_time": 5,
+					"mob_effect": "slowness",
+					"entity_filter": {
+						"all_of": [
+							{
+								"test": "is_family",
+								"subject": "other",
+								"value": "player"
+							}
+						]
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:despawn": {
+				"filters": {
+					"any_of": [
+						{
+							"test": "in_water"
+						}
+					]
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 0.5
+			},
+			"minecraft:timer": {
+				"time": 0.45,
+				"time_down_event": {
+					"event": "nom:despawn"
+				}
+			},
+			"minecraft:projectile": {
+				"gravity": 0,
+				"power": 3,
+				"inertia": 0.75,
+				"uncertainty_base": 10,
+				"offset": [
+					0,
+					0,
+					0
+				],
+				"should_bounce": false,
+				"destroy_on_hurt": false,
+				"on_hit": {
+					"impact_damage": {
+						"damage": 1,
+						"knockback": false
+					},
+					"stick_in_ground": {}
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:type_family": {
+				"family": [
+					"frost_breath_projectile",
+					"protection_ability_blockable",
+					"player_ability"
+				]
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"nom:block_breakable_wood_ew",
+					"nom:block_breakable_wood_ns",
+					"nom:block_breakable_stone_ew",
+					"nom:block_breakable_stone_ns"
+				]
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			},
+			"nom:as_projectile_enemy": {
+				"add": {
+					"component_groups": [
+						"nom:enemy"
+					]
+				}
+			}
+		}
+	}
+}

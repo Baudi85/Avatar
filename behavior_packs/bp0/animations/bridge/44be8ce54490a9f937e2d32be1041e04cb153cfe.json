@@ -1,0 +1,23 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.44be8ce54490a9f937e2d32be1041e04cb153cfe_0": {
+			"loop": true,
+			"animation_length": 0.5,
+			"timeline": {
+				"0.0": [
+					"/function enemy/bending/earth/wall/find_tick"
+				]
+			}
+		},
+		"animation.44be8ce54490a9f937e2d32be1041e04cb153cfe_1": {
+			"loop": true,
+			"animation_length": 0.2,
+			"timeline": {
+				"0.0": [
+					"/function enemy/bending/earth/wall/near_tick"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,317 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.custom_movement": {
+			"initial_state": "none",
+			"states": {
+				"none": {
+					"transitions": [
+						{
+							"walk": "q.modified_move_speed>=0.2&&q.modified_move_speed<=0.95&&v.lock_movement==0&&v.lock_all==0"
+						},
+						{
+							"run": "q.modified_move_speed>0.95&&v.lock_movement==0&&v.lock_all==0"
+						},
+						{
+							"sneak": "q.is_sneaking&&v.lock_movement==0&&v.lock_sneak==0&&v.lock_all==0"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"walk": {
+					"animations": [
+						{
+							"custom_walk": "!v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"none": "q.modified_move_speed<=0.2||(v.lock_movement==1||v.lock_all==1)"
+						},
+						{
+							"run": "q.modified_move_speed>0.95&&v.lock_movement==0&&v.lock_all==0"
+						},
+						{
+							"sneak": "q.is_sneaking&&v.lock_movement==0&&v.lock_sneak==0&&v.lock_all==0"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"run": {
+					"animations": [
+						{
+							"custom_run": "!v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"none": "q.modified_move_speed<=0.2||(v.lock_movement==1||v.lock_all==1)"
+						},
+						{
+							"walk": "q.modified_move_speed>=0.2&&q.modified_move_speed<=0.87&&v.lock_movement==0&&v.lock_all==0"
+						},
+						{
+							"sneak": "q.is_sneaking&&v.lock_movement==0&&v.lock_sneak==0&&v.lock_all==0"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"sneak": {
+					"animations": [
+						{
+							"sneak_controller": "!v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"none": "(!q.is_sneaking&&q.modified_move_speed<=0.2)||(v.lock_movement==1||v.lock_sneak==1||v.lock_all==1)"
+						},
+						{
+							"walk": "!q.is_sneaking&&q.modified_move_speed>=0.2&&q.modified_move_speed<=0.95&&v.lock_movement==0&&v.lock_all==0"
+						},
+						{
+							"run": "!q.is_sneaking&&q.modified_move_speed>0.95"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		},
+		"controller.animation.player.custom_attack": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"combo1": "v.attack_time>0&&v.lock_attack==0&&v.seq_dmg==0"
+						},
+						{
+							"combo2": "v.attack_time>0&&v.lock_attack==0&&v.seq_dmg==1"
+						}
+					]
+				},
+				"combo1": {
+					"transitions": [
+						{
+							"unlock": "(v.seq_dmg==0&&q.all_animations_finished)||v.lock_attack==1"
+						},
+						{
+							"combo2": "(v.attack_time_real&&v.lock_attack==0)"
+						}
+					],
+					"animations": [
+						"combo1",
+						"lock_sneak"
+					],
+					"blend_transition": 0.1
+				},
+				"combo2": {
+					"transitions": [
+						{
+							"unlock": "(v.seq_dmg==1&&q.all_animations_finished)||v.lock_attack==1"
+						},
+						{
+							"combo1": "(v.attack_time_real&&v.lock_attack==0)"
+						}
+					],
+					"animations": [
+						"combo2",
+						"lock_sneak"
+					],
+					"blend_transition": 0.1
+				},
+				"unlock": {
+					"animations": [
+						"unlock_sneak",
+						"unlock_movement"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.humanoid.jump": {
+			"states": {
+				"ground": {
+					"transitions": [
+						{
+							"jump": "q.is_jumping&&q.vertical_speed>0&&(v.lock_all==0&&v.lock_jump==0)"
+						},
+						{
+							"fall": "q.modified_move_speed>0.01&&!q.is_on_ground&&q.vertical_speed<-7.8&&(v.lock_all==0&&v.lock_jump==0)"
+						},
+						{
+							"double_jump_forward": "(v.lock_all==0&&v.lock_jump==0)&&q.is_stackable&&v.direction>0"
+						},
+						{
+							"double_jump_backward": "(v.lock_all==0&&v.lock_jump==0)&&q.is_stackable&&v.direction<0"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"fall": {
+					"animations": [
+						{
+							"fall": "!v.is_first_person"
+						},
+						"unlock_movement",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"land": "q.is_on_ground"
+						},
+						{
+							"ground": "v.lock_all==1||v.lock_jump==1"
+						},
+						{
+							"double_jump_forward": "(v.lock_all==0&&v.lock_jump==0)&&q.is_stackable&&v.direction>0"
+						},
+						{
+							"double_jump_backward": "(v.lock_all==0&&v.lock_jump==0)&&q.is_stackable&&v.direction<0"
+						}
+					],
+					"blend_transition": 0.1
+				},
+				"jump": {
+					"animations": [
+						{
+							"jump": "!v.is_first_person"
+						},
+						"lock_movement",
+						"lock_sneak"
+					],
+					"transitions": [
+						{
+							"unlock": "q.is_on_ground||q.all_animations_finished"
+						},
+						{
+							"ground": "v.lock_all==1||v.lock_jump==1"
+						},
+						{
+							"double_jump_forward": "(v.lock_all==0&&v.lock_jump==0)&&q.is_stackable&&v.direction>0"
+						},
+						{
+							"double_jump_backward": "(v.lock_all==0&&v.lock_jump==0)&&q.is_stackable&&v.direction<0"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"double_jump_forward": {
+					"animations": [
+						{
+							"double_jump": "!v.is_first_person"
+						},
+						"lock_double_jump",
+						"double_jump_vfx"
+					],
+					"transitions": [
+						{
+							"unlock": "(q.all_animations_finished&&q.is_on_ground)||(q.is_on_ground&&v.is_first_person)"
+						}
+					]
+				},
+				"double_jump_backward": {
+					"animations": [
+						{
+							"double_jump_back": "!v.is_first_person"
+						},
+						"lock_double_jump",
+						"double_jump_vfx"
+					],
+					"transitions": [
+						{
+							"unlock": "(q.all_animations_finished&&q.is_on_ground)||(q.is_on_ground&&v.is_first_person)"
+						}
+					]
+				},
+				"unlock": {
+					"animations": [
+						"unlock_movement",
+						"unlock_sneak"
+					],
+					"transitions": [
+						{
+							"fall": "!q.is_on_ground"
+						},
+						{
+							"land": "q.is_on_ground"
+						}
+					]
+				},
+				"land": {
+					"animations": [
+						{
+							"land": "!v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"jump": "(q.modified_move_speed<0.01||q.modified_move_speed>=0.25)&&!q.is_on_ground&&q.vertical_speed>0"
+						},
+						{
+							"ground": "q.is_on_ground&&q.all_animations_finished||(v.lock_all==1||v.lock_jump==1)"
+						},
+						{
+							"double_jump_forward": "(v.lock_all==0&&v.lock_jump==0)&&q.is_stackable&&v.direction>0"
+						},
+						{
+							"double_jump_backward": "(v.lock_all==0&&v.lock_jump==0)&&q.is_stackable&&v.direction<0"
+						}
+					],
+					"blend_transition": 0.2
+				}
+			}
+		},
+		"controller.animation.humanoid.sneak": {
+			"states": {
+				"stand": {
+					"transitions": [
+						{
+							"sneak": "q.is_sneaking&&q.modified_move_speed>0.05"
+						},
+						{
+							"sneak_still": "q.is_sneaking&&q.modified_move_speed<=0.05"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"sneak_still": {
+					"animations": [
+						{
+							"sneak_static": "!v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"sneak": "q.is_sneaking&&q.modified_move_speed>0.05"
+						},
+						{
+							"stand": "!q.is_sneaking"
+						}
+					],
+					"blend_transition": 0.3
+				},
+				"sneak": {
+					"animations": [
+						{
+							"sneak": "!v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"sneak_still": "q.is_sneaking&&q.modified_move_speed<=0.05"
+						},
+						{
+							"stand": "!q.is_sneaking"
+						}
+					],
+					"blend_transition": 0.3
+				}
+			}
+		}
+	}
+}

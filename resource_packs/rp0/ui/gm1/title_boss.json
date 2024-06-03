@@ -1,0 +1,138 @@
+{
+    "namespace": "gm1_title_boss",
+    "main": {
+        "type": "stack_panel",
+        "orientation": "horizontal",
+        "$offset_x": [ 0, 8 ],
+        "variables":[
+            { "requires": "$pocket_screen", "$offset_x": [ 0, 20 ]}
+        ],
+        "offset": "$offset_x",
+        "size": [ "100%c", "100%cm" ],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "controls": [
+            { "0@bossbar": { "$value": "/bossbar_0_value", "$name": "/bossbar_0_name" }},
+            { "1@bossbar": { "$value": "/bossbar_1_value", "$name": "/bossbar_1_name" }},
+            { "2@bossbar": { "$value": "/bossbar_2_value", "$name": "/bossbar_2_name" }}
+        ]
+    },
+    "bossbar": {
+        "type": "panel",
+        "size": [ 120, "100%c" ],
+        "controls": [{ "boss_name@boss_name": {}}, { "bar@bar": {}}],
+        "anchor_from": "top_middle",
+        "anchor_to": "top_middle",
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$value",
+                "source_property_name": "#value",
+                "target_property_name": "#value"
+            },
+            {
+                "binding_type": "view",
+                "source_property_name": "(not(#value = -1) and not(#value = ''))",
+                "target_property_name": "#visible"
+            }
+        ]
+    },
+    "boss_name": {
+        "type": "panel",
+        "size": [ 80, "100%c + 2px" ],
+        "controls": [{ "label@boss_name_label":{}}]
+    },
+    "boss_name_label":{
+        "type": "label",
+        "text_alignment": "center",
+        "color": "$boss_name_text_color",
+        "text": "#value",
+        "shadow": true,
+        "bindings": [
+            {
+                "binding_type": "view",
+                "source_control_name": "$name",
+                "source_property_name": "#value",
+                "target_property_name": "#value"
+        }]
+    },
+    "bar": {
+        "type": "panel",
+        "size": [ "100%sm", 5 ],
+        "offset": [0, "100%sm - 3px"],
+        "controls": [
+            {
+                "frame_progress_bar": {
+                    "layer": 0,
+                    "type":"panel",
+                    "size": ["100% + 18px", 15],
+                    "clips_children": true,
+                    "controls":[
+                        {
+                            "long":{
+                                "layer": -1,
+                                "type": "image",
+                                "texture": "textures/ui/frame_progress_bar_long",
+                                "size": [ "100%", "100%" ]
+                            }
+                        },
+                        {
+                            "short":{
+                                "type": "panel",
+                                "size": ["100%", "100%"],
+                                "controls":[{
+                                    "image":{
+                                        "layer": 0,
+                                        "type": "image",
+                                        "texture": "textures/ui/frame_progress_bar",
+                                        "size": [ "100%", "100%" ],
+                                        "offset": [0, "100%sm - 7500px"]
+                                        }
+                                    },
+                                    {
+                                        "size":{
+                                            "type": "panel",
+                                            "min_size": [75, 75],
+                                            "size":["100%c", "10000%x"],
+                                            "controls":[
+                                                {
+                                                    "label@boss_name_label":{
+                                                        "alpha": 0
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                }]
+                            }
+                        }
+                    ]
+                }
+            },
+            { "empty_progress_bar": { "layer": 1, "type": "image", "texture": "textures/ui/empty_progress_bar" }},
+            {
+                "filled_progress_bar": {
+                    "layer": 2,
+                    "type": "image",
+                    "size": [ "100%", "100%" ],
+                    "texture": "textures/ui/filled_progress_bar",
+                    "clip_direction": "left",
+                    "property_bag": { "#mul": 0.01 },
+                    "clip_pixelperfect": false,
+                    "bindings": [
+                        {
+                            "binding_type": "view",
+                            "source_control_name": "$value",
+                            "source_property_name": "#value",
+                            "target_property_name": "#value"
+                        },
+                        {
+                            "binding_type": "view",
+                            "source_property_name": "(1 - (#value * #mul))",
+                            "target_property_name": "#clip_ratio"
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

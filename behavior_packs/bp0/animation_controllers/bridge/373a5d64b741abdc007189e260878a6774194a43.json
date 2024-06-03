@@ -1,0 +1,45 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.373a5d64b741abdc007189e260878a6774194a43_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"projectile": "q.mark_variant==10||q.mark_variant==11||q.mark_variant==20||q.mark_variant==22||q.mark_variant==33||q.mark_variant==40"
+						},
+						{
+							"aoe": "q.mark_variant==12||q.mark_variant==41||q.mark_variant==32||q.mark_variant==21"
+						}
+					]
+				},
+				"projectile": {
+					"on_entry": [
+						"/tag @s add technique.projectile"
+					],
+					"on_exit": [
+						"/tag @s remove technique.projectile"
+					],
+					"transitions": [
+						{
+							"default": "q.mark_variant!=10&&q.mark_variant!=11&&q.mark_variant!=20&&q.mark_variant!=22&&q.mark_variant!=33&&q.mark_variant!=40"
+						}
+					]
+				},
+				"aoe": {
+					"on_entry": [
+						"/tag @s add technique.aoe"
+					],
+					"on_exit": [
+						"/tag @s remove technique.aoe"
+					],
+					"transitions": [
+						{
+							"default": "q.mark_variant!=12&&q.mark_variant!=41&&q.mark_variant!=32&&q.mark_variant!=21"
+						}
+					]
+				}
+			}
+		}
+	}
+}

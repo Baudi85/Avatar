@@ -1,0 +1,21 @@
+{
+	"format_version": "1.19.40",
+	"minecraft:block": {
+		"description": {
+			"identifier": "nom:block_banner_1x3_water_2_x",
+			"is_experimental": false,
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.block_banner_1x3_2_x",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "nom_block_banner_1x3_water",
+					"render_method": "alpha_test"
+				}
+			}
+		}
+	}
+}

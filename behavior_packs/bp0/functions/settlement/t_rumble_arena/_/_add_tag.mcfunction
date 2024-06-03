@@ -1,0 +1,1 @@
+tag @s add settlement.t_rumble_arena

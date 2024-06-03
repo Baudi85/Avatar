@@ -1,0 +1,165 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.6642c6d27c63022f1a239827eed330aa9b6bf300_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add can_end_state"
+					],
+					"on_exit": [
+						"/tag @s remove can_end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==420)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==420"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		},
+		"controller.animation.6642c6d27c63022f1a239827eed330aa9b6bf300_1": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.const_charge_time=1;",
+						"@s nom:state_bending_teq_0",
+						"v.runtime=q.life_time;",
+						"@s nom:enemy.bending.fire.dash.724724.move"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==420)"
+						},
+						{
+							"frozen": "q.is_shaking"
+						},
+						{
+							"in_water": "q.is_in_water"
+						},
+						{
+							"charging": "q.variant==1"
+						}
+					]
+				},
+				"in_water": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==420)"
+						},
+						{
+							"default": "!q.is_in_water"
+						}
+					]
+				},
+				"charging": {
+					"on_entry": [
+						"v.runtime=q.life_time;",
+						"/tp @s ~ ~ ~ facing @p"
+					],
+					"on_exit": [
+						"@s nom:enemy.bending.fire.dash.724724.end_charging"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==420)"
+						},
+						{
+							"frozen": "q.is_shaking"
+						},
+						{
+							"in_water": "q.is_in_water"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"use": "q.life_time>=v.runtime+v.const_charge_time"
+						}
+					]
+				},
+				"use": {
+					"animations": [
+						"animation.bending.fire.jet.using"
+					],
+					"on_entry": [
+						"@s nom:freeze_behavior",
+						"@s nom:state_bending_teq_2",
+						"/function bending/fire/jet/run_enemy",
+						"v.runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==420)"
+						},
+						{
+							"frozen": "q.is_shaking"
+						},
+						{
+							"land": "(q.ground_speed<0.15||q.is_on_ground)&&q.life_time>=v.runtime+1"
+						}
+					]
+				},
+				"land": {
+					"on_entry": [
+						"@s nom:unfreeze_behavior",
+						"v.runtime=q.life_time;",
+						"@s nom:state_bending_teq_5",
+						"/function bending/fire/jet/blowup_enemy"
+					],
+					"on_exit": [
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==420)"
+						},
+						{
+							"end": "q.life_time>=v.runtime+1"
+						}
+					]
+				},
+				"frozen": {
+					"on_entry": [
+						"@s nom:unfreeze_behavior",
+						"/event entity @s[tag=can_end_state] gm1:end_state"
+					],
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==420)"
+						},
+						{
+							"end": "!q.is_shaking"
+						}
+					]
+				},
+				"end": {
+					"transitions": [
+						{
+							"not_in_state": "!(1&&query.skin_id==420)"
+						}
+					]
+				},
+				"not_in_state": {
+					"transitions": [
+						{
+							"default": "1&&query.skin_id==420"
+						}
+					]
+				}
+			},
+			"initial_state": "not_in_state"
+		}
+	}
+}

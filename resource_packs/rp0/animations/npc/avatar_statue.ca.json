@@ -1,0 +1,252 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.humanoid.hidden": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.humanoid.hover_loop": {
+			"loop": true,
+			"bones": {
+				"root": {
+					"position": [
+						0,
+						"2+math.sin(query.anim_time*75-90)*2",
+						0
+					]
+				},
+				"body": {
+					"rotation": [
+						0,
+						0,
+						0
+					],
+					"position": [
+						0,
+						0,
+						0
+					]
+				},
+				"head": {
+					"rotation": [
+						"2+math.sin(query.anim_time*75-100)*4",
+						0,
+						0
+					]
+				},
+				"leftArm": {
+					"rotation": [
+						0,
+						"math.sin(query.anim_time*75-90)*-2",
+						"-6.5+math.sin(query.anim_time*75-90)*2.2"
+					],
+					"position": [
+						0.4,
+						"-0.3+math.sin(query.anim_time*75-90)*-0.3",
+						0.7
+					]
+				},
+				"rightArm": {
+					"rotation": [
+						0,
+						"math.sin(query.anim_time*75-90)*-2",
+						"6.5+math.sin(query.anim_time*75-90)*-2"
+					],
+					"position": [
+						-0.5,
+						"-0.3+math.sin(query.anim_time*75-90)*-0.3",
+						0.5
+					]
+				},
+				"leftLeg": {
+					"rotation": [
+						"3+math.sin(query.anim_time*75-90)*1.2",
+						"math.sin(query.anim_time*75-90)*2",
+						"-2+math.sin(query.anim_time*75-110)*2"
+					],
+					"position": [
+						0.3,
+						0,
+						0.9
+					]
+				},
+				"rightLeg": {
+					"rotation": [
+						"1+math.sin(query.anim_time*75-90)*-2",
+						"math.sin(query.anim_time*75-90)*2",
+						"2+math.sin(query.anim_time*75-110)*-2"
+					],
+					"position": [
+						-0.4,
+						0,
+						0.3
+					]
+				}
+			}
+		},
+		"animation.humanoid.hover_start": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"root": {
+					"position": {
+						"0.0": [
+							0,
+							0,
+							15.5
+						],
+						"0.2917": [
+							0,
+							0,
+							7.04
+						],
+						"0.6667": [
+							0,
+							0,
+							1.44
+						],
+						"1.0": [
+							0,
+							"2+math.sin(query.anim_time*75-90)*2",
+							0
+						]
+					}
+				},
+				"leftArm": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							"math.sin(query.anim_time*75-90)*-2",
+							"-6.5+math.sin(query.anim_time*75-90)*2.2"
+						]
+					},
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0.4,
+							"-0.3+math.sin(query.anim_time*75-90)*-0.3",
+							0.7
+						]
+					}
+				},
+				"rightArm": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							0,
+							"math.sin(query.anim_time*75-90)*-2",
+							"6.5+math.sin(query.anim_time*75-90)*-2"
+						]
+					},
+					"position": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							-0.5,
+							"-0.3+math.sin(query.anim_time*75-90)*-0.3",
+							0.5
+						]
+					}
+				},
+				"leftLeg": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							"3+math.sin(query.anim_time*75-90)*1.2",
+							"math.sin(query.anim_time*75-90)*2",
+							"-2+math.sin(query.anim_time*75-110)*2"
+						]
+					},
+					"position": [
+						0.3,
+						0,
+						0.9
+					]
+				},
+				"rightLeg": {
+					"rotation": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"1.0": [
+							"1+math.sin(query.anim_time*75-90)*-2",
+							"math.sin(query.anim_time*75-90)*2",
+							"2+math.sin(query.anim_time*75-110)*-2"
+						]
+					},
+					"position": [
+						-0.4,
+						0,
+						0.3
+					]
+				}
+			}
+		},
+		"animation.humanoid.hover_end": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 1,
+			"bones": {
+				"root": {
+					"position": {
+						"0.0": [
+							0,
+							0,
+							"query.anim_time*-15"
+						],
+						"1.0": [
+							0,
+							0,
+							15.5
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"0.6667": [
+							1,
+							1,
+							1
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.humanoid.blank": {
+			"loop": true
+		}
+	}
+}

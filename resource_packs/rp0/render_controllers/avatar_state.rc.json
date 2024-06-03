@@ -1,0 +1,24 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.avatar_boss": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"overlay_color": {
+				"a": "0.9-(q.modified_move_speed)",
+				"b": "0.7+q.modified_move_speed",
+				"g": "math.clamp(0.4+q.modified_move_speed/2,0.4,0.6)",
+				"r": 0.1
+			},
+			"ignore_lighting": true,
+			"light_color_multiplier": 0.5
+		}
+	}
+}

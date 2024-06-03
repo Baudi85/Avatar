@@ -1,0 +1,157 @@
+{
+	"format_version": "1.18.10",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:air_blade",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:snowball",
+			"animations": {
+				"animation.bending.player.air_blade.spawn": "animation.bending.player.air_blade.spawn",
+				"animation.bending.player.air_blade.tick": "animation.bending.player.air_blade.tick",
+				"animation.bending.enemy.air_blade.spawn": "animation.bending.enemy.air_blade.spawn",
+				"animation.bending.enemy.air_blade.tick": "animation.bending.enemy.air_blade.tick",
+				"c4697165f3da89ca_ac_0": "controller.animation.c4697165f3da89cabc2e765e9c8f345cfb9a36b9_0",
+				"c4697165f3da89ca_ac_1": "controller.animation.c4697165f3da89cabc2e765e9c8f345cfb9a36b9_1"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"animation.bending.player.air_blade.spawn": "!q.is_saddled"
+					},
+					{
+						"animation.bending.player.air_blade.tick": "!q.is_saddled"
+					},
+					{
+						"animation.bending.enemy.air_blade.spawn": "q.is_saddled"
+					},
+					{
+						"animation.bending.enemy.air_blade.tick": "q.is_saddled"
+					},
+					"c4697165f3da89ca_ac_0",
+					{
+						"c4697165f3da89ca_ac_1": "1"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"nom:enemy": {
+				"minecraft:type_family": {
+					"family": [
+						"enemy_bentity",
+						"air_blade",
+						"protection_ability_blockable"
+					]
+				},
+				"minecraft:is_saddled": {},
+				"minecraft:projectile": {
+					"gravity": 0,
+					"power": 1.2,
+					"inertia": 1,
+					"offset": [
+						0,
+						1,
+						0
+					],
+					"should_bounce": false,
+					"destroy_on_hurt": false,
+					"multiple_targets": true,
+					"on_hit": {
+						"stick_in_ground": {},
+						"impact_damage": {
+							"knockback": false
+						}
+					}
+				},
+				"minecraft:timer": {
+					"time": 0.7,
+					"time_down_event": {
+						"event": "nom:despawn"
+					}
+				}
+			}
+		},
+		"components": {
+			"minecraft:type_family": {
+				"family": [
+					"air_gate",
+					"protection_ability_blockable"
+				]
+			},
+			"minecraft:despawn": {
+				"filters": {
+					"any_of": [
+						{
+							"test": "in_water"
+						}
+					]
+				}
+			},
+			"minecraft:collision_box": {
+				"height": 0.5,
+				"width": 0.5
+			},
+			"minecraft:projectile": {
+				"gravity": 0,
+				"power": 1.5,
+				"inertia": 1.1,
+				"offset": [
+					0,
+					0,
+					0
+				],
+				"should_bounce": false,
+				"destroy_on_hurt": false,
+				"multiple_targets": true,
+				"on_hit": {
+					"stick_in_ground": {},
+					"impact_damage": {
+						"knockback": false
+					}
+				}
+			},
+			"minecraft:break_blocks": {
+				"breakable_blocks": [
+					"nom:block_breakable_wood_ew",
+					"nom:block_breakable_wood_ns",
+					"nom:block_breakable_stone_ew",
+					"nom:block_breakable_stone_ns"
+				]
+			},
+			"minecraft:timer": {
+				"time": 0.45,
+				"time_down_event": {
+					"event": "nom:despawn"
+				}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			},
+			"nom:as_projectile_enemy": {
+				"add": {
+					"component_groups": [
+						"nom:enemy"
+					]
+				}
+			}
+		}
+	}
+}

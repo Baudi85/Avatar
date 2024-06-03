@@ -1,0 +1,343 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"snow": {
+		"brightness_gamma": 0.45,
+		"isotropic": false,
+		"sound": "snow",
+		"textures": "snow"
+	},
+	"snow_layer": {
+		"brightness_gamma": 0.45,
+		"isotropic": false,
+		"sound": "snow",
+		"textures": "snow"
+	},
+	"dirt": {
+		"isotropic": false,
+		"sound": "gravel",
+		"textures": {
+			"down": "dirt_bottom",
+			"side": "dirt",
+			"up": "dirt_top"
+		}
+	},
+	"stained_glass_pane": {
+		"sound": "glass",
+		"textures": {
+			"down": "stained_glass_pane",
+			"east": "stained_glass_pane_top",
+			"north": "stained_glass_pane",
+			"south": "stained_glass_pane",
+			"up": "stained_glass_pane",
+			"west": "stained_glass_pane"
+		}
+	},
+	"glass": {
+		"sound": "wood"
+	},
+	"tinted_glass": {
+		"sound": "stone"
+	},
+	"mangrove_slab": {
+		"sound": "wood",
+		"textures": {
+			"down": "mangrove_planks_top",
+			"side": "mangrove_planks",
+			"up": "mangrove_planks_top"
+		}
+	},
+	"mangrove_double_slab": {
+		"sound": "wood",
+		"textures": {
+			"down": "mangrove_planks_top",
+			"side": "mangrove_planks",
+			"up": "mangrove_planks_top"
+		}
+	},
+	"netherrack": {
+		"sound": "metal"
+	},
+	"stained_hardened_clay": {
+		"isotropic": false,
+		"sound": "stone",
+		"textures": {
+			"down": "stained_clay_top",
+			"side": "stained_clay",
+			"up": "stained_clay_top"
+		}
+	},
+	"podzol": {
+		"isotropic": {
+			"down": false,
+			"up": false
+		},
+		"sound": "snow",
+		"textures": {
+			"down": "dirt_podzol_bottom",
+			"side": "dirt_podzol_side",
+			"up": "dirt_podzol_top"
+		}
+	},
+	"carpet": {
+		"sound": "cloth",
+		"textures": "carpet"
+	},
+	"sponge": {
+		"isotropic": false,
+		"sound": "wood",
+		"textures": {
+			"down": "bookshelf_top",
+			"side": "sponge",
+			"up": "sponge_top"
+		}
+	},
+	"concrete": {
+		"sound": "stone",
+		"textures": {
+			"down": "concrete_bottom",
+			"side": "concrete",
+			"up": "concrete_top"
+		}
+	},
+	"sandstone_stairs": {
+		"isotropic": {
+			"down": false,
+			"up": false
+		},
+		"textures": {
+			"down": "roof",
+			"side": "roof",
+			"up": "roof"
+		}
+	},
+	"red_sandstone_stairs": {
+		"isotropic": {
+			"down": false,
+			"up": false
+		},
+		"textures": {
+			"down": "redsandstone_bottom",
+			"side": "redsandstone_side",
+			"up": "redsandstone_top"
+		}
+	},
+	"crimson_slab": {
+		"sound": "wood",
+		"textures": {
+			"down": "crimson_planks",
+			"side": "crimson_planks",
+			"up": "crimson_planks_top"
+		}
+	},
+	"warped_slab": {
+		"sound": "snow",
+		"textures": {
+			"down": "warped_planks",
+			"side": "warped_planks",
+			"up": "warped_planks_top"
+		}
+	},
+	"lapis_ore": {
+		"sound": "stone",
+		"textures": {
+			"down": "lapis_ore_top",
+			"side": "lapis_ore",
+			"up": "lapis_ore_top"
+		}
+	},
+	"fence": {
+		"sound": "wood",
+		"textures": "fence"
+	},
+	"stripped_acacia_log": {
+		"sound": "wood",
+		"textures": {
+			"down": "shelf",
+			"side": "furnace_side",
+			"up": "shelf"
+		}
+	},
+	"stripped_jungle_log": {
+		"sound": "wood",
+		"textures": {
+			"down": "shelf_top",
+			"side": "furnace_side",
+			"up": "shelf_top"
+		}
+	},
+	"dirt_with_roots": {
+		"isotropic": false,
+		"sound": "dirt_with_roots",
+		"textures": {
+			"down": "dirt_with_roots_bottom",
+			"side": "dirt_with_roots",
+			"up": "dirt_with_roots_top"
+		}
+	},
+	"nom:block_streetlight_1": {
+		"sound": "stone"
+	},
+	"nom:block_streetlight_2": {
+		"sound": "stone"
+	},
+	"nom:block_streetlight_3": {
+		"sound": "stone"
+	},
+	"nom:block_streetlight_4": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_earth_1": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_earth_2": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_earth_3": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_earth_1_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_earth_2_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_earth_3_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_fire_1": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_fire_2": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_fire_3": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_fire_1_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_fire_2_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_fire_3_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_air_1": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_air_2": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_air_3": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_air_1_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_air_2_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_air_3_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_water_1": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_water_2": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_water_3": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_water_1_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_water_2_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_water_3_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_swater_1": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_swater_2": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_swater_3": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_swater_1_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_swater_2_x": {
+		"sound": "stone"
+	},
+	"nom:block_banner_1x3_swater_3_x": {
+		"sound": "stone"
+	},
+	"nom:block_breakable_wood_ns": {
+		"sound": "wood"
+	},
+	"nom:block_breakable_wood_ew": {
+		"sound": "wood"
+	},
+	"nom:block_breakable_stone_ns": {
+		"sound": "stone"
+	},
+	"nom:block_breakable_stone_ew": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_1_s": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_1_e": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_1_n": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_1_w": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_2_s": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_2_e": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_2_n": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_2_w": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_3_s": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_3_e": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_3_n": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_3_w": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_4_s": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_4_e": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_4_n": {
+		"sound": "stone"
+	},
+	"nom:block_shelf_4_w": {
+		"sound": "stone"
+	}
+}

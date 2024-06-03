@@ -1,0 +1,85 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.ice_chunk.grow": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.16667,
+			"bones": {
+				"ice_cube1": {
+					"scale": {
+						"0.0": [
+							0,
+							0,
+							0
+						],
+						"0.0417": [
+							0.1175,
+							0.1175,
+							0.1175
+						],
+						"0.125": [
+							1.15,
+							1.15,
+							1.15
+						],
+						"0.1667": [
+							1,
+							1,
+							1
+						]
+					}
+				}
+			}
+		},
+		"animation.ice_chunk.shrink": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.5,
+			"bones": {
+				"ice_cube1": {
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"0.5": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		},
+		"animation.ice_chunk.shake": {
+			"loop": true,
+			"animation_length": 2.29167,
+			"bones": {
+				"root": {
+					"position": {
+						"0.0": [
+							"math.random(-0.5,0.5)",
+							0,
+							"math.random(-0.5,0.5)"
+						],
+						"1.0": [
+							0,
+							0,
+							0
+						],
+						"1.4583": [
+							"math.random(-0.5,0.5)",
+							0,
+							"math.random(-0.5,0.5)"
+						],
+						"2.0": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			}
+		}
+	}
+}

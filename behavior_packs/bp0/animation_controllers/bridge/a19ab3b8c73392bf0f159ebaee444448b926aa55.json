@@ -1,0 +1,21 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.a19ab3b8c73392bf0f159ebaee444448b926aa55_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"reach": "query.is_saddled"
+						}
+					]
+				},
+				"reach": {
+					"on_entry": [
+						"/function find_block/on_reach"
+					]
+				}
+			}
+		}
+	}
+}

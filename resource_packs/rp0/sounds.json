@@ -1,0 +1,13 @@
+{
+    "entity_sounds": {
+        "entities": {
+            "nom:g_cabbagecart": {
+                "volume": 5.0,
+                "pitch": 1,
+                "events": {
+                    "hurt": "cabbage_thump"
+                }
+            }
+        }
+    }
+}

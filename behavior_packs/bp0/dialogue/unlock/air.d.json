@@ -1,0 +1,3175 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "unlock.air.blades.0000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.0001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/blades",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.0010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.0011",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/blades",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.0100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.0101",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/blades",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.0110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.0111",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/blades",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.1000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.1010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.1100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.blades.1110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.blades"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.0000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.0001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/sphere",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.0010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.0011",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/sphere",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.0100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.0110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.1000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.1001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/sphere",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.1010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.1011",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/sphere",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.1100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.sphere.1110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.sphere"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.0000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.0001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/tornado",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.0010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.0100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.0101",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/tornado",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.0110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.1000",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.1001",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/tornado",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.1010",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.1100",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "l"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.1101",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "sl"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/purchase/air/tornado",
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			},
+			{
+				"scene_tag": "unlock.air.tornado.1110",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{unlock.teq}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "air.tornado"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/blades"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "u"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/sphere"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "su"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/air/tornado"
+						]
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "p"
+								}
+							]
+						},
+						"commands": []
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "back"
+								}
+							]
+						},
+						"commands": [
+							"/execute @initiator ~ ~ ~ function unlock/ui/art"
+						]
+					}
+				],
+				"on_open_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/show",
+					"/execute @initiator ~ ~ ~ function ui/hud/hide",
+					"/scoreboard players set @initiator medidate_kick 0"
+				],
+				"on_close_commands": [
+					"/execute @initiator ~ ~ ~ function ui/abpoints/hide",
+					"/execute @initiator ~ ~ ~ function ui/hud/show",
+					"/scoreboard players set @initiator medidate_kick 5"
+				]
+			}
+		]
+	}
+}

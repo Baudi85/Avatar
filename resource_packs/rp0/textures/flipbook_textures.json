@@ -1,0 +1,51 @@
+[  
+  {
+    "flipbook_texture": "textures/blocks/water_still_grey",
+    "atlas_tile": "water_still_grey",
+    "ticks_per_frame": 20,
+    "blend_frames": true
+  },
+  {
+    "flipbook_texture": "textures/blocks/water_still_1",
+    "atlas_tile": "water_still_1",
+    "ticks_per_frame": 2
+  },
+  {
+    "flipbook_texture": "textures/blocks/water_still_2",
+    "atlas_tile": "water_still_2",
+    "ticks_per_frame": 2
+  },
+  {
+    "flipbook_texture": "textures/blocks/water_still_2",
+    "atlas_tile": "water_still_2",
+    "ticks_per_frame": 2
+  },
+  {
+    "flipbook_texture": "textures/blocks/redstone_lamp_on",
+    "atlas_tile": "redstone_lamp_on",
+    "ticks_per_frame": 4,
+    "frames": [ 0, 1, 2, 3, 2, 1, 0],
+    "blend_frames": true
+  },
+  {
+    "flipbook_texture": "textures/blocks/beacon",
+    "atlas_tile": "beacon",
+    "ticks_per_frame": 40,
+    "frames": [ 0, 1, 2, 3, 4, 5, 4, 3, 4, 5, 4, 5, 4, 3, 2, 1, 2, 3, 2, 1, {"index": 0, "time": 128} ],
+    "blend_frames": true
+  },
+  {
+    "flipbook_texture": "textures/blocks/breakable_stone",
+    "atlas_tile": "tinted_glass",
+    "ticks_per_frame": 8,
+    "frames": [ 1, 2, 3, 4, 3, 2, 1, 0, 0, 0, 0, {"index": 0, "time": 256} ],
+    "blend_frames": true
+  },
+  {
+    "flipbook_texture": "textures/blocks/breakable_wood",
+    "atlas_tile": "glass",
+    "ticks_per_frame": 8,
+    "frames": [ 1, 2, 3, 4, 3, 2, 1, 0, 0, 0, 0, {"index": 0, "time": 256} ],
+    "blend_frames": true
+  }
+]

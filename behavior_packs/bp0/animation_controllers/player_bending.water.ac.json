@@ -1,0 +1,322 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending.water.water_whip": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/water/raycast/loop/activate",
+						"/function bending/state/default",
+						"v.water_whip_runtime=q.life_time;",
+						"v.water_whip_const_timeout_time=10;"
+					],
+					"transitions": [
+						{
+							"no_chi": "q.is_using_item&&q.is_saddled"
+						},
+						{
+							"start_charging": "q.is_using_item&&!q.is_saddled"
+						}
+					]
+				},
+				"start_charging": {
+					"on_entry": [
+						"/function bending/water/water_whip/on_start_charging",
+						"v.water_whip_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"default": "q.variant==0||!q.is_using_item"
+						},
+						{
+							"requires_water": "q.variant==1&&q.life_time>=v.water_whip_runtime+0.1"
+						},
+						{
+							"found_water": "q.variant==2"
+						}
+					]
+				},
+				"requires_water": {
+					"on_entry": [
+						"/function bending/state/requires_water"
+					],
+					"transitions": [
+						{
+							"start_charging": "1"
+						}
+					]
+				},
+				"found_water": {
+					"on_entry": [
+						"/function bending/water/water_whip/on_found_water",
+						"v.water_whip_runtime=q.life_time;",
+						"v.water_whip_charge_time=0.5;"
+					],
+					"transitions": [
+						{
+							"hold_water": "q.variant==3&&q.life_time>=v.water_whip_runtime+v.water_whip_charge_time"
+						},
+						{
+							"default": "q.variant!=3"
+						}
+					]
+				},
+				"hold_water": {
+					"on_entry": [
+						"@s nom:state_bending_teq_4",
+						"/function bending/water/water_whip/on_hold_water",
+						"v.water_whip_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"release": "!q.is_using_item||q.life_time>=v.water_whip_runtime+v.water_whip_const_timeout_time"
+						}
+					]
+				},
+				"release": {
+					"on_entry": [
+						"v.water_whip_runtime=q.life_time;",
+						"@s nom:state_bending_teq_5",
+						"/function bending/water/water_whip/on_release"
+					],
+					"animations": [
+						"bending.water.water_whip.throw"
+					],
+					"transitions": [
+						{
+							"default": "q.variant==0"
+						}
+					]
+				},
+				"no_chi": {
+					"transitions": [
+						{
+							"default": "!q.is_saddled||!q.is_using_item"
+						}
+					],
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/water/raycast/loop/deactivate",
+						"/function bending/state/default"
+					]
+				}
+			}
+		},
+		"controller.animation.bending.water.frost_breath": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/default",
+						"v.const_charge_time=0.25;"
+					],
+					"transitions": [
+						{
+							"cooldown": "q.is_saddled"
+						},
+						{
+							"pre_using": "q.is_using_item"
+						}
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/state/default",
+						"v.runtime_frost_breath=q.life_time;"
+					],
+					"transitions": [
+						{
+							"default": "(!q.is_saddled||!q.is_using_item)&&q.life_time>=v.runtime_frost_breath+0.5"
+						}
+					]
+				},
+				"pre_using": {
+					"on_entry": [
+						"v.runtime_frost_breath=q.life_time;",
+						"@s nom:state_bending_teq_1"
+					],
+					"transitions": [
+						{
+							"using": "q.life_time>=v.runtime_frost_breath+v.const_charge_time"
+						}
+					]
+				},
+				"using": {
+					"on_entry": [
+						"v.runtime_frost_breath=q.life_time;",
+						"@s nom:state_bending_teq_2",
+						"/function bending/water/frost_breath/on_using"
+					],
+					"animations": [
+						"bending.water.frost_breath.using",
+						"chi.using.frost_breath"
+					],
+					"transitions": [
+						{
+							"cooldown": "!q.is_using_item||q.variant==0"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.water.octopus_form": {
+			"initial_state": "default",
+			"states": {
+				"holding_timeout": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/water/octopus_form/on_holding_timeout",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_using_item"
+						},
+						{
+							"no_chi": "q.is_saddled"
+						}
+					]
+				},
+				"no_chi": {
+					"transitions": [
+						{
+							"default": "!q.is_saddled&&!q.is_using_item"
+						}
+					],
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/water/raycast/loop/deactivate",
+						"/function bending/state/default"
+					]
+				},
+				"default": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/water/raycast/loop/activate",
+						"/function bending/state/default"
+					],
+					"transitions": [
+						{
+							"no_chi": "q.is_using_item&&q.is_saddled"
+						},
+						{
+							"start_charging": "q.is_using_item&&!q.is_saddled"
+						}
+					]
+				},
+				"start_charging": {
+					"on_entry": [
+						"/function bending/water/octopus_form/on_start_charging",
+						"v.octopus_form_runtime=q.life_time;"
+					],
+					"transitions": [
+						{
+							"default": "q.variant==0||!q.is_using_item"
+						},
+						{
+							"requires_water": "q.variant==1&&q.life_time>=v.octopus_form_runtime+0.1&&!q.is_tamed"
+						},
+						{
+							"use_water_skin": "q.variant==1&&q.life_time>=v.octopus_form_runtime+0.1&&q.is_tamed"
+						},
+						{
+							"found_water": "q.variant==2"
+						}
+					]
+				},
+				"requires_water": {
+					"on_entry": [
+						"/function bending/state/requires_water"
+					],
+					"transitions": [
+						{
+							"start_charging": "1"
+						}
+					]
+				},
+				"use_water_skin": {
+					"on_entry": [
+						"/function bending/water/octopus_form/on_use_water_skin",
+						"/function bending/water/octopus_form/on_found_water",
+						"v.octopus_form_runtime=q.life_time;",
+						"v.octopus_form_charge_time=0.25;"
+					],
+					"transitions": [
+						{
+							"hold_water": "q.variant>=3&&q.life_time>=v.octopus_form_runtime+v.octopus_form_charge_time"
+						},
+						{
+							"no_chi": "!q.is_using_item"
+						}
+					]
+				},
+				"found_water": {
+					"on_entry": [
+						"/function bending/water/octopus_form/on_found_water",
+						"v.octopus_form_runtime=q.life_time;",
+						"v.octopus_form_charge_time=0.25;"
+					],
+					"transitions": [
+						{
+							"pull_failed": "!q.is_using_item"
+						},
+						{
+							"pull_succeeded": "q.variant>=3&&q.life_time>=v.octopus_form_runtime+v.octopus_form_charge_time"
+						}
+					]
+				},
+				"pull_failed": {
+					"on_entry": [
+						"@s nom:state_bending_teq_0",
+						"/function bending/water/octopus_form/on_pull_failed"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_using_item"
+						}
+					]
+				},
+				"pull_succeeded": {
+					"transitions": [
+						{
+							"hold_water": "1"
+						}
+					]
+				},
+				"hold_water": {
+					"on_entry": [
+						"@s nom:state_bending_teq_4",
+						"/function bending/water/octopus_form/on_hold_water"
+					],
+					"animations": [
+						"bending.water.octopus_form.using",
+						"chi.using.octopus_form"
+					],
+					"transitions": [
+						{
+							"release": "!q.is_using_item||q.variant==0||q.variant==5"
+						}
+					]
+				},
+				"release": {
+					"on_entry": [
+						"v.octopus_form_runtime=q.life_time;",
+						"@s nom:state_bending_teq_5",
+						"/function bending/water/octopus_form/on_release"
+					],
+					"transitions": [
+						{
+							"default": "!q.is_using_item&&q.life_time>=v.octopus_form_runtime+1.1"
+						},
+						{
+							"holding_timeout": "q.is_using_item&&q.life_time>=v.octopus_form_runtime+1.1"
+						}
+					]
+				}
+			}
+		}
+	}
+}

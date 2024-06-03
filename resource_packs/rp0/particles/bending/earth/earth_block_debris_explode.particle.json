@@ -1,0 +1,99 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "nom:earth_block_debris_explode",
+			"basic_render_parameters": {
+				"material": "particles_alpha",
+				"texture": "textures/particle/pixel"
+			}
+		},
+		"curves": {
+			"variable.stretch_y": {
+				"type": "bezier",
+				"input": "variable.particle_age/variable.particle_lifetime",
+				"horizontal_range": 1,
+				"nodes": [
+					1,
+					1,
+					1,
+					10
+				]
+			},
+			"variable.shrink_x": {
+				"type": "bezier",
+				"input": "variable.particle_age/variable.particle_lifetime",
+				"horizontal_range": 1,
+				"nodes": [
+					1,
+					1,
+					0.2,
+					0.2
+				]
+			}
+		},
+		"components": {
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 75
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_box": {
+				"half_dimensions": [
+					0.4,
+					0.4,
+					0.4
+				],
+				"surface_only": true,
+				"direction": "outwards"
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(1,2)"
+			},
+			"minecraft:particle_initial_speed": "math.random(10,20)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_acceleration": [
+					0,
+					"-5*((v.particle_random_2)+5)",
+					0
+				],
+				"linear_drag_coefficient": "1+(v.particle_random_2)*2"
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"0.04*(v.particle_random_2)",
+					"0.04*(v.particle_random_2)"
+				],
+				"facing_camera_mode": "rotate_y",
+				"uv": {
+					"texture_width": 1,
+					"texture_height": 1,
+					"uv": [
+						0,
+						0
+					],
+					"uv_size": [
+						1,
+						1
+					]
+				}
+			},
+			"minecraft:particle_motion_collision": {
+				"collision_drag": 0.5,
+				"coefficient_of_restitution": 0.1,
+				"collision_radius": 0.05
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "math.round(v.particle_random_3*2)",
+					"gradient": {
+						"0.0": "#FF8A8375",
+						"1.0": "#FFA58D76",
+						"2.0": "#FF796754"
+					}
+				}
+			}
+		}
+	}
+}

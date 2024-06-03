@@ -1,0 +1,41 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.ad1117fbd12f0fc161cd7b0a9f3593006f5191ac_0": {
+			"loop": true,
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"/function bending/earth/earth_quake/earth_quake_tick"
+				]
+			}
+		},
+		"animation.ad1117fbd12f0fc161cd7b0a9f3593006f5191ac_1": {
+			"animation_length": 2,
+			"timeline": {
+				"0.0": [
+					"/function bending/earth/earth_quake/on_earth_quake_execute_power"
+				],
+				"0.6": [
+					"@s nom:slow_despawn"
+				]
+			}
+		},
+		"animation.ad1117fbd12f0fc161cd7b0a9f3593006f5191ac_2": {
+			"animation_length": 2,
+			"timeline": {
+				"1.6": [
+					"@s nom:despawn"
+				]
+			}
+		},
+		"animation.ad1117fbd12f0fc161cd7b0a9f3593006f5191ac_3": {
+			"animation_length": 12,
+			"timeline": {
+				"10": [
+					"@s nom:despawn"
+				]
+			}
+		}
+	}
+}

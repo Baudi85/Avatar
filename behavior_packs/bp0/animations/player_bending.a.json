@@ -1,0 +1,88 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.bending.water.water_whip.throw": {
+			"animation_length": 2,
+			"timeline": {
+				"0.0": [
+					"@s nom:shoot_water_whip_puddle"
+				],
+				"0.5": [
+					"@s nom:state_bending_teq_0"
+				]
+			}
+		},
+		"animation.bending.earth.earth_pull.fetching_stone": {
+			"animation_length": 1.6,
+			"timeline": {
+				"0.0": [
+					"/function bending/earth/earth_pull/on_fetching_stone_1",
+					"@s nom:state_bending_teq_3"
+				],
+				"0.6": [
+					"/function bending/earth/earth_pull/on_fetching_stone_2",
+					"@s nom:state_bending_teq_4"
+				],
+				"1.45": [
+					"/function bending/earth/earth_pull/on_fetching_stone_3",
+					"@s nom:state_bending_teq_5"
+				]
+			}
+		},
+		"animation.bending.earth.earth_pull.throwing_stone_1": {
+			"animation_length": 2,
+			"timeline": {
+				"0.0": [
+					"@s nom:shoot_earth_pull_stone_1",
+					"/playsound earth_pull_throw1 @a ~~~"
+				]
+			}
+		},
+		"animation.bending.earth.earth_pull.throwing_stone_2": {
+			"animation_length": 2,
+			"timeline": {
+				"0.0": [
+					"@s nom:shoot_earth_pull_stone_2",
+					"/playsound earth_pull_throw2 @a ~~~"
+				]
+			}
+		},
+		"animation.bending.earth.earth_pull.throwing_stone_3": {
+			"animation_length": 2,
+			"timeline": {
+				"0.0": [
+					"@s nom:shoot_earth_pull_stone_3",
+					"/playsound earth_pull_throw3 @a ~~~"
+				]
+			}
+		},
+		"animation.bending.player.reset_technique_id": {
+			"animation_length": 0.15,
+			"loop": false,
+			"timeline": {
+				"0.1": [
+					"/scoreboard players set @s technique_id 0",
+					"/function chi/ui/update_subtitle"
+				]
+			}
+		},
+		"animation.bending.player.air_blade.spawn": {
+			"animation_length": 0.05,
+			"loop": false,
+			"timeline": {
+				"0.0": [
+					"/function bending/air/air_blades/player_on_projectile_spawn"
+				]
+			}
+		},
+		"animation.bending.player.air_blade.tick": {
+			"animation_length": 0.05,
+			"loop": true,
+			"timeline": {
+				"0.0": [
+					"/function bending/air/air_blades/player_on_projectile_tick"
+				]
+			}
+		}
+	}
+}

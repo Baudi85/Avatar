@@ -1,0 +1,67 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.0278e55b13a610723783f3f6eef1a1d8cb125a79_0": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_848_cooldown = v.state_nom_earth_pull_small_cooldown;",
+					"v.chain_211_cooldown = v.state_nom_earth_pull_medium_cooldown;",
+					"v.chain_486_cooldown = v.state_nom_earth_pull_large_cooldown;",
+					"v.metastate_range_cooldown = v.chain_848_cooldown&&v.chain_211_cooldown&&v.chain_486_cooldown;"
+				]
+			}
+		},
+		"animation.0278e55b13a610723783f3f6eef1a1d8cb125a79_1": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_580_cooldown = v.state_nom_earth_wall_throw_cooldown;",
+					"v.metastate_throw_wall_cooldown = v.chain_580_cooldown;"
+				]
+			}
+		},
+		"animation.0278e55b13a610723783f3f6eef1a1d8cb125a79_2": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_458_cooldown = v.state_nom_earth_wall_spawn_cooldown||v.state_nom_earth_wall_throw_cooldown;",
+					"v.metastate_projectile_defence_wall_cooldown = v.chain_458_cooldown;"
+				]
+			}
+		},
+		"animation.0278e55b13a610723783f3f6eef1a1d8cb125a79_3": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_373_cooldown = v.state_nom_earth_wall_spawn_cooldown;",
+					"v.metastate_spawn_wall_cooldown = v.chain_373_cooldown;"
+				]
+			}
+		},
+		"animation.0278e55b13a610723783f3f6eef1a1d8cb125a79_4": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_775_cooldown = v.state_nom_approach_cooldown||v.state_nom_earth_quake_medium_cooldown;",
+					"v.metastate_quake_cooldown = v.chain_775_cooldown;"
+				]
+			}
+		},
+		"animation.0278e55b13a610723783f3f6eef1a1d8cb125a79_5": {
+			"loop": true,
+			"animation_length": 0.01,
+			"timeline": {
+				"0.0": [
+					"v.chain_115_cooldown = v.state_nom_strafe_side_cooldown;",
+					"v.metastate_projectile_defence_strafe_cooldown = v.chain_115_cooldown;"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+fill 82 19 -2 77 24 -2 nom:block_breakable_stone_ew 0 replace air

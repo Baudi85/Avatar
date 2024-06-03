@@ -1,0 +1,97 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:marker",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:explode": {
+					"fuse_length": 0.05,
+					"fuse_lit": true,
+					"power": 0
+				}
+			},
+			"nom:slow_despawn": {
+				"minecraft:explode": {
+					"fuse_length": 2,
+					"fuse_lit": true,
+					"power": 0
+				}
+			},
+			"nom:rain_check_success": {
+				"minecraft:type_family": {
+					"family": [
+						"marker",
+						"rain_check_success"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:health": {
+				"value": 8,
+				"max": 8
+			},
+			"minecraft:type_family": {
+				"family": [
+					"marker"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:fire_immune": {},
+			"minecraft:nameable": {
+				"allow_name_tag_renaming": true,
+				"always_show": false
+			}
+		},
+		"events": {
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			},
+			"nom:rain_check": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "weather_at_position",
+							"operator": "!=",
+							"value": "clear"
+						},
+						"add": {
+							"component_groups": [
+								"nom:rain_check_success"
+							]
+						}
+					},
+					{
+						"add": {
+							"component_groups": [
+								"nom:despawn"
+							]
+						}
+					}
+				]
+			}
+		}
+	}
+}

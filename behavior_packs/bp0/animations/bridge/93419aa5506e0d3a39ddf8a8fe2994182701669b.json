@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.93419aa5506e0d3a39ddf8a8fe2994182701669b_0": {
+			"loop": true,
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"/function bending/generic/on_material_pull_tick"
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,1 @@
+execute @s[scores={settlement_q_i=4}] ~ ~ ~ function settlement/t_clover_courtyard/_/_load_queue

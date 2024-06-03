@@ -1,0 +1,2 @@
+tellraw @s {"rawtext":[ { "text": "§6Settlement:§r§6 Added entity <" }, {"selector":"@e[type=!player,tag=!entity.technical,c=1,tag=!settlement.save]"}, {"text":">"}]}
+tag @e[type=!player,tag=!entity.technical,c=1,tag=!settlement.save] add settlement.save

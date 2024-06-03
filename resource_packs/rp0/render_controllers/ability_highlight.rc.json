@@ -1,0 +1,37 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.ability_highlight": {
+			"geometry": "array.g[q.variant]",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"array.t[q.variant]"
+			],
+			"arrays": {
+				"geometries": {
+					"Array.g": [
+						"Geometry.blank",
+						"Geometry.bending",
+						"Geometry.wall",
+						"Geometry.bending",
+						"Geometry.bending"
+					]
+				},
+				"textures": {
+					"Array.t": [
+						"Texture.blank",
+						"Texture.earth",
+						"Texture.earth",
+						"Texture.water",
+						"Texture.water"
+					]
+				}
+			},
+			"ignore_lighting": true
+		}
+	}
+}

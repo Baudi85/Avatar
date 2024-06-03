@@ -1,0 +1,254 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.water_whip.pre_holding_particle": {
+			"loop": true,
+			"bones": {
+				"water_whips_1": {
+					"position": [
+						0,
+						18,
+						-22
+					]
+				}
+			}
+		},
+		"animation.water_whip.holding_particle": {
+			"loop": true,
+			"start_delay": "v.water_whips_start_delay",
+			"bones": {
+				"water_bending": {
+					"rotation": [
+						"math.sin(q.anim_time*180)*20",
+						"q.anim_time*120",
+						"math.cos(q.anim_time*180)*20"
+					],
+					"position": [
+						0,
+						20,
+						0
+					]
+				},
+				"particle_locator": {
+					"position": [
+						"22+math.sin(query.anim_time*540)",
+						"math.sin(query.anim_time*360)*6",
+						"22+math.cos(query.anim_time*540)"
+					],
+					"scale": [
+						"1+math.sin(q.anim_time*720)",
+						"1-math.sin(q.anim_time*540)",
+						"1+math.cos(q.anim_time*720)"
+					]
+				},
+				"particle_locator3": {
+					"position": [
+						"20+math.cos(query.anim_time*540)",
+						"math.sin(query.anim_time*360+30)*7",
+						"20+math.sin(query.anim_time*540)"
+					],
+					"scale": [
+						"1+math.sin(q.anim_time*540)",
+						"1-math.sin(q.anim_time*720)",
+						"1+math.cos(q.anim_time*540)"
+					]
+				},
+				"particle_locator2": {
+					"position": [
+						24,
+						"math.sin(query.anim_time*360+60)*6",
+						24
+					],
+					"scale": [
+						"1-math.sin(q.anim_time*720)",
+						"1+math.sin(q.anim_time*540)",
+						"1-math.cos(q.anim_time*720)"
+					]
+				}
+			}
+		},
+		"animation.water_whip.holding_particle_particle": {
+			"loop": false,
+			"animation_length": 1,
+			"start_delay": "v.water_whips_start_delay",
+			"particle_effects": {
+				"0.0": [
+					{
+						"effect": "water_blob",
+						"locator": "water_bending_locator"
+					},
+					{
+						"effect": "water_blob",
+						"locator": "water_bending_locator2"
+					},
+					{
+						"effect": "water_blob",
+						"locator": "water_bending_locator3"
+					},
+					{
+						"effect": "water_trail",
+						"locator": "water_bending_locator"
+					},
+					{
+						"effect": "water_trail",
+						"locator": "water_bending_locator2"
+					},
+					{
+						"effect": "water_trail",
+						"locator": "water_bending_locator3"
+					}
+				]
+			}
+		},
+		"animation.particle.standby": {
+			"loop": true,
+			"bones": {
+				"water_whips_particle": {
+					"scale": 0
+				}
+			}
+		},
+		"animation.water_whip.pull.fp": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.15,
+			"bones": {
+				"water_whips_particle": {
+					"position": {
+						"0.0": [
+							0,
+							24,
+							"v.water_whips_dist*26"
+						],
+						"0.15": [
+							0,
+							"56",
+							"v.water_whips_dist*26"
+						]
+					}
+				},
+				"particle_locator": {
+					"position": {
+						"0.0": [
+							0,
+							24,
+							"v.water_whips_dist*26"
+						],
+						"0.15": [
+							0,
+							"56",
+							"v.water_whips_dist*26"
+						]
+					}
+				},
+				"particle_locator2": {
+					"position": {
+						"0.0": [
+							0,
+							24,
+							"v.water_whips_dist*26"
+						],
+						"0.15": [
+							0,
+							"56",
+							"v.water_whips_dist*26"
+						]
+					}
+				},
+				"particle_locator3": {
+					"position": {
+						"0.0": [
+							0,
+							24,
+							"v.water_whips_dist*26"
+						],
+						"0.15": [
+							0,
+							"56",
+							"v.water_whips_dist*26"
+						]
+					}
+				}
+			}
+		},
+		"animation.water_whip.pull.tp": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 0.15,
+			"bones": {
+				"water_whips_particle": {
+					"position": {
+						"0.0": [
+							"v.water_whips_x*16",
+							"v.water_whips_y*16",
+							"v.water_whips_z*-16"
+						],
+						"0.15": [
+							"v.water_whips_x*16",
+							"(v.water_whips_y*16)+32",
+							"v.water_whips_z*-16"
+						]
+					}
+				},
+				"particle_locator": {
+					"position": {
+						"0.0": [
+							"v.water_whips_x*16",
+							"v.water_whips_y*16",
+							"v.water_whips_z*-16"
+						],
+						"0.15": [
+							"v.water_whips_x*16",
+							"(v.water_whips_y*16)+32",
+							"v.water_whips_z*-16"
+						]
+					}
+				},
+				"particle_locator2": {
+					"position": {
+						"0.0": [
+							"v.water_whips_x*16",
+							"v.water_whips_y*16",
+							"v.water_whips_z*-16"
+						],
+						"0.15": [
+							"v.water_whips_x*16",
+							"(v.water_whips_y*16)+32",
+							"v.water_whips_z*-16"
+						]
+					}
+				},
+				"particle_locator3": {
+					"position": {
+						"0.0": [
+							"v.water_whips_x*16",
+							"v.water_whips_y*16",
+							"v.water_whips_z*-16"
+						],
+						"0.15": [
+							"v.water_whips_x*16",
+							"(v.water_whips_y*16)+32",
+							"v.water_whips_z*-16"
+						]
+					}
+				}
+			}
+		},
+		"animation.settlement.pop": {
+			"animation_length": 5,
+			"loop": true,
+			"particle_effects": {
+				"0.0": {
+					"effect": "pop",
+					"locator": "effect_locator"
+				}
+			}
+		},
+		"animation.player.double_jump_vfx": {
+			"animation_length": 0.5,
+			"particle_effects": {
+				"0.0": {
+					"effect": "double_jump"
+				}
+			}
+		}
+	}
+}

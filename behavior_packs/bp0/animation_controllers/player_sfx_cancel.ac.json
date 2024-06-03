@@ -1,0 +1,72 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.player.cancel_sweep": {
+			"initial_state": "enterer",
+			"states": {
+				"enterer": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==41"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"using": "q.variant>0"
+						},
+						{
+							"enterer": "q.mark_variant!=41"
+						}
+					]
+				},
+				"using": {
+					"transitions": [
+						{
+							"enterer": "q.mark_variant!=41"
+						},
+						{
+							"release": "q.variant==0"
+						}
+					]
+				},
+				"release": {
+					"animations": [
+						"sweep.sfx.cancel"
+					],
+					"on_exit": [
+						"/stopsound @s fire_sweep_init",
+						"/stopsound @s fire_sweep"
+					],
+					"transitions": [
+						{
+							"delay_end": "q.any_animation_finished"
+						}
+					]
+				},
+				"delay_end": {
+					"on_entry": [
+						"/stopsound @s fire_sweep_init",
+						"/stopsound @s fire_sweep"
+					],
+					"on_exit": [
+						"/stopsound @s fire_sweep_init",
+						"/stopsound @s fire_sweep"
+					],
+					"transitions": [
+						{
+							"enterer": "q.mark_variant!=41"
+						},
+						{
+							"default": "q.variant==0"
+						},
+						{
+							"using": "q.variant>0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1123 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_0": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_strafe_side"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_strafe_side=0;",
+						"/event entity @s[tag=state_init] nom:strafe.side._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:strafe.side._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:strafe.side._set",
+						"v.state_length=20;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=3"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_strafe_side=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_strafe_side"
+						},
+						{
+							"group_cooldown": "v.group_strafe_cooldown"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_strafe_side_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=3"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_strafe_side_cooldown=1;",
+						"v.group_strafe_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_strafe_side_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_strafe_side_cooldown=0;",
+						"v.group_strafe_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_strafe_side_cooldown_time+120"
+						}
+					]
+				},
+				"group_cooldown": {
+					"on_entry": [
+						"v.state_nom_strafe_side_cooldown=1;"
+					],
+					"on_exit": [
+						"v.state_nom_strafe_side_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "!v.group_strafe_cooldown"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_2": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_strafe_side=0;",
+						"v.state_nom_strafe_side_cooldown=0;",
+						"v.group_strafe_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_3": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_approach"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_approach=0;",
+						"/event entity @s[tag=state_init] nom:approach._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:approach._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:approach._set",
+						"v.state_length=200;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=6"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_approach=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_4": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_approach"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_approach_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=6"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_approach_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_approach_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_approach_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_approach_cooldown_time"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_5": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_approach=0;",
+						"v.state_nom_approach_cooldown=0;",
+						"v.false_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_6": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_aggressive_approach"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_aggressive_approach=0;",
+						"/event entity @s[tag=state_init] nom:aggressive_approach._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:aggressive_approach._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:aggressive_approach._set",
+						"v.state_length=200;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=7"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_aggressive_approach=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_7": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_aggressive_approach"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_aggressive_approach_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=7"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_aggressive_approach_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_aggressive_approach_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_aggressive_approach_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_aggressive_approach_cooldown_time+40"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_8": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_aggressive_approach=0;",
+						"v.state_nom_aggressive_approach_cooldown=0;",
+						"v.false_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_9": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_fire_stream_small"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_stream_small=0;",
+						"/event entity @s[tag=state_init] nom:fire.stream.small._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:fire.stream.small._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:fire.stream.small._set",
+						"v.state_length=1000;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=410"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_fire_stream_small=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_10": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_fire_stream_small"
+						},
+						{
+							"group_cooldown": "v.group_fire_stream_cooldown"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_stream_small_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=410"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_stream_small_cooldown=1;",
+						"v.group_fire_stream_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_stream_small_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_stream_small_cooldown=0;",
+						"v.group_fire_stream_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_fire_stream_small_cooldown_time+60"
+						}
+					]
+				},
+				"group_cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_stream_small_cooldown=1;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_stream_small_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "!v.group_fire_stream_cooldown"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_11": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_fire_stream_small=0;",
+						"v.state_nom_fire_stream_small_cooldown=0;",
+						"v.group_fire_stream_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_12": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_fire_stream_medium"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_stream_medium=0;",
+						"/event entity @s[tag=state_init] nom:fire.stream.medium._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:fire.stream.medium._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:fire.stream.medium._set",
+						"v.state_length=1000;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=411"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_fire_stream_medium=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_13": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_fire_stream_medium"
+						},
+						{
+							"group_cooldown": "v.group_fire_stream_cooldown"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_stream_medium_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=411"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_stream_medium_cooldown=1;",
+						"v.group_fire_stream_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_stream_medium_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_stream_medium_cooldown=0;",
+						"v.group_fire_stream_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_fire_stream_medium_cooldown_time+60"
+						}
+					]
+				},
+				"group_cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_stream_medium_cooldown=1;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_stream_medium_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "!v.group_fire_stream_cooldown"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_14": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_fire_stream_medium=0;",
+						"v.state_nom_fire_stream_medium_cooldown=0;",
+						"v.group_fire_stream_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_15": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_fire_stream_large"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_stream_large=0;",
+						"/event entity @s[tag=state_init] nom:fire.stream.large._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:fire.stream.large._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:fire.stream.large._set",
+						"v.state_length=1000;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=412"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_fire_stream_large=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_16": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_fire_stream_large"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_stream_large_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=412"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_stream_large_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_stream_large_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_stream_large_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_fire_stream_large_cooldown_time+60"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_17": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_fire_stream_large=0;",
+						"v.state_nom_fire_stream_large_cooldown=0;",
+						"v.false_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_18": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_fire_dash"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_dash=0;",
+						"/event entity @s[tag=state_init] nom:fire.dash._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:fire.dash._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:fire.dash._set",
+						"v.state_length=400;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=420"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_fire_dash=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_19": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_fire_dash"
+						},
+						{
+							"group_cooldown": "v.group_fire_dash_cooldown"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_dash_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=420"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_dash_cooldown=1;",
+						"v.group_fire_dash_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_dash_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_dash_cooldown=0;",
+						"v.group_fire_dash_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_fire_dash_cooldown_time+120"
+						}
+					]
+				},
+				"group_cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_dash_cooldown=1;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_dash_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "!v.group_fire_dash_cooldown"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_20": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_fire_dash=0;",
+						"v.state_nom_fire_dash_cooldown=0;",
+						"v.group_fire_dash_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_21": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_fire_dash_cancel"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_dash_cancel=0;",
+						"/event entity @s[tag=state_init] nom:fire.dash_cancel._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:fire.dash_cancel._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:fire.dash_cancel._set",
+						"v.state_length=400;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=421"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_fire_dash_cancel=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_22": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_fire_dash_cancel"
+						},
+						{
+							"group_cooldown": "v.group_fire_dash_cooldown"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_dash_cancel_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=421"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_dash_cancel_cooldown=1;",
+						"v.group_fire_dash_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_dash_cancel_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_dash_cancel_cooldown=0;",
+						"v.group_fire_dash_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_fire_dash_cancel_cooldown_time+80"
+						}
+					]
+				},
+				"group_cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_dash_cancel_cooldown=1;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_dash_cancel_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "!v.group_fire_dash_cooldown"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_23": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_fire_dash_cancel=0;",
+						"v.state_nom_fire_dash_cancel_cooldown=0;",
+						"v.group_fire_dash_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_24": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_fire_dash_far"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_dash_far=0;",
+						"/event entity @s[tag=state_init] nom:fire.dash_far._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:fire.dash_far._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:fire.dash_far._set",
+						"v.state_length=400;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=422"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_fire_dash_far=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_25": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_fire_dash_far"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_dash_far_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=422"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_dash_far_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_dash_far_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_dash_far_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_fire_dash_far_cooldown_time+160"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_26": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_fire_dash_far=0;",
+						"v.state_nom_fire_dash_far_cooldown=0;",
+						"v.false_cooldown=0;"
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_27": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"pre_state": "v.state_nom_fire_sweep"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_sweep=0;",
+						"/event entity @s[tag=state_init] nom:fire.sweep._end"
+					]
+				},
+				"pre_state": {
+					"on_entry": [
+						"@s nom:fire.sweep._skin"
+					],
+					"transitions": [
+						{
+							"in_state": "1"
+						}
+					]
+				},
+				"in_state": {
+					"on_entry": [
+						"v.state_time=q.time_stamp;",
+						"@s nom:fire.sweep._set",
+						"v.state_length=60;"
+					],
+					"transitions": [
+						{
+							"end": "(v.state_length>-1&&q.time_stamp-v.state_time>v.state_length)||0"
+						},
+						{
+							"default": "q.skin_id!=430"
+						}
+					],
+					"on_exit": [
+						"v.state_nom_fire_sweep=0;"
+					]
+				},
+				"end": {
+					"on_entry": [
+						"@s gm1:end_state"
+					],
+					"transitions": [
+						{
+							"default": "true"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_28": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"in_state": "v.state_nom_fire_sweep"
+						},
+						{
+							"group_cooldown": "v.group_fire_sweep_cooldown"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_sweep_cooldown=0;"
+					]
+				},
+				"in_state": {
+					"transitions": [
+						{
+							"cooldown": "q.skin_id!=430"
+						}
+					],
+					"on_entry": [
+						"v.state_nom_fire_sweep_cooldown=1;",
+						"v.group_fire_sweep_cooldown=1;"
+					]
+				},
+				"cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_sweep_cooldown_time=q.time_stamp;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_sweep_cooldown=0;",
+						"v.group_fire_sweep_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "q.time_stamp>v.state_nom_fire_sweep_cooldown_time+40"
+						}
+					]
+				},
+				"group_cooldown": {
+					"on_entry": [
+						"v.state_nom_fire_sweep_cooldown=1;"
+					],
+					"on_exit": [
+						"v.state_nom_fire_sweep_cooldown=0;"
+					],
+					"transitions": [
+						{
+							"default": "!v.group_fire_sweep_cooldown"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.490ef48a1e51d37533e04a63a3dab835dcbdb503_29": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.state_nom_fire_sweep=0;",
+						"v.state_nom_fire_sweep_cooldown=0;",
+						"v.group_fire_sweep_cooldown=0;"
+					]
+				}
+			}
+		}
+	}
+}

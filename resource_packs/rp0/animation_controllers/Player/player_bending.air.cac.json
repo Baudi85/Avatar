@@ -1,0 +1,359 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.bending.air.tornado": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=31"
+						},
+						{
+							"lock": "q.variant==1"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==31"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_head",
+						"lock_sneak",
+						"lock_jump",
+						"lock_movement"
+					],
+					"transitions": [
+						{
+							"charge": "1"
+						}
+					]
+				},
+				"charge": {
+					"animations": [
+						{
+							"tornado.charge": "!v.is_first_person"
+						},
+						{
+							"FP.tornado.charge": "v.is_first_person"
+						},
+						"air_tornado_charge1"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=31"
+						},
+						{
+							"hold": "q.any_animation_finished"
+						},
+						{
+							"unlock": "q.variant==3||q.variant==0"
+						}
+					]
+				},
+				"hold": {
+					"animations": [
+						{
+							"tornado.hold": "!v.is_first_person"
+						},
+						{
+							"FP.tornado.hold": "v.is_first_person"
+						},
+						"tornado_start",
+						"bending.air.tornado.sfx"
+					],
+					"transitions": [
+						{
+							"release": "q.variant==3||q.mark_variant!=31"
+						},
+						{
+							"unlock": "q.variant==0"
+						}
+					]
+				},
+				"release": {
+					"animations": [
+						{
+							"tornado.release": "!v.is_first_person"
+						},
+						{
+							"FP.tornado.release": "v.is_first_person"
+						},
+						"tornado_stop",
+						"air_tornado_release"
+					],
+					"transitions": [
+						{
+							"unlock": "q.any_animation_finished"
+						}
+					]
+				},
+				"unlock": {
+					"animations": [
+						"unlock_head",
+						"unlock_sneak",
+						"unlock_jump",
+						"unlock_movement"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=31"
+						},
+						{
+							"default": "v.lock_timer>=0.3"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.bending.air.air_sphere": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=32"
+						},
+						{
+							"lock": "q.variant==1"
+						}
+					],
+					"blend_transition": 0.25
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"default": "q.mark_variant==32"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_jump",
+						"lock_sneak",
+						"lock_movement",
+						"lock_head"
+					],
+					"transitions": [
+						{
+							"charge": "1"
+						}
+					]
+				},
+				"charge": {
+					"animations": [
+						{
+							"air_sphere.charge": "!v.is_first_person"
+						},
+						{
+							"FP.airsphere.charge": "v.is_first_person"
+						},
+						{
+							"air_sphere_spin": "!v.is_first_person"
+						},
+						{
+							"FP.air_sphere_spin_pose": "v.is_first_person"
+						},
+						"air_sphere_grow"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=32"
+						},
+						{
+							"hold": "q.any_animation_finished&&q.variant==2"
+						},
+						{
+							"unlock": "q.variant==0"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"hold": {
+					"animations": [
+						{
+							"air_sphere.hold": "!v.is_first_person"
+						},
+						{
+							"FP.airsphere.hold": "v.is_first_person"
+						},
+						{
+							"air_sphere_spin": "!v.is_first_person"
+						},
+						{
+							"FP.air_sphere_spin_pose": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"release": "q.variant==0||q.variant==3||q.mark_variant!=32"
+						}
+					],
+					"blend_transition": 0.2
+				},
+				"unlock": {
+					"animations": [
+						"unlock_jump",
+						"unlock_sneak",
+						"unlock_movement",
+						"lock_head"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"release": {
+					"animations": [
+						{
+							"air_sphere.release": "!v.is_first_person"
+						},
+						{
+							"FP.airpshere.release": "v.is_first_person"
+						}
+					],
+					"transitions": [
+						{
+							"unlock": "q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.25
+				}
+			}
+		},
+		"controller.animation.bending.air_blades": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=33"
+						},
+						{
+							"lock": "q.variant>=1&&q.variant!=5"
+						}
+					]
+				},
+				"swapped": {
+					"transitions": [
+						{
+							"unlock": "q.mark_variant==33"
+						}
+					]
+				},
+				"lock": {
+					"animations": [
+						"lock_head",
+						"lock_jump",
+						"lock_sneak"
+					],
+					"transitions": [
+						{
+							"charging": "1"
+						}
+					]
+				},
+				"charging": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=33"
+						},
+						{
+							"projectile_1": "q.variant>=2&&q.variant!=5"
+						},
+						{
+							"unlock": "q.variant==0||q.variant==5"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						"air_blades.charge"
+					]
+				},
+				"projectile_1": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=33"
+						},
+						{
+							"projectile_2": "q.variant>=3&&q.variant!=5"
+						},
+						{
+							"unlock": "(q.variant==0||q.variant==5)&&q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.3,
+					"animations": [
+						{
+							"air_blades.release_1": "!v.is_first_person"
+						},
+						{
+							"air_blades.release_2": "v.is_first_person"
+						}
+					]
+				},
+				"projectile_2": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=33"
+						},
+						{
+							"projectile_3": "q.variant>=4&&q.variant!=5"
+						},
+						{
+							"unlock": "(q.variant==0||q.variant==5)&&q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						{
+							"air_blades.release_2": "!v.is_first_person"
+						},
+						{
+							"air_blades.release_1": "v.is_first_person"
+						}
+					]
+				},
+				"projectile_3": {
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=33"
+						},
+						{
+							"projectile_1": "q.variant==2&&q.variant!=5"
+						},
+						{
+							"unlock": "(q.variant==0||q.variant==5)&&q.any_animation_finished"
+						}
+					],
+					"blend_transition": 0.1,
+					"animations": [
+						"air_blades.release_3"
+					]
+				},
+				"unlock": {
+					"animations": [
+						"unlock_jump",
+						"unlock_head",
+						"unlock_sneak",
+						"unlock_movement"
+					],
+					"transitions": [
+						{
+							"swapped": "q.mark_variant!=33"
+						},
+						{
+							"default": "v.lock_timer>=0.3||(q.variant!=0&&q.variant!=5)"
+						}
+					]
+				}
+			}
+		}
+	}
+}

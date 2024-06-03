@@ -1,0 +1,92 @@
+{
+	"format_version": "1.8.0",
+	"render_controllers": {
+		"controller.render.tornado": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.tornado"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"light_color_multiplier": "v.is_selected && q.is_saddled && query.camera_distance_range_lerp(1,9) != 1  ? 100000 : 1",
+			"part_visibility": [
+				{
+					"*": "q.variant == 2"
+				},
+				{
+					"top": false
+				}
+			],
+			"uv_anim": {
+				"offset": [
+					"q.life_time*0.1",
+					0
+				],
+				"scale": [
+					1,
+					1
+				]
+			}
+		},
+		"controller.render.tornado_top": {
+			"geometry": "geometry.default",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.default"
+			],
+			"light_color_multiplier": "v.is_selected && q.is_saddled && query.camera_distance_range_lerp(1,9) != 1  ? 100000 : 1",
+			"part_visibility": [
+				{
+					"*": false
+				},
+				{
+					"top": "q.variant == 2"
+				}
+			]
+		},
+		"controller.render.tornado_core": {
+			"geometry": "geometry.core",
+			"materials": [
+				{
+					"*": "material.core"
+				}
+			],
+			"textures": [
+				"texture.core"
+			],
+			"part_visibility": [
+				{
+					"*": "q.variant == 2"
+				}
+			],
+			"uv_anim": {
+				"offset": [
+					"q.life_time*0.1",
+					0
+				],
+				"scale": [
+					1,
+					1
+				]
+			}
+		},
+		"controller.render.spawn_tornado": {
+			"geometry": "geometry.spawn_tornado",
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"textures": [
+				"texture.tornado"
+			]
+		}
+	}
+}

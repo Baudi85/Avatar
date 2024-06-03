@@ -1,0 +1,11 @@
+{
+    "namespace": "crafting",
+    "player_armor_panel": {
+        "modifications": [
+            { "control_name": "armor_grid", "operation": "remove" },
+            { "control_name": "offhand_grid", "operation": "remove" }
+        ]
+    },
+    "player_armor_panel/player_bg": { "size": [ 70, 70 ], "offset": [ 9, 8 ]},
+    "player_armor_panel/player_preview_border": { "size": [ 72, 72 ], "offset": [ 8, 7 ]}
+}

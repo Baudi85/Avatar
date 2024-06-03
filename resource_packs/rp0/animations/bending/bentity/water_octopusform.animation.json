@@ -1,0 +1,27 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.water_octopusform.heartbeat": {
+			"loop": true,
+			"bones": {
+				"body": {
+					"rotation": [
+						"math.sin(q.anim_time*120)*5",
+						"math.sin(q.anim_time*240)*5",
+						"math.cos(q.anim_time*120)*5"
+					],
+					"position": [
+						"math.random(0.5,-0.5)",
+						0,
+						"math.random(0.5,-0.5)"
+					],
+					"scale": [
+						"1+math.sin(q.anim_time*360)*0.15",
+						"1+math.cos(q.anim_time*360)*0.15",
+						"1+math.sin(q.anim_time*360)*0.15"
+					]
+				}
+			}
+		}
+	}
+}

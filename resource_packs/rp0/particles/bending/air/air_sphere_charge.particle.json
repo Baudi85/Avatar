@@ -1,0 +1,84 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "nom:air_sphere_charge",
+			"basic_render_parameters": {
+				"material": "particles_blend",
+				"texture": "textures/particle/dust"
+			}
+		},
+		"curves": {
+			"variable.speed1": {
+				"type": "bezier",
+				"input": 0,
+				"horizontal_range": 0,
+				"nodes": [
+					1,
+					10.03,
+					0,
+					21.43
+				]
+			}
+		},
+		"components": {
+			"minecraft:emitter_local_space": {
+				"position": true,
+				"rotation": true
+			},
+			"minecraft:emitter_rate_steady": {
+				"spawn_rate": 250,
+				"max_particles": 250
+			},
+			"minecraft:emitter_lifetime_once": {
+				"active_time": 0.1
+			},
+			"minecraft:emitter_shape_sphere": {
+				"radius": 2,
+				"surface_only": true,
+				"direction": "inwards"
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": "math.random(0.2,0.4)"
+			},
+			"minecraft:particle_initial_speed": 2,
+			"minecraft:particle_motion_dynamic": {
+				"linear_drag_coefficient": 1
+			},
+			"minecraft:particle_kill_plane": [
+				0.1,
+				0.1,
+				0.1,
+				0.1
+			],
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					"variable.speed1*0.01",
+					0.01
+				],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 80,
+					"texture_height": 16,
+					"uv": [
+						5,
+						8
+					],
+					"uv_size": [
+						9,
+						4
+					]
+				}
+			},
+			"minecraft:particle_appearance_tinting": {
+				"color": {
+					"interpolant": "v.particle_age / v.particle_lifetime",
+					"gradient": {
+						"0.0": "#7DFFFFFF",
+						"1.0": "#ba3779e8"
+					}
+				}
+			}
+		}
+	}
+}

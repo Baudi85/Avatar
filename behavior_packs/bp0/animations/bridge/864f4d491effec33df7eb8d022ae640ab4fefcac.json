@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.864f4d491effec33df7eb8d022ae640ab4fefcac_0": {
+			"loop": true,
+			"animation_length": 0.05,
+			"timeline": {
+				"0.0": [
+					"@s nom:despawn"
+				]
+			}
+		}
+	}
+}

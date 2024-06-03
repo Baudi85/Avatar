@@ -1,0 +1,77 @@
+{
+	"format_version": "1.18.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:ui_handler",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"runtime_identifier": "minecraft:arrow",
+			"animations": {
+				"9be43347e91f0ceb_ac_0": "controller.animation.9be43347e91f0ceb931b47b29513661445a19068_0"
+			},
+			"scripts": {
+				"animate": [
+					"9be43347e91f0ceb_ac_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:npc": {
+				"npc_data": {}
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"cause": "all",
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:interact": {
+				"interactions": []
+			},
+			"minecraft:collision_box": {
+				"height": 0,
+				"width": 0
+			}
+		},
+		"events": {
+			"nom:reset_timer": {
+				"add": {
+					"component_groups": [
+						"nom:despawn_timer"
+					]
+				}
+			},
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"add": {
+					"component_groups": [
+						"nom:despawn_timer"
+					]
+				}
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"nom:despawn_timer": {
+				"minecraft:timer": {
+					"time": 2.6,
+					"looping": true,
+					"time_down_event": {
+						"event": "nom:despawn"
+					}
+				}
+			}
+		}
+	}
+}

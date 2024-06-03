@@ -1,0 +1,13 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.5a8592c8e816f87ae83478f796cd49fb24d14c4a_0": {
+			"animation_length": 1,
+			"timeline": {
+				"0.05": [
+					"/tag @s add out_of_players_face"
+				]
+			}
+		}
+	}
+}

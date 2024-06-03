@@ -1,0 +1,380 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:earth_quake",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"ad1117fbd12f0fc1_a_0": "animation.ad1117fbd12f0fc161cd7b0a9f3593006f5191ac_0",
+				"ad1117fbd12f0fc1_a_1": "animation.ad1117fbd12f0fc161cd7b0a9f3593006f5191ac_1",
+				"ad1117fbd12f0fc1_a_2": "animation.ad1117fbd12f0fc161cd7b0a9f3593006f5191ac_2",
+				"ad1117fbd12f0fc1_a_3": "animation.ad1117fbd12f0fc161cd7b0a9f3593006f5191ac_3",
+				"78a8d453fe857544_ac_0": "controller.animation.78a8d453fe857544b89dadceb7eb95aaeb192100_0"
+			},
+			"scripts": {
+				"animate": [
+					"ad1117fbd12f0fc1_a_0",
+					{
+						"ad1117fbd12f0fc1_a_1": "q.variant==1"
+					},
+					{
+						"ad1117fbd12f0fc1_a_2": "q.is_ignited"
+					},
+					"ad1117fbd12f0fc1_a_3",
+					"78a8d453fe857544_ac_0"
+				]
+			}
+		},
+		"component_groups": {
+			"nom:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"nom:slow_despawn": {
+				"minecraft:is_ignited": {}
+			},
+			"nom:execute_power": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"nom:type_0": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			},
+			"nom:type_1": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"nom:type_2": {
+				"minecraft:skin_id": {
+					"value": 2
+				}
+			},
+			"nom:type_3": {
+				"minecraft:skin_id": {
+					"value": 3
+				}
+			},
+			"nom:type_4": {
+				"minecraft:skin_id": {
+					"value": 4
+				}
+			},
+			"nom:type_5": {
+				"minecraft:skin_id": {
+					"value": 5
+				}
+			},
+			"nom:type_6": {
+				"minecraft:skin_id": {
+					"value": 6
+				}
+			},
+			"nom:type_7": {
+				"minecraft:skin_id": {
+					"value": 7
+				}
+			},
+			"nom:type_8": {
+				"minecraft:skin_id": {
+					"value": 8
+				}
+			},
+			"nom:type_9": {
+				"minecraft:skin_id": {
+					"value": 9
+				}
+			},
+			"nom:type_10": {
+				"minecraft:skin_id": {
+					"value": 10
+				}
+			},
+			"nom:type_11": {
+				"minecraft:skin_id": {
+					"value": 11
+				}
+			},
+			"nom:type_12": {
+				"minecraft:skin_id": {
+					"value": 12
+				}
+			},
+			"nom:type_13": {
+				"minecraft:skin_id": {
+					"value": 13
+				}
+			},
+			"nom:type_14": {
+				"minecraft:skin_id": {
+					"value": 14
+				}
+			},
+			"nom:type_15": {
+				"minecraft:skin_id": {
+					"value": 15
+				}
+			},
+			"nom:type_16": {
+				"minecraft:skin_id": {
+					"value": 16
+				}
+			},
+			"nom:level_1": {
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			},
+			"nom:level_2": {
+				"minecraft:mark_variant": {
+					"value": 2
+				}
+			},
+			"nom:level_3": {
+				"minecraft:mark_variant": {
+					"value": 3
+				}
+			},
+			"nom:level_4": {
+				"minecraft:mark_variant": {
+					"value": 4
+				}
+			},
+			"nom:level_5": {
+				"minecraft:mark_variant": {
+					"value": 5
+				}
+			}
+		},
+		"components": {
+			"minecraft:variant": {
+				"value": 0
+			},
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:collision_box": {
+				"width": 0,
+				"height": 0
+			},
+			"minecraft:health": {
+				"value": 8,
+				"max": 8
+			},
+			"minecraft:type_family": {
+				"family": [
+					"earth_quake"
+				]
+			},
+			"minecraft:fire_immune": {}
+		},
+		"events": {
+			"nom:remove_selected_loop": {
+				"sequence": [
+					{
+						"filters": {
+							"test": "has_component",
+							"operator": "==",
+							"value": "minecraft:is_saddled"
+						},
+						"trigger": "nom:remove_selected_buffer"
+					},
+					{
+						"filters": {
+							"test": "has_component",
+							"operator": "!=",
+							"value": "minecraft:is_saddled"
+						},
+						"trigger": "nom:remove_selected"
+					}
+				]
+			},
+			"nom:execute_power": {
+				"add": {
+					"component_groups": [
+						"nom:execute_power"
+					]
+				}
+			},
+			"nom:type_0": {
+				"add": {
+					"component_groups": [
+						"nom:type_0"
+					]
+				}
+			},
+			"nom:type_1": {
+				"add": {
+					"component_groups": [
+						"nom:type_1"
+					]
+				}
+			},
+			"nom:type_2": {
+				"add": {
+					"component_groups": [
+						"nom:type_2"
+					]
+				}
+			},
+			"nom:type_3": {
+				"add": {
+					"component_groups": [
+						"nom:type_3"
+					]
+				}
+			},
+			"nom:type_4": {
+				"add": {
+					"component_groups": [
+						"nom:type_4"
+					]
+				}
+			},
+			"nom:type_5": {
+				"add": {
+					"component_groups": [
+						"nom:type_5"
+					]
+				}
+			},
+			"nom:type_6": {
+				"add": {
+					"component_groups": [
+						"nom:type_6"
+					]
+				}
+			},
+			"nom:type_7": {
+				"add": {
+					"component_groups": [
+						"nom:type_7"
+					]
+				}
+			},
+			"nom:type_8": {
+				"add": {
+					"component_groups": [
+						"nom:type_8"
+					]
+				}
+			},
+			"nom:type_9": {
+				"add": {
+					"component_groups": [
+						"nom:type_9"
+					]
+				}
+			},
+			"nom:type_10": {
+				"add": {
+					"component_groups": [
+						"nom:type_10"
+					]
+				}
+			},
+			"nom:type_11": {
+				"add": {
+					"component_groups": [
+						"nom:type_11"
+					]
+				}
+			},
+			"nom:type_12": {
+				"add": {
+					"component_groups": [
+						"nom:type_12"
+					]
+				}
+			},
+			"nom:type_13": {
+				"add": {
+					"component_groups": [
+						"nom:type_13"
+					]
+				}
+			},
+			"nom:type_14": {
+				"add": {
+					"component_groups": [
+						"nom:type_14"
+					]
+				}
+			},
+			"nom:type_15": {
+				"add": {
+					"component_groups": [
+						"nom:type_15"
+					]
+				}
+			},
+			"nom:type_16": {
+				"add": {
+					"component_groups": [
+						"nom:type_16"
+					]
+				}
+			},
+			"nom:level_1": {
+				"add": {
+					"component_groups": [
+						"nom:level_1"
+					]
+				}
+			},
+			"nom:level_2": {
+				"add": {
+					"component_groups": [
+						"nom:level_2"
+					]
+				}
+			},
+			"nom:level_3": {
+				"add": {
+					"component_groups": [
+						"nom:level_3"
+					]
+				}
+			},
+			"nom:level_4": {
+				"add": {
+					"component_groups": [
+						"nom:level_4"
+					]
+				}
+			},
+			"nom:level_5": {
+				"add": {
+					"component_groups": [
+						"nom:level_5"
+					]
+				}
+			},
+			"nom:slow_despawn": {
+				"add": {
+					"component_groups": [
+						"nom:slow_despawn"
+					]
+				}
+			},
+			"nom:despawn": {
+				"add": {
+					"component_groups": [
+						"nom:despawn"
+					]
+				}
+			}
+		}
+	}
+}

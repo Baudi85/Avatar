@@ -1,0 +1,141 @@
+{
+	"format_version": "1.17.40",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "ui.default",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": ""
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": "§r"
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§r"
+								}
+							]
+						}
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§r"
+								}
+							]
+						}
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§r"
+								}
+							]
+						}
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§r"
+								}
+							]
+						}
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§r"
+								}
+							]
+						}
+					},
+					{
+						"name": {
+							"rawtext": [
+								{
+									"text": "§r"
+								}
+							]
+						}
+					}
+				],
+				"on_close_commands": [
+					"/testfor @s"
+				],
+				"on_open_commands": [
+					"/testfor @s"
+				]
+			},
+			{
+				"scene_tag": "ui.blank",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{ui.blank}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": ""
+						}
+					]
+				}
+			},
+			{
+				"scene_tag": "ui.fade",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{ui.fade}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": ""
+						}
+					]
+				}
+			},
+			{
+				"scene_tag": "ui.loader",
+				"npc_name": {
+					"rawtext": [
+						{
+							"text": "{ui.blank}"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"text": ""
+						}
+					]
+				},
+				"on_open_commands": [
+					"/tag @initiator add ui.loaded",
+					"/tag @s add despawn"
+				]
+			}
+		]
+	}
+}

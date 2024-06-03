@@ -1,0 +1,108 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.7db730d185d7e4cb6f74024ba1ac194aeb7e84b5_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/scoreboard players set @s battle_id 202",
+						"/scoreboard players add @s battle_exit 0",
+						"/tag @s add battle.manager",
+						"/tag @s add battle.manager.duel_unalaq"
+					]
+				}
+			}
+		},
+		"controller.animation.7db730d185d7e4cb6f74024ba1ac194aeb7e84b5_1": {
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"state_0": "q.variant==0&&q.is_sheared"
+						},
+						{
+							"state_1": "q.variant==1&&q.is_sheared"
+						},
+						{
+							"state_2": "q.variant==2&&q.is_sheared"
+						}
+					]
+				},
+				"state_0": {
+					"on_entry": [
+						"/scoreboard players set @s battle_state 0",
+						"@s nom:change_state_end"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "!q.is_sheared"
+						}
+					]
+				},
+				"state_1": {
+					"on_entry": [
+						"/scoreboard players set @s battle_state 1",
+						"@s nom:change_state_end"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "!q.is_sheared"
+						}
+					]
+				},
+				"state_2": {
+					"on_entry": [
+						"/scoreboard players set @s battle_state 2",
+						"@s nom:change_state_end"
+					],
+					"on_exit": [],
+					"transitions": [
+						{
+							"default": "!q.is_sheared"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.7db730d185d7e4cb6f74024ba1ac194aeb7e84b5_2": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"v.runtime_duel=q.life_time;"
+					],
+					"transitions": [
+						{
+							"delay": "q.is_tamed"
+						}
+					]
+				},
+				"delay": {
+					"on_entry": [
+						"v.runtime_duel=q.life_time;"
+					],
+					"transitions": [
+						{
+							"claim": "q.is_tamed&&q.life_time>=v.runtime_duel+1"
+						}
+					]
+				},
+				"claim": {
+					"transitions": [
+						{
+							"default": "!q.is_tamed"
+						}
+					],
+					"on_entry": [
+						"/execute @s[tag=!battle.is_claimed,tag=!no_reward] ~ ~ ~ function battle/duel/state/on_claim",
+						"/execute @s[tag=no_reward] ~ ~ ~ tag @s add battle.is_claimed",
+						"/tag @a remove battle.member.202",
+						"/tag @a remove battle.member",
+						"@s nom:on_claim_end"
+					]
+				}
+			}
+		}
+	}
+}

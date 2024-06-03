@@ -1,0 +1,838 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.music.player": {
+			"initial_state": "enterer",
+			"states": {
+				"enterer": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"stop": "v.music_id==99"
+						},
+						{
+							"encampment_loop": "v.music_id==100"
+						},
+						{
+							"duel_loop": "v.music_id==101"
+						},
+						{
+							"minigame1_loop": "v.music_id==102"
+						},
+						{
+							"minigame2_loop": "v.music_id==103"
+						},
+						{
+							"cutscene_active": "v.music_id==104"
+						},
+						{
+							"cutscene_basingse": "v.music_id==105"
+						},
+						{
+							"duel_loop2": "v.music_id==106"
+						},
+						{
+							"duel_loop3": "v.music_id==107"
+						},
+						{
+							"duel_loop4": "v.music_id==108"
+						},
+						{
+							"duel_loop5": "v.music_id==109"
+						},
+						{
+							"duel_loop6": "v.music_id==110"
+						},
+						{
+							"music_iroh": "v.music_id==111"
+						}
+					]
+				},
+				"stop": {
+					"transitions": [
+						{
+							"default": "v.music_id!=99"
+						}
+					],
+					"on_exit": [
+						"/stopsound @s encampment_music_loop"
+					]
+				},
+				"encampment_loop": {
+					"transitions": [
+						{
+							"default": "v.music_id!=100"
+						}
+					],
+					"animations": [
+						"music_encampment"
+					],
+					"on_exit": [
+						"/stopsound @s encampment_music_loop"
+					]
+				},
+				"duel_loop": {
+					"transitions": [
+						{
+							"default": "v.music_id!=101"
+						}
+					],
+					"animations": [
+						"music_duel"
+					],
+					"on_exit": [
+						"/stopsound @s duel_music_loop"
+					]
+				},
+				"duel_loop2": {
+					"transitions": [
+						{
+							"default": "v.music_id!=106"
+						}
+					],
+					"animations": [
+						"music_duel2"
+					],
+					"on_exit": [
+						"/stopsound @s duel_music_loop2"
+					]
+				},
+				"duel_loop3": {
+					"transitions": [
+						{
+							"default": "v.music_id!=107"
+						}
+					],
+					"animations": [
+						"music_duel3"
+					],
+					"on_exit": [
+						"/stopsound @s duel_music_loop3"
+					]
+				},
+				"duel_loop4": {
+					"transitions": [
+						{
+							"default": "v.music_id!=108"
+						}
+					],
+					"animations": [
+						"music_duel4"
+					],
+					"on_exit": [
+						"/stopsound @s duel_music_loop4"
+					]
+				},
+				"duel_loop5": {
+					"transitions": [
+						{
+							"default": "v.music_id!=109"
+						}
+					],
+					"animations": [
+						"music_duel5"
+					],
+					"on_exit": [
+						"/stopsound @s duel_music_loop5"
+					]
+				},
+				"duel_loop6": {
+					"transitions": [
+						{
+							"default": "v.music_id!=110"
+						}
+					],
+					"animations": [
+						"music_duel6"
+					],
+					"on_exit": [
+						"/stopsound @s duel_music_loop6"
+					]
+				},
+				"music_iroh": {
+					"transitions": [
+						{
+							"default": "v.music_id!=111"
+						}
+					],
+					"animations": [
+						"music_iroh"
+					],
+					"on_exit": [
+						"/stopsound @s leaves_from_the_vine"
+					]
+				},
+				"minigame1_loop": {
+					"transitions": [
+						{
+							"default": "v.music_id!=102"
+						}
+					],
+					"on_exit": [
+						"/stopsound @s minigame_upbeat_loop"
+					]
+				},
+				"minigame2_loop": {
+					"transitions": [
+						{
+							"default": "v.music_id!=103"
+						}
+					],
+					"animations": [
+						"music_minigame2"
+					],
+					"on_exit": [
+						"/stopsound @s minigame_drum_loop"
+					]
+				},
+				"cutscene_active": {
+					"transitions": [
+						{
+							"default": "q.all_animations_finished||v.music_id!=104"
+						}
+					],
+					"on_exit": [
+						"@s nom:music_reset"
+					]
+				},
+				"cutscene_basingse": {
+					"transitions": [
+						{
+							"default": "q.all_animations_finished||v.music_id!=105"
+						}
+					],
+					"on_exit": [
+						"@s nom:music_reset"
+					]
+				}
+			}
+		},
+		"controller.animation.music.changer": {
+			"initial_state": "enterer",
+			"states": {
+				"enterer": {
+					"transitions": [
+						{
+							"init": "1"
+						}
+					]
+				},
+				"init": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.music_id=0;"
+					]
+				},
+				"default": {
+					"transitions": [
+						{
+							"stop": "q.skin_id==99&&v.music_id!=99"
+						},
+						{
+							"encampment_loop": "q.skin_id==100&&v.music_id!=100"
+						},
+						{
+							"duel_loop": "q.skin_id==101&&v.music_id!=101"
+						},
+						{
+							"minigame1_loop": "q.skin_id==102&&v.music_id!=102"
+						},
+						{
+							"minigame2_loop": "q.skin_id==103&&v.music_id!=103"
+						},
+						{
+							"cutscene": "q.skin_id==104&&v.music_id!=104"
+						},
+						{
+							"cutscene_basingse": "q.skin_id==105&&v.music_id!=105"
+						},
+						{
+							"duel_loop2": "q.skin_id==106&&v.music_id!=106"
+						},
+						{
+							"duel_loop3": "q.skin_id==107&&v.music_id!=107"
+						},
+						{
+							"duel_loop4": "q.skin_id==108&&v.music_id!=108"
+						},
+						{
+							"duel_loop5": "q.skin_id==109&&v.music_id!=109"
+						},
+						{
+							"duel_loop6": "q.skin_id==110&&v.music_id!=110"
+						},
+						{
+							"music_iroh": "q.skin_id==111&&v.music_id!=111"
+						}
+					]
+				},
+				"stop": {
+					"on_entry": [
+						"v.music_id=99;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"encampment_loop": {
+					"on_entry": [
+						"v.music_id=100;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"duel_loop": {
+					"on_entry": [
+						"v.music_id=101;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"minigame1_loop": {
+					"on_entry": [
+						"v.music_id=102;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"minigame2_loop": {
+					"on_entry": [
+						"v.music_id=103;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"cutscene": {
+					"on_entry": [
+						"v.music_id=104;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"cutscene_basingse": {
+					"on_entry": [
+						"v.music_id=105;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"duel_loop2": {
+					"on_entry": [
+						"v.music_id=106;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"duel_loop3": {
+					"on_entry": [
+						"v.music_id=107;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"duel_loop4": {
+					"on_entry": [
+						"v.music_id=108;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"duel_loop5": {
+					"on_entry": [
+						"v.music_id=109;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"duel_loop6": {
+					"on_entry": [
+						"v.music_id=110;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				},
+				"music_iroh": {
+					"on_entry": [
+						"v.music_id=111;"
+					],
+					"transitions": [
+						{
+							"default": "1"
+						}
+					]
+				}
+			}
+		},
+		"controller.animation.world_music.random_player": {
+			"initial_state": "enterer",
+			"states": {
+				"enterer": {
+					"transitions": [
+						{
+							"init": "1"
+						}
+					]
+				},
+				"init": {
+					"transitions": [
+						{
+							"default": "1"
+						}
+					],
+					"on_entry": [
+						"v.music_rand=1;",
+						"v.music_hold=0;",
+						"v.music_wait=0;",
+						"v.rand_wait=0;",
+						"v.rand_wait_tick=0;",
+						"@s nom:random_music_start"
+					]
+				},
+				"default": {
+					"on_entry": [
+						"v.music_rand=math.random_integer(1,18);",
+						"v.rand_wait_tick=0;"
+					],
+					"animations": [
+						"music_rand_check"
+					],
+					"transitions": [
+						{
+							"stop": "q.skin_id==0"
+						},
+						{
+							"track1": "v.music_rand==1&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track2": "v.music_rand==2&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track3": "v.music_rand==3&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track4": "v.music_rand==4&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track5": "v.music_rand==5&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track6": "v.music_rand==6&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track7": "v.music_rand==7&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track8": "v.music_rand==8&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track9": "v.music_rand==9&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track10": "v.music_rand==10&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track11": "v.music_rand==11&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track12": "v.music_rand==12&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track13": "v.music_rand==13&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track14": "v.music_rand==14&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track15": "v.music_rand==15&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track16": "v.music_rand==16&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track17": "v.music_rand==17&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						},
+						{
+							"track18": "v.music_rand==18&&v.music_rand!=v.music_hold&&q.skin_id!=0"
+						}
+					]
+				},
+				"stop": {
+					"transitions": [
+						{
+							"return": "q.skin_id==1"
+						}
+					]
+				},
+				"return": {
+					"on_entry": [
+						"v.rand_wait=math.random_integer(25,50);",
+						"/music stop",
+						"/function music/music_stop"
+					],
+					"animations": [
+						"music_random_wait"
+					],
+					"transitions": [
+						{
+							"default": "v.rand_wait_tick==v.rand_wait&&q.skin_id!=0"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track1": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track1 1 1"
+					],
+					"animations": [
+						"music.random.track1"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track2": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track2 1 1"
+					],
+					"animations": [
+						"music.random.track2"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track3": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track3 1 1"
+					],
+					"animations": [
+						"music.random.track3"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track4": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track4 1 1"
+					],
+					"animations": [
+						"music.random.track4"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track5": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track5 1 1"
+					],
+					"animations": [
+						"music.random.track5"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track6": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track6 1 1"
+					],
+					"animations": [
+						"music.random.track6"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track7": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track7 1 1"
+					],
+					"animations": [
+						"music.random.track7"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track8": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track8 1 1"
+					],
+					"animations": [
+						"music.random.track8"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track9": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track9 1 1"
+					],
+					"animations": [
+						"music.random.track9"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track10": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track10 1 1"
+					],
+					"animations": [
+						"music.random.track10"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track11": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track11 1 1"
+					],
+					"animations": [
+						"music.random.track11"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track12": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track12 1 1"
+					],
+					"animations": [
+						"music.random.track12"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track13": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track13 1 1"
+					],
+					"animations": [
+						"music.random.track13"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track14": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track14 1 1"
+					],
+					"animations": [
+						"music.random.track14"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track15": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track15 1 1"
+					],
+					"animations": [
+						"music.random.track15"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track16": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track16 1 1"
+					],
+					"animations": [
+						"music.random.track16"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track17": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track17 1 1"
+					],
+					"animations": [
+						"music.random.track17"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				},
+				"track18": {
+					"on_entry": [
+						"v.music_hold=v.music_rand;",
+						"/music play music.random.track18 1 1"
+					],
+					"animations": [
+						"music.random.track18"
+					],
+					"transitions": [
+						{
+							"return": "q.all_animations_finished"
+						},
+						{
+							"stop": "q.skin_id==0"
+						}
+					]
+				}
+			}
+		}
+	}
+}

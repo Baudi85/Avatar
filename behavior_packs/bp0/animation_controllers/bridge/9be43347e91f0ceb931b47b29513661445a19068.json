@@ -1,0 +1,14 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.9be43347e91f0ceb931b47b29513661445a19068_0": {
+			"states": {
+				"default": {
+					"on_entry": [
+						"/tag @s add entity.technical"
+					]
+				}
+			}
+		}
+	}
+}

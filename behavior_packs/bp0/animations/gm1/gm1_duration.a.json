@@ -1,0 +1,8 @@
+{
+	"format_version": "1.10.0",
+	"animations": {
+		"animation.gm1.duration_10": {
+			"animation_length": 10
+		}
+	}
+}

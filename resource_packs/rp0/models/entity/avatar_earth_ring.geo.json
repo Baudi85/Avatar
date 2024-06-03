@@ -1,0 +1,299 @@
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.avatar_earth_ring",
+				"texture_width": 16,
+				"texture_height": 16,
+				"visible_bounds_width": 4,
+				"visible_bounds_height": 3.5,
+				"visible_bounds_offset": [
+					0,
+					1.25,
+					0
+				]
+			},
+			"bones": [
+				{
+					"name": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					]
+				},
+				{
+					"name": "small_cube_1",
+					"parent": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-19,
+								-1,
+								-1
+							],
+							"size": [
+								2,
+								2,
+								2
+							],
+							"uv": [
+								3,
+								3
+							]
+						}
+					]
+				},
+				{
+					"name": "small_cube_2",
+					"parent": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-19,
+								-1,
+								-1
+							],
+							"size": [
+								2,
+								2,
+								2
+							],
+							"uv": [
+								4,
+								10
+							]
+						}
+					]
+				},
+				{
+					"name": "small_cube_3",
+					"parent": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-19,
+								-1,
+								-1
+							],
+							"size": [
+								2,
+								2,
+								2
+							],
+							"uv": [
+								0,
+								5
+							]
+						}
+					]
+				},
+				{
+					"name": "small_cube_4",
+					"parent": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-19,
+								-1,
+								-1
+							],
+							"size": [
+								2,
+								2,
+								2
+							],
+							"uv": [
+								8,
+								2
+							]
+						}
+					]
+				},
+				{
+					"name": "small_cube_5",
+					"parent": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-19,
+								-1,
+								-1
+							],
+							"size": [
+								2,
+								2,
+								2
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "large_cube_1",
+					"parent": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-20,
+								-2,
+								-2
+							],
+							"size": [
+								4,
+								4,
+								4
+							],
+							"uv": [
+								0,
+								0
+							]
+						}
+					]
+				},
+				{
+					"name": "large_cube_2",
+					"parent": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-20,
+								-2,
+								-2
+							],
+							"size": [
+								4,
+								4,
+								4
+							],
+							"uv": [
+								0,
+								2
+							]
+						}
+					]
+				},
+				{
+					"name": "large_cube_3",
+					"parent": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-20,
+								-2,
+								-2
+							],
+							"size": [
+								4,
+								4,
+								4
+							],
+							"uv": [
+								0,
+								4
+							]
+						}
+					]
+				},
+				{
+					"name": "large_cube_4",
+					"parent": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-20,
+								-2,
+								-2
+							],
+							"size": [
+								4,
+								4,
+								4
+							],
+							"uv": [
+								0,
+								8
+							]
+						}
+					]
+				},
+				{
+					"name": "large_cube_5",
+					"parent": "earth_ring",
+					"pivot": [
+						0,
+						0,
+						0
+					],
+					"cubes": [
+						{
+							"origin": [
+								-20,
+								-2,
+								-2
+							],
+							"size": [
+								4,
+								4,
+								4
+							],
+							"uv": [
+								0,
+								6
+							]
+						}
+					]
+				}
+			]
+		}
+	]
+}

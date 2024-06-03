@@ -1,0 +1,29 @@
+{
+	"format_version": "1.18.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "nom:ui_close",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"a3fe844490ba23c0_a_0": "animation.a3fe844490ba23c09d4b072e7f8dbb62a2788f0a_0"
+			},
+			"scripts": {
+				"animate": [
+					"a3fe844490ba23c0_a_0"
+				]
+			}
+		},
+		"components": {
+			"minecraft:npc": {
+				"npc_data": {}
+			},
+			"minecraft:explode": {
+				"fuse_lit": true,
+				"fuse_length": 0.25,
+				"power": 0
+			}
+		}
+	}
+}

@@ -1,0 +1,113 @@
+{
+	"format_version": "1.10.0",
+	"render_controllers": {
+		"controller.render.daofei": {
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.base_0",
+						"Texture.base_1",
+						"Texture.base_2",
+						"Texture.base_3",
+						"Texture.base_4",
+						"Texture.base_5"
+					]
+				}
+			},
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"geometry": "geometry.default",
+			"textures": [
+				"array.t[query.mark_variant]"
+			]
+		},
+		"controller.render.daofei_death_1": {
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.base_0",
+						"Texture.base_1",
+						"Texture.base_2",
+						"Texture.base_3",
+						"Texture.base_4",
+						"Texture.base_5"
+					]
+				}
+			},
+			"materials": [
+				{
+					"*": "material.default"
+				}
+			],
+			"geometry": "geometry.default",
+			"textures": [
+				"array.t[query.mark_variant]"
+			],
+			"overlay_color": {
+				"a": "v.defeated_overlay_state_1",
+				"r": 1,
+				"b": 1,
+				"g": 1
+			},
+			"light_color_multiplier": "1+math.clamp((v.defeated_overlay_state_1*3),0,3)"
+		},
+		"controller.render.daofei_death_2": {
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.base_0",
+						"Texture.base_1",
+						"Texture.base_2",
+						"Texture.base_3",
+						"Texture.base_4",
+						"Texture.base_5"
+					]
+				}
+			},
+			"geometry": "geometry.default",
+			"textures": [
+				"array.t[query.mark_variant]"
+			],
+			"materials": [
+				{
+					"*": "material.death_fade"
+				}
+			],
+			"overlay_color": {
+				"a": "v.defeated_overlay_state_2",
+				"r": 0,
+				"b": 0,
+				"g": 0
+			},
+			"light_color_multiplier": "4-math.clamp((v.defeated_overlay_state_2*4),0,4)"
+		},
+		"controller.render.daofei_outline": {
+			"textures": [
+				"array.t[query.mark_variant]"
+			],
+			"arrays": {
+				"textures": {
+					"Array.t": [
+						"Texture.base_0",
+						"Texture.base_1",
+						"Texture.base_2",
+						"Texture.base_3",
+						"Texture.base_4",
+						"Texture.base_5"
+					]
+				}
+			},
+			"geometry": "geometry.inflated",
+			"materials": [
+				{
+					"*": "material.outline"
+				}
+			],
+			"light_color_multiplier": -1000,
+			"ignore_lighting": true
+		}
+	}
+}

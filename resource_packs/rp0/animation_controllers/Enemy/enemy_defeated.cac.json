@@ -1,0 +1,28 @@
+{
+	"format_version": "1.10.0",
+	"animation_controllers": {
+		"controller.animation.enemy_defeated": {
+			"initial_state": "default",
+			"states": {
+				"default": {
+					"transitions": [
+						{
+							"defeated": "q.can_power_jump"
+						}
+					],
+					"blend_transition": 0.25
+				},
+				"defeated": {
+					"animations": [
+						"defeat"
+					],
+					"transitions": [
+						{
+							"default": "!q.can_power_jump"
+						}
+					]
+				}
+			}
+		}
+	}
+}

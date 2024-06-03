@@ -1,0 +1,78 @@
+{
+    "npc_screen_contents": {
+        "size": [ "100%", "100%" ],
+        "controls": [
+            {
+                "creative@screen_selector": {
+                    "$content": "gm1_npc_creative.screen_contents",
+                    "$condition": "#teacher_view_visible"
+                }
+            },
+            {
+                "default@screen_selector": {
+                    "$content": "gm1_npc_default.screen_contents",
+                    "$condition": "(#title_text > '' and (#title_text < '{' or #title_text > '§') and #student_view_visible)"
+                }
+            },
+            {
+                "cutscene_bars@screen_selector": {
+                    "$content": "gm1_npc_cutscene_bars.screen_contents",
+                    "$condition": "(#title_text = '{cutscene.bars}')",
+                    "$time": 12
+                }
+            },
+            {
+                "splash@screen_selector": {
+                    "$content": "gm1_npc_splash.screen_contents",
+                    "$condition": "(#title_text = '{splash}')",
+                    "$time": 12
+                }
+            },
+            {
+                "fade@screen_selector": {
+                    "$content": "gm1_npc_fade.screen_contents",
+                    "$condition": "(#title_text = '{ui.fade}')",
+                    "$time": 4
+                }
+            },
+            {
+                "unlock_art@screen_selector": {
+                    "$content": "gm1_npc_unlock_art.screen_contents",
+                    "$condition": "(#title_text = '{unlock.art}')"
+                }
+            },
+            {
+                "unlock_teq@screen_selector": {
+                    "$content": "gm1_npc_unlock_teq_screens.selector",
+                    "$condition": "(#title_text = '{unlock.teq}')"
+                }
+            },
+            { "blank@screen_selector": { "$content": "blank", "$condition": "(#title_text = '{ui.blank}')" }}
+        ]
+    },
+    "screen_selector": {
+        "type": "panel",
+        "size": [ "100%", "100%" ],
+        "$condition|default": "1",
+        "$content|default": "blank",
+        "$time|default": 0,
+        "bindings": [
+            { "binding_name": "#title_text" },
+            { "binding_name": "#student_view_visible" },
+            { "binding_name": "#teacher_view_visible" },
+            { "binding_type": "view", "source_property_name": "$condition", "target_property_name": "#visible" }
+        ],
+        "controls": [
+            { "content@$content": {}},
+            { "safety_button@gm1_npc_safety_button.main":{}}
+        ]
+    },
+    "blank": { "type": "panel" },
+    "npc_screen": {
+        "$screen_content": "npc_interact.npc_screen_contents",
+        "force_render_below": true,
+        "$screen_animations": [],
+        "$background_animations": [],
+        "button_mappings":[]
+    }
+}

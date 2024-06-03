@@ -1,0 +1,1 @@
+msg @a[tag=dev] DOOR OPENS

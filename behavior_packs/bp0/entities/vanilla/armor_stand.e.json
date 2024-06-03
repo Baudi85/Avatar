@@ -1,0 +1,174 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "minecraft:armor_stand",
+			"is_spawnable": false,
+			"is_summonable": true,
+			"is_experimental": false,
+			"animations": {
+				"music.controller.random": "controller.animation.world_music.random_player",
+				"music_rand_check": "animation.music.random.loop",
+				"music_random_wait": "animation.music.random.wait",
+				"music.random.track1": "animation.music.random.track1",
+				"music.random.track2": "animation.music.random.track2",
+				"music.random.track3": "animation.music.random.track3",
+				"music.random.track4": "animation.music.random.track4",
+				"music.random.track5": "animation.music.random.track5",
+				"music.random.track6": "animation.music.random.track6",
+				"music.random.track7": "animation.music.random.track7",
+				"music.random.track8": "animation.music.random.track8",
+				"music.random.track9": "animation.music.random.track9",
+				"music.random.track10": "animation.music.random.track10",
+				"music.random.track11": "animation.music.random.track11",
+				"music.random.track12": "animation.music.random.track12",
+				"music.random.track13": "animation.music.random.track13",
+				"music.random.track14": "animation.music.random.track14",
+				"music.random.track15": "animation.music.random.track15",
+				"music.random.track16": "animation.music.random.track16",
+				"music.random.track17": "animation.music.random.track17",
+				"music.random.track18": "animation.music.random.track18",
+				"db63ed86e93d373b_a_0": "animation.db63ed86e93d373bc01d2731610e2990728612b5_0"
+			},
+			"scripts": {
+				"animate": [
+					{
+						"music.controller.random": "!q.is_ignited"
+					},
+					{
+						"db63ed86e93d373b_a_0": "q.mark_variant==1"
+					}
+				]
+			}
+		},
+		"component_groups": {
+			"gm1:main_entity": {
+				"minecraft:tick_world": {
+					"radius": 0
+				},
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			},
+			"gm1:despawn": {
+				"minecraft:instant_despawn": {}
+			},
+			"nom:invisible": {
+				"minecraft:scale": {
+					"value": 0
+				}
+			},
+			"nom:music_stop": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			},
+			"nom:music_start": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"nom:not_main": {
+				"minecraft:is_ignited": {}
+			}
+		},
+		"components": {
+			"minecraft:damage_sensor": {
+				"triggers": [
+					{
+						"deals_damage": false
+					}
+				]
+			},
+			"minecraft:nameable": {
+				"name_actions": [
+					{
+						"name_filter": "main",
+						"on_named": {
+							"event": "gm1:main_entity"
+						}
+					}
+				]
+			},
+			"minecraft:collision_box": {
+				"width": 0.6,
+				"height": 1.8
+			},
+			"minecraft:health": {
+				"value": 8,
+				"max": 8
+			},
+			"minecraft:type_family": {
+				"family": [
+					"armor_stand"
+				]
+			},
+			"minecraft:knockback_resistance": {
+				"value": 1
+			},
+			"minecraft:interact": {
+				"interactions": [
+					{
+						"on_interact": {
+							"filters": {
+								"all_of": [
+									{
+										"test": "has_equipment",
+										"value": "minecraft:blaze_rod",
+										"domain": "hand",
+										"subject": "other"
+									}
+								]
+							},
+							"event": "gm1:despawn"
+						}
+					}
+				]
+			}
+		},
+		"events": {
+			"nom:invisible": {
+				"add": {
+					"component_groups": [
+						"nom:invisible"
+					]
+				}
+			},
+			"gm1:main_entity": {
+				"add": {
+					"component_groups": [
+						"gm1:main_entity"
+					]
+				}
+			},
+			"gm1:despawn": {
+				"add": {
+					"component_groups": [
+						"gm1:despawn"
+					]
+				}
+			},
+			"nom:random_music_stop": {
+				"add": {
+					"component_groups": [
+						"nom:music_stop"
+					]
+				}
+			},
+			"nom:random_music_start": {
+				"add": {
+					"component_groups": [
+						"nom:music_start"
+					]
+				}
+			},
+			"nom:not_main": {
+				"add": {
+					"component_groups": [
+						"nom:not_main"
+					]
+				}
+			}
+		}
+	}
+}
